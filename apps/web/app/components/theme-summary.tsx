@@ -13,6 +13,40 @@ export function ThemeSummary() {
       <SectionTitle
         title="テーマ騰落サマリー"
         note="12マクロテーマの前日比・年初来・SOX比(α)。構成銘柄の単純平均"
+        info={{
+          label: "テーマ騰落サマリーの説明を表示",
+          title: "テーマ騰落サマリーとは",
+          content: (
+            <>
+              <p>
+                半導体関連の12マクロテーマ（メモリ・光接続・装置など）ごとに、構成銘柄の株価変動をまとめた一覧です。テーマ全体の強弱を素早く把握するためのサマリーです。
+              </p>
+              <ul className="list-disc space-y-1 pl-4">
+                <li>
+                  <strong className="font-medium text-ink">前日比</strong>
+                  ：直近営業日の騰落率
+                </li>
+                <li>
+                  <strong className="font-medium text-ink">YTD</strong>
+                  ：年初来の騰落率
+                </li>
+                <li>
+                  <strong className="font-medium text-ink">α（SOX比）</strong>
+                  ：テーマの年初来騰落率からSOX指数の年初来騰落率を引いた値。指数に対する相対パフォーマンス
+                </li>
+                <li>
+                  <strong className="font-medium text-ink">スパークライン</strong>
+                  ：直近の株価推移
+                </li>
+                <li>
+                  <strong className="font-medium text-ink">2× / 3× / 5×</strong>
+                  ：出来高が直近20日平均の何倍か（急増シグナル）
+                </li>
+              </ul>
+              <p>各テーマの騰落率は、構成銘柄の単純平均（等ウェイト）で算出しています。</p>
+            </>
+          ),
+        }}
       />
       <StockListShell>
         {rows.map((t) => {
@@ -32,7 +66,7 @@ export function ThemeSummary() {
                 <span className="font-bold text-[14px] leading-snug">{t.name}</span>
               </div>
 
-              <div className="mt-1.5 flex flex-wrap items-center gap-x-2 gap-y-1 pl-[18px] md:mt-0 md:ml-auto md:shrink-0 md:flex-nowrap md:pl-0">
+              <div className="mt-1.5 flex w-full flex-wrap items-center justify-end gap-x-2 gap-y-1 md:mt-0 md:ml-auto md:w-auto md:shrink-0 md:flex-nowrap md:justify-start">
                 <Sparkline values={t.spark} />
                 <span className={`font-mono font-bold text-[13.5px] ${pctColor(t.dayPct)}`}>
                   {fmtPct(t.dayPct)}

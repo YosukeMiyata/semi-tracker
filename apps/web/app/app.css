@@ -33,12 +33,6 @@ html {
   scroll-behavior: smooth;
 }
 
-/* v1 レインボーバー */
-.rainbow {
-  height: 3px;
-  background: linear-gradient(90deg, #6ee7f0, #9d7cf0 35%, #e8b04b 70%, #f0593c);
-}
-
 /* v1 タイトルアニメーション */
 .titlebeat {
   animation: titlebeat 2.6s ease-in-out infinite;

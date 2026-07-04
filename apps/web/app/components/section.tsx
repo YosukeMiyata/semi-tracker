@@ -1,10 +1,24 @@
 import type { ReactNode } from "react";
+import { InfoDialog } from "~/components/info-dialog";
 
-export function SectionTitle({ title, note }: { title: string; note?: string }) {
+export function SectionTitle({
+  title,
+  note,
+  info,
+}: {
+  title: string;
+  note?: string;
+  info?: { label: string; title: string; content: ReactNode };
+}) {
   return (
     <>
       <h2 className="mt-[26px] mb-1 flex items-center gap-2 font-bold font-serif text-[17px]">
         {title}
+        {info ? (
+          <InfoDialog label={info.label} title={info.title}>
+            {info.content}
+          </InfoDialog>
+        ) : null}
         <span className="h-px flex-1 bg-line" />
       </h2>
       {note ? <div className="mb-3 text-[12px] text-ink-2">{note}</div> : null}

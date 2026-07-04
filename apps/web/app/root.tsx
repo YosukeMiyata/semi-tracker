@@ -41,7 +41,6 @@ const TABS = [
 export default function App() {
   return (
     <>
-      <div className="rainbow" />
       <header className="sticky top-0 z-30 border-line border-b bg-paper/95 px-[14px] py-5 backdrop-blur-md">
         <div className="mx-auto flex max-w-[820px] items-center gap-2.5">
           <div className="min-w-0 flex-1">
@@ -51,6 +50,9 @@ export default function App() {
             <h1 className="mt-1.5 font-bold font-serif text-[19px] leading-[1.4] tracking-[0.02em]">
               半導体<span className="text-copper">テーマ</span>トラッカー
             </h1>
+            <p className="mt-1 font-mono text-[10px] text-faint sm:hidden">
+              {themesPerf.last_updated} 時点
+            </p>
           </div>
           <div className="hidden shrink-0 font-mono text-[11px] text-faint sm:block">
             {themesPerf.last_updated} 時点

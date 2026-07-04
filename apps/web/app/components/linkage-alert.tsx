@@ -8,7 +8,7 @@ export function LinkageAlert() {
 
   if (triggered.length === 0) {
     return (
-      <div className="border-line border-t border-dashed py-4 text-[13px] text-ink-2">
+      <div className="border-line border-t border-dashed p-4 text-[13px] text-ink-2">
         <span className="font-bold text-ink">本日の連動トリガー: なし</span>
         <span className="mx-1.5 text-faint">·</span>
         直近営業日に米国テーマが+2%超で上昇したサブテーマはありませんでした。
@@ -17,7 +17,7 @@ export function LinkageAlert() {
   }
 
   return (
-    <div className="mb-3 border-2 border-copper/50 border-t py-4">
+    <div className="mb-3 border-2 border-copper/50 border-t p-4">
       <div className="mb-3 flex flex-wrap items-center gap-2">
         <span className="rounded-md bg-copper px-2 py-0.5 font-bold text-[11px] text-paper tracking-[0.08em]">
           連動トリガー発火
