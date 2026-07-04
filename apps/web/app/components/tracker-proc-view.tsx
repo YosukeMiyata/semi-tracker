@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { ChipGroup } from "~/components/chip-group";
-import { fmtPct, pctColor } from "~/lib/data";
+import { StockListGroupLabel, StockThemeListRow } from "~/components/stock-list-row";
 import { analyzeStock } from "~/lib/technical";
 import processJson from "../../../../data/process.json";
 
@@ -71,31 +71,7 @@ function procVal(symbol: string, period: ProcPeriod): number | null {
   return tech.ret3m;
 }
 
-function StockChip({
-  stock,
-  period,
-  onPick,
-}: {
-  stock: ProcStock;
-  period: ProcPeriod;
-  onPick: (code: string) => void;
-}) {
-  const val = procVal(stock.code, period);
-  const mkClass = stock.market === "jp" ? "text-copper" : "text-us";
-  return (
-    <button
-      type="button"
-      onClick={() => onPick(stock.code)}
-      className="inline-flex items-center gap-1.5 rounded-lg border border-line bg-card px-2 py-1 text-left text-[11px] hover:bg-panel2"
-    >
-      <span className={`font-mono font-bold ${mkClass}`}>{stock.code}</span>
-      <span className="max-w-[88px] truncate">{stock.name}</span>
-      <span className={`font-mono text-[10.5px] ${pctColor(val)}`}>{fmtPct(val, 0)}</span>
-    </button>
-  );
-}
-
-function StockChips({
+function StockList({
   stocks,
   period,
   onPick,
@@ -105,14 +81,21 @@ function StockChips({
   onPick: (code: string) => void;
 }) {
   if (stocks.length === 0) {
-    return <span className="text-[11px] text-ink-2">—</span>;
+    return <span className="text-[12px] text-ink-2">—</span>;
   }
   return (
-    <div className="flex flex-wrap gap-1">
+    <>
       {stocks.map((s) => (
-        <StockChip key={s.code} stock={s} period={period} onPick={onPick} />
+        <StockThemeListRow
+          key={s.code}
+          symbol={s.code}
+          name={s.name}
+          market={s.market}
+          pct={procVal(s.code, period)}
+          onClick={() => onPick(s.code)}
+        />
       ))}
-    </div>
+    </>
   );
 }
 
@@ -133,41 +116,38 @@ function ProcStepBlock({
   return (
     <>
       {showArrow ? <div className="py-0.5 text-center text-[12px] text-ink-2">↓</div> : null}
-      <div
-        className="overflow-hidden rounded-card border border-line bg-card"
-        style={{ borderLeftWidth: 3, borderLeftColor: color }}
-      >
-        <div className="flex items-start gap-2 px-3 py-2.5">
+      <div className="border-line border-t border-l-[3px]" style={{ borderLeftColor: color }}>
+        <div className="flex items-start gap-2 py-3">
           <span className="text-[18px]">{step.icon}</span>
           <div className="min-w-0 flex-1">
-            <div className="font-bold text-[13px]">{step.name}</div>
-            <div className="text-[11px] text-ink-2">{step.desc}</div>
+            <div className="font-bold text-[14px]">{step.name}</div>
+            <div className="text-[12px] text-ink-2">{step.desc}</div>
           </div>
         </div>
 
         {step.groups ? (
-          <div className="space-y-2 border-line border-t px-3 pt-2 pb-3">
+          <div className="border-line border-t pb-2 pt-1">
             {step.groups.map((g) => (
-              <div key={g.label}>
-                <div className="mb-1 font-mono text-[10.5px] text-copper">{g.label}</div>
-                <StockChips stocks={g.stocks} period={period} onPick={onPickStock} />
+              <div key={g.label} className="mb-2 last:mb-0">
+                <StockListGroupLabel>{g.label}</StockListGroupLabel>
+                <StockList stocks={g.stocks} period={period} onPick={onPickStock} />
               </div>
             ))}
           </div>
         ) : (
           <div
-            className={`grid gap-2 border-line border-t px-3 pt-2 pb-3 ${hasMaterial ? "grid-cols-2" : "grid-cols-1"}`}
+            className={`grid gap-3 border-line border-t pb-2 pt-1 ${hasMaterial ? "grid-cols-1 md:grid-cols-2" : "grid-cols-1"}`}
           >
             <div>
-              <div className="mb-1 font-mono text-[10.5px]" style={{ color }}>
-                装置
-              </div>
-              <StockChips stocks={step.equip ?? []} period={period} onPick={onPickStock} />
+              <StockListGroupLabel>
+                <span style={{ color }}>装置</span>
+              </StockListGroupLabel>
+              <StockList stocks={step.equip ?? []} period={period} onPick={onPickStock} />
             </div>
             {hasMaterial ? (
               <div>
-                <div className="mb-1 font-mono text-[10.5px] text-ink-2">材料</div>
-                <StockChips stocks={step.material ?? []} period={period} onPick={onPickStock} />
+                <StockListGroupLabel>材料</StockListGroupLabel>
+                <StockList stocks={step.material ?? []} period={period} onPick={onPickStock} />
               </div>
             ) : null}
           </div>
@@ -197,7 +177,7 @@ export function ProcView({ onPickStock }: { onPickStock: (symbol: string) => voi
             <div key={`${step.stage}-${step.name}`}>
               {showStageHeader ? (
                 <div
-                  className="pt-1 font-bold text-[12.5px]"
+                  className="border-line border-t pt-3 font-bold text-[13.5px]"
                   style={{ color: STAGE_COLORS[step.stage] ?? "#888" }}
                 >
                   ■ {STAGE_LABELS[step.stage] ?? step.stage}

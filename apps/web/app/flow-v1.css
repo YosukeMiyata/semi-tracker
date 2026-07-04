@@ -1,0 +1,322 @@
+/* v1 docs/index.html フロー図スタイルをそのまま移植 */
+@import url("https://fonts.googleapis.com/css2?family=DotGothic16&display=swap");
+
+.flow-v1 {
+  --flow-dot: "DotGothic16", "Hiragino Sans", sans-serif;
+}
+
+.flow-v1 .pixel {
+  font-family: var(--flow-dot);
+  letter-spacing: 0.5px;
+}
+
+.flow-v1 .flow-intro {
+  margin: 10px 4px 12px;
+  font-size: 12.5px;
+  line-height: 1.6;
+  color: var(--color-ink-2);
+}
+
+.flow-v1 .flow-intro b {
+  color: var(--color-ink);
+}
+
+.flow-v1 .fstage {
+  border: 2px solid;
+  border-radius: 14px;
+  overflow: hidden;
+  margin-bottom: 2px;
+  background: var(--color-card);
+}
+
+.flow-v1 .fstage-h {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 12px 14px;
+}
+
+.flow-v1 .fstage-icon {
+  font-size: 22px;
+}
+
+.flow-v1 .fstage-name {
+  font-size: 14px;
+  font-weight: 800;
+  font-family: var(--flow-dot);
+  letter-spacing: 0.5px;
+}
+
+.flow-v1 .fstage-desc {
+  font-size: 11.5px;
+  color: var(--color-ink-2);
+  line-height: 1.6;
+  padding: 0 14px 10px;
+}
+
+.flow-v1 .fviz {
+  margin: 0 12px 12px;
+  padding: 11px;
+  background: var(--color-panel2);
+  border-radius: 10px;
+  font-size: 11.5px;
+  color: var(--color-ink);
+  text-align: center;
+  line-height: 1.7;
+}
+
+.flow-v1 .fpkg3,
+.flow-v1 .fcpo {
+  padding: 12px 10px;
+}
+
+.flow-v1 .p3-label {
+  font-size: 10.5px;
+  color: var(--color-ink-2);
+  margin-bottom: 8px;
+  letter-spacing: 0.5px;
+  font-family: var(--flow-dot);
+}
+
+.flow-v1 .p3layer {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 9px 7px;
+  margin: 4px 0;
+  border: 2px solid var(--color-paper);
+  position: relative;
+}
+
+.flow-v1 .p3top {
+  background: rgba(157, 124, 240, 0.3);
+}
+
+.flow-v1 .p3mid {
+  background: rgba(224, 164, 88, 0.35);
+}
+
+.flow-v1 .p3bot {
+  background: rgba(63, 167, 214, 0.3);
+}
+
+.flow-v1 .p3mb {
+  background: rgba(91, 146, 121, 0.35);
+}
+
+.flow-v1 .p3mb .p3tag {
+  background: #5b9279;
+}
+
+.flow-v1 .fice {
+  background: #070a12;
+  border: 3px solid #fff;
+  outline: 2px solid #070a12;
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.2);
+  border-radius: 0;
+  padding: 8px 8px 4px;
+  image-rendering: pixelated;
+}
+
+.flow-v1 .ice-talk {
+  margin: 8px 2px 6px;
+  padding: 8px 10px;
+  border: 2px solid #fff;
+  color: #fff;
+  font-size: 12px;
+  text-align: left;
+  letter-spacing: 1px;
+  line-height: 1.6;
+  background: #000;
+}
+
+.flow-v1 .ice-heart {
+  color: var(--color-up);
+  margin-right: 6px;
+  animation: flow-iceblink 1s steps(2, start) infinite;
+}
+
+@keyframes flow-iceblink {
+  to {
+    visibility: hidden;
+  }
+}
+
+.flow-v1 .p3chip {
+  background: var(--color-paper);
+  padding: 4px 9px;
+  font-size: 11.5px;
+  font-weight: 700;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  font-family: var(--flow-dot);
+}
+
+.flow-v1 .p3full {
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-family: var(--flow-dot);
+}
+
+.flow-v1 .p3tag {
+  position: absolute;
+  right: 5px;
+  top: -9px;
+  font-size: 9px;
+  background: var(--color-up);
+  color: #fff;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-family: var(--flow-dot);
+}
+
+.flow-v1 .p3mid .p3tag {
+  background: var(--color-up);
+}
+
+.flow-v1 .p3top .p3tag {
+  background: var(--color-us);
+}
+
+.flow-v1 .p3bot .p3tag {
+  background: var(--color-down);
+}
+
+.flow-v1 .p3note {
+  font-size: 10.5px;
+  color: var(--color-ink-2);
+  margin-top: 8px;
+  line-height: 1.5;
+  font-family: var(--flow-dot);
+}
+
+.flow-v1 .fsteps {
+  padding: 0 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.flow-v1 .fstep {
+  background: var(--color-panel2);
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--color-line);
+}
+
+.flow-v1 .fstep.open {
+  border-color: var(--color-ink-2);
+}
+
+.flow-v1 .fstep-h {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 12px;
+  width: 100%;
+  background: none;
+  border: none;
+  color: var(--color-ink);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.flow-v1 .fstep-icon {
+  font-size: 19px;
+  flex-shrink: 0;
+}
+
+.flow-v1 .fstep-main {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.flow-v1 .fstep-name {
+  font-size: 12.5px;
+  font-weight: 700;
+  font-family: var(--flow-dot);
+}
+
+.flow-v1 .fstep-desc {
+  font-size: 10.5px;
+  color: var(--color-ink-2);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.flow-v1 .fstep-cnt {
+  font-size: 10.5px;
+  color: var(--color-ink-2);
+  flex-shrink: 0;
+  font-weight: 600;
+}
+
+.flow-v1 .fstep-body {
+  padding: 4px 12px 12px;
+}
+
+.flow-v1 .frole {
+  margin-top: 8px;
+}
+
+.flow-v1 .frole-label {
+  font-size: 10.5px;
+  color: var(--color-faint);
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.flow-v1 .fchips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 5px;
+}
+
+.flow-v1 .fchip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: var(--color-paper);
+  border: 1px solid var(--color-line);
+  border-radius: 8px;
+  padding: 6px 9px;
+  cursor: pointer;
+  color: var(--color-ink);
+  font: inherit;
+}
+
+.flow-v1 .fchip:active {
+  background: var(--color-card);
+}
+
+.flow-v1 .fchip:focus-visible {
+  outline: 2px solid var(--color-copper);
+  outline-offset: 1px;
+}
+
+.flow-v1 .fchip-nm {
+  font-size: 11px;
+  max-width: 96px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.flow-v1 .farrow {
+  text-align: center;
+  color: var(--color-faint);
+  font-size: 15px;
+  margin: 1px 0 3px;
+}
+
+.flow-v1 .farrow:last-child {
+  display: none;
+}

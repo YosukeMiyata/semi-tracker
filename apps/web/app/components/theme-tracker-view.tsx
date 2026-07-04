@@ -3,6 +3,11 @@
 import { useEffect, useMemo, useState } from "react";
 import { ChipGroup } from "~/components/chip-group";
 import { Sparkline } from "~/components/sparkline";
+import {
+  StockListGroupLabel,
+  StockListShell,
+  StockThemeListRow,
+} from "~/components/stock-list-row";
 import { StockSearch } from "~/components/stock-search";
 import { StockSheet } from "~/components/stock-sheet";
 import { TrackerChart, TrackerChartLegend } from "~/components/tracker-chart";
@@ -13,14 +18,13 @@ import { ProcView } from "~/components/tracker-proc-view";
 import { RankView } from "~/components/tracker-rank-view";
 import { RetView } from "~/components/tracker-ret-view";
 import { VolView } from "~/components/tracker-vol-view";
-import { fmtPct, pctColor, volTier } from "~/lib/data";
+import { fmtPct, pctColor } from "~/lib/data";
 import {
   periodLabel,
   rankedThemes,
   sparkFromSeries,
   stockPeriodRet,
   stockRowLabel,
-  stockVolRatio,
   subAvg,
   TRACKER_MARKETS,
   TRACKER_PERIODS,
@@ -30,42 +34,6 @@ import {
   type TrackerView,
   trackerLastUpdated,
 } from "~/lib/tracker";
-
-function StockChip({
-  code,
-  name,
-  period,
-  onPick,
-}: {
-  code: string;
-  name: string;
-  period: TrackerPeriodId;
-  onPick: (symbol: string) => void;
-}) {
-  const ret = stockPeriodRet(code, period);
-  const vol = stockVolRatio(code);
-  const tier = volTier(vol);
-
-  return (
-    <button
-      type="button"
-      data-symbol={code}
-      title={`${name}(${code}) ${periodLabel(period)} ${fmtPct(ret)} / 出来高 ${vol ?? "—"}×`}
-      onClick={() => onPick(code)}
-      className={`mt-0.5 mr-1 inline-flex items-center gap-1 whitespace-nowrap rounded-full border px-2 py-0.5 text-[11px] ${
-        ret !== null && ret < 0 ? "border-down/30 bg-down-soft" : "border-up/30 bg-up-soft"
-      }`}
-    >
-      {name}
-      <span className={`font-mono font-semibold ${pctColor(ret)}`}>{fmtPct(ret, 0)}</span>
-      {tier !== null ? (
-        <span className="rounded bg-copper-soft px-1 font-bold text-[9.5px] text-copper">
-          出来高{tier}×
-        </span>
-      ) : null}
-    </button>
-  );
-}
 
 function SubBlock({
   sub,
@@ -83,42 +51,63 @@ function SubBlock({
   const showJp = market !== "us";
 
   return (
-    <div className="border-line border-b py-2 last:border-b-0">
-      <div className="mb-1 flex items-baseline gap-2">
-        <span className="font-bold text-[12.5px]">{sub.name}</span>
-        <span className={`font-mono font-semibold text-[12px] ${pctColor(avg)}`}>
-          {fmtPct(avg)}
-        </span>
+    <div className="border-line border-b py-3 last:border-b-0">
+      <div className="mb-2 flex items-baseline justify-between gap-2">
+        <span className="font-bold text-[13.5px]">{sub.name}</span>
+        <span className={`font-mono font-bold text-[13.5px] ${pctColor(avg)}`}>{fmtPct(avg)}</span>
       </div>
       {showUs && sub.us.length > 0 ? (
         <>
-          <div className="mb-0.5 text-[10.5px] text-ink-2">米国株</div>
+          <StockListGroupLabel>米国株</StockListGroupLabel>
           {sub.us.map((row) => {
             const s = stockRowLabel(row, "us");
             return (
-              <StockChip key={s.code} code={s.code} name={s.name} period={period} onPick={onPick} />
+              <StockThemeListRow
+                key={s.code}
+                symbol={s.code}
+                name={s.name}
+                market="us"
+                pct={stockPeriodRet(s.code, period)}
+                onClick={() => onPick(s.code)}
+              />
             );
           })}
         </>
       ) : null}
       {showJp && sub.jp.length > 0 ? (
         <>
-          <div className="mb-0.5 text-[10.5px] text-ink-2">連動日本株</div>
+          <StockListGroupLabel>連動日本株</StockListGroupLabel>
           {sub.jp.map((row) => {
             const s = stockRowLabel(row, "jp");
             return (
-              <StockChip key={s.code} code={s.code} name={s.name} period={period} onPick={onPick} />
+              <StockThemeListRow
+                key={s.code}
+                symbol={s.code}
+                name={s.name}
+                market="jp"
+                note={row.note}
+                pct={stockPeriodRet(s.code, period)}
+                onClick={() => onPick(s.code)}
+              />
             );
           })}
         </>
       ) : null}
       {showJp && sub.solo.length > 0 ? (
         <>
-          <div className="mb-0.5 text-[10.5px] text-ink-2">日本単独テーマ</div>
+          <StockListGroupLabel>日本単独テーマ</StockListGroupLabel>
           {sub.solo.map((row) => {
             const s = stockRowLabel(row, "jp");
             return (
-              <StockChip key={s.code} code={s.code} name={s.name} period={period} onPick={onPick} />
+              <StockThemeListRow
+                key={s.code}
+                symbol={s.code}
+                name={s.name}
+                market="jp"
+                note={row.note}
+                pct={stockPeriodRet(s.code, period)}
+                onClick={() => onPick(s.code)}
+              />
             );
           })}
         </>
@@ -200,16 +189,18 @@ export function ThemeTrackerView() {
               onChange={setMarket}
             />
 
-            <div className="rounded-card border border-line bg-card px-3 pt-3 pb-2">
-              <div className="mb-2 font-bold text-[13px]">{plabel} 累積騰落率(%) — テーマ平均</div>
+            <div className="border-line border-t pt-3 pb-2">
+              <div className="mb-2 font-bold text-[13.5px]">
+                {plabel} 累積騰落率(%) — テーマ平均
+              </div>
               <TrackerChart themes={rows} />
               <TrackerChartLegend themes={rows} />
-              <div className="mt-2 text-right font-mono text-[10.5px] text-ink-2">
+              <div className="mt-2 text-right font-mono text-[11px] text-ink-2">
                 データ {trackerLastUpdated} 時点
               </div>
             </div>
 
-            <div className="space-y-1.5">
+            <StockListShell>
               {rows.map((t, rank) => (
                 <details
                   key={t.key}
@@ -217,27 +208,27 @@ export function ThemeTrackerView() {
                   className="group"
                   onToggle={(e) => setOpenKey(e.currentTarget.open ? t.key : null)}
                 >
-                  <summary className="flex cursor-pointer list-none items-center gap-2.5 rounded-card border border-line bg-card px-4 py-[11px] [&::-webkit-details-marker]:hidden focus-visible:outline-2 focus-visible:outline-copper focus-visible:outline-offset-2">
+                  <summary className="flex cursor-pointer list-none items-center gap-2.5 border-line border-b py-3 [&::-webkit-details-marker]:hidden hover:bg-panel2/35 focus-visible:outline-2 focus-visible:outline-copper focus-visible:outline-offset-2">
                     <span
-                      className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full font-mono font-bold text-[11px] text-paper"
+                      className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full font-mono font-bold text-[12px] text-paper"
                       style={{ backgroundColor: t.color }}
                     >
                       {rank + 1}
                     </span>
-                    <div className="min-w-0 flex-1 font-bold text-[13.5px]">
+                    <div className="min-w-0 flex-1 font-bold text-[14px]">
                       {t.name}
-                      <small className="block font-normal text-[11px] text-ink-2">
-                        サブテーマ {t.subs.length} 件
+                      <small className="block font-normal text-[12px] text-ink-2">
+                        {t.subs.length}サブテーマ
                       </small>
                     </div>
                     <Sparkline values={sparkFromSeries(t.series)} />
                     <div
-                      className={`min-w-[64px] text-right font-mono font-semibold text-[14px] ${pctColor(t.avg)}`}
+                      className={`min-w-[4.75rem] text-right font-mono font-bold text-[15px] ${pctColor(t.avg)}`}
                     >
                       {fmtPct(t.avg)}
                     </div>
                   </summary>
-                  <div className="mx-1 mt-[-8px] rounded-b-card border border-line border-t-0 bg-panel2 px-3.5 pt-4 pb-2">
+                  <div className="border-line border-b px-0 pt-3 pb-1 last:border-b-0">
                     {t.subs.map((sub) => (
                       <SubBlock
                         key={sub.name}
@@ -250,7 +241,7 @@ export function ThemeTrackerView() {
                   </div>
                 </details>
               ))}
-            </div>
+            </StockListShell>
 
             <p className="text-[11px] text-ink-2 leading-[1.65]">
               出典: Stooq 日足(終値ベース)。{plabel}の累積騰落率=構成銘柄の単純平均。

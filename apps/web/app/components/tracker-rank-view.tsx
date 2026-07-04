@@ -2,8 +2,7 @@
 
 import { useMemo, useState } from "react";
 import { ChipGroup, MultiChipGroup } from "~/components/chip-group";
-import { fmtPct, pctColor } from "~/lib/data";
-import { highlightRowClass } from "~/lib/highlight";
+import { StockListShell, StockRankListRow } from "~/components/stock-list-row";
 import { analyzeStock, BULL_PATTERNS } from "~/lib/technical";
 import {
   allStockRows,
@@ -254,9 +253,9 @@ export function RankView({
         wrap
       />
 
-      <div className="overflow-hidden rounded-card border border-line bg-card">
+      <StockListShell>
         {rows.length === 0 ? (
-          <p className="px-3 py-6 text-center text-[12.5px] text-ink-2">該当する銘柄がありません</p>
+          <p className="py-6 text-center text-[13px] text-ink-2">該当する銘柄がありません</p>
         ) : (
           rows.map((r, i) => (
             <RankRow
@@ -269,7 +268,7 @@ export function RankView({
             />
           ))
         )}
-      </div>
+      </StockListShell>
     </>
   );
 }
@@ -291,21 +290,9 @@ function RankRow({
   const pat = tech.pattern;
   const bull = pat ? BULL_PATTERNS.has(pat) : false;
 
-  return (
-    <button
-      type="button"
-      data-symbol={row.symbol}
-      onClick={() => onPick(row.symbol)}
-      className={`flex w-full items-center gap-2 border-line border-b px-3 py-2.5 text-left last:border-b-0 hover:bg-panel2 ${highlightRowClass(row.symbol, highlightSymbol)}`}
-    >
-      <span className="w-6 font-mono text-[11px] text-ink-2">{rank}</span>
-      <span
-        className={`w-[52px] shrink-0 font-mono font-bold text-[12px] ${row.market === "jp" ? "text-copper" : "text-us"}`}
-      >
-        {row.symbol}
-      </span>
-      <span className="min-w-0 flex-1 truncate text-[12.5px]">
-        {row.name}
+  const trailing =
+    showTags && (pat || tech.po) ? (
+      <>
         {showTags && pat ? (
           <span
             className={`ml-1.5 inline-block rounded px-1.5 py-0.5 text-[10px] ${bull ? "bg-up-soft text-up" : "bg-down-soft text-down"}`}
@@ -318,10 +305,19 @@ function RankRow({
             PO
           </span>
         ) : null}
-      </span>
-      <span className={`font-mono font-semibold text-[13px] ${pctColor(tech.chgPct)}`}>
-        {fmtPct(tech.chgPct)}
-      </span>
-    </button>
+      </>
+    ) : null;
+
+  return (
+    <StockRankListRow
+      rank={rank}
+      symbol={row.symbol}
+      name={row.name}
+      market={row.market}
+      pct={tech.chgPct}
+      onClick={() => onPick(row.symbol)}
+      highlightSymbol={highlightSymbol}
+      trailing={trailing}
+    />
   );
 }

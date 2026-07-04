@@ -1,4 +1,4 @@
-import { Card } from "~/components/section";
+import { StockListShell } from "~/components/stock-list-row";
 import { type HeadlineItem, shortDate } from "~/lib/headlines";
 
 /* v1 風: ダークUI上で半透明の色分けバッジ */
@@ -30,22 +30,19 @@ export function HeadlineList({
   compact?: boolean;
 }) {
   if (items.length === 0) {
-    return <Card className="text-[12.5px] text-ink-2">ヘッドラインはまだありません。</Card>;
+    return (
+      <p className="border-line border-t py-4 text-[13px] text-ink-2">
+        ヘッドラインはまだありません。
+      </p>
+    );
   }
 
   return (
-    <Card className={compact ? "p-0" : ""}>
-      <ul className={compact ? "divide-y divide-line" : "space-y-0"}>
-        {items.map((item, index) => (
-          <li
-            key={item.id}
-            className={
-              compact
-                ? "px-4 py-2.5"
-                : `border-line border-b py-3 last:border-b-0 ${index === 0 ? "pt-0" : ""}`
-            }
-          >
-            <div className="mb-1 flex flex-wrap items-center gap-2 text-[11px] text-ink-2">
+    <StockListShell>
+      <ul>
+        {items.map((item) => (
+          <li key={item.id} className="border-line border-b py-3 last:border-b-0">
+            <div className="mb-1.5 flex flex-wrap items-center gap-2 text-[11px] text-ink-2">
               <span
                 className={`rounded-full border px-2 py-0.5 font-medium ${sourceBadgeClass(item.source)}`}
               >
@@ -57,7 +54,7 @@ export function HeadlineList({
               href={item.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="block font-medium text-[13.5px] text-ink leading-[1.45] hover:text-copper"
+              className={`block font-medium text-ink leading-[1.45] hover:text-copper ${compact ? "text-[13.5px]" : "text-[14px]"}`}
             >
               {item.title}
               <span className="ml-1 text-[11px] text-copper">↗</span>
@@ -65,6 +62,6 @@ export function HeadlineList({
           </li>
         ))}
       </ul>
-    </Card>
+    </StockListShell>
   );
 }

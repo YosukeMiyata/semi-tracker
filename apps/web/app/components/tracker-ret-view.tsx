@@ -2,8 +2,7 @@
 
 import { useMemo, useState } from "react";
 import { ChipGroup } from "~/components/chip-group";
-import { fmtPct, pctColor } from "~/lib/data";
-import { highlightRowClass } from "~/lib/highlight";
+import { StockListShell, StockRankListRow } from "~/components/stock-list-row";
 import {
   allStockRows,
   macroSectorOptions,
@@ -132,12 +131,12 @@ export function RetView({
 
       <ChipGroup label="市場" options={MARKET_OPTS} value={market} onChange={setMarket} />
 
-      <div className="overflow-hidden rounded-card border border-line bg-card">
-        <div className="border-line border-b px-3 py-2 font-bold text-[12.5px]">
+      <StockListShell>
+        <div className="border-line border-b py-2 font-bold text-[13.5px]">
           {plabel} 騰落率ランキング
         </div>
         {rows.length === 0 ? (
-          <p className="px-3 py-6 text-center text-[12.5px] text-ink-2">該当する銘柄がありません</p>
+          <p className="py-6 text-center text-[13px] text-ink-2">該当する銘柄がありません</p>
         ) : (
           rows.map((r, i) => {
             let tag: string | null = null;
@@ -147,37 +146,29 @@ export function RetView({
               tag = "出遅れ";
             }
             return (
-              <button
+              <StockRankListRow
                 key={r.symbol}
-                type="button"
-                data-symbol={r.symbol}
+                rank={i + 1}
+                symbol={r.symbol}
+                name={r.name}
+                market={r.market}
+                pct={r.ret}
                 onClick={() => onPickStock(r.symbol)}
-                className={`flex w-full items-center gap-2 border-line border-b px-3 py-2.5 text-left last:border-b-0 hover:bg-panel2 ${highlightRowClass(r.symbol, highlightSymbol)}`}
-              >
-                <span className="w-6 font-mono text-[11px] text-ink-2">{i + 1}</span>
-                <span
-                  className={`w-[52px] shrink-0 font-mono font-bold text-[12px] ${r.market === "jp" ? "text-copper" : "text-us"}`}
-                >
-                  {r.symbol}
-                </span>
-                <span className="min-w-0 flex-1 truncate text-[12.5px]">
-                  {r.name}
-                  {tag ? (
+                highlightSymbol={highlightSymbol}
+                trailing={
+                  tag ? (
                     <span
                       className={`ml-1.5 inline-block rounded px-1.5 py-0.5 text-[10px] ${tag === "先行" ? "bg-up-soft text-up" : "bg-down-soft text-down"}`}
                     >
                       {tag}
                     </span>
-                  ) : null}
-                </span>
-                <span className={`font-mono font-semibold text-[13px] ${pctColor(r.ret)}`}>
-                  {fmtPct(r.ret)}
-                </span>
-              </button>
+                  ) : null
+                }
+              />
             );
           })
         )}
-      </div>
+      </StockListShell>
     </>
   );
 }

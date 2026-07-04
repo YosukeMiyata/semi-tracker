@@ -1,5 +1,11 @@
 import { useMemo, useState } from "react";
 import { ChipGroup } from "~/components/chip-group";
+import {
+  StockListShell,
+  StockSymbol,
+  stockListVolGridClass,
+  stockListVolHeaderClass,
+} from "~/components/stock-list-row";
 import { fmtPct, pctColor } from "~/lib/data";
 import { highlightRowClass } from "~/lib/highlight";
 import { allStockRows, type StockRow } from "~/lib/tracker";
@@ -62,9 +68,10 @@ export function VolView({
       <ChipGroup label="並び替え" options={SORT_OPTS} value={sort} onChange={setSort} />
       <ChipGroup label="順序" options={DIR_OPTS} value={dir} onChange={setDir} />
 
-      <div className="overflow-hidden rounded-card border border-line bg-card">
-        <div className="grid grid-cols-[28px_1fr_auto_auto] gap-2 border-line border-b px-3 py-2 text-[10.5px] text-ink-2">
+      <StockListShell>
+        <div className={stockListVolHeaderClass}>
           <span>#</span>
+          <span>コード</span>
           <span>銘柄</span>
           <span className="text-right">前日比</span>
           <span className="text-right">出来高率</span>
@@ -77,27 +84,23 @@ export function VolView({
               type="button"
               data-symbol={r.symbol}
               onClick={() => onPickStock(r.symbol)}
-              className={`grid w-full grid-cols-[28px_1fr_auto_auto] items-center gap-2 border-line border-b px-3 py-2.5 text-left text-[13px] last:border-b-0 hover:bg-panel2 ${highlightRowClass(r.symbol, highlightSymbol)}`}
+              className={`${stockListVolGridClass} ${highlightRowClass(r.symbol, highlightSymbol)}`}
             >
-              <span className="font-mono text-[11px] text-ink-2">{i + 1}</span>
-              <span className="min-w-0 truncate">
-                <span
-                  className={`font-mono font-bold text-[12px] ${r.market === "jp" ? "text-copper" : "text-us"}`}
-                >
-                  {r.symbol}
-                </span>{" "}
-                <span className="text-[12px]">{r.name}</span>
-              </span>
-              <span className={`font-mono text-[12px] ${pctColor(r.chgPct)}`}>
+              <span className="font-mono font-semibold text-[12px] text-copper">{i + 1}</span>
+              <StockSymbol symbol={r.symbol} market={r.market} />
+              <span className="min-w-0 truncate text-[13.5px] font-medium">{r.name}</span>
+              <span className={`font-mono font-bold text-[13.5px] ${pctColor(r.chgPct)}`}>
                 {fmtPct(r.chgPct)}
               </span>
-              <span className={`font-mono text-[12px] ${hot ? "font-bold text-up" : ""}`}>
+              <span
+                className={`min-w-[3.5rem] text-right font-mono text-[13.5px] ${hot ? "font-bold text-up" : ""}`}
+              >
                 {r.volRatio !== null ? `${r.volRatio.toFixed(1)}×` : "—"}
               </span>
             </button>
           );
         })}
-      </div>
+      </StockListShell>
     </>
   );
 }

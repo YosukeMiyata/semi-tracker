@@ -67,18 +67,18 @@ export function LinkView({
       {[...triggered, ...rest].map((g) => (
         <div
           key={g.theme}
-          className={`mb-2 overflow-hidden rounded-card border bg-card ${g.triggered ? "border-up/40" : "border-line"}`}
+          className={`mb-3 border-line border-t ${g.triggered ? "border-up/40" : ""}`}
         >
-          <div className="flex items-start justify-between gap-2 border-line border-b px-3 py-2.5">
+          <div className="flex items-start justify-between gap-2 border-line border-b py-3">
             <div>
-              <div className="font-bold text-[13px]">{g.sub}</div>
-              <div className="text-[11px] text-ink-2">{g.macro}</div>
+              <div className="font-bold text-[14px]">{g.sub}</div>
+              <div className="text-[12px] text-ink-2">{g.macro}</div>
             </div>
             {trigBadge(g.trigLevel, g.usAvg)}
           </div>
 
           {g.us.length > 0 ? (
-            <div className="flex flex-wrap gap-1.5 border-line border-b px-3 py-2 text-[10.5px] text-ink-2">
+            <div className="flex flex-wrap gap-1.5 border-line border-b py-2 text-[11px] text-ink-2">
               <span className="mr-1">前日の米国:</span>
               {g.us.map((u) => (
                 <span key={u.symbol} className="rounded bg-panel2 px-1.5 py-0.5 font-mono">
@@ -89,7 +89,7 @@ export function LinkView({
             </div>
           ) : null}
 
-          <div className="grid grid-cols-[1fr_auto_auto_auto] gap-2 px-3 py-1.5 text-[10px] text-ink-2">
+          <div className="grid grid-cols-[1fr_auto_auto_auto] gap-2 border-line border-b py-2 text-[11px] text-ink-2">
             <span>翌日に連動する日本株</span>
             <span className="text-right">連動率</span>
             <span className="text-right">翌日平均</span>
@@ -102,19 +102,22 @@ export function LinkView({
               type="button"
               data-symbol={r.code}
               onClick={() => onPickStock(r.code)}
-              className={`grid w-full grid-cols-[1fr_auto_auto_auto] items-center gap-2 border-line border-t px-3 py-2 text-left text-[12.5px] hover:bg-panel2 ${highlightRowClass(r.code, highlightSymbol)}`}
+              className={`grid w-full grid-cols-[1fr_auto_auto_auto] items-center gap-2 border-line border-b py-3 text-left text-[13.5px] last:border-b-0 hover:bg-panel2/35 ${highlightRowClass(r.code, highlightSymbol)}`}
             >
               <span>
-                <span className="font-mono font-bold text-copper">{r.code}</span> {r.name}
+                <span className="font-mono font-bold text-[13px] text-copper">{r.code}</span>{" "}
+                <span className="font-medium">{r.name}</span>
               </span>
               <span
-                className={`font-mono text-right ${r.rate >= 60 ? "text-up" : r.rate <= 40 ? "text-down" : ""}`}
+                className={`font-mono font-bold text-[13.5px] ${r.rate >= 60 ? "text-up" : r.rate <= 40 ? "text-down" : ""}`}
               >
                 {r.rate}%
               </span>
-              <span className={`font-mono text-right ${pctColor(r.avg)}`}>{fmtPct(r.avg, 2)}</span>
+              <span className={`font-mono font-bold text-[13.5px] ${pctColor(r.avg)}`}>
+                {fmtPct(r.avg, 2)}
+              </span>
               <span
-                className={`font-mono text-right text-[11px] ${r.n < 5 ? "text-down" : "text-ink-2"}`}
+                className={`font-mono text-right text-[12px] ${r.n < 5 ? "text-down" : "text-ink-2"}`}
               >
                 n{r.n}
               </span>

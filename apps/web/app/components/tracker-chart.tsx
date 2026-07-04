@@ -31,7 +31,14 @@ export function TrackerChart({ themes }: { themes: TrackerRankedTheme[] }) {
   const drawable = useMemo(() => themes.filter((t) => t.series.length >= 2), [themes]);
 
   const defaultSelected = useMemo(
-    () => new Set(drawable.slice(0, 3).map((t) => t.key)),
+    () =>
+      new Set(
+        drawable
+          .slice()
+          .sort((a, b) => (b.avg ?? -1e9) - (a.avg ?? -1e9))
+          .slice(0, 3)
+          .map((t) => t.key),
+      ),
     [drawable],
   );
   const [selected, setSelected] = useState(defaultSelected);

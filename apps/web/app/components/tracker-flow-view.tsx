@@ -1,9 +1,11 @@
 "use client";
 
 import { useState } from "react";
+import { FlowStageVisual } from "~/components/flow-visuals";
 import { fmtPct, pctColor } from "~/lib/data";
 import { stockChgPct } from "~/lib/tracker";
 import flowJson from "../../../../data/flow.json";
+import "../flow-v1.css";
 
 interface FlowItem {
   code: string;
@@ -36,86 +38,23 @@ interface FlowStage {
 
 const stages = (flowJson as { stages: FlowStage[] }).stages;
 
-function StageVisual({ kind }: { kind: string | null }) {
-  if (kind === "loop") {
-    return (
-      <div className="mx-3 mb-3 rounded-[10px] border border-line border-dashed bg-panel2 px-3 py-2.5 text-center text-[12px] text-ink-2 leading-[1.6]">
-        🔄 洗浄→成膜→露光→エッチング→CMP を何層も繰り返して回路ビルを建てる
-      </div>
-    );
-  }
-  if (kind === "package3") {
-    return (
-      <div className="mx-3 mb-3 space-y-1 text-[11.5px]">
-        <div className="rounded-md border border-us/40 bg-us/15 px-2 py-1.5 text-center font-bold">
-          GPU / HBM / CPO — チップ&光の出口
-        </div>
-        <div className="rounded-md border border-copper/30 bg-copper-soft px-2 py-1.5 text-center font-bold">
-          ◧ インターポーザー(Si / ガラス) — 歪まない中間層
-        </div>
-        <div className="rounded-md border border-down/30 bg-down-soft px-2 py-1.5 text-center font-bold">
-          ▦ パッケージ基板(ABF/樹脂) — 骨格・密着
-        </div>
-        <div className="rounded-md border border-[#3E9B62]/30 bg-[#3E9B62]/15 px-2 py-1.5 text-center font-bold">
-          ▩ マザーボード(PCB) — 大地
-        </div>
-      </div>
-    );
-  }
-  if (kind === "test") {
-    return (
-      <div className="mx-3 mb-3 rounded-[10px] border border-line bg-panel2 px-3 py-2.5 text-center text-[12px]">
-        ✅ 完成チップを全数検査・テストして出荷
-      </div>
-    );
-  }
-  if (kind === "cpo") {
-    return (
-      <div className="mx-3 mb-3 space-y-1 text-[11.5px]">
-        <div className="rounded-md border border-us/40 bg-us/15 px-2 py-1.5 text-center">
-          GPU / HBM / 💠光エンジン
-        </div>
-        <div className="rounded-md border border-copper/30 bg-copper-soft px-2 py-1.5 text-center">
-          シリコンフォトニクス層(光配線)
-        </div>
-        <div className="rounded-md border border-down/30 bg-down-soft px-2 py-1.5 text-center">
-          🧵 光ファイバーで外部へ → 海底ケーブルで大陸間へ
-        </div>
-      </div>
-    );
-  }
-  if (kind === "iceberg") {
-    return (
-      <div className="mx-3 mb-3 rounded-[10px] border-2 border-ink bg-paper px-3 py-3 text-[11.5px] text-ink leading-[1.65]">
-        <div className="mb-2 border border-line px-2 py-1.5 text-[12px]">
-          <span className="text-up">♥</span>{" "}
-          海面の上=GPUサーバー。海面下=ストレージ・ネットワーク・電源・冷却の「見えない土台」
-        </div>
-        <div className="space-y-1 text-center font-bold">
-          <div className="bg-cyan/20 py-1 text-ink">⛰️ GPUサーバー(海面)</div>
-          <div className="bg-down/25 py-1 text-ink">📚 ストレージ層</div>
-          <div className="bg-down/40 py-1 text-ink">🕸️ ネットワーク層</div>
-          <div className="bg-down/60 py-1 text-white">⚡ 電源・配電層</div>
-          <div className="bg-[#1B4F8A] py-1 text-white">❄️ 冷却層(氷山の底)</div>
-        </div>
-      </div>
-    );
-  }
-  return null;
-}
-
-function StockChip({ item, onPick }: { item: FlowItem; onPick: (code: string) => void }) {
+function FlowChip({ item, onPick }: { item: FlowItem; onPick: (code: string) => void }) {
   const chg = stockChgPct(item.code);
+  const mkCol = item.market === "jp" ? "var(--color-copper)" : "var(--color-us)";
+
   return (
     <button
       type="button"
-      onClick={() => onPick(item.code)}
-      className="inline-flex items-center gap-1.5 rounded-lg border border-line bg-card px-2 py-1 text-[11px] hover:bg-panel2"
+      className="fchip"
+      onClick={(e) => {
+        e.stopPropagation();
+        onPick(item.code);
+      }}
     >
-      <span className={`font-mono font-bold ${item.market === "jp" ? "text-copper" : "text-us"}`}>
+      <span className="font-mono font-bold" style={{ color: mkCol }}>
         {item.code}
       </span>
-      <span className="max-w-[88px] truncate">{item.name}</span>
+      <span className="fchip-nm">{item.name}</span>
       <span className={`font-mono text-[10.5px] ${pctColor(chg)}`}>{fmtPct(chg, 0)}</span>
     </button>
   );
@@ -135,30 +74,27 @@ function FlowStepBlock({
   onPickStock: (code: string) => void;
 }) {
   const total = step.roles.reduce((a, r) => a + r.items.length, 0);
+
   return (
-    <div className={`rounded-[10px] border border-line bg-panel2 ${open ? "border-ink-2/40" : ""}`}>
-      <button
-        type="button"
-        onClick={() => onToggle(stepKey)}
-        className="flex w-full items-center gap-2 px-3 py-2.5 text-left"
-      >
-        <span className="text-[18px]">{step.icon}</span>
-        <span className="min-w-0 flex-1">
-          <span className="block font-bold text-[13px]">{step.name}</span>
-          <span className="block text-[11px] text-ink-2">{step.desc}</span>
+    <div className={`fstep ${open ? "open" : ""}`}>
+      <button type="button" className="fstep-h" onClick={() => onToggle(stepKey)}>
+        <span className="fstep-icon">{step.icon}</span>
+        <span className="fstep-main">
+          <span className="fstep-name">{step.name}</span>
+          <span className="fstep-desc">{step.desc}</span>
         </span>
-        <span className="shrink-0 text-[11px] text-ink-2">
+        <span className="fstep-cnt">
           {total}銘柄 {open ? "▲" : "▼"}
         </span>
       </button>
       {open ? (
-        <div className="space-y-2 border-line border-t px-3 pt-2 pb-3">
+        <div className="fstep-body">
           {step.roles.map((role) => (
-            <div key={role.label}>
-              <div className="mb-1 font-mono text-[10.5px] text-copper">{role.label}</div>
-              <div className="flex flex-wrap gap-1">
+            <div key={role.label} className="frole">
+              <span className="frole-label">{role.label}</span>
+              <div className="fchips">
                 {role.items.map((item) => (
-                  <StockChip key={item.code} item={item} onPick={onPickStock} />
+                  <FlowChip key={item.code} item={item} onPick={onPickStock} />
                 ))}
               </div>
             </div>
@@ -170,60 +106,55 @@ function FlowStepBlock({
 }
 
 export function FlowView({ onPickStock }: { onPickStock: (symbol: string) => void }) {
-  const [openSteps, setOpenSteps] = useState<Record<string, boolean>>({});
+  const [flowOpen, setFlowOpen] = useState<Record<string, boolean>>({});
 
-  const toggle = (key: string) => {
-    setOpenSteps((prev) => ({ ...prev, [key]: !prev[key] }));
+  const toggleFlowStep = (key: string) => {
+    setFlowOpen((prev) => ({ ...prev, [key]: !prev[key] }));
   };
 
   return (
-    <>
-      <p className="text-[12px] text-ink-2 leading-[1.55]">
+    <div className="flow-v1">
+      <div className="flow-intro">
         半導体づくりを<b>5ステージ</b>
         で図解。①前工程→②中工程・先端パッケージング→③後工程→④光電融合→⑤データセンター/インフラ(氷山)。
-        各工程をタップで銘柄が展開します。
-      </p>
+        <br />
+        <span>
+          各工程をタップで銘柄が展開。銘柄タップで詳細へ。⑤は氷山の見えない土台=電源・冷却・超純水・ネットワークまで一望。
+        </span>
+      </div>
 
-      <div className="space-y-2">
+      <div>
         {stages.map((stage, si) => (
           <div key={stage.key}>
-            <div
-              className="overflow-hidden rounded-card border-2 bg-card"
-              style={{ borderColor: stage.color }}
-            >
-              <div
-                className="flex items-center gap-2 px-3 py-2.5"
-                style={{ backgroundColor: `${stage.color}22` }}
-              >
-                <span className="text-[22px]">{stage.icon}</span>
-                <span className="font-bold text-[14px]" style={{ color: stage.color }}>
+            <div className="fstage" style={{ borderColor: stage.color }}>
+              <div className="fstage-h" style={{ background: `${stage.color}22` }}>
+                <span className="fstage-icon">{stage.icon}</span>
+                <span className="fstage-name" style={{ color: stage.color }}>
                   {stage.name}
                 </span>
               </div>
-              <p className="px-3 py-2 text-[12px] text-ink-2 leading-[1.6]">{stage.desc}</p>
-              <StageVisual kind={stage.visual} />
-              <div className="space-y-1.5 px-3 pb-3">
-                {stage.steps.map((step, i) => {
-                  const key = `${stage.key}_${i}`;
+              <div className="fstage-desc">{stage.desc}</div>
+              <FlowStageVisual kind={stage.visual} />
+              <div className="fsteps">
+                {stage.steps.map((step, stepIdx) => {
+                  const key = `${stage.key}_${stepIdx}`;
                   return (
                     <FlowStepBlock
                       key={key}
                       step={step}
                       stepKey={key}
-                      open={!!openSteps[key]}
-                      onToggle={toggle}
+                      open={!!flowOpen[key]}
+                      onToggle={toggleFlowStep}
                       onPickStock={onPickStock}
                     />
                   );
                 })}
               </div>
             </div>
-            {si < stages.length - 1 ? (
-              <div className="py-1 text-center text-[12px] text-ink-2">▼</div>
-            ) : null}
+            {si < stages.length - 1 ? <div className="farrow">▼</div> : null}
           </div>
         ))}
       </div>
-    </>
+    </div>
   );
 }

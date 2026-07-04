@@ -1,5 +1,5 @@
 import { type ReactNode, useEffect, useMemo, useRef, useState } from "react";
-import { fmtPct, pctColor } from "~/lib/data";
+import { StockSearchListRow } from "~/components/stock-list-row";
 import { searchByTag, searchStocks } from "~/lib/tracker";
 
 export function StockSearch({
@@ -81,25 +81,15 @@ export function StockSearch({
         {showTag && tagHits.length > 0 ? (
           <SearchDropdown>
             {tagHits.map((hit) => (
-              <button
+              <StockSearchListRow
                 key={hit.symbol}
-                type="button"
+                symbol={hit.symbol}
+                name={hit.name}
+                market={hit.market}
+                pct={hit.chgPct}
+                badge={hit.matchedTag}
                 onClick={() => pick(hit.symbol)}
-                className="flex w-full items-center gap-2 border-line border-b px-3 py-2.5 text-left text-[13px] last:border-b-0 hover:bg-panel2"
-              >
-                <span
-                  className={`min-w-[52px] font-mono font-semibold text-[12px] ${hit.market === "jp" ? "text-copper" : "text-us"}`}
-                >
-                  {hit.symbol}
-                </span>
-                <span className="min-w-0 flex-1 truncate">{hit.name}</span>
-                <span className="rounded bg-copper-soft px-1.5 py-0.5 text-[10px] text-copper">
-                  {hit.matchedTag}
-                </span>
-                <span className={`font-mono text-[12px] ${pctColor(hit.chgPct)}`}>
-                  {fmtPct(hit.chgPct)}
-                </span>
-              </button>
+              />
             ))}
           </SearchDropdown>
         ) : null}
@@ -115,7 +105,7 @@ export function StockSearch({
 
 function SearchDropdown({ children }: { children: ReactNode }) {
   return (
-    <div className="absolute top-[calc(100%+4px)] right-0 left-0 z-20 max-h-[280px] overflow-y-auto rounded-card border border-line bg-card shadow-[0_8px_24px_rgba(0,0,0,.5)]">
+    <div className="absolute top-[calc(100%+4px)] right-0 left-0 z-20 max-h-[280px] overflow-y-auto rounded-card border border-line bg-paper shadow-[0_8px_24px_rgba(0,0,0,.5)]">
       {children}
     </div>
   );
@@ -129,18 +119,12 @@ function SearchRow({
   onPick: (symbol: string) => void;
 }) {
   return (
-    <button
-      type="button"
+    <StockSearchListRow
+      symbol={hit.symbol}
+      name={hit.name}
+      market={hit.market}
+      pct={hit.chgPct}
       onClick={() => onPick(hit.symbol)}
-      className="flex w-full items-center gap-2 border-line border-b px-3 py-2.5 text-left text-[13px] last:border-b-0 hover:bg-panel2"
-    >
-      <span
-        className={`min-w-[52px] font-mono font-semibold text-[12px] ${hit.market === "jp" ? "text-copper" : "text-us"}`}
-      >
-        {hit.symbol}
-      </span>
-      <span className="min-w-0 flex-1 truncate">{hit.name}</span>
-      <span className={`font-mono text-[12px] ${pctColor(hit.chgPct)}`}>{fmtPct(hit.chgPct)}</span>
-    </button>
+    />
   );
 }
