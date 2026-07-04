@@ -7,6 +7,8 @@
   data/themes_perf.json  マクロテーマ別: 年初来騰落率・スパークライン・出来高シグナル
   data/linkage.json      米日連動の全集計(v1 ロジック踏襲)
   data/linkage_top.json  ホーム表示用の上位抜粋(直近トリガー分)
+  data/process.json      工程タブ(装置|材料 2カラム、process_map.py 由来)
+  data/flow.json         フロー図(5ステージ、flow_map.py 由来)
   data/update_report.json 取得結果レポート(ソース内訳・失敗銘柄)
 
 失敗時の挙動(仕様書 4.1):
@@ -37,6 +39,7 @@ from fetchers import (  # noqa: E402
     fetch_with_fallback,
     validate_series,
 )
+from build_maps import build as build_maps  # noqa: E402
 from linkage import METHOD_NOTE, build_linkage  # noqa: E402
 from themes import MACRO, all_symbols  # noqa: E402
 
@@ -404,6 +407,7 @@ def main() -> None:
     linkage = build_linkage(MACRO, quotes)
     linkage_out = {"last_updated": last_updated, "method": METHOD_NOTE, "themes": linkage}
     linkage_top = build_linkage_top(linkage, last_updated)
+    process_payload, flow_payload = build_maps()
     report = {
         "generated_at": started.strftime("%Y-%m-%dT%H:%M:%SZ"),
         "last_updated": last_updated,
@@ -424,6 +428,8 @@ def main() -> None:
         "timeline_stats.json": timeline_stats,
         "linkage.json": linkage_out,
         "linkage_top.json": linkage_top,
+        "process.json": process_payload,
+        "flow.json": flow_payload,
         "update_report.json": report,
     }
     for fname, payload in outputs.items():

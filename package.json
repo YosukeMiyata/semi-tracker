@@ -8,6 +8,7 @@
     "biome:check": "biome check .",
     "biome:fix": "biome check --write .",
     "data:master": "python3 pipeline/build_master.py",
+    "data:maps": "python3 pipeline/build_maps.py",
     "data:headlines": "python3 pipeline/fetch_headlines.py"
   },
   "devDependencies": {

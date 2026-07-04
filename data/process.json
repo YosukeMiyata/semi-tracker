@@ -1,0 +1,818 @@
+{
+ "source": "pipeline/process_map.py (v1: yuyu5555-bit/semi-tracker)",
+ "steps": [
+  {
+   "stage": "maker",
+   "name": "半導体メーカー",
+   "desc": "チップを生み出す主体",
+   "icon": "🏭",
+   "groups": [
+    {
+     "label": "垂直統合(IDM)",
+     "stocks": [
+      {
+       "code": "INTC",
+       "name": "Intel",
+       "market": "us"
+      },
+      {
+       "code": "MU",
+       "name": "Micron",
+       "market": "us"
+      },
+      {
+       "code": "6723",
+       "name": "ルネサス",
+       "market": "jp"
+      }
+     ]
+    },
+    {
+     "label": "ファブレス(設計のみ)",
+     "stocks": [
+      {
+       "code": "NVDA",
+       "name": "NVIDIA",
+       "market": "us"
+      },
+      {
+       "code": "AMD",
+       "name": "AMD",
+       "market": "us"
+      },
+      {
+       "code": "AVGO",
+       "name": "Broadcom",
+       "market": "us"
+      },
+      {
+       "code": "MRVL",
+       "name": "Marvell",
+       "market": "us"
+      },
+      {
+       "code": "ARM",
+       "name": "Arm",
+       "market": "us"
+      }
+     ]
+    },
+    {
+     "label": "ファウンドリ(受託製造)",
+     "stocks": [
+      {
+       "code": "TSM",
+       "name": "TSMC(ADR)",
+       "market": "us"
+      },
+      {
+       "code": "GFS",
+       "name": "GlobalFoundries",
+       "market": "us"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "stage": "design",
+   "name": "① 設計・開発(EDA)",
+   "desc": "回路を設計するソフト・IP",
+   "icon": "✏️",
+   "equip": [
+    {
+     "code": "SNPS",
+     "name": "Synopsys",
+     "market": "us"
+    },
+    {
+     "code": "CDNS",
+     "name": "Cadence",
+     "market": "us"
+    },
+    {
+     "code": "ARM",
+     "name": "Arm",
+     "market": "us"
+    }
+   ],
+   "material": [
+    {
+     "code": "6526",
+     "name": "ソシオネクスト",
+     "market": "jp"
+    }
+   ]
+  },
+  {
+   "stage": "front",
+   "name": "② シリコンウェハー製造",
+   "desc": "チップの土台となる円盤",
+   "icon": "💿",
+   "equip": [
+    {
+     "code": "3445",
+     "name": "RS Technologies",
+     "market": "jp"
+    }
+   ],
+   "material": [
+    {
+     "code": "4063",
+     "name": "信越化学",
+     "market": "jp"
+    },
+    {
+     "code": "3436",
+     "name": "SUMCO",
+     "market": "jp"
+    },
+    {
+     "code": "6890",
+     "name": "フェローテックHD",
+     "market": "jp"
+    }
+   ]
+  },
+  {
+   "stage": "front",
+   "name": "③ フォトマスク製造",
+   "desc": "回路の原版(ハンコ)",
+   "icon": "🎭",
+   "equip": [
+    {
+     "code": "6920",
+     "name": "レーザーテック",
+     "market": "jp"
+    }
+   ],
+   "material": [
+    {
+     "code": "429A",
+     "name": "テクセンドフォトマスク",
+     "market": "jp"
+    },
+    {
+     "code": "7741",
+     "name": "HOYA",
+     "market": "jp"
+    },
+    {
+     "code": "7911",
+     "name": "TOPPAN",
+     "market": "jp"
+    },
+    {
+     "code": "7912",
+     "name": "大日本印刷",
+     "market": "jp"
+    }
+   ]
+  },
+  {
+   "stage": "front",
+   "name": "④ 成膜(Deposition)",
+   "desc": "ウェハに薄い膜を積む",
+   "icon": "🧱",
+   "equip": [
+    {
+     "code": "8035",
+     "name": "東京エレクトロン",
+     "market": "jp"
+    },
+    {
+     "code": "AMAT",
+     "name": "Applied Materials",
+     "market": "us"
+    },
+    {
+     "code": "LRCX",
+     "name": "Lam Research",
+     "market": "us"
+    },
+    {
+     "code": "6525",
+     "name": "KOKUSAI ELECTRIC",
+     "market": "jp"
+    },
+    {
+     "code": "6728",
+     "name": "アルバック",
+     "market": "jp"
+    },
+    {
+     "code": "6387",
+     "name": "サムコ",
+     "market": "jp"
+    },
+    {
+     "code": "6590",
+     "name": "芝浦メカトロニクス",
+     "market": "jp"
+    }
+   ],
+   "material": [
+    {
+     "code": "4369",
+     "name": "トリケミカル研究所",
+     "market": "jp"
+    },
+    {
+     "code": "4401",
+     "name": "ADEKA",
+     "market": "jp"
+    }
+   ]
+  },
+  {
+   "stage": "front",
+   "name": "⑤ フォトレジスト塗布",
+   "desc": "感光材を塗る(コータ)",
+   "icon": "🖌️",
+   "equip": [
+    {
+     "code": "8035",
+     "name": "東京エレクトロン",
+     "market": "jp"
+    },
+    {
+     "code": "7735",
+     "name": "SCREEN HD",
+     "market": "jp"
+    }
+   ],
+   "material": [
+    {
+     "code": "4186",
+     "name": "東京応化工業",
+     "market": "jp"
+    },
+    {
+     "code": "4005",
+     "name": "住友化学",
+     "market": "jp"
+    },
+    {
+     "code": "4901",
+     "name": "富士フイルム",
+     "market": "jp"
+    },
+    {
+     "code": "4970",
+     "name": "東洋合成工業",
+     "market": "jp"
+    }
+   ]
+  },
+  {
+   "stage": "front",
+   "name": "⑥ 露光(リソグラフィ)",
+   "desc": "回路設計図を焼き付ける",
+   "icon": "💡",
+   "equip": [
+    {
+     "code": "ASML",
+     "name": "ASML",
+     "market": "us"
+    },
+    {
+     "code": "7731",
+     "name": "ニコン",
+     "market": "jp"
+    },
+    {
+     "code": "7751",
+     "name": "キヤノン",
+     "market": "jp"
+    },
+    {
+     "code": "6925",
+     "name": "ウシオ電機",
+     "market": "jp"
+    }
+   ],
+   "material": [
+    {
+     "code": "4021",
+     "name": "日産化学",
+     "market": "jp"
+    },
+    {
+     "code": "4187",
+     "name": "大阪有機化学",
+     "market": "jp"
+    }
+   ]
+  },
+  {
+   "stage": "front",
+   "name": "⑦ エッチング(膜を除去)",
+   "desc": "不要な膜を削る",
+   "icon": "🔬",
+   "equip": [
+    {
+     "code": "LRCX",
+     "name": "Lam Research",
+     "market": "us"
+    },
+    {
+     "code": "8035",
+     "name": "東京エレクトロン",
+     "market": "jp"
+    },
+    {
+     "code": "AMAT",
+     "name": "Applied Materials",
+     "market": "us"
+    },
+    {
+     "code": "6387",
+     "name": "サムコ",
+     "market": "jp"
+    }
+   ],
+   "material": [
+    {
+     "code": "4047",
+     "name": "関東電化工業",
+     "market": "jp"
+    },
+    {
+     "code": "4044",
+     "name": "セントラル硝子",
+     "market": "jp"
+    },
+    {
+     "code": "4109",
+     "name": "ステラケミファ",
+     "market": "jp"
+    },
+    {
+     "code": "4022",
+     "name": "ラサ工業",
+     "market": "jp"
+    }
+   ]
+  },
+  {
+   "stage": "front",
+   "name": "⑧ 洗浄(Clean)",
+   "desc": "汚れ・微粒子を除去",
+   "icon": "💧",
+   "equip": [
+    {
+     "code": "7735",
+     "name": "SCREEN HD",
+     "market": "jp"
+    },
+    {
+     "code": "8035",
+     "name": "東京エレクトロン",
+     "market": "jp"
+    },
+    {
+     "code": "ACMR",
+     "name": "ACM Research",
+     "market": "us"
+    }
+   ],
+   "material": [
+    {
+     "code": "4091",
+     "name": "日本酸素HD",
+     "market": "jp"
+    },
+    {
+     "code": "4368",
+     "name": "扶桑化学工業",
+     "market": "jp"
+    }
+   ]
+  },
+  {
+   "stage": "front",
+   "name": "⑨ 平坦化(CMP)",
+   "desc": "表面を磨いて平らに",
+   "icon": "⚙️",
+   "equip": [
+    {
+     "code": "6361",
+     "name": "荏原",
+     "market": "jp"
+    },
+    {
+     "code": "AMAT",
+     "name": "Applied Materials",
+     "market": "us"
+    }
+   ],
+   "material": [
+    {
+     "code": "4004",
+     "name": "レゾナック",
+     "market": "jp"
+    },
+    {
+     "code": "4368",
+     "name": "扶桑化学工業",
+     "market": "jp"
+    },
+    {
+     "code": "4966",
+     "name": "上村工業",
+     "market": "jp"
+    }
+   ]
+  },
+  {
+   "stage": "front",
+   "name": "⑩ ウェハー検査・計測",
+   "desc": "欠陥・寸法を検査",
+   "icon": "🔍",
+   "equip": [
+    {
+     "code": "6920",
+     "name": "レーザーテック",
+     "market": "jp"
+    },
+    {
+     "code": "KLAC",
+     "name": "KLA",
+     "market": "us"
+    },
+    {
+     "code": "ONTO",
+     "name": "Onto Innovation",
+     "market": "us"
+    },
+    {
+     "code": "NVMI",
+     "name": "Nova",
+     "market": "us"
+    },
+    {
+     "code": "BRKR",
+     "name": "Bruker",
+     "market": "us"
+    },
+    {
+     "code": "KEYS",
+     "name": "Keysight",
+     "market": "us"
+    },
+    {
+     "code": "7729",
+     "name": "東京精密",
+     "market": "jp"
+    },
+    {
+     "code": "7717",
+     "name": "Vテクノロジー",
+     "market": "jp"
+    }
+   ],
+   "material": []
+  },
+  {
+   "stage": "back",
+   "name": "⑪ ダイシング",
+   "desc": "ウェハをチップに切り分け",
+   "icon": "🔪",
+   "equip": [
+    {
+     "code": "6146",
+     "name": "ディスコ",
+     "market": "jp"
+    },
+    {
+     "code": "7729",
+     "name": "東京精密",
+     "market": "jp"
+    },
+    {
+     "code": "6338",
+     "name": "タカトリ",
+     "market": "jp"
+    }
+   ],
+   "material": [
+    {
+     "code": "6988",
+     "name": "日東電工",
+     "market": "jp"
+    }
+   ]
+  },
+  {
+   "stage": "back",
+   "name": "⑫ パッケージング",
+   "desc": "GPUと一緒にABF基板に載せる",
+   "icon": "📦",
+   "equip": [
+    {
+     "code": "6315",
+     "name": "TOWA",
+     "market": "jp"
+    },
+    {
+     "code": "KLIC",
+     "name": "Kulicke & Soffa",
+     "market": "us"
+    },
+    {
+     "code": "NDSN",
+     "name": "Nordson(アンダーフィル塗布)",
+     "market": "us"
+    },
+    {
+     "code": "6227",
+     "name": "AIメカテック",
+     "market": "jp"
+    }
+   ],
+   "material": [
+    {
+     "code": "4062",
+     "name": "イビデン",
+     "market": "jp"
+    },
+    {
+     "code": "2802",
+     "name": "味の素",
+     "market": "jp"
+    },
+    {
+     "code": "4203",
+     "name": "住友ベークライト",
+     "market": "jp"
+    },
+    {
+     "code": "4061",
+     "name": "デンカ",
+     "market": "jp"
+    },
+    {
+     "code": "4626",
+     "name": "太陽HD",
+     "market": "jp"
+    },
+    {
+     "code": "7966",
+     "name": "リンテック",
+     "market": "jp"
+    },
+    {
+     "code": "6768",
+     "name": "タムラ製作所",
+     "market": "jp"
+    }
+   ]
+  },
+  {
+   "stage": "back",
+   "name": "⑬ テスト",
+   "desc": "良品/不良を判定",
+   "icon": "✅",
+   "equip": [
+    {
+     "code": "6857",
+     "name": "アドバンテスト",
+     "market": "jp"
+    },
+    {
+     "code": "TER",
+     "name": "Teradyne",
+     "market": "us"
+    },
+    {
+     "code": "COHU",
+     "name": "Cohu",
+     "market": "us"
+    },
+    {
+     "code": "FORM",
+     "name": "FormFactor",
+     "market": "us"
+    },
+    {
+     "code": "6871",
+     "name": "日本マイクロニクス",
+     "market": "jp"
+    },
+    {
+     "code": "6855",
+     "name": "日本電子材料",
+     "market": "jp"
+    },
+    {
+     "code": "6941",
+     "name": "山一電機",
+     "market": "jp"
+    },
+    {
+     "code": "6627",
+     "name": "テラプローブ",
+     "market": "jp"
+    },
+    {
+     "code": "7729",
+     "name": "東京精密",
+     "market": "jp"
+    },
+    {
+     "code": "6337",
+     "name": "テセック",
+     "market": "jp"
+    }
+   ],
+   "material": []
+  },
+  {
+   "stage": "facility",
+   "name": "◆ 超純水・薬液・ガス供給",
+   "desc": "全工程を支えるインフラ",
+   "icon": "🚰",
+   "equip": [
+    {
+     "code": "6370",
+     "name": "栗田工業",
+     "market": "jp"
+    },
+    {
+     "code": "6368",
+     "name": "オルガノ",
+     "market": "jp"
+    },
+    {
+     "code": "6254",
+     "name": "野村マイクロ",
+     "market": "jp"
+    }
+   ],
+   "material": [
+    {
+     "code": "4091",
+     "name": "日本酸素HD",
+     "market": "jp"
+    },
+    {
+     "code": "6055",
+     "name": "ジャパンマテリアル",
+     "market": "jp"
+    },
+    {
+     "code": "ENTG",
+     "name": "Entegris",
+     "market": "us"
+    },
+    {
+     "code": "LIN",
+     "name": "Linde",
+     "market": "us"
+    }
+   ]
+  },
+  {
+   "stage": "facility",
+   "name": "◆ クリーンルーム・空調",
+   "desc": "製造環境を作る",
+   "icon": "🌀",
+   "equip": [
+    {
+     "code": "1979",
+     "name": "大気社",
+     "market": "jp"
+    },
+    {
+     "code": "1969",
+     "name": "高砂熱学工業",
+     "market": "jp"
+    },
+    {
+     "code": "1980",
+     "name": "ダイダン",
+     "market": "jp"
+    },
+    {
+     "code": "1961",
+     "name": "三機工業",
+     "market": "jp"
+    }
+   ],
+   "material": []
+  },
+  {
+   "stage": "facility",
+   "name": "◆ 装置部品・サブシステム",
+   "desc": "装置を構成する精密部品",
+   "icon": "🔩",
+   "equip": [
+    {
+     "code": "6273",
+     "name": "SMC",
+     "market": "jp"
+    },
+    {
+     "code": "6407",
+     "name": "CKD",
+     "market": "jp"
+    },
+    {
+     "code": "6490",
+     "name": "日本ピラー工業",
+     "market": "jp"
+    },
+    {
+     "code": "6323",
+     "name": "ローツェ",
+     "market": "jp"
+    },
+    {
+     "code": "6324",
+     "name": "ハーモニック・ドライブ",
+     "market": "jp"
+    },
+    {
+     "code": "6264",
+     "name": "マルマエ",
+     "market": "jp"
+    },
+    {
+     "code": "6486",
+     "name": "イーグル工業",
+     "market": "jp"
+    },
+    {
+     "code": "6877",
+     "name": "OBARA GROUP",
+     "market": "jp"
+    },
+    {
+     "code": "MKSI",
+     "name": "MKS Instruments",
+     "market": "us"
+    },
+    {
+     "code": "ICHR",
+     "name": "Ichor",
+     "market": "us"
+    },
+    {
+     "code": "UCTT",
+     "name": "Ultra Clean",
+     "market": "us"
+    },
+    {
+     "code": "AEIS",
+     "name": "Advanced Energy",
+     "market": "us"
+    }
+   ],
+   "material": []
+  },
+  {
+   "stage": "facility",
+   "name": "◆ 半導体商社",
+   "desc": "流通を担う",
+   "icon": "🚚",
+   "equip": [
+    {
+     "code": "3132",
+     "name": "マクニカ",
+     "market": "jp"
+    },
+    {
+     "code": "2760",
+     "name": "東京エレクトロンデバイス",
+     "market": "jp"
+    },
+    {
+     "code": "8154",
+     "name": "加賀電子",
+     "market": "jp"
+    },
+    {
+     "code": "3156",
+     "name": "レスターHD",
+     "market": "jp"
+    },
+    {
+     "code": "2737",
+     "name": "トーメンデバイス",
+     "market": "jp"
+    },
+    {
+     "code": "ARW",
+     "name": "Arrow Electronics",
+     "market": "us"
+    },
+    {
+     "code": "AVT",
+     "name": "Avnet",
+     "market": "us"
+    }
+   ],
+   "material": []
+  }
+ ]
+}

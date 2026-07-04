@@ -26,6 +26,7 @@ jobs:
       - name: 株価取得 → 集計 → data/*.json 生成
         # 失敗率が閾値を超えると exit 1 で終了し、data/ は書き換えられない
         # → 前回データが維持され、このジョブの失敗通知(メール)で気づける(仕様書 4.1)
+        # process.json / flow.json も themes.py マスタから同時生成
         run: python3 pipeline/update_prices.py
 
       - name: RSS ヘッドライン取得 → data/headlines.json
@@ -39,7 +40,8 @@ jobs:
           git add data/
           # update_report.json は毎回タイムスタンプが変わるため、実データの変更だけを見る
           if git diff --cached --quiet -- data/prices.json data/themes_perf.json \
-              data/linkage.json data/linkage_top.json data/themes.json data/headlines.json; then
+              data/linkage.json data/linkage_top.json data/themes.json data/headlines.json \
+              data/process.json data/flow.json; then
             echo "実データに変更なし(休場日など)— commit しない"
             exit 0
           fi

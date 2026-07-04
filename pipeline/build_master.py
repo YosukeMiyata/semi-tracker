@@ -99,6 +99,10 @@ def main() -> None:
     for warning in warnings:
         print(f"  warning: {warning}", file=sys.stderr)
 
+    from build_maps import main as build_maps_main  # noqa: E402
+
+    build_maps_main()
+
 
 if __name__ == "__main__":
     main()
