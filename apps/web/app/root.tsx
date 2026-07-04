@@ -49,7 +49,7 @@ export default function App() {
           </div>
         </div>
         <div className="ml-auto font-mono text-[11px] text-ink-2">
-          データ {themesPerf.last_updated} 時点
+          {themesPerf.last_updated} 時点
         </div>
       </header>
 
