@@ -112,9 +112,7 @@ function StockChip({ item, onPick }: { item: FlowItem; onPick: (code: string) =>
       onClick={() => onPick(item.code)}
       className="inline-flex items-center gap-1.5 rounded-lg border border-line bg-card px-2 py-1 text-[11px] hover:bg-panel2"
     >
-      <span
-        className={`font-mono font-bold ${item.market === "jp" ? "text-copper" : "text-us"}`}
-      >
+      <span className={`font-mono font-bold ${item.market === "jp" ? "text-copper" : "text-us"}`}>
         {item.code}
       </span>
       <span className="max-w-[88px] truncate">{item.name}</span>
@@ -138,9 +136,7 @@ function FlowStepBlock({
 }) {
   const total = step.roles.reduce((a, r) => a + r.items.length, 0);
   return (
-    <div
-      className={`rounded-[10px] border border-line bg-panel2 ${open ? "border-ink-2/40" : ""}`}
-    >
+    <div className={`rounded-[10px] border border-line bg-panel2 ${open ? "border-ink-2/40" : ""}`}>
       <button
         type="button"
         onClick={() => onToggle(stepKey)}

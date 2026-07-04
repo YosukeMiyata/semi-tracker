@@ -75,7 +75,9 @@ export default function News() {
             type="button"
             onClick={() => setFilter(f.key)}
             className={`rounded-full border px-3 py-1.5 text-[12px] focus-visible:outline-2 focus-visible:outline-copper focus-visible:outline-offset-2 ${
-              filter === f.key ? "border-ink bg-ink text-paper" : "border-line bg-transparent text-ink-2"
+              filter === f.key
+                ? "border-ink bg-ink text-paper"
+                : "border-line bg-transparent text-ink-2"
             }`}
           >
             {f.label}
