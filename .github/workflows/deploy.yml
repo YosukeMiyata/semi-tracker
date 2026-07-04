@@ -46,6 +46,9 @@ jobs:
         with:
           path: apps/web/build/client
 
+  # Pages バックエンドは「Deployment failed, try again later.」で散発的に失敗するため
+  # (アーティファクト作成は成功しており、同一内容の再実行では成功する)、
+  # 段階バックオフ付きで最大3回試行する。最終試行のみ失敗を run に反映する。
   deploy:
     needs: build
     runs-on: ubuntu-latest
@@ -55,8 +58,6 @@ jobs:
     outputs:
       first_attempt: ${{ steps.deployment.outcome }}
     steps:
-      # deploy-pages は一時的な障害で失敗することがあるため、失敗を握りつぶして
-      # 下の deploy-retry ジョブで1回だけ再試行する
       - id: deployment
         uses: actions/deploy-pages@v4
         continue-on-error: true
@@ -68,8 +69,27 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+    outputs:
+      second_attempt: ${{ steps.deployment.outcome }}
     steps:
-      - name: 60秒待って再デプロイ
-        run: sleep 60
+      - name: 120秒待って再デプロイ(2回目)
+        run: sleep 120
+      - id: deployment
+        uses: actions/deploy-pages@v4
+        continue-on-error: true
+
+  deploy-retry-2:
+    needs: [deploy, deploy-retry]
+    if: >-
+      always() &&
+      needs.deploy.outputs.first_attempt == 'failure' &&
+      needs.deploy-retry.outputs.second_attempt == 'failure'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: 180秒待って再デプロイ(最終)
+        run: sleep 180
       - id: deployment
         uses: actions/deploy-pages@v4
