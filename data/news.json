@@ -1,5 +1,5 @@
 {
-  "_schema": "id: 一意ID / date: YYYY-MM-DD / sentiment: -2.0〜+2.0 / tags: themes.json の macro key / geo: 地政学フラグ / impact_chain: 影響の連鎖 / related_stocks: {code,name,direction(up|down|flat)} / source_url: 出典リンク(必須)",
+  "_schema": "id: 一意ID / date: YYYY-MM-DD / sentiment: -2.0〜+2.0 / tags: themes.json の macro key(memory, optical, package, spe, compute, analog_power, passive, datacenter, materials, subsystem, facility, metals)/ geo: 地政学フラグ / impact_chain: 影響の連鎖 / related_stocks: {code, name, direction(up|down|flat)} / source_url: 出典リンク(空なら非表示)",
   "items": [
     {
       "id": "2026-07-01-kioxia",
@@ -7,12 +7,177 @@
       "title": "キオクシア、4-6月期営業利益1.3兆円予想 — メモリ「スーパーサイクル」入りへ",
       "summary": "AIデータセンター向けSSD需要の急拡大で、売上高は前期比74.5%増の見通し。NAND市況の強さは装置・材料まで波及します。",
       "sentiment": 2.0,
-      "tags": ["memory"],
+      "tags": [
+        "memory"
+      ],
       "geo": false,
-      "impact_chain": ["キオクシア決算", "NAND市況↑", "装置・材料に波及"],
+      "impact_chain": [
+        "キオクシア決算",
+        "NAND市況↑",
+        "装置・材料に波及"
+      ],
       "related_stocks": [
-        { "code": "285A", "name": "キオクシア", "direction": "up" },
-        { "code": "6055", "name": "ジャパンマテリアル", "direction": "up" }
+        {
+          "code": "285A",
+          "name": "キオクシア",
+          "direction": "up"
+        },
+        {
+          "code": "6525",
+          "name": "KOKUSAI",
+          "direction": "up"
+        },
+        {
+          "code": "6055",
+          "name": "ジャパンマテリアル",
+          "direction": "up"
+        },
+        {
+          "code": "4004",
+          "name": "レゾナック",
+          "direction": "up"
+        }
+      ],
+      "source_url": ""
+    },
+    {
+      "id": "2026-06-30-tsmc",
+      "date": "2026-06-30",
+      "title": "TSMC、2026年30%超の増収見通しを再確認",
+      "summary": "HPCが売上の61%に。熊本工場の先端化検討も追い風。TSMCの設備投資は日本の装置・材料の受注に直結します。",
+      "sentiment": 1.5,
+      "tags": [
+        "compute"
+      ],
+      "geo": false,
+      "impact_chain": [
+        "TSMC増収継続",
+        "設備投資↑",
+        "日本の装置・材料に追い風"
+      ],
+      "related_stocks": [
+        {
+          "code": "8035",
+          "name": "東京エレクトロン",
+          "direction": "up"
+        },
+        {
+          "code": "6146",
+          "name": "ディスコ",
+          "direction": "up"
+        }
+      ],
+      "source_url": ""
+    },
+    {
+      "id": "2026-06-29-china-export",
+      "date": "2026-06-29",
+      "title": "中国、日本企業を輸出規制リストに追加 — 2月に続く追加措置",
+      "summary": "両用品目の輸出禁止・管理厳格化の対象が拡大(規制管理リスト・注視リスト計40団体)。調達網に中国依存がある電子部品・材料株には逆風です。",
+      "sentiment": -2.0,
+      "tags": [
+        "passive",
+        "materials"
+      ],
+      "geo": true,
+      "impact_chain": [
+        "対日規制強化",
+        "調達コスト・納期リスク",
+        "部品・材料に重し"
+      ],
+      "related_stocks": [
+        {
+          "code": "6981",
+          "name": "村田製作所",
+          "direction": "down"
+        },
+        {
+          "code": "6762",
+          "name": "TDK",
+          "direction": "down"
+        }
+      ],
+      "source_url": ""
+    },
+    {
+      "id": "2026-06-25-nvda-correction",
+      "date": "2026-06-25",
+      "title": "NVIDIA株、直近30日で約13%下落",
+      "summary": "輸出規制と競合激化への警戒。日本のGPU連動銘柄には短期の重し。",
+      "sentiment": -1.0,
+      "tags": [
+        "compute"
+      ],
+      "geo": false,
+      "impact_chain": [
+        "NVIDIA調整",
+        "GPU連動の裁定売り",
+        "テスタ・冷却関連に重し"
+      ],
+      "related_stocks": [
+        {
+          "code": "6857",
+          "name": "アドバンテスト",
+          "direction": "down"
+        }
+      ],
+      "source_url": ""
+    },
+    {
+      "id": "2026-06-20-match-act",
+      "date": "2026-06-20",
+      "title": "米MATCH法案、審議続く — 装置輸出規制を旧世代にも拡大へ",
+      "summary": "日本・オランダにも同水準の規制を要請。成立なら中国向け売上比率の高い装置株に影響。",
+      "sentiment": -1.5,
+      "tags": [
+        "spe"
+      ],
+      "geo": true,
+      "impact_chain": [
+        "DUVまで規制拡大案",
+        "対中売上比率の高い装置に懸念",
+        "業績予想の下振れリスク"
+      ],
+      "related_stocks": [
+        {
+          "code": "8035",
+          "name": "東京エレクトロン",
+          "direction": "down"
+        },
+        {
+          "code": "7735",
+          "name": "SCREEN",
+          "direction": "down"
+        }
+      ],
+      "source_url": ""
+    },
+    {
+      "id": "2026-06-01-culitho",
+      "date": "2026-06-01",
+      "title": "NVIDIA×TSMC、AIをファブに導入 — cuLithoで20〜50%効率化",
+      "summary": "リソグラフィ計算や欠陥検査をGPUで加速。製造×AIの新市場が拡大。",
+      "sentiment": 1.5,
+      "tags": [
+        "spe"
+      ],
+      "geo": false,
+      "impact_chain": [
+        "AIのファブ導入",
+        "計算リソグラフィ・検査の需要↑",
+        "検査・計測関連に追い風"
+      ],
+      "related_stocks": [
+        {
+          "code": "6920",
+          "name": "レーザーテック",
+          "direction": "up"
+        },
+        {
+          "code": "7729",
+          "name": "東京精密",
+          "direction": "up"
+        }
       ],
       "source_url": ""
     }

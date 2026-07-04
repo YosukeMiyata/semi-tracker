@@ -1,5 +1,8 @@
-import { Card, Placeholder, SectionTitle } from "~/components/section";
-import { fmtPct, linkageTop, pctColor, themesPerf } from "~/lib/data";
+import { NewsCard } from "~/components/news-card";
+import { Card, SectionTitle } from "~/components/section";
+import { Wafer } from "~/components/wafer";
+import { fmtPct, linkageTop } from "~/lib/data";
+import { featuredNews, themeSentiments, verdictLabel, weeklySentiment } from "~/lib/news";
 
 export function meta() {
   return [{ title: "ホーム — 半導体テーマトラッカー 2.0" }];
@@ -10,54 +13,66 @@ function splitTheme(theme: string): { macro: string; sub: string } {
   return { macro, sub: sub ?? macro };
 }
 
+const weekly = weeklySentiment();
+const waferThemes = themeSentiments();
+const featured = featuredNews();
+
 export default function Home() {
   return (
     <>
-      <Card>
-        <div className="text-[11px] text-ink-2 tracking-[0.14em]">今週のセンチメント</div>
-        <div className="font-mono font-semibold text-[44px] leading-[1.05]">
-          — <small className="font-medium text-[16px] text-ink-2">/ ±2.0</small>
-        </div>
-        <span className="mt-1.5 inline-block rounded-full bg-copper-soft px-2.5 py-0.5 font-bold text-[12px] text-copper">
-          ニュース運用の開始後に表示
-        </span>
-        <div className="mt-2 border-line border-t border-dashed pt-2.5 text-[11px] text-ink-2">
-          ダイ1つ=1テーマのウェハーマップ(v1の12マクロテーマ × ニュース感情スコアで着色)を
-          ここに表示します。
-        </div>
-      </Card>
-
-      <h2 className="mt-[26px] mb-1 flex items-center gap-2 font-bold font-serif text-[17px]">
-        年初来テーマ Top3
-        <span className="h-px flex-1 bg-line" />
-      </h2>
-      <div className="mb-3 text-[12px] text-ink-2">資金が来ているテーマ(詳細はテーマタブ)</div>
-      <Card>
-        {themesPerf.themes.slice(0, 3).map((t) => (
-          <div
-            key={t.key}
-            className="flex items-center gap-2.5 border-line border-b py-2.5 last:border-b-0"
-          >
-            <span
-              className="h-2.5 w-2.5 shrink-0 rounded-[3px]"
-              style={{ backgroundColor: t.color }}
-            />
-            <div className="flex-1 font-bold text-[13.5px]">{t.name}</div>
-            <div className={`font-mono font-semibold text-[14px] ${pctColor(t.ytd_pct)}`}>
-              {fmtPct(t.ytd_pct)}
-            </div>
+      <div className="grid grid-cols-[150px_1fr] items-center gap-3.5 rounded-card border border-line bg-card px-4 pt-5 pb-4">
+        <Wafer themes={waferThemes} />
+        <div>
+          <div className="text-[11px] text-ink-2 tracking-[0.14em]">今週のセンチメント</div>
+          <div className="font-mono font-semibold text-[44px] leading-[1.05]">
+            {weekly.score === null
+              ? "—"
+              : `${weekly.score > 0 ? "+" : weekly.score < 0 ? "−" : ""}${Math.abs(weekly.score).toFixed(1)}`}
+            <small className="font-medium text-[16px] text-ink-2"> / ±2.0</small>
           </div>
-        ))}
-      </Card>
+          <span className="mt-1.5 inline-block rounded-full bg-copper-soft px-2.5 py-0.5 font-bold text-[12px] text-copper">
+            {verdictLabel(weekly.score)}
+          </span>
+          <div className="mt-2 text-[12px] text-ink-2">
+            {weekly.delta !== null ? (
+              <>
+                先週比{" "}
+                <b className={weekly.delta >= 0 ? "text-up" : "text-down"}>
+                  {weekly.delta >= 0 ? "▲" : "▼"}
+                  {Math.abs(weekly.delta).toFixed(1)}
+                </b>{" "}
+                ・
+              </>
+            ) : null}{" "}
+            分析ニュース {weekly.count}本
+          </div>
+        </div>
+        <div className="col-span-full border-line border-t border-dashed pt-2.5 text-[11px] text-ink-2">
+          ダイ1つ=1テーマ(v1の12マクロテーマ)。直近7日のニュース論調スコアで着色。今週ニュースの無いテーマは中立色です。
+          <div className="mt-1 flex flex-wrap gap-3">
+            <span>
+              <i className="mr-1 inline-block h-2.5 w-2.5 rounded-[2px] bg-up align-[-1px]" />
+              ポジティブ
+            </span>
+            <span>
+              <i className="mr-1 inline-block h-2.5 w-2.5 rounded-[2px] bg-[#C9CED6] align-[-1px]" />
+              中立
+            </span>
+            <span>
+              <i className="mr-1 inline-block h-2.5 w-2.5 rounded-[2px] bg-down align-[-1px]" />
+              ネガティブ
+            </span>
+          </div>
+        </div>
+      </div>
 
       <SectionTitle
         title="今週の注目 3本"
         note="ニュースを「どの銘柄に効くか」まで翻訳して届けます"
       />
-      <Placeholder>
-        data/news.json(手動運用)から感情スコア上位・注目のニュースを3本表示。影響の連鎖 +
-        関連銘柄チップ付き。
-      </Placeholder>
+      {featured.map((item) => (
+        <NewsCard key={item.id} item={item} />
+      ))}
 
       <SectionTitle
         title="米国テーマ → 翌日の日本株"

@@ -29,6 +29,17 @@ html {
   scroll-behavior: smooth;
 }
 
+/* ウェハーマップ: 検査機のスキャン風に順番へフェードイン。
+   ベースは opacity:1 なので reduced-motion で animation が無効でも表示される */
+.die {
+  animation: die-in 0.45s ease both;
+}
+@keyframes die-in {
+  from {
+    opacity: 0;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   * {
     /* biome-ignore lint/complexity/noImportantStyles: reduced-motion 時は全アニメーションを確実に止める(プロトタイプ踏襲) */
