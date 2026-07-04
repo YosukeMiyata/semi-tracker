@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import { Links, Meta, NavLink, Outlet, Scripts, ScrollRestoration } from "react-router";
+import { HomeHeaderMenu } from "~/components/home-header-menu";
 import { themesPerf } from "~/lib/data";
 import "./app.css";
 
@@ -51,9 +52,10 @@ export default function App() {
               半導体<span className="text-copper">テーマ</span>トラッカー
             </h1>
           </div>
-          <div className="shrink-0 font-mono text-[11px] text-faint">
+          <div className="hidden shrink-0 font-mono text-[11px] text-faint sm:block">
             {themesPerf.last_updated} 時点
           </div>
+          <HomeHeaderMenu />
         </div>
       </header>
 

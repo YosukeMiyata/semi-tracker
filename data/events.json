@@ -1,0 +1,69 @@
+{
+  "_schema": "date: YYYY-MM-DD / kind: earnings|regulation|industry|macro / title / body / tags: themes.json の macro key / source_url: 任意",
+  "items": [
+    {
+      "date": "2026-07-08",
+      "kind": "earnings",
+      "title": "キオクシア 決算説明(フォロー)",
+      "body": "NAND市況・AI向けSSD需要の見通し。メモリ・SPE・材料テーマの方向感を確認。",
+      "tags": ["memory", "materials"],
+      "source_url": ""
+    },
+    {
+      "date": "2026-07-10",
+      "kind": "earnings",
+      "title": "東京エレクトロン 1Q決算",
+      "body": "AI向け成膜・エッチ装置の受注・中国比率が焦点。SPEテーマ全体のセンチメントに効く。",
+      "tags": ["spe"],
+      "source_url": ""
+    },
+    {
+      "date": "2026-07-11",
+      "kind": "earnings",
+      "title": "アドバンテスト 1Q決算",
+      "body": "HBM/GPU向けメモリテスタ需要。compute・memory連動の確認材料。",
+      "tags": ["spe", "compute"],
+      "source_url": ""
+    },
+    {
+      "date": "2026-07-15",
+      "kind": "industry",
+      "title": "TSMC 2Q決算・ガイダンス",
+      "body": "CoWoS容量・設備投資計画。日本の装置・パッケージング株への波及が大きい。",
+      "tags": ["compute", "package", "spe"],
+      "source_url": ""
+    },
+    {
+      "date": "2026-07-17",
+      "kind": "macro",
+      "title": "WSTS 月次統計(5月分) 発表見込",
+      "body": "世界半導体売上の前年比。macro.json 更新のタイミング。",
+      "tags": ["memory", "spe"],
+      "source_url": "https://www.wsts.org/"
+    },
+    {
+      "date": "2026-07-22",
+      "kind": "regulation",
+      "title": "米議会 MATCH法案 動向ウォッチ",
+      "body": "DUV規制拡大案の進捗。成立・修正案はSPE・材料に再評価トリガー。",
+      "tags": ["spe", "materials"],
+      "source_url": ""
+    },
+    {
+      "date": "2026-07-24",
+      "kind": "earnings",
+      "title": "レーザーテック 1Q決算",
+      "body": "EUVマスク検査・計算リソグラフィ(cuLitho)関連の受注。",
+      "tags": ["spe"],
+      "source_url": ""
+    },
+    {
+      "date": "2026-07-31",
+      "kind": "earnings",
+      "title": "ルネサス 2Q決算",
+      "body": "自動車・産業向け回復とAI向けアナログ。analog_powerテーマの材料。",
+      "tags": ["analog_power"],
+      "source_url": ""
+    }
+  ]
+}

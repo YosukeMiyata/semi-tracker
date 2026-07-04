@@ -1,8 +1,9 @@
 import { useState } from "react";
+import { EventCalendar } from "~/components/event-calendar";
 import { HeadlineList } from "~/components/headline-list";
 import { NewsCard } from "~/components/news-card";
 import { Card, SectionTitle } from "~/components/section";
-import { SentimentChart } from "~/components/sentiment-chart";
+import { SentimentChartPanel } from "~/components/sentiment-chart-panel";
 import { fmtPct, pctColor, timelineReactions } from "~/lib/data";
 import { headlineItems, headlinesFetchedAt } from "~/lib/headlines";
 import { newsItems, themeNames, timelineItems } from "~/lib/news";
@@ -51,6 +52,8 @@ export default function News() {
       />
       <HeadlineList items={headlineItems} />
 
+      <EventCalendar />
+
       <SectionTitle
         title="分析ニュース"
         note="感情スコア付きの特別枠。余裕があるときに手動で追記します"
@@ -58,10 +61,10 @@ export default function News() {
 
       <SectionTitle
         title="センチメント定点観測"
-        note="分析ニュースの論調スコア週次推移。株価との乖離を見るための温度計です"
+        note="全体またはテーマ別の週次論調スコア。株価との乖離を見る温度計です"
       />
       <Card>
-        <SentimentChart />
+        <SentimentChartPanel />
       </Card>
 
       <SectionTitle

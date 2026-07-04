@@ -2,6 +2,46 @@
   "_schema": "id: 一意ID / date: YYYY-MM-DD / sentiment: -2.0〜+2.0 / tags: themes.json の macro key(memory, optical, package, spe, compute, analog_power, passive, datacenter, materials, subsystem, facility, metals)/ geo: 地政学フラグ / impact_chain: 影響の連鎖 / related_stocks: {code, name, direction(up|down|flat)} / source_url: 出典リンク(空なら非表示)",
   "items": [
     {
+      "id": "2026-07-03-kokusai",
+      "date": "2026-07-03",
+      "title": "KOKUSAI ELECTRIC、前日+15%超 — 成膜装置の資金集中",
+      "summary": "AI向け半導体の成膜工程需要を背景に、SPEテーマ内で突出した動き。同工程の東京エレクトロン・サムコ等とセットで見る局面です。",
+      "sentiment": 1.0,
+      "tags": ["spe"],
+      "geo": false,
+      "impact_chain": [
+        "成膜需要の期待",
+        "SPEテーマ内の銘柄選別",
+        "装置サイクル再評価"
+      ],
+      "related_stocks": [
+        { "code": "6525", "name": "KOKUSAI ELECTRIC", "direction": "up" },
+        { "code": "8035", "name": "東京エレクトロン", "direction": "up" },
+        { "code": "6387", "name": "サムコ", "direction": "up" }
+      ],
+      "source_url": ""
+    },
+    {
+      "id": "2026-07-02-sox-selloff",
+      "date": "2026-07-02",
+      "title": "SOX指数、前日比−5.4% — 半導体全体の調整色",
+      "summary": "米国半導体株の一斉売りがSOXを押し下げ。日本のGPU連動・装置株にも短期の重しが及びやすい局面です。",
+      "sentiment": -1.5,
+      "tags": ["compute", "spe"],
+      "geo": false,
+      "impact_chain": [
+        "SOX急落",
+        "リスクオフ",
+        "連動日本株の調整圧力"
+      ],
+      "related_stocks": [
+        { "code": "6857", "name": "アドバンテスト", "direction": "down" },
+        { "code": "8035", "name": "東京エレクトロン", "direction": "down" },
+        { "code": "200A", "name": "グローバルX半導体ETF", "direction": "down" }
+      ],
+      "source_url": ""
+    },
+    {
       "id": "2026-07-01-kioxia",
       "date": "2026-07-01",
       "title": "キオクシア、4-6月期営業利益1.3兆円予想 — メモリ「スーパーサイクル」入りへ",

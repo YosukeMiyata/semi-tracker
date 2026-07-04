@@ -1,11 +1,19 @@
 import { useState } from "react";
-import { fmtPct, indices, linkageTop, themesPerf } from "~/lib/data";
+import { fmtPct, indices, linkageTop } from "~/lib/data";
+import { macro } from "~/lib/macro";
 import { anchorDate, featuredNews, verdictLabel, weeklySentiment } from "~/lib/news";
+import { soxYtdPct, themeSummaryRows } from "~/lib/theme-summary";
+import { weeklyDigest } from "~/lib/weekly-digest";
 
 function buildSummary(): string {
   const weekly = weeklySentiment();
+  const soxYtd = soxYtdPct();
   const lines: string[] = [
     `# 半導体テーマトラッカー データサマリー(基準日 ${anchorDate})`,
+    "",
+    `## 今週変わったこと(${weeklyDigest.week_start}〜${weeklyDigest.week_end})`,
+    weeklyDigest.title,
+    weeklyDigest.body,
     "",
     `## 週間センチメント`,
     `スコア: ${weekly.score === null ? "データなし" : weekly.score.toFixed(1)} / ±2.0(${verdictLabel(weekly.score)}、分析ニュース ${weekly.count}本)`,
@@ -17,10 +25,23 @@ function buildSummary(): string {
       `終値 ${ix.last} / 前日 ${fmtPct(ix.chg_pct)} / 年初来 ${fmtPct(ix.ytd_pct)}`,
     );
   }
-  lines.push("", "## テーマ別 年初来騰落率(構成銘柄の単純平均)");
-  for (const t of themesPerf.themes) {
+  lines.push("", "## マクロ(サイクル)", macro.cycle_note);
+  const lastWsts = macro.wsts.series.at(-1);
+  if (lastWsts) {
     lines.push(
-      `- ${t.name}: ${fmtPct(t.ytd_pct)}${t.vol_ratio !== null ? `(出来高 ${t.vol_ratio.toFixed(2)}×)` : ""}`,
+      `WSTS直近(${lastWsts.month}): ${lastWsts.value}${macro.wsts.unit} / 前年比 ${fmtPct(lastWsts.yoy_pct, 1)}`,
+    );
+  }
+  if (macro.capex) {
+    lines.push("", `## CapEx ガイダンス(${macro.capex.as_of})`);
+    for (const c of macro.capex.items) {
+      lines.push(`- ${c.company}: ${c.value}B$ / YoY ${fmtPct(c.yoy_pct, 0)} — ${c.note}`);
+    }
+  }
+  lines.push("", `## テーマ別 年初来・SOX比α(SOX YTD ${fmtPct(soxYtd, 1)})`);
+  for (const t of themeSummaryRows()) {
+    lines.push(
+      `- ${t.name}: YTD ${fmtPct(t.ytdPct)} / α ${fmtPct(t.soxAlpha, 0)}${t.volRatio !== null ? ` / 出来高 ${t.volRatio.toFixed(2)}×` : ""}`,
     );
   }
   lines.push("", `## 米国テーマ → 翌日の日本株(${linkageTop.method})`);

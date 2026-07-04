@@ -1,3 +1,4 @@
+import type { WeeklySentimentPoint } from "~/lib/news";
 import { weeklySentimentSeries } from "~/lib/news";
 
 const W = 360;
@@ -5,10 +6,18 @@ const H = 130;
 const PAD = { l: 28, r: 6, t: 10, b: 18 };
 const PLOT_W = W - PAD.l - PAD.r;
 const PLOT_H = H - PAD.t - PAD.b;
-const Y_MAX = 2; // スコアは -2〜+2 の固定ドメイン
+const Y_MAX = 2;
 
-export function SentimentChart({ weeks = 12 }: { weeks?: number }) {
-  const series = weeklySentimentSeries(weeks);
+export function SentimentChart({
+  weeks = 12,
+  series: seriesProp,
+  label = "週次センチメント推移",
+}: {
+  weeks?: number;
+  series?: WeeklySentimentPoint[];
+  label?: string;
+}) {
+  const series = seriesProp ?? weeklySentimentSeries(weeks);
   const slot = PLOT_W / series.length;
   const barW = slot * 0.55;
   const yAt = (v: number) => PAD.t + (1 - (v + Y_MAX) / (2 * Y_MAX)) * PLOT_H;
@@ -16,12 +25,7 @@ export function SentimentChart({ weeks = 12 }: { weeks?: number }) {
 
   return (
     <div>
-      <svg
-        viewBox={`0 0 ${W} ${H}`}
-        className="w-full"
-        role="img"
-        aria-label="週次センチメント推移チャート"
-      >
+      <svg viewBox={`0 0 ${W} ${H}`} className="w-full" role="img" aria-label={label}>
         {[2, 1, 0, -1, -2].map((v) => (
           <g key={v}>
             <line
@@ -45,7 +49,7 @@ export function SentimentChart({ weeks = 12 }: { weeks?: number }) {
         {series.map((wk, i) => {
           const cx = PAD.l + slot * i + slot / 2;
           const [, m, d] = wk.weekStart.split("-");
-          const label = `${Number(m)}/${Number(d)}`;
+          const dateLabel = `${Number(m)}/${Number(d)}`;
           return (
             <g key={wk.weekStart}>
               {wk.avg !== null ? (
@@ -58,7 +62,7 @@ export function SentimentChart({ weeks = 12 }: { weeks?: number }) {
                     rx={2}
                     fill={wk.avg >= 0 ? "var(--color-up)" : "var(--color-down)"}
                   >
-                    <title>{`${label}週: 平均 ${wk.avg >= 0 ? "+" : "−"}${Math.abs(wk.avg).toFixed(1)}(${wk.count}本)`}</title>
+                    <title>{`${dateLabel}週: 平均 ${wk.avg >= 0 ? "+" : "−"}${Math.abs(wk.avg).toFixed(1)}(${wk.count}本)`}</title>
                   </rect>
                   <text
                     x={cx}
@@ -78,16 +82,13 @@ export function SentimentChart({ weeks = 12 }: { weeks?: number }) {
                   textAnchor="middle"
                   className="fill-ink-2 font-mono text-[8px]"
                 >
-                  {label}
+                  {dateLabel}
                 </text>
               ) : null}
             </g>
           );
         })}
       </svg>
-      <p className="mt-1 text-[10.5px] text-ink-2">
-        週次平均(月曜起点、バー上は平均スコア)。ニュースが無い週は空欄。手動運用の蓄積とともに伸びていきます。
-      </p>
     </div>
   );
 }

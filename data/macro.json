@@ -1,0 +1,60 @@
+{
+  "_schema": "cycle_note: シリコンサイクル位置づけ(手動) / wsts: WSTS月次世界半導体売上(手動更新) / source_url: 出典",
+  "last_updated": "2026-06-01",
+  "source_url": "https://www.wsts.org/",
+  "cycle_note": "2026年はAI向けHBM・SSD需要がメモリを牽引する「メモリ主導の上昇局面」。WSTS月次は前年比2桁台の伸びが続いており、サイクル全体は拡大フェーズ。ただしSOXの急調整は、個別テーマ(装置・GPU連動)のボラティリティが高いことを示唆します。",
+  "wsts": {
+    "label": "WSTS 世界半導体売上(月次)",
+    "unit": "十億ドル",
+    "series": [
+      { "month": "2025-07", "value": 51.3, "yoy_pct": 18.3 },
+      { "month": "2025-08", "value": 53.1, "yoy_pct": 20.7 },
+      { "month": "2025-09", "value": 53.8, "yoy_pct": 23.2 },
+      { "month": "2025-10", "value": 54.6, "yoy_pct": 22.1 },
+      { "month": "2025-11", "value": 55.9, "yoy_pct": 20.4 },
+      { "month": "2025-12", "value": 57.2, "yoy_pct": 19.8 },
+      { "month": "2026-01", "value": 56.4, "yoy_pct": 17.6 },
+      { "month": "2026-02", "value": 57.8, "yoy_pct": 18.9 },
+      { "month": "2026-03", "value": 58.9, "yoy_pct": 19.5 },
+      { "month": "2026-04", "value": 59.6, "yoy_pct": 18.2 },
+      { "month": "2026-05", "value": 60.8, "yoy_pct": 17.1 }
+    ]
+  },
+  "capex": {
+    "label": "主要ファブ・メモリ CapEx ガイダンス",
+    "unit": "十億ドル/年",
+    "as_of": "2026-Q2",
+    "items": [
+      {
+        "company": "TSMC",
+        "value": 38,
+        "yoy_pct": 12,
+        "note": "2nm・CoWoS増産。日本装置・材料の受注に直結"
+      },
+      {
+        "company": "Samsung",
+        "value": 28,
+        "yoy_pct": 8,
+        "note": "HBM・先端DRAM。メモリ装置需要の牽引"
+      },
+      {
+        "company": "Micron",
+        "value": 14,
+        "yoy_pct": 45,
+        "note": "HBM専用ファブ増設。成膜・検査装置に波及"
+      },
+      {
+        "company": "Intel",
+        "value": 18,
+        "yoy_pct": -5,
+        "note": "ファブ再編中。米国向けサプライチェーン再配置"
+      },
+      {
+        "company": "SK hynix",
+        "value": 16,
+        "yoy_pct": 35,
+        "note": "HBM中心の増産。プローブ・テスタ需要"
+      }
+    ]
+  }
+}

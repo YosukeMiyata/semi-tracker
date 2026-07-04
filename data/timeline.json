@@ -9,6 +9,13 @@
       "tags": ["passive", "materials"]
     },
     {
+      "date": "2026-07-02",
+      "tone": "neg",
+      "title": "SOX指数 前日比−5%超 — 半導体全体のリスクオフ",
+      "body": "米国半導体株の一斉売り。GPU連動・装置株の短期調整トリガーになりやすい。",
+      "tags": ["compute", "spe"]
+    },
+    {
       "date": "2026-04",
       "tone": "neg",
       "title": "米議会にMATCH法案提出",
