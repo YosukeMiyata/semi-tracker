@@ -1,0 +1,15 @@
+[project]
+name = "semi-tracker-pipeline"
+version = "0.1.0"
+description = "半導体テーマトラッカー v2 データパイプライン(銘柄マスタ変換・株価取得・集計)"
+requires-python = ">=3.12"
+dependencies = []
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+# themes.py は v1 由来のデータファイルなので lint 対象外(友人の編集ワークフローを維持)
+extend-exclude = ["themes.py"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]

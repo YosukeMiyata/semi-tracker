@@ -1,0 +1,21 @@
+{
+  "name": "semi-tracker",
+  "private": true,
+  "scripts": {
+    "dev": "pnpm --filter web dev",
+    "build": "pnpm --filter web build",
+    "typecheck": "pnpm --filter web typecheck",
+    "biome:check": "biome check .",
+    "biome:fix": "biome check --write .",
+    "data:master": "python3 pipeline/build_master.py"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.3.0"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
+  },
+  "packageManager": "pnpm@10.25.0"
+}

@@ -1,0 +1,20 @@
+{
+  "_schema": "id: 一意ID / date: YYYY-MM-DD / sentiment: -2.0〜+2.0 / tags: themes.json の macro key / geo: 地政学フラグ / impact_chain: 影響の連鎖 / related_stocks: {code,name,direction(up|down|flat)} / source_url: 出典リンク(必須)",
+  "items": [
+    {
+      "id": "2026-07-01-kioxia",
+      "date": "2026-07-01",
+      "title": "キオクシア、4-6月期営業利益1.3兆円予想 — メモリ「スーパーサイクル」入りへ",
+      "summary": "AIデータセンター向けSSD需要の急拡大で、売上高は前期比74.5%増の見通し。NAND市況の強さは装置・材料まで波及します。",
+      "sentiment": 2.0,
+      "tags": ["memory"],
+      "geo": false,
+      "impact_chain": ["キオクシア決算", "NAND市況↑", "装置・材料に波及"],
+      "related_stocks": [
+        { "code": "285A", "name": "キオクシア", "direction": "up" },
+        { "code": "6055", "name": "ジャパンマテリアル", "direction": "up" }
+      ],
+      "source_url": ""
+    }
+  ]
+}

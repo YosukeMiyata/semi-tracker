@@ -1,0 +1,2365 @@
+{
+  "source": "pipeline/themes.py (v1: yuyu5555-bit/semi-tracker の銘柄マスタを踏襲)",
+  "stats": {
+    "macro_themes": 12,
+    "sub_themes": 59,
+    "jp_stocks": 191,
+    "us_symbols": 91
+  },
+  "macro": [
+    {
+      "key": "memory",
+      "name": "メモリ・ストレージ",
+      "color": "#F0593C",
+      "subs": [
+        {
+          "name": "HBM(広帯域メモリ)",
+          "us": [
+            {
+              "symbol": "MU",
+              "name": "Micron"
+            }
+          ],
+          "jp": [
+            {
+              "code": "6871",
+              "name": "日本マイクロニクス",
+              "note": "HBM向けプローブカード世界首位(約33%)"
+            },
+            {
+              "code": "6315",
+              "name": "TOWA",
+              "note": "HBM向けコンプレッション封止装置"
+            },
+            {
+              "code": "7729",
+              "name": "東京精密",
+              "note": "ウエハテスト用プローバ世界首位"
+            },
+            {
+              "code": "6857",
+              "name": "アドバンテスト",
+              "note": "HBM向けメモリテスタ"
+            },
+            {
+              "code": "6146",
+              "name": "ディスコ",
+              "note": "HBM向けダイシング/グラインダ"
+            },
+            {
+              "code": "8035",
+              "name": "東京エレクトロン",
+              "note": "HBM製造装置"
+            }
+          ],
+          "solo": []
+        },
+        {
+          "name": "NAND・SSD",
+          "us": [
+            {
+              "symbol": "MU",
+              "name": "Micron"
+            },
+            {
+              "symbol": "SNDK",
+              "name": "SanDisk"
+            },
+            {
+              "symbol": "WDC",
+              "name": "Western Digital"
+            }
+          ],
+          "jp": [
+            {
+              "code": "285A",
+              "name": "キオクシア",
+              "note": "NAND専業・世界3位、AI向けSSD需要を直接享受"
+            },
+            {
+              "code": "8035",
+              "name": "東京エレクトロン",
+              "note": "NAND製造装置"
+            }
+          ],
+          "solo": []
+        },
+        {
+          "name": "DRAM",
+          "us": [
+            {
+              "symbol": "MU",
+              "name": "Micron"
+            }
+          ],
+          "jp": [
+            {
+              "code": "6871",
+              "name": "日本マイクロニクス",
+              "note": "DRAM向けプローブカード"
+            },
+            {
+              "code": "6920",
+              "name": "レーザーテック",
+              "note": "DRAM検査関連"
+            }
+          ],
+          "solo": []
+        },
+        {
+          "name": "HDD(ニアライン)",
+          "us": [
+            {
+              "symbol": "STX",
+              "name": "Seagate"
+            },
+            {
+              "symbol": "WDC",
+              "name": "Western Digital"
+            }
+          ],
+          "jp": [
+            {
+              "code": "6998",
+              "name": "日本タングステン",
+              "note": "HDD部材・超硬工具"
+            },
+            {
+              "code": "6762",
+              "name": "TDK",
+              "note": "HDDヘッド等の部材"
+            },
+            {
+              "code": "6594",
+              "name": "ニデック",
+              "note": "HDD用精密モーター"
+            }
+          ],
+          "solo": []
+        }
+      ]
+    },
+    {
+      "key": "optical",
+      "name": "光接続",
+      "color": "#E8B04B",
+      "subs": [
+        {
+          "name": "シリコンフォトニクス",
+          "us": [
+            {
+              "symbol": "COHR",
+              "name": "Coherent"
+            },
+            {
+              "symbol": "LITE",
+              "name": "Lumentum"
+            },
+            {
+              "symbol": "GFS",
+              "name": "GlobalFoundries"
+            }
+          ],
+          "jp": [
+            {
+              "code": "6613",
+              "name": "QDレーザ",
+              "note": "量子ドットレーザー"
+            },
+            {
+              "code": "7713",
+              "name": "シグマ光機",
+              "note": "光学部品・光学機器"
+            },
+            {
+              "code": "5802",
+              "name": "住友電工",
+              "note": "InP基板・光デバイス垂直統合、波長可変レーザー"
+            },
+            {
+              "code": "5801",
+              "name": "古河電工",
+              "note": "DFBレーザ・光配線"
+            },
+            {
+              "code": "6723",
+              "name": "ルネサス",
+              "note": "光電融合・車載半導体"
+            }
+          ],
+          "solo": []
+        },
+        {
+          "name": "CPO(コパッケージドオプティクス)",
+          "us": [
+            {
+              "symbol": "AVGO",
+              "name": "Broadcom"
+            },
+            {
+              "symbol": "MRVL",
+              "name": "Marvell"
+            },
+            {
+              "symbol": "MTSI",
+              "name": "MACOM"
+            },
+            {
+              "symbol": "TEL",
+              "name": "TE Connectivity"
+            }
+          ],
+          "jp": [
+            {
+              "code": "9432",
+              "name": "NTT",
+              "note": "IOWN構想・光電融合デバイス生産"
+            },
+            {
+              "code": "5801",
+              "name": "古河電工",
+              "note": "光コネクタ・特殊ファイバー"
+            },
+            {
+              "code": "5803",
+              "name": "フジクラ",
+              "note": "高密度光配線"
+            },
+            {
+              "code": "5802",
+              "name": "住友電工",
+              "note": "光デバイス"
+            },
+            {
+              "code": "4062",
+              "name": "イビデン",
+              "note": "光電融合パッケージ基板"
+            },
+            {
+              "code": "6490",
+              "name": "日本ピラー工業",
+              "note": "シール・流体制御/光電融合部品"
+            }
+          ],
+          "solo": []
+        },
+        {
+          "name": "光トランシーバ・光部品",
+          "us": [
+            {
+              "symbol": "COHR",
+              "name": "Coherent"
+            },
+            {
+              "symbol": "LITE",
+              "name": "Lumentum"
+            },
+            {
+              "symbol": "AAOI",
+              "name": "Applied Opto"
+            },
+            {
+              "symbol": "CIEN",
+              "name": "Ciena"
+            }
+          ],
+          "jp": [
+            {
+              "code": "6521",
+              "name": "オキサイド",
+              "note": "光学単結晶・レーザー部品"
+            },
+            {
+              "code": "6524",
+              "name": "湖北工業",
+              "note": "光通信用部品・端子"
+            },
+            {
+              "code": "6777",
+              "name": "santec HD",
+              "note": "光部品・波長可変光源"
+            },
+            {
+              "code": "6834",
+              "name": "精工技研",
+              "note": "光コネクタ・フェルール"
+            },
+            {
+              "code": "5217",
+              "name": "テクノクオーツ",
+              "note": "石英ガラス・半導体製造部材"
+            },
+            {
+              "code": "6841",
+              "name": "横河電機",
+              "note": "光計測・光スペアナ"
+            },
+            {
+              "code": "6754",
+              "name": "アンリツ",
+              "note": "光通信測定器"
+            },
+            {
+              "code": "4980",
+              "name": "デクセリアルズ",
+              "note": "光学フィルム・異方性導電膜"
+            },
+            {
+              "code": "6235",
+              "name": "オプトラン",
+              "note": "光学薄膜成膜装置"
+            },
+            {
+              "code": "5801",
+              "name": "古河電工",
+              "note": "光トランシーバ部品"
+            },
+            {
+              "code": "6490",
+              "name": "日本ピラー工業",
+              "note": "シール・流体制御/光電融合部品"
+            }
+          ],
+          "solo": []
+        },
+        {
+          "name": "光ファイバー・光配線",
+          "us": [
+            {
+              "symbol": "GLW",
+              "name": "Corning"
+            }
+          ],
+          "jp": [
+            {
+              "code": "6703",
+              "name": "OKI",
+              "note": "光通信インフラ"
+            },
+            {
+              "code": "6701",
+              "name": "NEC",
+              "note": "海底ケーブル・光通信"
+            },
+            {
+              "code": "6702",
+              "name": "富士通",
+              "note": "光通信・光トランシーバ"
+            },
+            {
+              "code": "5985",
+              "name": "サンコール",
+              "note": "光部品・精密部品"
+            },
+            {
+              "code": "5803",
+              "name": "フジクラ",
+              "note": "SWR/WTC高密度光ファイバー、融着接続機世界トップ"
+            },
+            {
+              "code": "5801",
+              "name": "古河電工",
+              "note": "13,824心超多心光ファイバー量産"
+            },
+            {
+              "code": "5802",
+              "name": "住友電工",
+              "note": "光ファイバー"
+            }
+          ],
+          "solo": []
+        }
+      ]
+    },
+    {
+      "key": "package",
+      "name": "先端パッケージング・基板",
+      "color": "#9D7CF0",
+      "subs": [
+        {
+          "name": "CoWoS・2.5D実装",
+          "us": [
+            {
+              "symbol": "NVDA",
+              "name": "NVIDIA"
+            },
+            {
+              "symbol": "AMD",
+              "name": "AMD"
+            }
+          ],
+          "jp": [
+            {
+              "code": "6146",
+              "name": "ディスコ",
+              "note": "薄化・ダイシング"
+            },
+            {
+              "code": "6315",
+              "name": "TOWA",
+              "note": "封止"
+            },
+            {
+              "code": "4004",
+              "name": "レゾナック",
+              "note": "後工程材料(JOINT2主導)"
+            }
+          ],
+          "solo": []
+        },
+        {
+          "name": "ABF基板",
+          "us": [],
+          "jp": [
+            {
+              "code": "4062",
+              "name": "イビデン",
+              "note": "AI向けICパッケージ基板の中核、能力2.5倍計画"
+            },
+            {
+              "code": "2802",
+              "name": "味の素",
+              "note": "ABF(味の素ビルドアップフィルム)世界シェアほぼ100%"
+            }
+          ],
+          "solo": []
+        },
+        {
+          "name": "ガラス基板(次世代)",
+          "us": [
+            {
+              "symbol": "INTC",
+              "name": "Intel"
+            },
+            {
+              "symbol": "GLW",
+              "name": "Corning"
+            }
+          ],
+          "jp": [
+            {
+              "code": "3110",
+              "name": "日東紡",
+              "note": "ガラスクロス(ガラス繊維)世界トップ"
+            },
+            {
+              "code": "7746",
+              "name": "岡本硝子",
+              "note": "特殊ガラス"
+            },
+            {
+              "code": "5201",
+              "name": "AGC",
+              "note": "ガラス基板素材・TGV微細孔加工"
+            },
+            {
+              "code": "5214",
+              "name": "日本電気硝子",
+              "note": "ガラス基板"
+            },
+            {
+              "code": "7912",
+              "name": "大日本印刷",
+              "note": "TGVガラス基板パイロットライン"
+            }
+          ],
+          "solo": []
+        },
+        {
+          "name": "プリント基板/PCB・パッケージ基板(製品)",
+          "us": [],
+          "jp": [
+            {
+              "code": "4062",
+              "name": "イビデン",
+              "note": "ICパッケージ基板世界首位"
+            },
+            {
+              "code": "6787",
+              "name": "メイコー",
+              "note": "プリント配線板専業大手・AIサーバー基板"
+            },
+            {
+              "code": "6971",
+              "name": "京セラ",
+              "note": "ICパッケージ基板・PCB両方"
+            },
+            {
+              "code": "6958",
+              "name": "CMK",
+              "note": "プリント基板"
+            },
+            {
+              "code": "6837",
+              "name": "京写",
+              "note": "プリント配線板"
+            }
+          ],
+          "solo": []
+        },
+        {
+          "name": "プリント基板/CCL・銅箔・ガラス(素材)",
+          "us": [],
+          "jp": [
+            {
+              "code": "4004",
+              "name": "レゾナックHD",
+              "note": "先端パッケージング向けCCL高シェア"
+            },
+            {
+              "code": "4182",
+              "name": "三菱ガス化学",
+              "note": "BT材料世界シェア首位"
+            },
+            {
+              "code": "3110",
+              "name": "日東紡績",
+              "note": "ガラスクロス(基板補強材)"
+            },
+            {
+              "code": "4203",
+              "name": "住友ベークライト",
+              "note": "高耐熱銅張積層板(CCL)"
+            },
+            {
+              "code": "5706",
+              "name": "三井金属",
+              "note": "極薄電解銅箔"
+            },
+            {
+              "code": "5208",
+              "name": "有沢製作所",
+              "note": "リジッド〜FPC配線板材料"
+            },
+            {
+              "code": "7912",
+              "name": "大日本印刷",
+              "note": "パッケージ基板・フォトマスク"
+            },
+            {
+              "code": "5201",
+              "name": "AGC",
+              "note": "ガラス基板・基板材料"
+            },
+            {
+              "code": "6490",
+              "name": "日本ピラー工業",
+              "note": "シール・流体制御/光電融合部品"
+            }
+          ],
+          "solo": []
+        },
+        {
+          "name": "プリント基板/製造装置・薬品(周辺)",
+          "us": [],
+          "jp": [
+            {
+              "code": "6327",
+              "name": "北川精機",
+              "note": "PCB積層プレス装置 世界トップクラス"
+            },
+            {
+              "code": "6336",
+              "name": "石井表記",
+              "note": "PCB製造装置・インクジェットコータ"
+            },
+            {
+              "code": "6278",
+              "name": "ユニオンツール",
+              "note": "PCB用超硬ドリル世界シェア約3割"
+            },
+            {
+              "code": "4626",
+              "name": "太陽ホールディングス",
+              "note": "ソルダーレジスト(保護膜)世界トップ"
+            },
+            {
+              "code": "4971",
+              "name": "メック",
+              "note": "プリント基板用エッチング薬品"
+            },
+            {
+              "code": "4975",
+              "name": "JCU",
+              "note": "PCBめっき技術・薬品の専門"
+            },
+            {
+              "code": "6134",
+              "name": "FUJI",
+              "note": "実装機(チップマウンター)"
+            },
+            {
+              "code": "6656",
+              "name": "インスペック",
+              "note": "基板外観検査装置"
+            }
+          ],
+          "solo": []
+        }
+      ]
+    },
+    {
+      "key": "spe",
+      "name": "半導体製造装置(SPE)",
+      "color": "#3FA7D6",
+      "subs": [
+        {
+          "name": "露光(リソグラフィ)",
+          "us": [
+            {
+              "symbol": "ASML",
+              "name": "ASML(EUV独占)"
+            }
+          ],
+          "jp": [
+            {
+              "code": "8035",
+              "name": "東京エレクトロン",
+              "note": "コータ/デベロッパ"
+            },
+            {
+              "code": "7731",
+              "name": "ニコン",
+              "note": "露光装置"
+            },
+            {
+              "code": "7751",
+              "name": "キヤノン",
+              "note": "露光・ナノインプリント"
+            },
+            {
+              "code": "6925",
+              "name": "ウシオ電機",
+              "note": "露光用光源"
+            }
+          ],
+          "solo": []
+        },
+        {
+          "name": "成膜(Deposition)",
+          "us": [
+            {
+              "symbol": "AMAT",
+              "name": "Applied Materials"
+            },
+            {
+              "symbol": "LRCX",
+              "name": "Lam Research"
+            },
+            {
+              "symbol": "ASMIY",
+              "name": "ASM International"
+            }
+          ],
+          "jp": [
+            {
+              "code": "8035",
+              "name": "東京エレクトロン",
+              "note": "成膜(CVD/ALD)"
+            },
+            {
+              "code": "6525",
+              "name": "KOKUSAI ELECTRIC",
+              "note": "バッチ成膜"
+            },
+            {
+              "code": "6728",
+              "name": "アルバック",
+              "note": "真空成膜装置"
+            },
+            {
+              "code": "6387",
+              "name": "サムコ",
+              "note": "CVD/エッチング中堅"
+            },
+            {
+              "code": "6590",
+              "name": "芝浦メカトロニクス",
+              "note": "枚葉式成膜"
+            }
+          ],
+          "solo": []
+        },
+        {
+          "name": "エッチング(Etch)",
+          "us": [
+            {
+              "symbol": "LRCX",
+              "name": "Lam Research"
+            },
+            {
+              "symbol": "AMAT",
+              "name": "Applied Materials"
+            }
+          ],
+          "jp": [
+            {
+              "code": "8035",
+              "name": "東京エレクトロン",
+              "note": "エッチング装置"
+            }
+          ],
+          "solo": []
+        },
+        {
+          "name": "洗浄(Clean)",
+          "us": [
+            {
+              "symbol": "ACMR",
+              "name": "ACM Research"
+            }
+          ],
+          "jp": [
+            {
+              "code": "7735",
+              "name": "SCREEN HD",
+              "note": "洗浄世界首位"
+            },
+            {
+              "code": "8035",
+              "name": "東京エレクトロン",
+              "note": "洗浄(Clean Track)"
+            },
+            {
+              "code": "6237",
+              "name": "イワキ",
+              "note": "半導体薬液移送ケミカルポンプ"
+            }
+          ],
+          "solo": []
+        },
+        {
+          "name": "検査・計測(Metrology)",
+          "us": [
+            {
+              "symbol": "KLAC",
+              "name": "KLA"
+            },
+            {
+              "symbol": "ONTO",
+              "name": "Onto Innovation"
+            },
+            {
+              "symbol": "NVMI",
+              "name": "Nova"
+            },
+            {
+              "symbol": "BRKR",
+              "name": "Bruker"
+            },
+            {
+              "symbol": "KEYS",
+              "name": "Keysight"
+            }
+          ],
+          "jp": [
+            {
+              "code": "7717",
+              "name": "Vテクノロジー",
+              "note": "パネル・半導体検査/マスク関連"
+            },
+            {
+              "code": "6920",
+              "name": "レーザーテック",
+              "note": "EUVマスク検査で独占"
+            },
+            {
+              "code": "7729",
+              "name": "東京精密",
+              "note": "計測・プローバ"
+            }
+          ],
+          "solo": []
+        },
+        {
+          "name": "EUVマスク・材料",
+          "us": [
+            {
+              "symbol": "ASML",
+              "name": "ASML"
+            }
+          ],
+          "jp": [
+            {
+              "code": "6920",
+              "name": "レーザーテック",
+              "note": "EUVマスク欠陥検査"
+            },
+            {
+              "code": "7741",
+              "name": "HOYA",
+              "note": "マスクブランクス世界シェア約80%"
+            },
+            {
+              "code": "429A",
+              "name": "テクセンドフォトマスク",
+              "note": "外販フォトマスク世界トップ・EUV対応"
+            },
+            {
+              "code": "4063",
+              "name": "信越化学",
+              "note": "フォトマスク基板"
+            },
+            {
+              "code": "4183",
+              "name": "三井化学",
+              "note": "半導体材料・フォトレジスト関連"
+            }
+          ],
+          "solo": []
+        },
+        {
+          "name": "イオン注入・CMP",
+          "us": [
+            {
+              "symbol": "AMAT",
+              "name": "Applied Materials"
+            },
+            {
+              "symbol": "ACLS",
+              "name": "Axcelis"
+            }
+          ],
+          "jp": [
+            {
+              "code": "6361",
+              "name": "荏原",
+              "note": "CMP装置"
+            }
+          ],
+          "solo": []
+        },
+        {
+          "name": "後工程・ダイシング・封止",
+          "us": [
+            {
+              "symbol": "KLIC",
+              "name": "Kulicke & Soffa"
+            },
+            {
+              "symbol": "AMAT",
+              "name": "Applied Materials"
+            },
+            {
+              "symbol": "NDSN",
+              "name": "Nordson(アンダーフィル塗布)"
+            }
+          ],
+          "jp": [
+            {
+              "code": "6146",
+              "name": "ディスコ",
+              "note": "ダイシング/グラインダ世界シェア8割超"
+            },
+            {
+              "code": "6315",
+              "name": "TOWA",
+              "note": "封止(モールディング)高シェア"
+            },
+            {
+              "code": "7729",
+              "name": "東京精密",
+              "note": "ダイシング"
+            },
+            {
+              "code": "6338",
+              "name": "タカトリ",
+              "note": "ダイシング装置中堅"
+            },
+            {
+              "code": "6227",
+              "name": "AIメカテック",
+              "note": "ボールアタッチ・先端パッケージング装置(KLIC/NDSNと競合)"
+            },
+            {
+              "code": "4966",
+              "name": "上村工業",
+              "note": "めっき薬品・装置世界大手"
+            },
+            {
+              "code": "6340",
+              "name": "澁谷工業",
+              "note": "レーザー加工機"
+            }
+          ],
+          "solo": []
+        },
+        {
+          "name": "テスト(ATE)・プローブカード",
+          "us": [
+            {
+              "symbol": "TER",
+              "name": "Teradyne"
+            },
+            {
+              "symbol": "COHU",
+              "name": "Cohu"
+            },
+            {
+              "symbol": "FORM",
+              "name": "FormFactor"
+            }
+          ],
+          "jp": [
+            {
+              "code": "6627",
+              "name": "テラプローブ",
+              "note": "テスト受託(OSAT)"
+            },
+            {
+              "code": "6857",
+              "name": "アドバンテスト",
+              "note": "SoC/メモリテスタ世界首位、NVIDIA連動"
+            },
+            {
+              "code": "6871",
+              "name": "日本マイクロニクス",
+              "note": "プローブカード(メモリ世界首位)"
+            },
+            {
+              "code": "6855",
+              "name": "日本電子材料",
+              "note": "プローブカード専業"
+            },
+            {
+              "code": "6941",
+              "name": "山一電機",
+              "note": "テストソケット・バーンインソケット"
+            },
+            {
+              "code": "6966",
+              "name": "三井ハイテック",
+              "note": "リードフレーム世界トップ・モーターコア"
+            },
+            {
+              "code": "6337",
+              "name": "テセック",
+              "note": "テスター中堅・パワー半導体向け"
+            },
+            {
+              "code": "7729",
+              "name": "東京精密",
+              "note": "テスタ・プローバ"
+            }
+          ],
+          "solo": []
+        }
+      ]
+    },
+    {
+      "key": "compute",
+      "name": "AI半導体・コンピュート",
+      "color": "#5BE39B",
+      "subs": [
+        {
+          "name": "GPU・AIアクセラレータ",
+          "us": [
+            {
+              "symbol": "NVDA",
+              "name": "NVIDIA"
+            },
+            {
+              "symbol": "AMD",
+              "name": "AMD"
+            }
+          ],
+          "jp": [
+            {
+              "code": "6857",
+              "name": "アドバンテスト",
+              "note": "AIチップのテスト工程"
+            },
+            {
+              "code": "6146",
+              "name": "ディスコ",
+              "note": "ダイシング/研削"
+            }
+          ],
+          "solo": []
+        },
+        {
+          "name": "カスタムASIC・XPU",
+          "us": [
+            {
+              "symbol": "AVGO",
+              "name": "Broadcom"
+            },
+            {
+              "symbol": "MRVL",
+              "name": "Marvell"
+            }
+          ],
+          "jp": [
+            {
+              "code": "6526",
+              "name": "ソシオネクスト",
+              "note": "カスタムSoC設計ファブレス、北米DC案件"
+            }
+          ],
+          "solo": []
+        },
+        {
+          "name": "CPU",
+          "us": [
+            {
+              "symbol": "AMD",
+              "name": "AMD"
+            },
+            {
+              "symbol": "INTC",
+              "name": "Intel"
+            },
+            {
+              "symbol": "ARM",
+              "name": "Arm"
+            }
+          ],
+          "jp": [
+            {
+              "code": "9984",
+              "name": "ソフトバンクG",
+              "note": "Arm子会社保有"
+            }
+          ],
+          "solo": []
+        },
+        {
+          "name": "ファウンドリ(受託製造)",
+          "us": [
+            {
+              "symbol": "TSM",
+              "name": "TSMC(ADR)"
+            },
+            {
+              "symbol": "GFS",
+              "name": "GlobalFoundries"
+            },
+            {
+              "symbol": "INTC",
+              "name": "Intel"
+            }
+          ],
+          "jp": [
+            {
+              "code": "6146",
+              "name": "ディスコ",
+              "note": "TSMC設備投資に連動"
+            },
+            {
+              "code": "8035",
+              "name": "東京エレクトロン",
+              "note": "TSMC設備投資に連動"
+            }
+          ],
+          "solo": []
+        },
+        {
+          "name": "EDA(設計ツール)",
+          "us": [
+            {
+              "symbol": "SNPS",
+              "name": "Synopsys"
+            },
+            {
+              "symbol": "CDNS",
+              "name": "Cadence"
+            }
+          ],
+          "jp": [
+            {
+              "code": "6526",
+              "name": "ソシオネクスト",
+              "note": "設計受託"
+            }
+          ],
+          "solo": []
+        },
+        {
+          "name": "半導体ETF・指数",
+          "us": [
+            {
+              "symbol": "SOXX",
+              "name": "iシェアーズ半導体ETF"
+            },
+            {
+              "symbol": "SMH",
+              "name": "ヴァンエック半導体ETF"
+            },
+            {
+              "symbol": "SOXL",
+              "name": "Direxion半導体ブル3倍"
+            },
+            {
+              "symbol": "HBMX",
+              "name": "HBM関連ETF"
+            },
+            {
+              "symbol": "DRAM",
+              "name": "ラウンドヒル・メモリーETF"
+            }
+          ],
+          "jp": [],
+          "solo": [
+            {
+              "code": "200A",
+              "name": "グローバルX 半導体関連-日本株式ETF",
+              "note": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "analog_power",
+      "name": "アナログ・パワー半導体",
+      "color": "#F0A85B",
+      "subs": [
+        {
+          "name": "アナログ半導体",
+          "us": [
+            {
+              "symbol": "TXN",
+              "name": "Texas Instruments"
+            },
+            {
+              "symbol": "ADI",
+              "name": "Analog Devices"
+            },
+            {
+              "symbol": "SWKS",
+              "name": "Skyworks"
+            }
+          ],
+          "jp": [
+            {
+              "code": "6723",
+              "name": "ルネサス",
+              "note": "車載・産業アナログ/MCU"
+            },
+            {
+              "code": "3105",
+              "name": "日清紡HD",
+              "note": "マイクロデバイス(新日本無線)"
+            },
+            {
+              "code": "6479",
+              "name": "ミネベアミツミ",
+              "note": "アナログ半導体・センサ"
+            }
+          ],
+          "solo": []
+        },
+        {
+          "name": "パワー半導体",
+          "us": [
+            {
+              "symbol": "ON",
+              "name": "ON Semi"
+            },
+            {
+              "symbol": "NVTS",
+              "name": "Navitas"
+            },
+            {
+              "symbol": "MPWR",
+              "name": "Monolithic Power"
+            },
+            {
+              "symbol": "WOLF",
+              "name": "Wolfspeed"
+            }
+          ],
+          "jp": [
+            {
+              "code": "6963",
+              "name": "ローム",
+              "note": "SiC・GaNパワー半導体"
+            },
+            {
+              "code": "6723",
+              "name": "ルネサス",
+              "note": "SiC・GaNパワー半導体"
+            },
+            {
+              "code": "6503",
+              "name": "三菱電機",
+              "note": "SiCパワー半導体"
+            },
+            {
+              "code": "6504",
+              "name": "富士電機",
+              "note": "SiCパワー半導体"
+            }
+          ],
+          "solo": []
+        },
+        {
+          "name": "イメージセンサー(CIS)",
+          "us": [
+            {
+              "symbol": "ON",
+              "name": "ON Semi"
+            }
+          ],
+          "jp": [
+            {
+              "code": "6758",
+              "name": "ソニーG",
+              "note": "CMOSイメージセンサ世界首位"
+            },
+            {
+              "code": "6740",
+              "name": "ジャパンディスプレイ",
+              "note": "ディスプレイ・車載/eLEAP"
+            }
+          ],
+          "solo": []
+        }
+      ]
+    },
+    {
+      "key": "passive",
+      "name": "電子部品(MLCC等)",
+      "color": "#F08CC0",
+      "subs": [
+        {
+          "name": "MLCC・コンデンサ(主役)",
+          "us": [],
+          "jp": [
+            {
+              "code": "6981",
+              "name": "村田製作所",
+              "note": "MLCC世界シェア約40%首位"
+            },
+            {
+              "code": "6976",
+              "name": "太陽誘電",
+              "note": "世界3位、AIサーバ向け新型MLCC"
+            },
+            {
+              "code": "6762",
+              "name": "TDK",
+              "note": "世界5位・受動部品総合"
+            },
+            {
+              "code": "6971",
+              "name": "京セラ",
+              "note": "MLCC・セラミック部品"
+            }
+          ],
+          "solo": []
+        },
+        {
+          "name": "MLCC材料(素材)",
+          "us": [],
+          "jp": [
+            {
+              "code": "4028",
+              "name": "石原産業",
+              "note": "MLCC素材チタン酸バリウム"
+            },
+            {
+              "code": "4100",
+              "name": "戸田工業",
+              "note": "誘電体・酸化鉄材料(TDK系)"
+            },
+            {
+              "code": "4078",
+              "name": "堺化学工業",
+              "note": "MLCC誘電体材料"
+            },
+            {
+              "code": "3101",
+              "name": "東洋紡",
+              "note": "MLCC離型フィルム(製造資材)"
+            }
+          ],
+          "solo": []
+        },
+        {
+          "name": "アルミ電解・他コンデンサ",
+          "us": [],
+          "jp": [
+            {
+              "code": "6997",
+              "name": "日本ケミコン",
+              "note": "AIサーバ用LBYシリーズ"
+            },
+            {
+              "code": "6996",
+              "name": "ニチコン",
+              "note": "アルミ電解コンデンサ"
+            },
+            {
+              "code": "3891",
+              "name": "高度紙工業",
+              "note": "コンデンサ用セパレータ世界トップ"
+            },
+            {
+              "code": "6969",
+              "name": "松尾電機",
+              "note": "タンタル・フィルムコンデンサ"
+            },
+            {
+              "code": "6994",
+              "name": "指月電機製作所",
+              "note": "車載用高耐熱フィルムコンデンサ首位"
+            }
+          ],
+          "solo": []
+        },
+        {
+          "name": "チップ抵抗器",
+          "us": [],
+          "jp": [
+            {
+              "code": "6999",
+              "name": "KOA",
+              "note": "チップ抵抗器大手・車載/産機"
+            },
+            {
+              "code": "6977",
+              "name": "日本抵抗器製作所",
+              "note": "抵抗器"
+            }
+          ],
+          "solo": []
+        },
+        {
+          "name": "水晶デバイス",
+          "us": [],
+          "jp": [
+            {
+              "code": "6779",
+              "name": "日本電波工業",
+              "note": "水晶デバイス大手"
+            },
+            {
+              "code": "6878",
+              "name": "大真空",
+              "note": "水晶デバイス"
+            },
+            {
+              "code": "6794",
+              "name": "リバーエレテック",
+              "note": "水晶振動子"
+            }
+          ],
+          "solo": []
+        }
+      ]
+    },
+    {
+      "key": "datacenter",
+      "name": "データセンター",
+      "color": "#7CC8F0",
+      "subs": [
+        {
+          "name": "DC1層_建設請負業者",
+          "us": [
+            {
+              "symbol": "PWR",
+              "name": "Quanta Services"
+            },
+            {
+              "symbol": "IESC",
+              "name": "IES Holdings"
+            },
+            {
+              "symbol": "FIX",
+              "name": "Comfort Systems"
+            }
+          ],
+          "jp": [],
+          "solo": [
+            {
+              "code": "1942",
+              "name": "関電工",
+              "note": "電気工事・DC建設"
+            },
+            {
+              "code": "1944",
+              "name": "きんでん",
+              "note": "電気工事・DC建設"
+            },
+            {
+              "code": "1969",
+              "name": "高砂熱学工業",
+              "note": "空調設備工事"
+            }
+          ]
+        },
+        {
+          "name": "DC2層_建物内設備",
+          "us": [
+            {
+              "symbol": "ETN",
+              "name": "Eaton"
+            },
+            {
+              "symbol": "POWL",
+              "name": "Powell"
+            }
+          ],
+          "jp": [
+            {
+              "code": "1961",
+              "name": "三機工業",
+              "note": "空調・電気設備工事"
+            },
+            {
+              "code": "6504",
+              "name": "富士電機",
+              "note": "変圧器・UPS・受配電"
+            },
+            {
+              "code": "6622",
+              "name": "ダイヘン",
+              "note": "変圧器・受配電/DC需要で急拡大"
+            },
+            {
+              "code": "6501",
+              "name": "日立製作所",
+              "note": "日立エナジー(変圧器・HVDC世界大手)"
+            }
+          ],
+          "solo": []
+        },
+        {
+          "name": "DC3層_冷却",
+          "us": [
+            {
+              "symbol": "VRT",
+              "name": "Vertiv"
+            },
+            {
+              "symbol": "CARR",
+              "name": "Carrier"
+            },
+            {
+              "symbol": "TT",
+              "name": "Trane"
+            },
+            {
+              "symbol": "MOD",
+              "name": "Modine"
+            },
+            {
+              "symbol": "NVT",
+              "name": "nVent"
+            },
+            {
+              "symbol": "SMCI",
+              "name": "Super Micro"
+            },
+            {
+              "symbol": "HPE",
+              "name": "HPE"
+            }
+          ],
+          "jp": [
+            {
+              "code": "6367",
+              "name": "ダイキン工業",
+              "note": "米Chilldyne買収・負圧式液冷"
+            },
+            {
+              "code": "6584",
+              "name": "三桜工業",
+              "note": "液体冷却"
+            },
+            {
+              "code": "1969",
+              "name": "高砂熱学工業",
+              "note": "DC空調・冷却"
+            },
+            {
+              "code": "6516",
+              "name": "山洋電気",
+              "note": "液冷ポンプ"
+            },
+            {
+              "code": "6458",
+              "name": "新晃工業",
+              "note": "大型空調機・DC空調6割増産"
+            }
+          ],
+          "solo": []
+        },
+        {
+          "name": "DC4層_配線・光インフラ",
+          "us": [
+            {
+              "symbol": "BE",
+              "name": "Bloom Energy"
+            },
+            {
+              "symbol": "MLI",
+              "name": "Mueller Industries"
+            },
+            {
+              "symbol": "BDC",
+              "name": "Belden"
+            }
+          ],
+          "jp": [
+            {
+              "code": "5802",
+              "name": "住友電工",
+              "note": "電力・光ケーブル"
+            },
+            {
+              "code": "5805",
+              "name": "SWCC",
+              "note": "電線・ケーブル"
+            }
+          ],
+          "solo": []
+        },
+        {
+          "name": "電源・配電(米国)",
+          "us": [
+            {
+              "symbol": "VRT",
+              "name": "Vertiv"
+            },
+            {
+              "symbol": "ETN",
+              "name": "Eaton"
+            },
+            {
+              "symbol": "GEV",
+              "name": "GE Vernova"
+            },
+            {
+              "symbol": "POWL",
+              "name": "Powell"
+            },
+            {
+              "symbol": "BE",
+              "name": "Bloom Energy"
+            }
+          ],
+          "jp": [
+            {
+              "code": "6504",
+              "name": "富士電機",
+              "note": "受配電・UPS"
+            },
+            {
+              "code": "6707",
+              "name": "サンケン電気",
+              "note": "パワー半導体・電源"
+            }
+          ],
+          "solo": []
+        },
+        {
+          "name": "AIサーバー・スイッチ",
+          "us": [
+            {
+              "symbol": "SMCI",
+              "name": "Super Micro"
+            },
+            {
+              "symbol": "DELL",
+              "name": "Dell"
+            },
+            {
+              "symbol": "HPE",
+              "name": "HPE"
+            },
+            {
+              "symbol": "ANET",
+              "name": "Arista"
+            },
+            {
+              "symbol": "AVGO",
+              "name": "Broadcom"
+            },
+            {
+              "symbol": "ALAB",
+              "name": "Astera Labs"
+            },
+            {
+              "symbol": "CRDO",
+              "name": "Credo"
+            },
+            {
+              "symbol": "CSCO",
+              "name": "Cisco"
+            }
+          ],
+          "jp": [],
+          "solo": []
+        },
+        {
+          "name": "DC運営・GPUクラウド",
+          "us": [
+            {
+              "symbol": "CRWV",
+              "name": "CoreWeave"
+            },
+            {
+              "symbol": "NBIS",
+              "name": "Nebius"
+            },
+            {
+              "symbol": "EQIX",
+              "name": "Equinix"
+            },
+            {
+              "symbol": "ORCL",
+              "name": "Oracle"
+            }
+          ],
+          "jp": [
+            {
+              "code": "3905",
+              "name": "データセクション",
+              "note": "AI・DC関連"
+            },
+            {
+              "code": "3778",
+              "name": "さくらインターネット",
+              "note": "政府クラウド＋GPUクラウド"
+            },
+            {
+              "code": "3774",
+              "name": "IIJ",
+              "note": "DC運営"
+            }
+          ],
+          "solo": []
+        }
+      ]
+    },
+    {
+      "key": "materials",
+      "name": "材料・ウエハー(日本優位)",
+      "color": "#C0C8D8",
+      "subs": [
+        {
+          "name": "フォトレジスト・反射防止膜",
+          "us": [
+            {
+              "symbol": "DD",
+              "name": "DuPont"
+            }
+          ],
+          "jp": [],
+          "solo": [
+            {
+              "code": "4186",
+              "name": "東京応化工業",
+              "note": "フォトレジスト世界首位(約25%)、EUV得意"
+            },
+            {
+              "code": "4063",
+              "name": "信越化学",
+              "note": "EUVレジスト"
+            },
+            {
+              "code": "4005",
+              "name": "住友化学",
+              "note": "フォトレジスト"
+            },
+            {
+              "code": "4901",
+              "name": "富士フイルム",
+              "note": "EUVレジスト参入"
+            },
+            {
+              "code": "4021",
+              "name": "日産化学",
+              "note": "反射防止膜で高シェア"
+            },
+            {
+              "code": "4970",
+              "name": "東洋合成工業",
+              "note": "感光材世界シェア約7割"
+            },
+            {
+              "code": "4187",
+              "name": "大阪有機化学",
+              "note": "レジスト原料"
+            },
+            {
+              "code": "4366",
+              "name": "ダイトーケミックス",
+              "note": "レジスト原料"
+            }
+          ]
+        },
+        {
+          "name": "シリコンウエハー・再生",
+          "us": [],
+          "jp": [],
+          "solo": [
+            {
+              "code": "5384",
+              "name": "フジミインコーポレーテッド",
+              "note": "CMP研磨スラリー世界大手"
+            },
+            {
+              "code": "4043",
+              "name": "トクヤマ",
+              "note": "多結晶シリコン(半導体用)世界大手"
+            },
+            {
+              "code": "4022",
+              "name": "ラサ工業",
+              "note": "高純度リン酸・半導体材料/ウェハ再生"
+            },
+            {
+              "code": "4063",
+              "name": "信越化学",
+              "note": "ウエハー世界首位(約30%)"
+            },
+            {
+              "code": "3436",
+              "name": "SUMCO",
+              "note": "ウエハー世界2位"
+            },
+            {
+              "code": "6890",
+              "name": "フェローテックHD",
+              "note": "中国でウェハ製造・真空シール"
+            },
+            {
+              "code": "3445",
+              "name": "RS Technologies",
+              "note": "シリコンウェハ再生"
+            }
+          ]
+        },
+        {
+          "name": "特殊ガス・エッチングガス",
+          "us": [
+            {
+              "symbol": "ENTG",
+              "name": "Entegris"
+            },
+            {
+              "symbol": "LIN",
+              "name": "Linde"
+            },
+            {
+              "symbol": "APD",
+              "name": "Air Products"
+            }
+          ],
+          "jp": [],
+          "solo": [
+            {
+              "code": "4047",
+              "name": "関東電化工業",
+              "note": "エッチングガス(フッ素系)高シェア"
+            },
+            {
+              "code": "4044",
+              "name": "セントラル硝子",
+              "note": "エッチングガス"
+            },
+            {
+              "code": "4109",
+              "name": "ステラケミファ",
+              "note": "高純度フッ酸世界シェア7割"
+            },
+            {
+              "code": "4022",
+              "name": "ラサ工業",
+              "note": "リン酸(エッチング液)トップシェア"
+            },
+            {
+              "code": "4091",
+              "name": "日本酸素HD",
+              "note": "特殊ガス・産業ガス国内首位"
+            },
+            {
+              "code": "6055",
+              "name": "ジャパンマテリアル",
+              "note": "特殊ガス供給サービス"
+            }
+          ]
+        },
+        {
+          "name": "成膜材料・前駆体・CMP",
+          "us": [],
+          "jp": [
+            {
+              "code": "4410",
+              "name": "ハリマ化成",
+              "note": "はんだ材料・電子材料"
+            },
+            {
+              "code": "4462",
+              "name": "石原ケミカル",
+              "note": "めっき薬品・電子材料"
+            }
+          ],
+          "solo": [
+            {
+              "code": "4369",
+              "name": "トリケミカル研究所",
+              "note": "高純度前駆体・ALD材料"
+            },
+            {
+              "code": "4401",
+              "name": "ADEKA",
+              "note": "成膜用前駆体"
+            },
+            {
+              "code": "4004",
+              "name": "レゾナック",
+              "note": "CMPスラリー大手"
+            },
+            {
+              "code": "4205",
+              "name": "日本ゼオン",
+              "note": "CMP用材料"
+            },
+            {
+              "code": "4368",
+              "name": "扶桑化学工業",
+              "note": "高純度コロイダルシリカ"
+            },
+            {
+              "code": "4090",
+              "name": "高純度化学研究所",
+              "note": "MO原料"
+            }
+          ]
+        },
+        {
+          "name": "封止材・テープ・その他素材",
+          "us": [],
+          "jp": [
+            {
+              "code": "4968",
+              "name": "荒川化学工業",
+              "note": "半導体封止材・接着剤"
+            },
+            {
+              "code": "6768",
+              "name": "タムラ製作所",
+              "note": "はんだ材料・電子化学(DC変圧器も)"
+            },
+            {
+              "code": "7966",
+              "name": "リンテック",
+              "note": "半導体粘着テープ・ペリクル"
+            }
+          ],
+          "solo": [
+            {
+              "code": "4203",
+              "name": "住友ベークライト",
+              "note": "封止材大手"
+            },
+            {
+              "code": "4061",
+              "name": "デンカ",
+              "note": "球状シリカフィラー"
+            },
+            {
+              "code": "6988",
+              "name": "日東電工",
+              "note": "半導体用テープ世界大手"
+            },
+            {
+              "code": "3407",
+              "name": "旭化成",
+              "note": "ドライフィルムレジスト"
+            },
+            {
+              "code": "4626",
+              "name": "太陽HD",
+              "note": "ソルダーレジスト世界首位"
+            },
+            {
+              "code": "5208",
+              "name": "有沢製作所",
+              "note": "銅張積層板"
+            },
+            {
+              "code": "7826",
+              "name": "フルヤ金属",
+              "note": "イリジウム坩堝で高シェア"
+            }
+          ]
+        },
+        {
+          "name": "電線・ケーブル",
+          "us": [
+            {
+              "symbol": "GLW",
+              "name": "Corning"
+            }
+          ],
+          "jp": [],
+          "solo": [
+            {
+              "code": "5803",
+              "name": "フジクラ",
+              "note": "電線御三家・光通信主力"
+            },
+            {
+              "code": "5801",
+              "name": "古河電工",
+              "note": "電線御三家・多心光ファイバー"
+            },
+            {
+              "code": "5802",
+              "name": "住友電工",
+              "note": "電線御三家"
+            },
+            {
+              "code": "5805",
+              "name": "SWCC",
+              "note": "電線・ケーブル"
+            }
+          ]
+        },
+        {
+          "name": "フォトマスク・イメージセンサ等",
+          "us": [
+            {
+              "symbol": "PLAB",
+              "name": "Photronics"
+            }
+          ],
+          "jp": [],
+          "solo": [
+            {
+              "code": "7911",
+              "name": "TOPPAN",
+              "note": "フォトマスク大手"
+            },
+            {
+              "code": "429A",
+              "name": "テクセンドフォトマスク",
+              "note": "旧TOPPAN系・外販フォトマスク世界トップ"
+            },
+            {
+              "code": "7912",
+              "name": "大日本印刷",
+              "note": "フォトマスク・ナノインプリント"
+            },
+            {
+              "code": "6758",
+              "name": "ソニーG",
+              "note": "CMOSイメージセンサ世界首位"
+            },
+            {
+              "code": "6963",
+              "name": "ローム",
+              "note": "パワー半導体"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "subsystem",
+      "name": "装置部品・サブシステム",
+      "color": "#8FA0B8",
+      "subs": [
+        {
+          "name": "真空・ガス制御・ポンプ",
+          "us": [
+            {
+              "symbol": "MKSI",
+              "name": "MKS Instruments"
+            },
+            {
+              "symbol": "ICHR",
+              "name": "Ichor"
+            },
+            {
+              "symbol": "UCTT",
+              "name": "Ultra Clean"
+            },
+            {
+              "symbol": "AEIS",
+              "name": "Advanced Energy"
+            }
+          ],
+          "jp": [
+            {
+              "code": "6668",
+              "name": "アドテックプラズマテクノロジー",
+              "note": "半導体製造用プラズマ電源"
+            }
+          ],
+          "solo": [
+            {
+              "code": "6273",
+              "name": "SMC",
+              "note": "空圧機器世界首位"
+            },
+            {
+              "code": "6407",
+              "name": "CKD",
+              "note": "薬液バルブ・流量制御"
+            },
+            {
+              "code": "6674",
+              "name": "GSユアサ",
+              "note": "産業用蓄電池・大容量UPS向け需要拡大"
+            },
+            {
+              "code": "6363",
+              "name": "酉島製作所",
+              "note": "ポンプ大手・データセンター冷却/水インフラ"
+            },
+            {
+              "code": "6490",
+              "name": "日本ピラー工業",
+              "note": "シール材・継手で高シェア"
+            },
+            {
+              "code": "6361",
+              "name": "荏原",
+              "note": "ドライ真空ポンプ世界大手"
+            }
+          ]
+        },
+        {
+          "name": "搬送・精密部品",
+          "us": [],
+          "jp": [
+            {
+              "code": "6384",
+              "name": "昭和真空",
+              "note": "真空装置・スパッタ"
+            },
+            {
+              "code": "6339",
+              "name": "新東工業",
+              "note": "鋳造・表面処理装置"
+            }
+          ],
+          "solo": [
+            {
+              "code": "6323",
+              "name": "ローツェ",
+              "note": "ウェハ搬送ロボット高シェア"
+            },
+            {
+              "code": "6324",
+              "name": "ハーモニック・ドライブ",
+              "note": "精密減速機世界トップ"
+            },
+            {
+              "code": "6264",
+              "name": "マルマエ",
+              "note": "真空チャンバー部品"
+            },
+            {
+              "code": "6486",
+              "name": "イーグル工業",
+              "note": "メカニカルシール世界大手"
+            },
+            {
+              "code": "6877",
+              "name": "OBARA GROUP",
+              "note": "CMP研磨ヘッド・ニッチトップ"
+            },
+            {
+              "code": "6258",
+              "name": "平田機工",
+              "note": "生産設備・搬送装置"
+            },
+            {
+              "code": "5631",
+              "name": "日本製鋼所",
+              "note": "樹脂成形装置"
+            },
+            {
+              "code": "6383",
+              "name": "ダイフク",
+              "note": "搬送システム・物流自動化"
+            }
+          ]
+        },
+        {
+          "name": "光・センサー・計測部品",
+          "us": [],
+          "jp": [
+            {
+              "code": "5332",
+              "name": "TOTO",
+              "note": "セラミック静電チャック(半導体)"
+            },
+            {
+              "code": "5331",
+              "name": "ノリタケ",
+              "note": "研削砥石・セラミック(半導体研磨)"
+            },
+            {
+              "code": "5334",
+              "name": "日本特殊陶業",
+              "note": "セラミックパッケージ・静電チャック"
+            },
+            {
+              "code": "5333",
+              "name": "日本ガイシ",
+              "note": "半導体製造装置用セラミックス"
+            },
+            {
+              "code": "7746",
+              "name": "岡本硝子",
+              "note": "特殊ガラス・反射鏡"
+            }
+          ],
+          "solo": [
+            {
+              "code": "6965",
+              "name": "浜松ホトニクス",
+              "note": "光検出器・レーザー世界大手"
+            },
+            {
+              "code": "6861",
+              "name": "キーエンス",
+              "note": "センサー・測定器(高収益)"
+            },
+            {
+              "code": "6856",
+              "name": "堀場製作所",
+              "note": "マスフローコントローラ世界シェア6割(堀場エステック)"
+            },
+            {
+              "code": "6925",
+              "name": "ウシオ電機",
+              "note": "露光用光源"
+            },
+            {
+              "code": "6834",
+              "name": "精工技研",
+              "note": "光学部品・金型"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "facility",
+      "name": "ファシリティ・商社(国策)",
+      "color": "#A8B89F",
+      "subs": [
+        {
+          "name": "超純水・クリーンルーム",
+          "us": [],
+          "jp": [],
+          "solo": [
+            {
+              "code": "6370",
+              "name": "栗田工業",
+              "note": "超純水装置国内首位"
+            },
+            {
+              "code": "6368",
+              "name": "オルガノ",
+              "note": "超純水製造装置"
+            },
+            {
+              "code": "6254",
+              "name": "野村マイクロ",
+              "note": "超純水専業"
+            },
+            {
+              "code": "1979",
+              "name": "大気社",
+              "note": "クリーンルーム施工国内トップ"
+            },
+            {
+              "code": "1969",
+              "name": "高砂熱学工業",
+              "note": "空調設備工事大手"
+            },
+            {
+              "code": "1980",
+              "name": "ダイダン",
+              "note": "設備工事"
+            }
+          ]
+        },
+        {
+          "name": "半導体商社",
+          "us": [
+            {
+              "symbol": "ARW",
+              "name": "Arrow Electronics"
+            },
+            {
+              "symbol": "AVT",
+              "name": "Avnet"
+            }
+          ],
+          "jp": [
+            {
+              "code": "2737",
+              "name": "トーメンデバイス",
+              "note": "東芝/キオクシア系 半導体商社"
+            }
+          ],
+          "solo": [
+            {
+              "code": "3132",
+              "name": "マクニカ",
+              "note": "半導体商社最大手"
+            },
+            {
+              "code": "2760",
+              "name": "東京エレクトロンデバイス",
+              "note": "TEL系・技術商社"
+            },
+            {
+              "code": "8154",
+              "name": "加賀電子",
+              "note": "EMSも手がける"
+            },
+            {
+              "code": "3156",
+              "name": "レスターHD",
+              "note": "電子部品商社"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "metals",
+      "name": "銅・貴金属(川上資源)",
+      "color": "#D98C5F",
+      "subs": [
+        {
+          "name": "銅接続(DC配線・コネクタ)",
+          "us": [
+            {
+              "symbol": "APH",
+              "name": "Amphenol"
+            },
+            {
+              "symbol": "MRVL",
+              "name": "Marvell"
+            },
+            {
+              "symbol": "CRDO",
+              "name": "Credo"
+            },
+            {
+              "symbol": "COPX",
+              "name": "Global X 銅ETF"
+            }
+          ],
+          "jp": [
+            {
+              "code": "5706",
+              "name": "三井金属",
+              "note": "極薄電解銅箔"
+            },
+            {
+              "code": "5016",
+              "name": "JX金属",
+              "note": "銅箔・スパッタターゲット"
+            },
+            {
+              "code": "5801",
+              "name": "古河電工",
+              "note": "銅・電線"
+            },
+            {
+              "code": "5803",
+              "name": "フジクラ",
+              "note": "銅・電線"
+            },
+            {
+              "code": "6278",
+              "name": "ユニオンツール",
+              "note": "PCBドリル等"
+            },
+            {
+              "code": "4971",
+              "name": "メック",
+              "note": "銅表面処理薬品"
+            }
+          ],
+          "solo": []
+        },
+        {
+          "name": "銅(地金・鉱山)",
+          "us": [
+            {
+              "symbol": "FCX",
+              "name": "Freeport-McMoRan"
+            },
+            {
+              "symbol": "AA",
+              "name": "Alcoa"
+            },
+            {
+              "symbol": "COPX",
+              "name": "Global X 銅ETF"
+            }
+          ],
+          "jp": [
+            {
+              "code": "5016",
+              "name": "JX金属",
+              "note": "銅製錬・スパッタターゲット"
+            },
+            {
+              "code": "5706",
+              "name": "三井金属",
+              "note": "電解銅箔・製錬"
+            },
+            {
+              "code": "3110",
+              "name": "日東紡",
+              "note": "ガラスクロス・銅関連"
+            },
+            {
+              "code": "5741",
+              "name": "UACJ",
+              "note": "アルミ圧延"
+            },
+            {
+              "code": "5703",
+              "name": "日本軽金属HD",
+              "note": "アルミ"
+            }
+          ],
+          "solo": []
+        },
+        {
+          "name": "金・銀(貴金属)",
+          "us": [
+            {
+              "symbol": "NEM",
+              "name": "Newmont"
+            },
+            {
+              "symbol": "GDX",
+              "name": "VanEck 金鉱株ETF"
+            }
+          ],
+          "jp": [
+            {
+              "code": "5713",
+              "name": "住友金属鉱山",
+              "note": "金・銅・電池材料"
+            },
+            {
+              "code": "1673",
+              "name": "WisdomTree 銀",
+              "note": "銀ETF"
+            }
+          ],
+          "solo": []
+        }
+      ]
+    }
+  ]
+}

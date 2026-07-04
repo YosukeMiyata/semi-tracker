@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+/*
+ * デザイントークン — semi-tracker-v2-prototype.html の CSS 変数を正とする。
+ * 上昇=赤 / 下落=青 は日本市場の慣習。
+ */
+@theme {
+  --color-paper: #f2f3f5; /* ウェハーグレー */
+  --color-card: #ffffff;
+  --color-ink: #171c26; /* 藍墨 */
+  --color-ink-2: #5a6372;
+  --color-line: #e1e4e9;
+  --color-copper: #a65e2b; /* 銅配線 */
+  --color-copper-soft: #f3e7dc;
+  --color-up: #c93a31; /* 上昇=赤 */
+  --color-up-soft: #fbeae8;
+  --color-down: #1f5fa8; /* 下落=青 */
+  --color-down-soft: #e7eff8;
+  --color-neutral: #8a93a1;
+
+  --font-sans: "Zen Kaku Gothic New", sans-serif;
+  --font-serif: "Shippori Mincho", serif;
+  --font-mono: "IBM Plex Mono", monospace;
+
+  --radius-card: 14px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    /* biome-ignore lint/complexity/noImportantStyles: reduced-motion 時は全アニメーションを確実に止める(プロトタイプ踏襲) */
+    animation: none !important;
+    /* biome-ignore lint/complexity/noImportantStyles: 同上 */
+    transition: none !important;
+  }
+}

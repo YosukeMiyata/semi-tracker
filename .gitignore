@@ -1,0 +1,13 @@
+# Node
+node_modules/
+apps/web/build/
+apps/web/.react-router/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# OS / editor
+.DS_Store
+*.local
