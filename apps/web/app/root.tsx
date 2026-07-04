@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import { Links, Meta, NavLink, Outlet, Scripts, ScrollRestoration } from "react-router";
+import { themesPerf } from "~/lib/data";
 import "./app.css";
 
 export function Layout({ children }: { children: ReactNode }) {
@@ -42,7 +43,9 @@ export default function App() {
         <div className="font-bold font-serif text-[19px] tracking-[0.02em]">
           半導体テーマトラッカー <em className="text-copper not-italic">2.0</em>
         </div>
-        <div className="ml-auto font-mono text-[11px] text-ink-2">開発版</div>
+        <div className="ml-auto font-mono text-[11px] text-ink-2">
+          データ {themesPerf.last_updated} 時点
+        </div>
       </header>
 
       <main className="mx-auto max-w-[640px] px-4 pt-[18px] pb-10">
@@ -54,7 +57,8 @@ export default function App() {
         :本サイトは公開情報の整理・ニュース論調の分析を提供するものであり、金融商品取引法上の投資助言ではありません。感情スコアはニュース記事の論調を機械的に数値化したもので、将来の株価を予測するものではありません。投資判断はご自身の責任でお願いします。
         <br />
         <br />
-        データソース:株価=Stooq日足(平日自動更新予定)/ニュース=主要メディア(出典リンクを各記事に表示予定)
+        データソース:株価=Stooq / Yahoo Finance
+        日足(平日自動更新・前営業日確定分)/ニュース=主要メディア(出典リンクを各記事に表示予定)
       </footer>
 
       <nav className="fixed inset-x-0 bottom-0 z-40 flex justify-around border-line border-t bg-card px-1 pt-1.5 pb-[calc(6px+env(safe-area-inset-bottom))]">

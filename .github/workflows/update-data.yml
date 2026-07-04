@@ -1,0 +1,41 @@
+name: update-data
+
+on:
+  schedule:
+    - cron: "0 10 * * 1-5" # 平日 JST 19:00(UTC 10:00)。Actions の cron は数分〜遅延あり
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-data
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: 株価取得 → 集計 → data/*.json 生成
+        # 失敗率が閾値を超えると exit 1 で終了し、data/ は書き換えられない
+        # → 前回データが維持され、このジョブの失敗通知(メール)で気づける(仕様書 4.1)
+        run: python3 pipeline/update_prices.py
+
+      - name: 変更があれば commit & push(→ deploy.yml が自動でサイト再ビルド)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/
+          if git diff --cached --quiet; then
+            echo "変更なし(休場日など)"
+            exit 0
+          fi
+          git commit -m "data: 日次更新 $(TZ=Asia/Tokyo date +%Y-%m-%d) [auto]"
+          git push
