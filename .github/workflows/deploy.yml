@@ -52,6 +52,24 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+    outputs:
+      first_attempt: ${{ steps.deployment.outcome }}
     steps:
+      # deploy-pages は一時的な障害で失敗することがあるため、失敗を握りつぶして
+      # 下の deploy-retry ジョブで1回だけ再試行する
+      - id: deployment
+        uses: actions/deploy-pages@v4
+        continue-on-error: true
+
+  deploy-retry:
+    needs: deploy
+    if: needs.deploy.outputs.first_attempt == 'failure'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: 60秒待って再デプロイ
+        run: sleep 60
       - id: deployment
         uses: actions/deploy-pages@v4
