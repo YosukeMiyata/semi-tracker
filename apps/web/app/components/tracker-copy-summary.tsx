@@ -107,7 +107,7 @@ export function TrackerCopySummary() {
     <button
       type="button"
       onClick={copy}
-      className="w-full rounded-card border border-line border-dashed bg-[#FBFBFC] px-3 py-2.5 text-[12.5px] font-bold hover:bg-card"
+      className="w-full rounded-[10px] border-none bg-gradient-to-br from-down to-[#5B9279] px-3 py-3 text-[13px] font-bold text-white hover:opacity-90"
     >
       {copied ? "コピーしました ✓" : "📋 AI分析用サマリーをコピー(Claudeに貼って質問)"}
     </button>

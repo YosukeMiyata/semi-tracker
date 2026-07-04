@@ -146,7 +146,7 @@ export function ThemeChart({ themes }: { themes: ThemeDetail[] }) {
               x2={W - PAD.r}
               y1={yAt(v)}
               y2={yAt(v)}
-              stroke={v === 0 ? "#C9CED6" : "var(--color-line)"}
+              stroke={v === 0 ? "var(--color-faint)" : "var(--color-line)"}
               strokeDasharray={v === 0 ? "3 3" : undefined}
             />
             <text

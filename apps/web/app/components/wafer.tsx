@@ -12,27 +12,27 @@ const GAP = 3;
 /** スコア→色(プロトタイプの col() を移植)。null(ニュースなし)は中立色 */
 function dieColor(s: number | null): string {
   if (s === null) {
-    return "#C9CED6";
+    return "#8B94A8";
   }
   if (s >= 1.5) {
-    return "#C93A31";
+    return "#F0593C";
   }
   if (s >= 0.8) {
-    return "#DB7168";
+    return "#E8785A";
   }
   if (s >= 0.3) {
-    return "#EBAFAA";
+    return "#C97A68";
   }
   if (s > -0.3) {
-    return "#C9CED6";
+    return "#8B94A8";
   }
   if (s > -0.8) {
-    return "#A6BEDC";
+    return "#6AADD4";
   }
   if (s > -1.5) {
-    return "#5C8CC0";
+    return "#4A9BC8";
   }
-  return "#1F5FA8";
+  return "#3FA7D6";
 }
 
 export interface WaferTheme {
@@ -58,7 +58,7 @@ export function Wafer({ themes }: { themes: WaferTheme[] }) {
   }
   return (
     <svg viewBox="0 0 150 150" role="img" aria-label="テーマ別センチメントのウェハーマップ">
-      <circle cx={CX} cy={CY} r={R} fill="#FAFBFC" stroke="#D6DAE0" strokeWidth="1.5" />
+      <circle cx={CX} cy={CY} r={R} fill="#1B2231" stroke="rgba(38,48,65,.8)" strokeWidth="1.5" />
       {dies.map((d, i) => (
         <rect
           key={`${d.theme.key}-${d.x}-${d.y}`}

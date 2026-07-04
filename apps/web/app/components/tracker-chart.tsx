@@ -52,7 +52,7 @@ export function TrackerChart({ themes }: { themes: TrackerRankedTheme[] }) {
               x2={W - PAD.r}
               y1={yAt(v)}
               y2={yAt(v)}
-              stroke={Math.abs(v) < 0.01 ? "#C9CED6" : "var(--color-line)"}
+              stroke={Math.abs(v) < 0.01 ? "var(--color-faint)" : "var(--color-line)"}
               strokeDasharray={Math.abs(v) < 0.01 ? "3 3" : undefined}
             />
             <text

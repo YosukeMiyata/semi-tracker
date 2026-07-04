@@ -10,6 +10,7 @@ export function ChipGroup<T extends string>({
   onChange,
   accent,
   wrap,
+  large,
 }: {
   label: string;
   options: ChipOption<T>[];
@@ -17,6 +18,7 @@ export function ChipGroup<T extends string>({
   onChange: (id: T) => void;
   accent?: Partial<Record<T, string>>;
   wrap?: boolean;
+  large?: boolean;
 }) {
   return (
     <div>
@@ -31,10 +33,12 @@ export function ChipGroup<T extends string>({
               type="button"
               aria-pressed={active}
               onClick={() => onChange(opt.id)}
-              className={`shrink-0 rounded-lg border px-3 py-1.5 text-[12.5px] transition-colors focus-visible:outline-2 focus-visible:outline-copper focus-visible:outline-offset-1 ${
+              className={`shrink-0 rounded-lg border transition-colors focus-visible:outline-2 focus-visible:outline-copper focus-visible:outline-offset-1 ${
+                large ? "px-4 py-2.5 text-[15px] font-bold" : "px-3.5 py-2 text-[12px]"
+              } ${
                 active
-                  ? (accentClass ?? "border-ink bg-ink font-bold text-card")
-                  : "border-line bg-card text-ink-2"
+                  ? (accentClass ?? "border-ink bg-ink font-bold text-paper")
+                  : "border-line bg-transparent text-ink-2"
               }`}
             >
               {opt.label}
@@ -71,8 +75,10 @@ export function MultiChipGroup<T extends string>({
               type="button"
               aria-pressed={active}
               onClick={() => onToggle(opt.id)}
-              className={`shrink-0 rounded-lg border px-3 py-1.5 text-[12px] transition-colors focus-visible:outline-2 focus-visible:outline-copper focus-visible:outline-offset-1 ${
-                active ? "border-ink bg-ink font-bold text-card" : "border-line bg-card text-ink-2"
+              className={`shrink-0 rounded-lg border px-3.5 py-2 text-[12px] font-semibold transition-colors focus-visible:outline-2 focus-visible:outline-copper focus-visible:outline-offset-1 ${
+                active
+                  ? "border-ink bg-ink font-bold text-paper"
+                  : "border-line bg-transparent text-ink-2"
               }`}
             >
               {opt.label}

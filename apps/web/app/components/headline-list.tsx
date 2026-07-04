@@ -1,24 +1,25 @@
 import { Card } from "~/components/section";
 import { type HeadlineItem, shortDate } from "~/lib/headlines";
 
+/* v1 風: ダークUI上で半透明の色分けバッジ */
 const SOURCE_STYLE: Record<string, string> = {
-  日経: "border-[#E8D4C8] bg-[#FBF6F2] text-[#8B5A3C]",
-  日経xTECH: "border-[#E8D4C8] bg-[#FBF6F2] text-[#8B5A3C]",
-  Bloomberg: "border-[#F0DCC8] bg-[#FFF8F0] text-[#9A5C1A]",
-  Reuters: "border-[#D4DCE8] bg-[#F2F6FB] text-[#3A5A8C]",
-  CNBC: "border-[#D4E0F0] bg-[#F0F5FC] text-[#2E5080]",
-  WSJ: "border-[#D8D4E8] bg-[#F4F2FA] text-[#4A3A6B]",
-  ITmedia: "border-[#D8E8D4] bg-[#F4FAF2] text-[#3A6B3A]",
-  "EE Times Japan": "border-[#E0D4E8] bg-[#F7F3FA] text-[#5A3A7A]",
-  DigiTimes: "border-[#D4E8E8] bg-[#F0FAFA] text-[#2A6060]",
-  日刊工業: "border-[#E4DDD4] bg-[#FAF8F5] text-[#6B5344]",
-  東洋経済: "border-[#D4D8E8] bg-[#F2F4FA] text-[#3A4570]",
-  SemiEngineering: "border-[#E0E4D4] bg-[#F7FAF2] text-[#4A5A3A]",
-  "Tom's Hardware": "border-[#D8E0E8] bg-[#F0F4F8] text-[#3A5060]",
+  日経: "border-copper/40 bg-copper/10 text-copper",
+  日経xTECH: "border-copper/40 bg-copper/10 text-copper",
+  Bloomberg: "border-copper/30 bg-copper/8 text-copper",
+  Reuters: "border-down/40 bg-down/10 text-down",
+  CNBC: "border-down/30 bg-down/8 text-down",
+  WSJ: "border-us/40 bg-us/10 text-us",
+  ITmedia: "border-[#3E9B62]/40 bg-[#3E9B62]/10 text-[#3E9B62]",
+  "EE Times Japan": "border-us/30 bg-us/8 text-us",
+  DigiTimes: "border-cyan/40 bg-cyan/10 text-cyan",
+  日刊工業: "border-copper/25 bg-copper/8 text-ink-2",
+  東洋経済: "border-down/25 bg-down/8 text-ink-2",
+  SemiEngineering: "border-[#3E9B62]/30 bg-[#3E9B62]/8 text-[#3E9B62]",
+  "Tom's Hardware": "border-cyan/30 bg-cyan/8 text-cyan",
 };
 
 function sourceBadgeClass(source: string): string {
-  return SOURCE_STYLE[source] ?? "border-line bg-card text-ink-2";
+  return SOURCE_STYLE[source] ?? "border-line bg-panel2 text-ink-2";
 }
 
 export function HeadlineList({

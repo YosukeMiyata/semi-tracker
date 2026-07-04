@@ -65,7 +65,7 @@ export function CopySummary() {
       <button
         type="button"
         onClick={copy}
-        className="rounded-full bg-ink px-5 py-2 font-bold text-[13px] text-card focus-visible:outline-2 focus-visible:outline-copper focus-visible:outline-offset-2"
+        className="rounded-full bg-gradient-to-br from-down to-[#5B9279] px-5 py-2 font-bold text-[13px] text-white focus-visible:outline-2 focus-visible:outline-copper focus-visible:outline-offset-2"
       >
         {copied ? "コピーしました ✓" : "AI分析用サマリーをコピー"}
       </button>

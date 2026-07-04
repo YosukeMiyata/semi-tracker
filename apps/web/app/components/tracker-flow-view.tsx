@@ -39,7 +39,7 @@ const stages = (flowJson as { stages: FlowStage[] }).stages;
 function StageVisual({ kind }: { kind: string | null }) {
   if (kind === "loop") {
     return (
-      <div className="mx-3 mb-3 rounded-[10px] border border-line border-dashed bg-[#FBFBFC] px-3 py-2.5 text-center text-[12px] text-ink-2 leading-[1.6]">
+      <div className="mx-3 mb-3 rounded-[10px] border border-line border-dashed bg-panel2 px-3 py-2.5 text-center text-[12px] text-ink-2 leading-[1.6]">
         🔄 洗浄→成膜→露光→エッチング→CMP を何層も繰り返して回路ビルを建てる
       </div>
     );
@@ -47,7 +47,7 @@ function StageVisual({ kind }: { kind: string | null }) {
   if (kind === "package3") {
     return (
       <div className="mx-3 mb-3 space-y-1 text-[11.5px]">
-        <div className="rounded-md border border-[#9D7CF0]/40 bg-[#9D7CF0]/15 px-2 py-1.5 text-center font-bold">
+        <div className="rounded-md border border-us/40 bg-us/15 px-2 py-1.5 text-center font-bold">
           GPU / HBM / CPO — チップ&光の出口
         </div>
         <div className="rounded-md border border-copper/30 bg-copper-soft px-2 py-1.5 text-center font-bold">
@@ -56,7 +56,7 @@ function StageVisual({ kind }: { kind: string | null }) {
         <div className="rounded-md border border-down/30 bg-down-soft px-2 py-1.5 text-center font-bold">
           ▦ パッケージ基板(ABF/樹脂) — 骨格・密着
         </div>
-        <div className="rounded-md border border-[#3E9B62]/30 bg-[#EAF5EE] px-2 py-1.5 text-center font-bold">
+        <div className="rounded-md border border-[#3E9B62]/30 bg-[#3E9B62]/15 px-2 py-1.5 text-center font-bold">
           ▩ マザーボード(PCB) — 大地
         </div>
       </div>
@@ -64,7 +64,7 @@ function StageVisual({ kind }: { kind: string | null }) {
   }
   if (kind === "test") {
     return (
-      <div className="mx-3 mb-3 rounded-[10px] border border-line bg-[#FBFBFC] px-3 py-2.5 text-center text-[12px]">
+      <div className="mx-3 mb-3 rounded-[10px] border border-line bg-panel2 px-3 py-2.5 text-center text-[12px]">
         ✅ 完成チップを全数検査・テストして出荷
       </div>
     );
@@ -72,7 +72,7 @@ function StageVisual({ kind }: { kind: string | null }) {
   if (kind === "cpo") {
     return (
       <div className="mx-3 mb-3 space-y-1 text-[11.5px]">
-        <div className="rounded-md border border-[#9D7CF0]/40 bg-[#9D7CF0]/15 px-2 py-1.5 text-center">
+        <div className="rounded-md border border-us/40 bg-us/15 px-2 py-1.5 text-center">
           GPU / HBM / 💠光エンジン
         </div>
         <div className="rounded-md border border-copper/30 bg-copper-soft px-2 py-1.5 text-center">
@@ -86,17 +86,17 @@ function StageVisual({ kind }: { kind: string | null }) {
   }
   if (kind === "iceberg") {
     return (
-      <div className="mx-3 mb-3 rounded-[10px] border-2 border-ink bg-[#0B0E15] px-3 py-3 text-[11.5px] text-card leading-[1.65]">
-        <div className="mb-2 border border-card/30 px-2 py-1.5 text-[12px]">
+      <div className="mx-3 mb-3 rounded-[10px] border-2 border-ink bg-paper px-3 py-3 text-[11.5px] text-ink leading-[1.65]">
+        <div className="mb-2 border border-line px-2 py-1.5 text-[12px]">
           <span className="text-up">♥</span>{" "}
           海面の上=GPUサーバー。海面下=ストレージ・ネットワーク・電源・冷却の「見えない土台」
         </div>
         <div className="space-y-1 text-center font-bold">
-          <div className="bg-[#EAF6FF]/90 py-1 text-ink">⛰️ GPUサーバー(海面)</div>
-          <div className="bg-[#7FD8E8]/90 py-1 text-ink">📚 ストレージ層</div>
-          <div className="bg-[#4FB3D9]/90 py-1 text-card">🕸️ ネットワーク層</div>
-          <div className="bg-[#2E86C1]/90 py-1 text-card">⚡ 電源・配電層</div>
-          <div className="bg-[#1B4F8A] py-1 text-card">❄️ 冷却層(氷山の底)</div>
+          <div className="bg-cyan/20 py-1 text-ink">⛰️ GPUサーバー(海面)</div>
+          <div className="bg-down/25 py-1 text-ink">📚 ストレージ層</div>
+          <div className="bg-down/40 py-1 text-ink">🕸️ ネットワーク層</div>
+          <div className="bg-down/60 py-1 text-white">⚡ 電源・配電層</div>
+          <div className="bg-[#1B4F8A] py-1 text-white">❄️ 冷却層(氷山の底)</div>
         </div>
       </div>
     );
@@ -110,10 +110,10 @@ function StockChip({ item, onPick }: { item: FlowItem; onPick: (code: string) =>
     <button
       type="button"
       onClick={() => onPick(item.code)}
-      className="inline-flex items-center gap-1.5 rounded-lg border border-line bg-card px-2 py-1 text-[11px] hover:bg-[#FBFBFC]"
+      className="inline-flex items-center gap-1.5 rounded-lg border border-line bg-card px-2 py-1 text-[11px] hover:bg-panel2"
     >
       <span
-        className={`font-mono font-bold ${item.market === "jp" ? "text-copper" : "text-[#7A52E0]"}`}
+        className={`font-mono font-bold ${item.market === "jp" ? "text-copper" : "text-us"}`}
       >
         {item.code}
       </span>
@@ -139,7 +139,7 @@ function FlowStepBlock({
   const total = step.roles.reduce((a, r) => a + r.items.length, 0);
   return (
     <div
-      className={`rounded-[10px] border border-line bg-[#FBFBFC] ${open ? "border-ink-2/40" : ""}`}
+      className={`rounded-[10px] border border-line bg-panel2 ${open ? "border-ink-2/40" : ""}`}
     >
       <button
         type="button"

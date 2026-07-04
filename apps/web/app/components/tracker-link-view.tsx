@@ -5,14 +5,14 @@ import { linkageGroups, linkageMethod } from "~/lib/tracker";
 function trigBadge(level: number, usAvg: number | null) {
   if (level >= 3) {
     return (
-      <span className="rounded-full bg-up px-2 py-0.5 font-bold text-[10px] text-card">
+      <span className="rounded-full bg-up px-2 py-0.5 font-bold text-[10px] text-white">
         ▲▲▲ 急騰 {fmtPct(usAvg)}
       </span>
     );
   }
   if (level >= 2) {
     return (
-      <span className="rounded-full bg-up/85 px-2 py-0.5 font-bold text-[10px] text-card">
+      <span className="rounded-full bg-up/85 px-2 py-0.5 font-bold text-[10px] text-white">
         ▲▲ 大幅高 {fmtPct(usAvg)}
       </span>
     );
@@ -59,7 +59,7 @@ export function LinkView({
       </p>
 
       {triggered.length === 0 ? (
-        <p className="rounded-card border border-line border-dashed bg-[#FBFBFC] px-3 py-2.5 text-[12px] text-ink-2">
+        <p className="rounded-card border border-line border-dashed bg-panel2 px-3 py-2.5 text-[12px] text-ink-2">
           直近の営業日に +2% 超で上昇した米国テーマはありませんでした。以下は過去実績の連動率です。
         </p>
       ) : null}
@@ -81,8 +81,8 @@ export function LinkView({
             <div className="flex flex-wrap gap-1.5 border-line border-b px-3 py-2 text-[10.5px] text-ink-2">
               <span className="mr-1">前日の米国:</span>
               {g.us.map((u) => (
-                <span key={u.symbol} className="rounded bg-[#FBFBFC] px-1.5 py-0.5 font-mono">
-                  <span className="text-[#7A52E0]">{u.symbol}</span>{" "}
+                <span key={u.symbol} className="rounded bg-panel2 px-1.5 py-0.5 font-mono">
+                  <span className="text-us">{u.symbol}</span>{" "}
                   <span className={pctColor(u.chgPct)}>{fmtPct(u.chgPct)}</span>
                 </span>
               ))}
@@ -102,7 +102,7 @@ export function LinkView({
               type="button"
               data-symbol={r.code}
               onClick={() => onPickStock(r.code)}
-              className={`grid w-full grid-cols-[1fr_auto_auto_auto] items-center gap-2 border-line border-t px-3 py-2 text-left text-[12.5px] hover:bg-[#FBFBFC] ${highlightRowClass(r.code, highlightSymbol)}`}
+              className={`grid w-full grid-cols-[1fr_auto_auto_auto] items-center gap-2 border-line border-t px-3 py-2 text-left text-[12.5px] hover:bg-panel2 ${highlightRowClass(r.code, highlightSymbol)}`}
             >
               <span>
                 <span className="font-mono font-bold text-copper">{r.code}</span> {r.name}

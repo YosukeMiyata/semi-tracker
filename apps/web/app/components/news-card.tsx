@@ -19,13 +19,13 @@ const BORDER = {
 const BADGE = {
   pos: "bg-up-soft text-up",
   neg: "bg-down-soft text-down",
-  neu: "bg-[#EDEFF2] text-neutral",
+  neu: "bg-panel2 text-neutral",
 } as const;
 
 const STOCK_CHIP = {
-  up: "border-[#EBC3BF] bg-up-soft text-up",
-  down: "border-[#BFD3EA] bg-down-soft text-down",
-  flat: "border-line bg-card text-ink-2",
+  up: "border-up/30 bg-up-soft text-up",
+  down: "border-down/30 bg-down-soft text-down",
+  flat: "border-line bg-panel2 text-ink-2",
 } as const;
 
 const ARROW = { up: "▲", down: "▼", flat: "―" } as const;
@@ -46,7 +46,7 @@ export function NewsCard({ item }: { item: NewsItem }) {
         {item.tags.map((tag) => (
           <span
             key={tag}
-            className="rounded-full border border-[#E4CDB8] bg-copper-soft px-2 py-0.5 font-medium text-[11px] text-copper"
+            className="rounded-full border border-cyan/40 bg-cyan/10 px-2 py-0.5 font-medium text-[11px] text-cyan"
           >
             {themeNames.get(tag) ?? tag}
           </span>
@@ -63,9 +63,9 @@ export function NewsCard({ item }: { item: NewsItem }) {
         ) : null}
       </div>
       <h3 className="mb-1.5 font-bold text-[14.5px] leading-[1.5]">{item.title}</h3>
-      <p className="mb-2 text-[13px] text-[#3C4552]">{item.summary}</p>
+      <p className="mb-2 text-[13px] text-ink-2">{item.summary}</p>
       {item.impact_chain.length > 0 ? (
-        <div className="mb-2 rounded-[10px] border border-[#E0CDB9] border-dashed bg-[#FAF7F3] px-3 py-2.5 text-[12.5px]">
+        <div className="mb-2 rounded-[10px] border border-copper/30 border-dashed bg-panel2 px-3 py-2.5 text-[12.5px]">
           <div className="mb-1 font-bold text-[10.5px] text-copper tracking-[0.1em]">
             影響の連鎖
           </div>

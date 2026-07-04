@@ -75,7 +75,7 @@ export default function News() {
             type="button"
             onClick={() => setFilter(f.key)}
             className={`rounded-full border px-3 py-1.5 text-[12px] focus-visible:outline-2 focus-visible:outline-copper focus-visible:outline-offset-2 ${
-              filter === f.key ? "border-ink bg-ink text-card" : "border-line bg-card text-ink-2"
+              filter === f.key ? "border-ink bg-ink text-paper" : "border-line bg-transparent text-ink-2"
             }`}
           >
             {f.label}
@@ -98,7 +98,7 @@ export default function News() {
               />
               <div className="font-mono text-[11px] text-ink-2">{t.date}</div>
               <div className="mt-0.5 mb-0.5 font-bold text-[13.5px]">{t.title}</div>
-              <div className="text-[12.5px] text-[#3C4552]">{t.body}</div>
+              <div className="text-[12.5px] text-ink-2">{t.body}</div>
               {timelineReactions[t.date] ? (
                 <div className="mt-1 flex flex-wrap items-center gap-1 text-[10.5px]">
                   <span className="text-ink-2">イベント後5営業日:</span>

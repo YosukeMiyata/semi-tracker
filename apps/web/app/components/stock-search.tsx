@@ -46,7 +46,7 @@ export function StockSearch({
             onChange={(e) => setQuery(e.target.value)}
             placeholder="銘柄コード・名前で検索(例: 6146 / ディスコ / レーザー)"
             autoComplete="off"
-            className="w-full rounded-card border border-line bg-card py-2.5 pr-3 pl-9 text-[13px] text-ink placeholder:text-ink-2 focus-visible:border-copper focus-visible:outline-none"
+            className="w-full rounded-card border border-line bg-panel2 py-2.5 pr-3 pl-9 text-[13px] text-ink placeholder:text-faint focus-visible:border-copper focus-visible:outline-none"
           />
         </div>
         {showStock && hits.length > 0 ? (
@@ -75,7 +75,7 @@ export function StockSearch({
             onChange={(e) => setTagQuery(e.target.value)}
             placeholder="タグ(例: 先端パッケージング / MLCC / PCB / テスト)"
             autoComplete="off"
-            className="w-full rounded-card border border-line bg-card py-2.5 pr-3 pl-9 text-[13px] text-ink placeholder:text-ink-2 focus-visible:border-copper focus-visible:outline-none"
+            className="w-full rounded-card border border-line bg-panel2 py-2.5 pr-3 pl-9 text-[13px] text-ink placeholder:text-faint focus-visible:border-copper focus-visible:outline-none"
           />
         </div>
         {showTag && tagHits.length > 0 ? (
@@ -85,10 +85,10 @@ export function StockSearch({
                 key={hit.symbol}
                 type="button"
                 onClick={() => pick(hit.symbol)}
-                className="flex w-full items-center gap-2 border-line border-b px-3 py-2.5 text-left text-[13px] last:border-b-0 hover:bg-[#FBFBFC]"
+                className="flex w-full items-center gap-2 border-line border-b px-3 py-2.5 text-left text-[13px] last:border-b-0 hover:bg-panel2"
               >
                 <span
-                  className={`min-w-[52px] font-mono font-semibold text-[12px] ${hit.market === "jp" ? "text-copper" : "text-[#7A52E0]"}`}
+                  className={`min-w-[52px] font-mono font-semibold text-[12px] ${hit.market === "jp" ? "text-copper" : "text-us"}`}
                 >
                   {hit.symbol}
                 </span>
@@ -115,7 +115,7 @@ export function StockSearch({
 
 function SearchDropdown({ children }: { children: ReactNode }) {
   return (
-    <div className="absolute top-[calc(100%+4px)] right-0 left-0 z-20 max-h-[280px] overflow-y-auto rounded-card border border-line bg-card shadow-[0_8px_24px_rgba(23,28,38,.12)]">
+    <div className="absolute top-[calc(100%+4px)] right-0 left-0 z-20 max-h-[280px] overflow-y-auto rounded-card border border-line bg-card shadow-[0_8px_24px_rgba(0,0,0,.5)]">
       {children}
     </div>
   );
@@ -132,10 +132,10 @@ function SearchRow({
     <button
       type="button"
       onClick={() => onPick(hit.symbol)}
-      className="flex w-full items-center gap-2 border-line border-b px-3 py-2.5 text-left text-[13px] last:border-b-0 hover:bg-[#FBFBFC]"
+      className="flex w-full items-center gap-2 border-line border-b px-3 py-2.5 text-left text-[13px] last:border-b-0 hover:bg-panel2"
     >
       <span
-        className={`min-w-[52px] font-mono font-semibold text-[12px] ${hit.market === "jp" ? "text-copper" : "text-[#7A52E0]"}`}
+        className={`min-w-[52px] font-mono font-semibold text-[12px] ${hit.market === "jp" ? "text-copper" : "text-us"}`}
       >
         {hit.symbol}
       </span>

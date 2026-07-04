@@ -1,36 +1,73 @@
 @import "tailwindcss";
 
 /*
- * デザイントークン — semi-tracker-v2-prototype.html の CSS 変数を正とする。
- * 上昇=赤 / 下落=青 は日本市場の慣習。
+ * デザイントークン — v1 (yuyu5555-bit/semi-tracker) のトンマナを踏襲。
+ * ダークUI / レインボーバー / 上昇=赤 / 下落=青。フォントは v2 原案を使用。
  */
 @theme {
-  --color-paper: #f2f3f5; /* ウェハーグレー */
-  --color-card: #ffffff;
-  --color-ink: #171c26; /* 藍墨 */
-  --color-ink-2: #5a6372;
-  --color-line: #e1e4e9;
-  --color-copper: #a65e2b; /* 銅配線 */
-  --color-copper-soft: #f3e7dc;
-  --color-up: #c93a31; /* 上昇=赤 */
-  --color-up-soft: #fbeae8;
-  --color-down: #1f5fa8; /* 下落=青 */
-  --color-down-soft: #e7eff8;
-  --color-neutral: #8a93a1;
+  --color-paper: #0b0e15; /* v1 --ink: 背景 */
+  --color-card: #141a26; /* v1 --panel */
+  --color-panel2: #1b2231; /* v1 --panel2: ネスト面 */
+  --color-ink: #f0f3f9; /* v1 --text: 本文 */
+  --color-ink-2: #b4bdd0; /* v1 --dim */
+  --color-faint: #8b94a8;
+  --color-line: rgba(38, 48, 65, 0.6);
+  --color-copper: #e8b04b; /* v1 --jp */
+  --color-copper-soft: rgba(232, 176, 75, 0.15);
+  --color-up: #f0593c;
+  --color-up-soft: rgba(240, 89, 60, 0.18);
+  --color-down: #3fa7d6;
+  --color-down-soft: rgba(63, 167, 214, 0.18);
+  --color-neutral: #8b94a8;
+  --color-us: #9d7cf0;
+  --color-cyan: #6ee7f0;
 
   --font-sans: "Zen Kaku Gothic New", sans-serif;
   --font-serif: "Shippori Mincho", serif;
   --font-mono: "IBM Plex Mono", monospace;
 
-  --radius-card: 14px;
+  --radius-card: 12px;
 }
 
 html {
   scroll-behavior: smooth;
 }
 
-/* ウェハーマップ: 検査機のスキャン風に順番へフェードイン。
-   ベースは opacity:1 なので reduced-motion で animation が無効でも表示される */
+/* v1 レインボーバー */
+.rainbow {
+  height: 3px;
+  background: linear-gradient(90deg, #6ee7f0, #9d7cf0 35%, #e8b04b 70%, #f0593c);
+}
+
+/* v1 タイトルアニメーション */
+.titlebeat {
+  animation: titlebeat 2.6s ease-in-out infinite;
+}
+@keyframes titlebeat {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+.titletwinkle {
+  animation: titletwinkle 3s ease-in-out infinite;
+}
+@keyframes titletwinkle {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.35;
+    transform: scale(1.3);
+  }
+}
+
+/* ウェハーマップ */
 .die {
   animation: die-in 0.45s ease both;
 }
@@ -42,7 +79,7 @@ html {
 
 @media (prefers-reduced-motion: reduce) {
   * {
-    /* biome-ignore lint/complexity/noImportantStyles: reduced-motion 時は全アニメーションを確実に止める(プロトタイプ踏襲) */
+    /* biome-ignore lint/complexity/noImportantStyles: reduced-motion 時は全アニメーションを確実に止める */
     animation: none !important;
     /* biome-ignore lint/complexity/noImportantStyles: 同上 */
     transition: none !important;

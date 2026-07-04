@@ -173,7 +173,7 @@ export function StockPriceChart({ symbol }: { symbol: string }) {
     const mas = MA_DEFS.map(([nn]) => maSeries(closesAll, nn).slice(startIdx));
     const legendItems = MA_DEFS.map(([nn, colr], mi) => {
       const avail = mas[mi].some((v) => v != null);
-      return { nn, colr: avail ? colr : "#C9CED6" };
+      return { nn, colr: avail ? colr : "var(--color-faint)" };
     });
     return { svg: svgInner, legend: legendItems };
   }, [symbol, tf]);
@@ -193,7 +193,7 @@ export function StockPriceChart({ symbol }: { symbol: string }) {
             className={`rounded-full border px-2.5 py-0.5 text-[11px] ${
               tf === id
                 ? "border-copper bg-copper-soft font-semibold text-copper"
-                : "border-line bg-card text-ink-2"
+                : "border-line bg-transparent text-ink-2"
             }`}
           >
             {label}

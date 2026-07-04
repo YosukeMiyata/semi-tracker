@@ -77,12 +77,12 @@ export function VolView({
               type="button"
               data-symbol={r.symbol}
               onClick={() => onPickStock(r.symbol)}
-              className={`grid w-full grid-cols-[28px_1fr_auto_auto] items-center gap-2 border-line border-b px-3 py-2.5 text-left text-[13px] last:border-b-0 hover:bg-[#FBFBFC] ${highlightRowClass(r.symbol, highlightSymbol)}`}
+              className={`grid w-full grid-cols-[28px_1fr_auto_auto] items-center gap-2 border-line border-b px-3 py-2.5 text-left text-[13px] last:border-b-0 hover:bg-panel2 ${highlightRowClass(r.symbol, highlightSymbol)}`}
             >
               <span className="font-mono text-[11px] text-ink-2">{i + 1}</span>
               <span className="min-w-0 truncate">
                 <span
-                  className={`font-mono font-bold text-[12px] ${r.market === "jp" ? "text-copper" : "text-[#7A52E0]"}`}
+                  className={`font-mono font-bold text-[12px] ${r.market === "jp" ? "text-copper" : "text-us"}`}
                 >
                   {r.symbol}
                 </span>{" "}

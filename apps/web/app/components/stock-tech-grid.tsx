@@ -31,7 +31,7 @@ function rsiColor(v: number | null): string {
 
 function TechCell({ label, children }: { label: string; children: ReactNode }) {
   return (
-    <div className="rounded-lg border border-line bg-[#FBFBFC] px-2 py-1.5">
+    <div className="rounded-lg border border-line bg-panel2 px-2 py-1.5">
       <div className="text-[10px] text-ink-2">{label}</div>
       <div className="mt-0.5 font-mono text-[12px]">{children}</div>
     </div>
@@ -126,7 +126,7 @@ export function StockTechGrid({ tech }: { tech: StockTechnical }) {
       ) : null}
 
       {hints.length > 0 ? (
-        <div className="rounded-lg border border-line bg-[#FBFBFC] px-2.5 py-2 text-[11px] text-ink-2 leading-[1.65]">
+        <div className="rounded-lg border border-line bg-panel2 px-2.5 py-2 text-[11px] text-ink-2 leading-[1.65]">
           {hints.map((h) => (
             <div key={h}>{h}</div>
           ))}

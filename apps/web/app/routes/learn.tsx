@@ -15,7 +15,7 @@ export default function Learn() {
             <span className="font-mono text-[11px] text-copper">{term.en}</span>
             <span className="font-bold text-[14px]">{term.jp}</span>
           </summary>
-          <div className="px-4 pt-3 pb-1.5 text-[13px] text-[#3C4552]">
+          <div className="px-4 pt-3 pb-1.5 text-[13px] text-ink-2">
             {term.body}
             <div className="mt-2 rounded-[10px] bg-copper-soft px-3 py-2 text-[12.5px]">
               <b className="text-copper">なぜ株価に効く?</b> {term.why}

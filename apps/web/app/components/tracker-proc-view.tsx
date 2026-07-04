@@ -81,12 +81,12 @@ function StockChip({
   onPick: (code: string) => void;
 }) {
   const val = procVal(stock.code, period);
-  const mkClass = stock.market === "jp" ? "text-copper" : "text-[#7A52E0]";
+  const mkClass = stock.market === "jp" ? "text-copper" : "text-us";
   return (
     <button
       type="button"
       onClick={() => onPick(stock.code)}
-      className="inline-flex items-center gap-1.5 rounded-lg border border-line bg-card px-2 py-1 text-left text-[11px] hover:bg-[#FBFBFC]"
+      className="inline-flex items-center gap-1.5 rounded-lg border border-line bg-card px-2 py-1 text-left text-[11px] hover:bg-panel2"
     >
       <span className={`font-mono font-bold ${mkClass}`}>{stock.code}</span>
       <span className="max-w-[88px] truncate">{stock.name}</span>

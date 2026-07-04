@@ -152,11 +152,11 @@ export function RetView({
                 type="button"
                 data-symbol={r.symbol}
                 onClick={() => onPickStock(r.symbol)}
-                className={`flex w-full items-center gap-2 border-line border-b px-3 py-2.5 text-left last:border-b-0 hover:bg-[#FBFBFC] ${highlightRowClass(r.symbol, highlightSymbol)}`}
+                className={`flex w-full items-center gap-2 border-line border-b px-3 py-2.5 text-left last:border-b-0 hover:bg-panel2 ${highlightRowClass(r.symbol, highlightSymbol)}`}
               >
                 <span className="w-6 font-mono text-[11px] text-ink-2">{i + 1}</span>
                 <span
-                  className={`w-[52px] shrink-0 font-mono font-bold text-[12px] ${r.market === "jp" ? "text-copper" : "text-[#7A52E0]"}`}
+                  className={`w-[52px] shrink-0 font-mono font-bold text-[12px] ${r.market === "jp" ? "text-copper" : "text-us"}`}
                 >
                   {r.symbol}
                 </span>

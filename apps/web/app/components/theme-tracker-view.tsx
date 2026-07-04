@@ -53,7 +53,7 @@ function StockChip({
       title={`${name}(${code}) ${periodLabel(period)} ${fmtPct(ret)} / 出来高 ${vol ?? "—"}×`}
       onClick={() => onPick(code)}
       className={`mt-0.5 mr-1 inline-flex items-center gap-1 whitespace-nowrap rounded-full border px-2 py-0.5 text-[11px] ${
-        ret !== null && ret < 0 ? "border-[#BFD3EA] bg-down-soft" : "border-[#EBC3BF] bg-up-soft"
+        ret !== null && ret < 0 ? "border-down/30 bg-down-soft" : "border-up/30 bg-up-soft"
       }`}
     >
       {name}
@@ -163,13 +163,13 @@ export function ThemeTrackerView() {
   }, [highlightSymbol]);
 
   const viewAccent: Partial<Record<TrackerView, string>> = {
-    theme: "border-[#6EE7F0] bg-[#6EE7F0] font-bold text-ink",
-    rank: "border-copper bg-copper font-bold text-card",
-    vol: "border-[#3E9B62] bg-[#3E9B62] font-bold text-card",
-    ret: "border-[#E0A458] bg-[#E0A458] font-bold text-card",
-    link: "border-up bg-up font-bold text-card",
-    flow: "border-[#9D7CF0] bg-[#9D7CF0] font-bold text-card",
-    proc: "border-[#D98A3E] bg-[#D98A3E] font-bold text-card",
+    theme: "border-cyan bg-cyan font-bold text-paper",
+    rank: "border-copper bg-copper font-bold text-paper",
+    vol: "border-[#3E9B62] bg-[#3E9B62] font-bold text-white",
+    ret: "border-[#D98A3E] bg-[#D98A3E] font-bold text-white",
+    link: "border-up bg-up font-bold text-white",
+    flow: "border-us bg-us font-bold text-white",
+    proc: "border-[#D98A3E] bg-[#D98A3E] font-bold text-white",
   };
 
   return (
@@ -187,6 +187,7 @@ export function ThemeTrackerView() {
           value={view}
           onChange={setView}
           accent={viewAccent}
+          large
         />
 
         {view === "theme" ? (
@@ -218,7 +219,7 @@ export function ThemeTrackerView() {
                 >
                   <summary className="flex cursor-pointer list-none items-center gap-2.5 rounded-card border border-line bg-card px-4 py-[11px] [&::-webkit-details-marker]:hidden focus-visible:outline-2 focus-visible:outline-copper focus-visible:outline-offset-2">
                     <span
-                      className="flex h-6 w-6 shrink-0 items-center justify-center rounded-md font-mono font-bold text-[11px] text-card"
+                      className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full font-mono font-bold text-[11px] text-paper"
                       style={{ backgroundColor: t.color }}
                     >
                       {rank + 1}
@@ -236,7 +237,7 @@ export function ThemeTrackerView() {
                       {fmtPct(t.avg)}
                     </div>
                   </summary>
-                  <div className="mx-1 mt-[-8px] rounded-b-card border border-line border-t-0 bg-[#FBFBFC] px-3.5 pt-4 pb-2">
+                  <div className="mx-1 mt-[-8px] rounded-b-card border border-line border-t-0 bg-panel2 px-3.5 pt-4 pb-2">
                     {t.subs.map((sub) => (
                       <SubBlock
                         key={sub.name}

@@ -60,7 +60,7 @@ export default function Home() {
               ポジティブ
             </span>
             <span>
-              <i className="mr-1 inline-block h-2.5 w-2.5 rounded-[2px] bg-[#C9CED6] align-[-1px]" />
+              <i className="mr-1 inline-block h-2.5 w-2.5 rounded-[2px] bg-faint align-[-1px]" />
               中立
             </span>
             <span>

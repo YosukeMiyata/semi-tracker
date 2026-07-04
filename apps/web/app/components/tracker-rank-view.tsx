@@ -296,11 +296,11 @@ function RankRow({
       type="button"
       data-symbol={row.symbol}
       onClick={() => onPick(row.symbol)}
-      className={`flex w-full items-center gap-2 border-line border-b px-3 py-2.5 text-left last:border-b-0 hover:bg-[#FBFBFC] ${highlightRowClass(row.symbol, highlightSymbol)}`}
+      className={`flex w-full items-center gap-2 border-line border-b px-3 py-2.5 text-left last:border-b-0 hover:bg-panel2 ${highlightRowClass(row.symbol, highlightSymbol)}`}
     >
       <span className="w-6 font-mono text-[11px] text-ink-2">{rank}</span>
       <span
-        className={`w-[52px] shrink-0 font-mono font-bold text-[12px] ${row.market === "jp" ? "text-copper" : "text-[#7A52E0]"}`}
+        className={`w-[52px] shrink-0 font-mono font-bold text-[12px] ${row.market === "jp" ? "text-copper" : "text-us"}`}
       >
         {row.symbol}
       </span>

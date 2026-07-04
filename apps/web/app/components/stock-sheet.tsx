@@ -49,7 +49,7 @@ export function StockSheet({
   const tags = stockTags(symbol);
   const linkHits = stockLinkageHits(symbol);
   const tech = analyzeStock(symbol);
-  const mkClass = row.market === "jp" ? "text-copper" : "text-[#7A52E0]";
+  const mkClass = row.market === "jp" ? "text-copper" : "text-us";
 
   const nav = (view: TrackerView) => {
     onClose();
@@ -61,10 +61,10 @@ export function StockSheet({
       <button
         type="button"
         aria-label="閉じる"
-        className="absolute inset-0 bg-ink/40"
+        className="absolute inset-0 bg-paper/80"
         onClick={onClose}
       />
-      <div className="relative max-h-[85vh] overflow-y-auto rounded-t-[18px] border-line border-t bg-card px-4 pt-3 pb-[calc(12px+env(safe-area-inset-bottom))] shadow-[0_-8px_32px_rgba(23,28,38,.15)]">
+      <div className="relative max-h-[85vh] overflow-y-auto rounded-t-[18px] border-line border-t bg-card px-4 pt-3 pb-[calc(12px+env(safe-area-inset-bottom))] shadow-[0_-8px_24px_rgba(0,0,0,.5)]">
         <div className="mb-3 flex items-start gap-2">
           <div className="min-w-0 flex-1">
             <div className={`font-mono font-bold text-[15px] ${mkClass}`}>{row.symbol}</div>
@@ -146,7 +146,7 @@ export function StockSheet({
               </span>
             ) : null}
             {tech.pattern ? (
-              <span className="rounded-full border border-line bg-[#FBFBFC] px-2 py-0.5 text-[10.5px]">
+              <span className="rounded-full border border-line bg-panel2 px-2 py-0.5 text-[10.5px]">
                 {tech.pattern}
               </span>
             ) : null}
@@ -175,7 +175,7 @@ export function StockSheet({
             return (
               <div
                 key={p.id}
-                className="rounded-lg border border-line bg-[#FBFBFC] px-2 py-1.5 text-center"
+                className="rounded-lg border border-line bg-panel2 px-2 py-1.5 text-center"
               >
                 <div className="text-[10px] text-ink-2">{p.label}</div>
                 <div className={`font-mono font-semibold text-[12.5px] ${pctColor(v)}`}>
@@ -197,7 +197,7 @@ export function StockSheet({
               {linkHits.map((hit) => (
                 <div
                   key={hit.theme}
-                  className={`rounded-lg border px-2.5 py-2 text-[11.5px] ${hit.triggered ? "border-up/30 bg-up-soft/40" : "border-line bg-[#FBFBFC]"}`}
+                  className={`rounded-lg border px-2.5 py-2 text-[11.5px] ${hit.triggered ? "border-up/30 bg-up-soft/40" : "border-line bg-panel2"}`}
                 >
                   <div className="font-bold">{hit.sub}</div>
                   <div className="text-[10.5px] text-ink-2">{hit.macro}</div>
@@ -231,7 +231,7 @@ export function StockSheet({
               {themes.map((t) => (
                 <span
                   key={t.label}
-                  className="rounded-full border border-line bg-[#FBFBFC] px-2.5 py-0.5 text-[11px]"
+                  className="rounded-full border border-line bg-panel2 px-2.5 py-0.5 text-[11px]"
                 >
                   {t.label}
                 </span>
@@ -260,28 +260,28 @@ export function StockSheet({
               <button
                 type="button"
                 onClick={() => nav("vol")}
-                className="rounded-lg border border-line bg-[#FBFBFC] px-2 py-2 text-[12px] hover:bg-card"
+                className="rounded-lg border border-line bg-panel2 px-2 py-2 text-[12px] hover:bg-card"
               >
                 📊 出来高率
               </button>
               <button
                 type="button"
                 onClick={() => nav("ret")}
-                className="rounded-lg border border-line bg-[#FBFBFC] px-2 py-2 text-[12px] hover:bg-card"
+                className="rounded-lg border border-line bg-panel2 px-2 py-2 text-[12px] hover:bg-card"
               >
                 📈 騰落率
               </button>
               <button
                 type="button"
                 onClick={() => nav("link")}
-                className="rounded-lg border border-line bg-[#FBFBFC] px-2 py-2 text-[12px] hover:bg-card"
+                className="rounded-lg border border-line bg-panel2 px-2 py-2 text-[12px] hover:bg-card"
               >
                 🔗 連動
               </button>
               <button
                 type="button"
                 onClick={() => nav("theme")}
-                className="rounded-lg border border-line bg-[#FBFBFC] px-2 py-2 text-[12px] hover:bg-card"
+                className="rounded-lg border border-line bg-panel2 px-2 py-2 text-[12px] hover:bg-card"
               >
                 🗂️ テーマ
               </button>
@@ -297,7 +297,7 @@ export function StockSheet({
               href={link.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-lg border border-line bg-card px-3 py-1.5 text-[12px] hover:bg-[#FBFBFC]"
+              className="rounded-lg border border-line bg-card px-3 py-1.5 text-[12px] hover:bg-panel2"
             >
               {link.label}
             </a>
