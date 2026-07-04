@@ -5,9 +5,9 @@ import {
   type CalendarCell,
   type CalendarEvent,
   eventDateLabel,
+  eventsGroupedByDate,
   eventThemeName,
   eventWeekdayLabel,
-  eventsGroupedByDate,
   isEventAnchorDay,
   KIND_CLASS,
   KIND_LABEL,
@@ -161,7 +161,9 @@ function EventListItem({
         </span>
         <span className="font-medium text-[13px] leading-snug">{event.title}</span>
       </div>
-      <p className={`mt-1 text-ink-2 ${compact ? "line-clamp-1 text-[11px]" : "line-clamp-2 text-[12px]"}`}>
+      <p
+        className={`mt-1 text-ink-2 ${compact ? "line-clamp-1 text-[11px]" : "line-clamp-2 text-[12px]"}`}
+      >
         {event.body}
       </p>
     </>

@@ -10,8 +10,8 @@ import { ThemeSummary } from "~/components/theme-summary";
 import { Wafer } from "~/components/wafer";
 import { WeeklyDigest } from "~/components/weekly-digest";
 import { fmtPct, indices, pctColor } from "~/lib/data";
-import { HOME_SECTION_SCROLL_MT } from "~/lib/home-sections";
 import { recentHeadlines } from "~/lib/headlines";
+import { HOME_SECTION_SCROLL_MT } from "~/lib/home-sections";
 import { featuredNews, themeSentiments, verdictLabel, weeklySentiment } from "~/lib/news";
 
 export function meta() {
