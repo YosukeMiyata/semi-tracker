@@ -1,7 +1,9 @@
+import { CopySummary } from "~/components/copy-summary";
 import { NewsCard } from "~/components/news-card";
 import { Card, SectionTitle } from "~/components/section";
+import { Sparkline } from "~/components/sparkline";
 import { Wafer } from "~/components/wafer";
-import { fmtPct, linkageTop } from "~/lib/data";
+import { fmtPct, indices, linkageTop, pctColor } from "~/lib/data";
 import { featuredNews, themeSentiments, verdictLabel, weeklySentiment } from "~/lib/news";
 
 export function meta() {
@@ -66,6 +68,31 @@ export default function Home() {
         </div>
       </div>
 
+      {indices.length > 0 ? (
+        <div className="mt-3">
+          {indices.map((ix) => (
+            <Card key={ix.id} className="flex items-center gap-3">
+              <div className="min-w-0 flex-1">
+                <div className="font-bold text-[13px]">
+                  {ix.name}
+                  <small className="ml-1.5 font-mono font-normal text-[10px] text-ink-2">
+                    {ix.date}
+                  </small>
+                </div>
+                <div className="font-mono font-semibold text-[16px]">
+                  {ix.last.toLocaleString()}
+                </div>
+              </div>
+              <Sparkline values={ix.spark} />
+              <div className="text-right font-mono text-[12px]">
+                <div className={pctColor(ix.chg_pct)}>前日 {fmtPct(ix.chg_pct)}</div>
+                <div className={pctColor(ix.ytd_pct)}>年初来 {fmtPct(ix.ytd_pct)}</div>
+              </div>
+            </Card>
+          ))}
+        </div>
+      ) : null}
+
       <SectionTitle
         title="今週の注目 3本"
         note="ニュースを「どの銘柄に効くか」まで翻訳して届けます"
@@ -113,6 +140,8 @@ export default function Home() {
         )}
       </Card>
       <p className="mt-2 text-[11px] text-ink-2">手法: {linkageTop.method}</p>
+
+      <CopySummary />
     </>
   );
 }

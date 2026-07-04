@@ -46,6 +46,11 @@ SPARK_DAYS = 63  # スパークライン: 直近3ヶ月(営業日)
 FAIL_THRESHOLD = 0.10  # 失敗が全体の10%を超えたら書き込まず異常終了
 SLEEP_SEC = 0.8
 
+# 銘柄マスタ(themes.py)外の追加取得シンボル: 指数など
+EXTRA_SYMBOLS = {
+    "^SOX": ("SOX指数", "us"),
+}
+
 
 PROBE_SYMBOL = ("8035", "jp")  # カナリア: 東京エレクトロン
 
@@ -99,6 +104,38 @@ def _ytd_pct(daily: list, year: str) -> float | None:
     if base is None or base[0] > f"{year}-01-31" or not base[1]:
         return None
     return (daily[-1][1] / base[1] - 1) * 100
+
+
+def _chg_pct(daily: list) -> float | None:
+    """前日比(%)"""
+    if len(daily) < 2 or not daily[-2][1]:
+        return None
+    return (daily[-1][1] / daily[-2][1] - 1) * 100
+
+
+def _theme_ytd_series(quotes: dict, codes: list[str], year: str) -> list:
+    """テーマの年初来累積騰落率の日次系列(等ウェイト)。[[date, pct], ...]"""
+    cum_by_member = []
+    for code in codes:
+        q = quotes.get(code)
+        if not q or not q["daily"]:
+            continue
+        daily = q["daily"]
+        base = next((r for r in daily if r[0] >= f"{year}-01-01"), None)
+        if base is None or base[0] > f"{year}-01-31" or not base[1]:
+            continue
+        cum_by_member.append(
+            {r[0]: (r[1] / base[1] - 1) * 100 for r in daily if r[0] >= base[0]}
+        )
+    if not cum_by_member:
+        return []
+    dates = sorted(set().union(*[set(c) for c in cum_by_member]))
+    series = []
+    for d in dates:
+        vals = [c[d] for c in cum_by_member if d in c]
+        if vals:
+            series.append([d, round(sum(vals) / len(vals), 2)])
+    return series
 
 
 def _vol_ratio(daily: list) -> float | None:
@@ -167,6 +204,133 @@ def build_themes_perf(quotes: dict, last_updated: str) -> dict:
     }
 
 
+def build_themes_detail(quotes: dict, last_updated: str) -> dict:
+    """テーマタブ用の詳細データ: 年初来累積騰落率の系列+サブテーマ→銘柄のドリルダウン。"""
+    year = last_updated[:4]
+    themes = []
+    for m in MACRO:
+        codes: dict[str, str] = {}
+        for sub in m["subs"]:
+            for row in list(sub["jp"]) + list(sub["solo"]):
+                codes.setdefault(row[0], row[1])
+        series = _theme_ytd_series(quotes, list(codes), year)
+
+        subs = []
+        for sub in m["subs"]:
+            stocks = []
+            seen: set[str] = set()
+            for row in list(sub["jp"]) + list(sub["solo"]):
+                code, name = row[0], row[1]
+                if code in seen:
+                    continue
+                seen.add(code)
+                q = quotes.get(code)
+                if not q or not q["daily"]:
+                    continue
+                y = _ytd_pct(q["daily"], year)
+                stocks.append(
+                    {
+                        "code": code,
+                        "name": name,
+                        "ytd_pct": round(y, 1) if y is not None else None,
+                        "chg_pct": (lambda c: round(c, 2) if c is not None else None)(
+                            _chg_pct(q["daily"])
+                        ),
+                        "vol_ratio": _vol_ratio(q["daily"]),
+                    }
+                )
+            if not stocks:
+                continue
+            stocks.sort(key=lambda s: (s["ytd_pct"] is None, -(s["ytd_pct"] or 0)))
+            ytds = [s["ytd_pct"] for s in stocks if s["ytd_pct"] is not None]
+            subs.append(
+                {
+                    "name": sub["name"],
+                    "ytd_pct": round(sum(ytds) / len(ytds), 1) if ytds else None,
+                    "stocks": stocks,
+                }
+            )
+        subs.sort(key=lambda s: (s["ytd_pct"] is None, -(s["ytd_pct"] or 0)))
+
+        themes.append(
+            {
+                "key": m["key"],
+                "name": m["name"],
+                "color": m["color"],
+                "ytd_pct": series[-1][1] if series else None,
+                "series": series,
+                "subs": subs,
+            }
+        )
+    return {
+        "last_updated": last_updated,
+        "note": "累積騰落率=構成銘柄の年初来リターンの単純平均(日次)。銘柄の並びは年初来騰落率順",
+        "themes": themes,
+    }
+
+
+def build_indices(quotes: dict, last_updated: str) -> dict:
+    """指数データ(SOX 等)。無料で取得できる範囲の市場指標。"""
+    year = last_updated[:4]
+    indices = []
+    for sym, (name, _market) in EXTRA_SYMBOLS.items():
+        q = quotes.get(sym)
+        if not q or not q["daily"]:
+            continue
+        daily = q["daily"]
+        window = daily[-SPARK_DAYS:]
+        spark = []
+        if len(window) >= 2 and window[0][1]:
+            base = window[0][1]
+            spark = [round((r[1] / base - 1) * 100, 2) for r in window]
+        y = _ytd_pct(daily, year)
+        c = _chg_pct(daily)
+        indices.append(
+            {
+                "id": sym,
+                "name": name,
+                "last": round(daily[-1][1], 2),
+                "date": daily[-1][0],
+                "chg_pct": round(c, 2) if c is not None else None,
+                "ytd_pct": round(y, 1) if y is not None else None,
+                "spark": spark,
+            }
+        )
+    return {"last_updated": last_updated, "indices": indices}
+
+
+def build_timeline_stats(themes_detail: dict, last_updated: str) -> dict:
+    """地政学タイムラインの各イベント後の関連テーマ株価反応(+5営業日)。
+
+    timeline.json の tags(テーマ key)と日付(YYYY-MM-DD のもののみ)を使い、
+    テーマ累積騰落率系列からイベント直前終値→5営業日後の変化率を計算する。
+    """
+    timeline_path = DATA_DIR / "timeline.json"
+    if not timeline_path.exists():
+        return {"last_updated": last_updated, "reactions": {}}
+    timeline = json.loads(timeline_path.read_text(encoding="utf-8"))
+    series_by_key = {t["key"]: t["series"] for t in themes_detail["themes"]}
+
+    reactions: dict = {}
+    for item in timeline.get("items", []):
+        date = item.get("date", "")
+        tags = item.get("tags", [])
+        if len(date) != 10 or not tags:
+            continue  # YYYY-MM 形式(日付不明)のイベントは対象外
+        for tag in tags:
+            series = series_by_key.get(tag)
+            if not series:
+                continue
+            idx = max((i for i, r in enumerate(series) if r[0] <= date), default=None)
+            if idx is None or idx + 5 >= len(series):
+                continue
+            c0 = series[idx][1]
+            c5 = series[idx + 5][1]
+            pct = ((1 + c5 / 100) / (1 + c0 / 100) - 1) * 100
+            reactions.setdefault(date, {})[tag] = round(pct, 1)
+    return {"last_updated": last_updated, "reactions": reactions}
+
+
 def build_linkage_top(linkage: dict, last_updated: str, top_n: int = 3) -> dict:
     """ホーム用: 直近トリガー(米国テーマ+2%超)したサブテーマの最良行を上位 N 件。"""
     candidates = []
@@ -211,6 +375,7 @@ def main() -> None:
         sys.exit(1)
 
     symbols = all_symbols()
+    symbols.update(EXTRA_SYMBOLS)
     if args.only:
         wanted = {s.strip() for s in args.only.split(",")}
         symbols = {k: v for k, v in symbols.items() if k in wanted}
@@ -233,6 +398,9 @@ def main() -> None:
     last_updated = max(jp_dates) if jp_dates else date.today().isoformat()
 
     themes_perf = build_themes_perf(quotes, last_updated)
+    themes_detail = build_themes_detail(quotes, last_updated)
+    indices = build_indices(quotes, last_updated)
+    timeline_stats = build_timeline_stats(themes_detail, last_updated)
     linkage = build_linkage(MACRO, quotes)
     linkage_out = {"last_updated": last_updated, "method": METHOD_NOTE, "themes": linkage}
     linkage_top = build_linkage_top(linkage, last_updated)
@@ -251,6 +419,9 @@ def main() -> None:
     outputs = {
         "prices.json": {"last_updated": last_updated, "quotes": quotes},
         "themes_perf.json": themes_perf,
+        "themes_detail.json": themes_detail,
+        "indices.json": indices,
+        "timeline_stats.json": timeline_stats,
         "linkage.json": linkage_out,
         "linkage_top.json": linkage_top,
         "update_report.json": report,

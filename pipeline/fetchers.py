@@ -18,6 +18,7 @@ import io
 import json
 import sys
 import time
+import urllib.parse
 import urllib.request
 from datetime import date, datetime, timezone
 
@@ -104,7 +105,7 @@ class YahooChartFetcher:
         ysym = self.symbol(sym, market)
         for host in ("query1.finance.yahoo.com", "query2.finance.yahoo.com"):
             url = (
-                f"https://{host}/v8/finance/chart/{ysym}"
+                f"https://{host}/v8/finance/chart/{urllib.parse.quote(ysym, safe='')}"
                 f"?range=2y&interval=1d&includeAdjustedClose=true"
             )
             out = self._fetch_one(url)
@@ -147,9 +148,11 @@ class YahooChartFetcher:
                 d = datetime.fromtimestamp(t, tz=timezone.utc).strftime("%Y-%m-%d")
                 out.append((d, float(c), float(v), float(o), float(h), float(lo)))
             out.sort(key=lambda x: x[0])
-            # 末尾が出来高0の未確定バーなら除く(場中の不完全データ対策)
-            while len(out) >= 2 and out[-1][2] == 0:
-                out.pop()
+            # 末尾が出来高0の未確定バーなら除く(場中の不完全データ対策)。
+            # 指数(^SOX 等)は全行が出来高0なので、出来高を持つ銘柄に限る
+            if any(r[2] for r in out):
+                while len(out) >= 2 and out[-1][2] == 0:
+                    out.pop()
             return out or None
         except Exception:
             return None

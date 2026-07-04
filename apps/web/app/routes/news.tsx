@@ -1,7 +1,9 @@
 import { useState } from "react";
 import { NewsCard } from "~/components/news-card";
 import { Card, SectionTitle } from "~/components/section";
-import { newsItems, timelineItems } from "~/lib/news";
+import { SentimentChart } from "~/components/sentiment-chart";
+import { fmtPct, pctColor, timelineReactions } from "~/lib/data";
+import { newsItems, themeNames, timelineItems } from "~/lib/news";
 
 export function meta() {
   return [{ title: "ニュース — 半導体テーマトラッカー 2.0" }];
@@ -40,6 +42,14 @@ export default function News() {
   return (
     <>
       <SectionTitle
+        title="センチメント定点観測"
+        note="ニュース論調スコアの週次推移。株価との乖離を見るための温度計です"
+      />
+      <Card>
+        <SentimentChart />
+      </Card>
+
+      <SectionTitle
         title="ニュース感情分析"
         note="論調を−2〜+2でスコア化。投資判断ではなくニュースの温度計です"
       />
@@ -74,6 +84,22 @@ export default function News() {
               <div className="font-mono text-[11px] text-ink-2">{t.date}</div>
               <div className="mt-0.5 mb-0.5 font-bold text-[13.5px]">{t.title}</div>
               <div className="text-[12.5px] text-[#3C4552]">{t.body}</div>
+              {timelineReactions[t.date] ? (
+                <div className="mt-1 flex flex-wrap items-center gap-1 text-[10.5px]">
+                  <span className="text-ink-2">イベント後5営業日:</span>
+                  {Object.entries(timelineReactions[t.date]).map(([tag, pct]) => (
+                    <span
+                      key={tag}
+                      className="rounded-full border border-line bg-card px-1.5 py-0.5"
+                    >
+                      {themeNames.get(tag) ?? tag}{" "}
+                      <span className={`font-mono font-semibold ${pctColor(pct)}`}>
+                        {fmtPct(pct)}
+                      </span>
+                    </span>
+                  ))}
+                </div>
+              ) : null}
             </div>
           ))}
         </div>

@@ -116,6 +116,33 @@ export function themeSentiments(): { key: string; name: string; score: number | 
   });
 }
 
+/** センチメント定点観測: 週次(月曜起点)の平均スコアと本数。基準日は anchorDate */
+export function weeklySentimentSeries(
+  weeks = 12,
+): { weekStart: string; avg: number | null; count: number }[] {
+  const anchor = new Date(`${anchorDate}T00:00:00Z`);
+  const monOffset = (anchor.getUTCDay() + 6) % 7;
+  const currentMonday = new Date(anchor);
+  currentMonday.setUTCDate(anchor.getUTCDate() - monOffset);
+
+  const out: { weekStart: string; avg: number | null; count: number }[] = [];
+  for (let w = weeks - 1; w >= 0; w--) {
+    const start = new Date(currentMonday);
+    start.setUTCDate(currentMonday.getUTCDate() - w * 7);
+    const end = new Date(start);
+    end.setUTCDate(start.getUTCDate() + 7);
+    const s = start.toISOString().slice(0, 10);
+    const e = end.toISOString().slice(0, 10);
+    const items = newsItems.filter((n) => n.date >= s && n.date < e);
+    out.push({
+      weekStart: s,
+      avg: items.length > 0 ? items.reduce((a, b) => a + b.sentiment, 0) / items.length : null,
+      count: items.length,
+    });
+  }
+  return out;
+}
+
 /** ホームの注目3本: 直近14日からスコア絶対値の大きい順 */
 export function featuredNews(count = 3): NewsItem[] {
   const twoWeeksAgo = daysBefore(anchorDate, 14);
