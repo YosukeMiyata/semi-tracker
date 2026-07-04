@@ -1,0 +1,57 @@
+name: deploy
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4 # バージョンは package.json の packageManager を使用
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: 依存関係のインストール
+        run: pnpm install --frozen-lockfile
+
+      - name: Lint(Biome)
+        run: pnpm biome:check
+
+      - name: 型チェック
+        run: pnpm typecheck
+
+      - name: ビルド(SSG + Pages 用フラット化)
+        run: pnpm build
+
+      - name: データ JSON を同梱(フロントが fetch できるように)
+        run: cp -R data apps/web/build/client/data
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: apps/web/build/client
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
