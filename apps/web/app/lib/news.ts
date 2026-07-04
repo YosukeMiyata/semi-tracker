@@ -66,6 +66,12 @@ function average(values: number[]): number | null {
   return values.reduce((a, b) => a + b, 0) / values.length;
 }
 
+/** 直近 N 日のニュース(基準日は anchorDate) */
+export function recentNews(days: number): NewsItem[] {
+  const from = daysBefore(anchorDate, days);
+  return newsItems.filter((n) => n.date > from);
+}
+
 /** 週間センチメント = 直近7日のニュース sentiment の平均(仕様書 4.2) */
 export function weeklySentiment() {
   const weekAgo = daysBefore(anchorDate, 7);
