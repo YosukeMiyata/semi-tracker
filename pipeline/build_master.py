@@ -103,6 +103,16 @@ def main() -> None:
 
     build_maps_main()
 
+    from tags import TAGS  # noqa: E402
+
+    tags_path = OUT_PATH.parent / "stock_tags.json"
+    tags_path.write_text(
+        json.dumps({"source": "pipeline/tags.py (v1)", "tags": TAGS}, ensure_ascii=False, indent=1)
+        + "\n",
+        encoding="utf-8",
+    )
+    print(f"wrote {tags_path.name} ({len(TAGS)} symbols)")
+
 
 if __name__ == "__main__":
     main()

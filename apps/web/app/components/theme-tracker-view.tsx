@@ -1,15 +1,17 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { ChipGroup } from "~/components/chip-group";
 import { Sparkline } from "~/components/sparkline";
 import { StockSearch } from "~/components/stock-search";
 import { StockSheet } from "~/components/stock-sheet";
 import { TrackerChart, TrackerChartLegend } from "~/components/tracker-chart";
+import { TrackerCopySummary } from "~/components/tracker-copy-summary";
 import { FlowView } from "~/components/tracker-flow-view";
 import { LinkView } from "~/components/tracker-link-view";
 import { ProcView } from "~/components/tracker-proc-view";
 import { RankView } from "~/components/tracker-rank-view";
+import { RetView } from "~/components/tracker-ret-view";
 import { VolView } from "~/components/tracker-vol-view";
 import { fmtPct, pctColor, volTier } from "~/lib/data";
 import {
@@ -47,6 +49,7 @@ function StockChip({
   return (
     <button
       type="button"
+      data-symbol={code}
       title={`${name}(${code}) ${periodLabel(period)} ${fmtPct(ret)} / 出来高 ${vol ?? "—"}×`}
       onClick={() => onPick(code)}
       className={`mt-0.5 mr-1 inline-flex items-center gap-1 whitespace-nowrap rounded-full border px-2 py-0.5 text-[11px] ${
@@ -130,15 +133,40 @@ export function ThemeTrackerView() {
   const [market, setMarket] = useState<TrackerMarket>("both");
   const [openKey, setOpenKey] = useState<string | null>(null);
   const [sheetSymbol, setSheetSymbol] = useState<string | null>(null);
+  const [highlightSymbol, setHighlightSymbol] = useState<string | null>(null);
+  const [tagPrefill, setTagPrefill] = useState<string | undefined>();
 
   const rows = useMemo(() => rankedThemes(period, market), [period, market]);
   const plabel = periodLabel(period);
   const pickStock = (symbol: string) => setSheetSymbol(symbol);
 
+  const gotoView = (v: TrackerView, sym: string) => {
+    setSheetSymbol(null);
+    setView(v);
+    setHighlightSymbol(sym);
+  };
+
+  useEffect(() => {
+    if (!highlightSymbol) {
+      return;
+    }
+    const timer = window.setTimeout(() => {
+      document
+        .querySelector(`[data-symbol="${highlightSymbol}"]`)
+        ?.scrollIntoView({ behavior: "smooth", block: "center" });
+    }, 150);
+    const clear = window.setTimeout(() => setHighlightSymbol(null), 2500);
+    return () => {
+      window.clearTimeout(timer);
+      window.clearTimeout(clear);
+    };
+  }, [highlightSymbol]);
+
   const viewAccent: Partial<Record<TrackerView, string>> = {
     theme: "border-[#6EE7F0] bg-[#6EE7F0] font-bold text-ink",
     rank: "border-copper bg-copper font-bold text-card",
     vol: "border-[#3E9B62] bg-[#3E9B62] font-bold text-card",
+    ret: "border-[#E0A458] bg-[#E0A458] font-bold text-card",
     link: "border-up bg-up font-bold text-card",
     flow: "border-[#9D7CF0] bg-[#9D7CF0] font-bold text-card",
     proc: "border-[#D98A3E] bg-[#D98A3E] font-bold text-card",
@@ -156,7 +184,7 @@ export function ThemeTrackerView() {
         </p>
       </div>
 
-      <StockSearch onPick={pickStock} />
+      <StockSearch onPick={pickStock} tagPrefill={tagPrefill} />
 
       <div className="mt-3 space-y-3">
         <ChipGroup
@@ -236,9 +264,21 @@ export function ThemeTrackerView() {
           </>
         ) : null}
 
-        {view === "rank" ? <RankView onPickStock={pickStock} /> : null}
-        {view === "vol" ? <VolView onPickStock={pickStock} /> : null}
-        {view === "link" ? <LinkView onPickStock={pickStock} /> : null}
+        {view === "rank" ? (
+          <>
+            <RankView onPickStock={pickStock} highlightSymbol={highlightSymbol} />
+            <TrackerCopySummary />
+          </>
+        ) : null}
+        {view === "vol" ? (
+          <VolView onPickStock={pickStock} highlightSymbol={highlightSymbol} />
+        ) : null}
+        {view === "ret" ? (
+          <RetView onPickStock={pickStock} highlightSymbol={highlightSymbol} />
+        ) : null}
+        {view === "link" ? (
+          <LinkView onPickStock={pickStock} highlightSymbol={highlightSymbol} />
+        ) : null}
 
         {view === "flow" ? <FlowView onPickStock={pickStock} /> : null}
 
@@ -246,7 +286,15 @@ export function ThemeTrackerView() {
       </div>
 
       {sheetSymbol ? (
-        <StockSheet symbol={sheetSymbol} onClose={() => setSheetSymbol(null)} />
+        <StockSheet
+          symbol={sheetSymbol}
+          onClose={() => setSheetSymbol(null)}
+          onNavigate={gotoView}
+          onSearchTag={(tag) => {
+            setTagPrefill(tag);
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }}
+        />
       ) : null}
     </>
   );

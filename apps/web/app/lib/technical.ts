@@ -23,6 +23,8 @@ export interface StockTechnical {
   ret3m: number | null;
   rsi: number | null;
   posPct: number | null;
+  hi52: number | null;
+  lo52: number | null;
   streak: number;
   daytrade: string | null;
   signal: string | null;
@@ -499,6 +501,8 @@ export function analyzeStock(symbol: string): StockTechnical | null {
     ret3m,
     rsi,
     posPct,
+    hi52: hi52 ? Math.round(hi52 * 100) / 100 : null,
+    lo52: lo52 ? Math.round(lo52 * 100) / 100 : null,
     streak,
     daytrade,
     signal,
@@ -525,3 +529,37 @@ export const BULL_PATTERNS = new Set([
   "トリプルボトム",
   "ダブルボトム",
 ]);
+
+export function stockHints(tech: StockTechnical): string[] {
+  const hints: string[] = [];
+  if (tech.daytrade === "資金流入急増") {
+    hints.push("⚡ 出来高2倍↑＋前日比2%↑=今日の主役。寄り付き〜前場の値動きに注目");
+  } else if (tech.daytrade === "初動の兆し") {
+    hints.push("⚡ 出来高増え始め＋小幅上昇=初動の可能性。早めの監視");
+  } else if (tech.daytrade === "急落・リバ狙い") {
+    hints.push("⚡ 出来高急増＋急落=狼狽売り後のリバウンド狙い候補");
+  }
+  if (tech.signal === "押し目") {
+    hints.push("📉 25日線から大きく下＋RSI低い=反発狙いの押し目候補(スイング)");
+  } else if (tech.signal === "過熱") {
+    hints.push("🔥 過熱気味。短期は利確・調整に注意");
+  } else if (tech.signal === "25日線付近") {
+    hints.push("⚖️ 25日線付近。方向感待ち");
+  }
+  if (tech.streak <= -4) {
+    hints.push(`📍 ${-tech.streak}日連続下落=売られすぎ反発に警戒`);
+  }
+  if (tech.streak >= 4) {
+    hints.push(`📈 ${tech.streak}日連続上昇=勢いあるが過熱も`);
+  }
+  if (tech.ret1m !== null && tech.ret1m <= -15) {
+    hints.push(`📍 1ヶ月で${tech.ret1m}%下落=出遅れ・リバ狙いの監視対象`);
+  }
+  if (tech.posPct !== null && tech.posPct >= 90) {
+    hints.push("🚀 52週高値圏=強いが高値掴み注意");
+  }
+  if (tech.posPct !== null && tech.posPct <= 15) {
+    hints.push("🔻 52週安値圏=底値狙いの監視対象");
+  }
+  return hints;
+}

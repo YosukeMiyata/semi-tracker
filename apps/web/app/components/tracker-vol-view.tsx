@@ -1,6 +1,7 @@
 import { useMemo, useState } from "react";
 import { ChipGroup } from "~/components/chip-group";
 import { fmtPct, pctColor } from "~/lib/data";
+import { highlightRowClass } from "~/lib/highlight";
 import { allStockRows, type StockRow } from "~/lib/tracker";
 
 type VolMarket = "all" | "jp" | "us";
@@ -33,7 +34,13 @@ function sortRows(rows: StockRow[], sort: VolSort, dir: VolDir): StockRow[] {
     });
 }
 
-export function VolView({ onPickStock }: { onPickStock: (symbol: string) => void }) {
+export function VolView({
+  onPickStock,
+  highlightSymbol = null,
+}: {
+  onPickStock: (symbol: string) => void;
+  highlightSymbol?: string | null;
+}) {
   const [market, setMarket] = useState<VolMarket>("all");
   const [sort, setSort] = useState<VolSort>("volRatio");
   const [dir, setDir] = useState<VolDir>("desc");
@@ -68,8 +75,9 @@ export function VolView({ onPickStock }: { onPickStock: (symbol: string) => void
             <button
               key={r.symbol}
               type="button"
+              data-symbol={r.symbol}
               onClick={() => onPickStock(r.symbol)}
-              className="grid w-full grid-cols-[28px_1fr_auto_auto] items-center gap-2 border-line border-b px-3 py-2.5 text-left text-[13px] last:border-b-0 hover:bg-[#FBFBFC]"
+              className={`grid w-full grid-cols-[28px_1fr_auto_auto] items-center gap-2 border-line border-b px-3 py-2.5 text-left text-[13px] last:border-b-0 hover:bg-[#FBFBFC] ${highlightRowClass(r.symbol, highlightSymbol)}`}
             >
               <span className="font-mono text-[11px] text-ink-2">{i + 1}</span>
               <span className="min-w-0 truncate">

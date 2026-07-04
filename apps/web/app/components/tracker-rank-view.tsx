@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 import { ChipGroup, MultiChipGroup } from "~/components/chip-group";
 import { fmtPct, pctColor } from "~/lib/data";
+import { highlightRowClass } from "~/lib/highlight";
 import { analyzeStock, BULL_PATTERNS } from "~/lib/technical";
 import {
   allStockRows,
@@ -106,7 +107,13 @@ function matchSignals(
   return true;
 }
 
-export function RankView({ onPickStock }: { onPickStock: (symbol: string) => void }) {
+export function RankView({
+  onPickStock,
+  highlightSymbol = null,
+}: {
+  onPickStock: (symbol: string) => void;
+  highlightSymbol?: string | null;
+}) {
   const [sector, setSector] = useState("all");
   const [sub, setSub] = useState("all");
   const [market, setMarket] = useState<RankMarket>("all");
@@ -258,6 +265,7 @@ export function RankView({ onPickStock }: { onPickStock: (symbol: string) => voi
               rank={i + 1}
               onPick={onPickStock}
               showTags={patterns.size > 0 || signals.size > 0}
+              highlightSymbol={highlightSymbol}
             />
           ))
         )}
@@ -271,11 +279,13 @@ function RankRow({
   rank,
   onPick,
   showTags,
+  highlightSymbol,
 }: {
   row: StockRow & { tech: NonNullable<ReturnType<typeof analyzeStock>> };
   rank: number;
   onPick: (symbol: string) => void;
   showTags: boolean;
+  highlightSymbol: string | null;
 }) {
   const { tech } = row;
   const pat = tech.pattern;
@@ -284,8 +294,9 @@ function RankRow({
   return (
     <button
       type="button"
+      data-symbol={row.symbol}
       onClick={() => onPick(row.symbol)}
-      className="flex w-full items-center gap-2 border-line border-b px-3 py-2.5 text-left last:border-b-0 hover:bg-[#FBFBFC]"
+      className={`flex w-full items-center gap-2 border-line border-b px-3 py-2.5 text-left last:border-b-0 hover:bg-[#FBFBFC] ${highlightRowClass(row.symbol, highlightSymbol)}`}
     >
       <span className="w-6 font-mono text-[11px] text-ink-2">{rank}</span>
       <span

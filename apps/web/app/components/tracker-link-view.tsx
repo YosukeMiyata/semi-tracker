@@ -1,4 +1,5 @@
 import { fmtPct, pctColor } from "~/lib/data";
+import { highlightRowClass } from "~/lib/highlight";
 import { linkageGroups, linkageMethod } from "~/lib/tracker";
 
 function trigBadge(level: number, usAvg: number | null) {
@@ -30,7 +31,13 @@ function trigBadge(level: number, usAvg: number | null) {
   );
 }
 
-export function LinkView({ onPickStock }: { onPickStock: (symbol: string) => void }) {
+export function LinkView({
+  onPickStock,
+  highlightSymbol = null,
+}: {
+  onPickStock: (symbol: string) => void;
+  highlightSymbol?: string | null;
+}) {
   const groups = linkageGroups();
   const triggered = groups.filter((g) => g.triggered);
   const rest = groups.filter((g) => !g.triggered);
@@ -48,7 +55,7 @@ export function LinkView({ onPickStock }: { onPickStock: (symbol: string) => voi
       <p className="text-[12px] text-ink-2 leading-[1.55]">
         米国系テーマが <b className="text-up">+2%以上</b>{" "}
         上昇した翌営業日に連動しやすい「テーマ→日本株」ランキング。
-        銘柄タップで期間別騰落率などの詳細を表示します。
+        銘柄タップで、どのテーマにどれだけ連動するかの内訳を表示します。
       </p>
 
       {triggered.length === 0 ? (
@@ -93,8 +100,9 @@ export function LinkView({ onPickStock }: { onPickStock: (symbol: string) => voi
             <button
               key={`${g.theme}-${r.code}`}
               type="button"
+              data-symbol={r.code}
               onClick={() => onPickStock(r.code)}
-              className="grid w-full grid-cols-[1fr_auto_auto_auto] items-center gap-2 border-line border-t px-3 py-2 text-left text-[12.5px] hover:bg-[#FBFBFC]"
+              className={`grid w-full grid-cols-[1fr_auto_auto_auto] items-center gap-2 border-line border-t px-3 py-2 text-left text-[12.5px] hover:bg-[#FBFBFC] ${highlightRowClass(r.code, highlightSymbol)}`}
             >
               <span>
                 <span className="font-mono font-bold text-copper">{r.code}</span> {r.name}

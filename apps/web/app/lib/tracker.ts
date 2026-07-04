@@ -1,9 +1,12 @@
 import { fmtPct } from "~/lib/data";
+import flowJson from "../../../../data/flow.json";
 import linkageJson from "../../../../data/linkage.json";
 import pricesJson from "../../../../data/prices.json";
+import processJson from "../../../../data/process.json";
+import stockTagsJson from "../../../../data/stock_tags.json";
 import themesMaster from "../../../../data/themes.json";
 
-export type TrackerView = "theme" | "rank" | "vol" | "link" | "flow" | "proc";
+export type TrackerView = "theme" | "rank" | "vol" | "ret" | "link" | "flow" | "proc";
 export type TrackerMarket = "both" | "us" | "jp";
 export type TrackerPeriodId = "1D" | "5D" | "10D" | "1M" | "2M" | "3M" | "6M" | "1Y" | "YTD";
 
@@ -72,10 +75,11 @@ export const TRACKER_MARKETS: { id: TrackerMarket; label: string }[] = [
 
 export const TRACKER_VIEWS: { id: TrackerView; label: string }[] = [
   { id: "theme", label: "テーマ" },
-  { id: "rank", label: "銘柄" },
+  { id: "rank", label: "銘柄分析" },
   { id: "vol", label: "前日比・出来高" },
-  { id: "link", label: "連動" },
+  { id: "ret", label: "騰落率" },
   { id: "flow", label: "フロー図" },
+  { id: "link", label: "連動" },
   { id: "proc", label: "工程" },
 ];
 
@@ -206,6 +210,125 @@ export function subAvg(
   return lastOf(avgSeries(pickSymbols(sub, market), period));
 }
 
+export interface TagSearchHit extends SearchHit {
+  matchedTag: string;
+}
+
+let tagIndexCache: Map<string, Set<string>> | null = null;
+
+function addTag(index: Map<string, Set<string>>, tag: string, symbol: string) {
+  const key = tag.trim();
+  if (!key || !quotes[symbol]) {
+    return;
+  }
+  if (!index.has(key)) {
+    index.set(key, new Set());
+  }
+  index.get(key)?.add(symbol);
+}
+
+function buildTagIndex(): Map<string, Set<string>> {
+  const index = new Map<string, Set<string>>();
+  for (const m of macros) {
+    for (const sub of m.subs) {
+      for (const sym of pickSymbols(sub, "both")) {
+        addTag(index, m.name, sym);
+        addTag(index, sub.name, sym);
+        for (const row of sub.jp) {
+          if (row.code === sym && row.note) {
+            addTag(index, row.note, sym);
+          }
+        }
+        for (const row of sub.solo) {
+          if (row.code === sym && row.note) {
+            addTag(index, row.note, sym);
+          }
+        }
+      }
+    }
+  }
+
+  const flowStages = (
+    flowJson as {
+      stages: {
+        steps: { name: string; roles: { label: string; items: { code: string }[] }[] }[];
+      }[];
+    }
+  ).stages;
+  for (const stage of flowStages) {
+    for (const step of stage.steps) {
+      for (const role of step.roles) {
+        for (const item of role.items) {
+          addTag(index, role.label, item.code);
+          addTag(index, step.name, item.code);
+        }
+      }
+    }
+  }
+
+  const procSteps = (
+    processJson as {
+      steps: { name: string; groups?: { label: string; stocks: { code: string }[] }[] }[];
+    }
+  ).steps;
+  for (const step of procSteps) {
+    for (const g of step.groups ?? []) {
+      for (const s of g.stocks) {
+        addTag(index, g.label, s.code);
+        addTag(index, step.name, s.code);
+      }
+    }
+  }
+
+  const masterTags = (stockTagsJson as { tags: Record<string, string[]> }).tags;
+  for (const [sym, tags] of Object.entries(masterTags)) {
+    for (const tag of tags) {
+      addTag(index, tag, sym);
+    }
+  }
+
+  return index;
+}
+
+function tagIndex(): Map<string, Set<string>> {
+  if (!tagIndexCache) {
+    tagIndexCache = buildTagIndex();
+  }
+  return tagIndexCache;
+}
+
+export function searchByTag(query: string, limit = 20): TagSearchHit[] {
+  const q = query.trim().toLowerCase();
+  if (!q) {
+    return [];
+  }
+  const idx = tagIndex();
+  const matchedTags = [...idx.keys()].filter(
+    (tag) => tag.toLowerCase().includes(q) || q.includes(tag.toLowerCase()),
+  );
+  const symTag = new Map<string, string>();
+  for (const tag of matchedTags) {
+    for (const sym of idx.get(tag) ?? []) {
+      if (!symTag.has(sym)) {
+        symTag.set(sym, tag);
+      }
+    }
+  }
+  return [...symTag.entries()]
+    .map(([symbol, matchedTag]) => {
+      const row = quotes[symbol];
+      return {
+        symbol,
+        name: row.name,
+        market: row.market,
+        chgPct: chgPct(symbol),
+        matchedTag,
+      };
+    })
+    .sort((a, b) => Math.abs(b.chgPct ?? 0) - Math.abs(a.chgPct ?? 0))
+    .slice(0, limit);
+}
+
 export function searchStocks(query: string, limit = 15): SearchHit[] {
   const q = query.trim().toLowerCase();
   if (!q) {
@@ -274,6 +397,42 @@ export function stockThemes(symbol: string): { macroIdx: number; label: string }
     }
   });
   return hits;
+}
+
+export function stockTags(symbol: string): string[] {
+  return (stockTagsJson as { tags: Record<string, string[]> }).tags[symbol] ?? [];
+}
+
+export interface StockLinkageHit {
+  theme: string;
+  macro: string;
+  sub: string;
+  rate: number;
+  avg: number;
+  n: number;
+  usAvg: number | null;
+  triggered: boolean;
+  trigLevel: number;
+}
+
+export function stockLinkageHits(symbol: string): StockLinkageHit[] {
+  return linkageGroups()
+    .flatMap((g) =>
+      g.rows
+        .filter((r) => r.code === symbol)
+        .map((r) => ({
+          theme: g.theme,
+          macro: g.macro,
+          sub: g.sub,
+          rate: r.rate,
+          avg: r.avg,
+          n: r.n,
+          usAvg: g.usAvg,
+          triggered: g.triggered,
+          trigLevel: g.trigLevel,
+        })),
+    )
+    .sort((a, b) => b.rate - a.rate || b.avg - a.avg);
 }
 
 export interface StockRow {
