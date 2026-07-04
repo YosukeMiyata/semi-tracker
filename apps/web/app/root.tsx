@@ -58,7 +58,9 @@ export default function App() {
         <br />
         <br />
         データソース:株価=Stooq / Yahoo Finance
-        日足(平日自動更新・前営業日確定分)/ニュース=主要メディア(出典リンクを各記事に表示予定)
+        日足(平日自動更新・前営業日確定分)/ヘッドライン=日経・Bloomberg・Reuters・CNBC・WSJ・日刊工業・東洋経済・日経xTECH・ITmedia・EE
+        Times Japan・DigiTimes・SemiEngineering・Tom&apos;s
+        Hardware(RSS・平日自動)/分析ニュース=手動編集(data/news.json)
       </footer>
 
       <nav className="fixed inset-x-0 bottom-0 z-40 flex justify-around border-line border-t bg-card px-1 pt-1.5 pb-[calc(6px+env(safe-area-inset-bottom))]">

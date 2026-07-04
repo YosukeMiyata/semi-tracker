@@ -1,8 +1,10 @@
 import { useState } from "react";
+import { HeadlineList } from "~/components/headline-list";
 import { NewsCard } from "~/components/news-card";
 import { Card, SectionTitle } from "~/components/section";
 import { SentimentChart } from "~/components/sentiment-chart";
 import { fmtPct, pctColor, timelineReactions } from "~/lib/data";
+import { headlineItems, headlinesFetchedAt } from "~/lib/headlines";
 import { newsItems, themeNames, timelineItems } from "~/lib/news";
 
 export function meta() {
@@ -39,18 +41,31 @@ export default function News() {
     return true;
   });
 
+  const fetchedLabel = headlinesFetchedAt.slice(0, 10);
+
   return (
     <>
       <SectionTitle
+        title="自動ヘッドライン"
+        note={`13媒体から RSS 取得(毎日自動更新・${fetchedLabel} 取得)`}
+      />
+      <HeadlineList items={headlineItems} />
+
+      <SectionTitle
+        title="分析ニュース"
+        note="感情スコア付きの特別枠。余裕があるときに手動で追記します"
+      />
+
+      <SectionTitle
         title="センチメント定点観測"
-        note="ニュース論調スコアの週次推移。株価との乖離を見るための温度計です"
+        note="分析ニュースの論調スコア週次推移。株価との乖離を見るための温度計です"
       />
       <Card>
         <SentimentChart />
       </Card>
 
       <SectionTitle
-        title="ニュース感情分析"
+        title="分析ニュース一覧"
         note="論調を−2〜+2でスコア化。投資判断ではなくニュースの温度計です"
       />
       <div className="mt-2.5 mb-3.5 flex flex-wrap gap-1.5">

@@ -1,9 +1,11 @@
 import { CopySummary } from "~/components/copy-summary";
+import { HeadlineList } from "~/components/headline-list";
 import { NewsCard } from "~/components/news-card";
 import { Card, SectionTitle } from "~/components/section";
 import { Sparkline } from "~/components/sparkline";
 import { Wafer } from "~/components/wafer";
 import { fmtPct, indices, linkageTop, pctColor } from "~/lib/data";
+import { recentHeadlines } from "~/lib/headlines";
 import { featuredNews, themeSentiments, verdictLabel, weeklySentiment } from "~/lib/news";
 
 export function meta() {
@@ -18,6 +20,7 @@ function splitTheme(theme: string): { macro: string; sub: string } {
 const weekly = weeklySentiment();
 const waferThemes = themeSentiments();
 const featured = featuredNews();
+const headlines = recentHeadlines(3, 5);
 
 export default function Home() {
   return (
@@ -94,8 +97,14 @@ export default function Home() {
       ) : null}
 
       <SectionTitle
+        title="最新ヘッドライン"
+        note="主要メディアの見出しを RSS で自動掲載(RSS 全文はニュースタブ)"
+      />
+      <HeadlineList items={headlines} compact />
+
+      <SectionTitle
         title="今週の注目 3本"
-        note="ニュースを「どの銘柄に効くか」まで翻訳して届けます"
+        note="手動の分析ニュース — どの銘柄に効くかまで翻訳して届けます"
       />
       {featured.map((item) => (
         <NewsCard key={item.id} item={item} />

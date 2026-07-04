@@ -28,6 +28,10 @@ jobs:
         # → 前回データが維持され、このジョブの失敗通知(メール)で気づける(仕様書 4.1)
         run: python3 pipeline/update_prices.py
 
+      - name: RSS ヘッドライン取得 → data/headlines.json
+        # 失敗しても株価更新は維持。前回 headlines.json を残す
+        run: python3 pipeline/fetch_headlines.py || echo "headlines fetch skipped"
+
       - name: 変更があれば commit & push(→ deploy.yml が自動でサイト再ビルド)
         run: |
           git config user.name "github-actions[bot]"
@@ -35,7 +39,7 @@ jobs:
           git add data/
           # update_report.json は毎回タイムスタンプが変わるため、実データの変更だけを見る
           if git diff --cached --quiet -- data/prices.json data/themes_perf.json \
-              data/linkage.json data/linkage_top.json data/themes.json; then
+              data/linkage.json data/linkage_top.json data/themes.json data/headlines.json; then
             echo "実データに変更なし(休場日など)— commit しない"
             exit 0
           fi

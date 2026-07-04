@@ -28,7 +28,29 @@ python3 pipeline/build_master.py   # または pnpm data:master
 - 連動日本株: `["6857", "アドバンテスト", "連動理由"]`
 - 日本単独: `["4186", "東京応化工業", "内容"]`
 
-## ニュースの追加(Phase 1: 手動運用)
+## ニュースの二層構成
+
+### 自動ヘッドライン(毎日 RSS 更新)
+
+`pipeline/fetch_headlines.py` が平日バッチで `data/headlines.json` を生成します。
+日経・Bloomberg・Reuters・CNBC・WSJ・日刊工業・東洋経済・日経xTECH・ITmedia・EE Times Japan・DigiTimes・SemiEngineering・Tom's Hardware から見出し+リンクを掲載(無料・AI なし)。
+
+```sh
+python3 pipeline/fetch_headlines.py   # または pnpm data:headlines
+```
+
+- **日経**: 日経電子版は公開 RSS がないため、Google News(`site:nikkei.com`) で半導体記事を取得
+- **Bloomberg / CNBC / WSJ / Reuters**: Google News(`site:各媒体`) で半導体記事を取得(Reuters は公式 RSS 終了)
+- **日経xTECH**: 日経クロステック RSS(半導体キーワードでフィルタ)
+- **ITmedia**: TechFactory「エレクトロニクス」RSS
+- **EE Times Japan**: 新着記事 RSS
+- **DigiTimes**: 台湾発の半導体業界専門メディア RSS(キーワードでフィルタ)
+- **SemiEngineering**: 半導体設計・製造の専門メディア RSS
+- **日刊工業**: Google News(`site:nikkan.co.jp`) — 公開 RSS は取得不可のため
+- **東洋経済**: Google News(`site:toyokeizai.net`)
+- **Tom's Hardware**: 半導体タグ RSS(英語・ハードウェア/CPU/GPU 寄り)
+
+### 分析ニュース(Phase 1: 手動運用)
 
 `data/news.json` に 1 件追記して commit すればサイトに反映されます。
 スキーマは同ファイル内の既存エントリを参照。感情スコア(sentiment)は
