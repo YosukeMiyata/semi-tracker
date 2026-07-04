@@ -33,8 +33,10 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/
-          if git diff --cached --quiet; then
-            echo "変更なし(休場日など)"
+          # update_report.json は毎回タイムスタンプが変わるため、実データの変更だけを見る
+          if git diff --cached --quiet -- data/prices.json data/themes_perf.json \
+              data/linkage.json data/linkage_top.json data/themes.json; then
+            echo "実データに変更なし(休場日など)— commit しない"
             exit 0
           fi
           git commit -m "data: 日次更新 $(TZ=Asia/Tokyo date +%Y-%m-%d) [auto]"
