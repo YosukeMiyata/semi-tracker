@@ -1,7 +1,7 @@
 [project]
 name = "semi-tracker-pipeline"
 version = "0.1.0"
-description = "半導体テーマトラッカー v2 データパイプライン(銘柄マスタ変換・株価取得・集計)"
+description = "半導体テーマトラッカー データパイプライン(銘柄マスタ変換・株価取得・集計)"
 requires-python = ">=3.12"
 dependencies = []
 

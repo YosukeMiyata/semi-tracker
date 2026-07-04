@@ -8,7 +8,7 @@ import { headlineItems, headlinesFetchedAt } from "~/lib/headlines";
 import { newsItems, themeNames, timelineItems } from "~/lib/news";
 
 export function meta() {
-  return [{ title: "ニュース — 半導体テーマトラッカー 2.0" }];
+  return [{ title: "ニュース — 半導体テーマトラッカー" }];
 }
 
 type Filter = "all" | "pos" | "neg" | "geo";

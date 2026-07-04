@@ -30,7 +30,7 @@ OUT_PATH = DATA_DIR / "headlines.json"
 KEEP_DAYS = 14
 MAX_ITEMS = 72
 UA = (
-    "Mozilla/5.0 (compatible; semi-tracker/2.0; +https://github.com/yuyu5555-bit/semi-tracker)"
+    "Mozilla/5.0 (compatible; semi-tracker; +https://github.com/yuyu5555-bit/semi-tracker)"
 )
 
 # Google News 検索 URL を組み立てる

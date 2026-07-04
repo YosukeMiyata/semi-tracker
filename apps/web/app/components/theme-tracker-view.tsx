@@ -174,15 +174,9 @@ export function ThemeTrackerView() {
 
   return (
     <>
-      <div className="mb-4">
-        <div className="text-[10px] text-ink-2 tracking-[0.16em]">SEMICONDUCTOR THEME TRACKER</div>
-        <h1 className="mt-1 font-bold font-serif text-[22px] tracking-[0.01em]">
-          半導体テーマトラッカー
-        </h1>
-        <p className="mt-1 text-[12.5px] text-ink-2 leading-[1.55]">
-          累積騰落率で、どのテーマに資金が来てどこから抜けたかを一望。タップでサブテーマ・連動日本株へ。
-        </p>
-      </div>
+      <p className="mb-4 text-[12.5px] text-ink-2 leading-[1.55]">
+        累積騰落率で、どのテーマに資金が来てどこから抜けたかを一望。タップでサブテーマ・連動日本株へ。
+      </p>
 
       <StockSearch onPick={pickStock} tagPrefill={tagPrefill} />
 

@@ -2,7 +2,7 @@ import { SectionTitle } from "~/components/section";
 import { glossaryTerms } from "~/lib/news";
 
 export function meta() {
-  return [{ title: "学ぶ — 半導体テーマトラッカー 2.0" }];
+  return [{ title: "学ぶ — 半導体テーマトラッカー" }];
 }
 
 export default function Learn() {

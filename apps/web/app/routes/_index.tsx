@@ -9,7 +9,7 @@ import { recentHeadlines } from "~/lib/headlines";
 import { featuredNews, themeSentiments, verdictLabel, weeklySentiment } from "~/lib/news";
 
 export function meta() {
-  return [{ title: "ホーム — 半導体テーマトラッカー 2.0" }];
+  return [{ title: "ホーム — 半導体テーマトラッカー" }];
 }
 
 function splitTheme(theme: string): { macro: string; sub: string } {

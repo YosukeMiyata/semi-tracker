@@ -9,7 +9,7 @@ export function Layout({ children }: { children: ReactNode }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>半導体テーマトラッカー 2.0</title>
+        <title>半導体テーマトラッカー</title>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
@@ -39,9 +39,10 @@ const TABS = [
 export default function App() {
   return (
     <>
-      <header className="sticky top-0 z-30 flex items-baseline gap-2.5 border-line border-b bg-paper/90 px-[18px] py-3 backdrop-blur-md">
-        <div className="font-bold font-serif text-[19px] tracking-[0.02em]">
-          半導体テーマトラッカー <em className="text-copper not-italic">2.0</em>
+      <header className="sticky top-0 z-30 flex items-center gap-2.5 border-line border-b bg-paper/90 px-[18px] py-3 backdrop-blur-md">
+        <div>
+          <div className="text-[10px] text-ink-2 tracking-[0.16em]">SEMICONDUCTOR THEME TRACKER</div>
+          <div className="font-bold font-serif text-[19px] tracking-[0.02em]">半導体テーマトラッカー</div>
         </div>
         <div className="ml-auto font-mono text-[11px] text-ink-2">
           データ {themesPerf.last_updated} 時点

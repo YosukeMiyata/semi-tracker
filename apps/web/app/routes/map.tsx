@@ -3,7 +3,7 @@ import { SectionTitle } from "~/components/section";
 import { type SupplyStep, stageNewsCount, stages, stockName } from "~/lib/supplychain";
 
 export function meta() {
-  return [{ title: "マップ — 半導体テーマトラッカー 2.0" }];
+  return [{ title: "マップ — 半導体テーマトラッカー" }];
 }
 
 function Chips({ codes }: { codes: string[] }) {

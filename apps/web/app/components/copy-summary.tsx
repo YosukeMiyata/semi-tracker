@@ -5,7 +5,7 @@ import { anchorDate, featuredNews, verdictLabel, weeklySentiment } from "~/lib/n
 function buildSummary(): string {
   const weekly = weeklySentiment();
   const lines: string[] = [
-    `# 半導体テーマトラッカー 2.0 データサマリー(基準日 ${anchorDate})`,
+    `# 半導体テーマトラッカー データサマリー(基準日 ${anchorDate})`,
     "",
     `## 週間センチメント`,
     `スコア: ${weekly.score === null ? "データなし" : weekly.score.toFixed(1)} / ±2.0(${verdictLabel(weekly.score)}、分析ニュース ${weekly.count}本)`,
