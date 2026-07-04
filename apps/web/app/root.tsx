@@ -41,8 +41,12 @@ export default function App() {
     <>
       <header className="sticky top-0 z-30 flex items-center gap-2.5 border-line border-b bg-paper/90 px-[18px] py-3 backdrop-blur-md">
         <div>
-          <div className="text-[10px] text-ink-2 tracking-[0.16em]">SEMICONDUCTOR THEME TRACKER</div>
-          <div className="font-bold font-serif text-[19px] tracking-[0.02em]">半導体テーマトラッカー</div>
+          <div className="text-[10px] text-ink-2 tracking-[0.16em]">
+            SEMICONDUCTOR THEME TRACKER
+          </div>
+          <div className="font-bold font-serif text-[19px] tracking-[0.02em]">
+            半導体テーマトラッカー
+          </div>
         </div>
         <div className="ml-auto font-mono text-[11px] text-ink-2">
           データ {themesPerf.last_updated} 時点
