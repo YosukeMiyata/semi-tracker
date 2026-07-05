@@ -51,7 +51,9 @@ export default function Home() {
                   {ix.name}
                   <small className="type-meta ml-1.5 font-mono font-normal">{ix.date}</small>
                 </div>
-                <div className="type-mono-value mt-0.5 font-semibold">{ix.last.toLocaleString()}</div>
+                <div className="type-mono-value mt-0.5 font-semibold">
+                  {ix.last.toLocaleString()}
+                </div>
               </div>
               <Sparkline values={ix.spark} />
               <div className="type-body-sm text-right font-mono">
@@ -119,7 +121,7 @@ export default function Home() {
           title="最新ヘッドライン"
           note="主要メディアの見出し(RSS 自動)。詳細はニュースタブ"
         />
-        <HeadlineList items={headlines} compact />
+        <HeadlineList items={headlines} />
       </section>
 
       <CopySummary />

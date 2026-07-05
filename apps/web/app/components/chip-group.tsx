@@ -23,7 +23,9 @@ export function ChipGroup<T extends string>({
   return (
     <div>
       <div className="type-meta mb-1.5 tracking-[0.08em]">{label}</div>
-      <div className={`-mx-0.5 flex gap-1.5 pb-0.5 md:gap-2 ${wrap ? "flex-wrap" : "overflow-x-auto"}`}>
+      <div
+        className={`-mx-0.5 flex gap-1.5 pb-0.5 md:gap-2 ${wrap ? "flex-wrap" : "overflow-x-auto"}`}
+      >
         {options.map((opt) => {
           const active = opt.id === value;
           const accentClass = accent?.[opt.id];
@@ -68,7 +70,9 @@ export function MultiChipGroup<T extends string>({
   return (
     <div>
       <div className="type-meta mb-1.5 tracking-[0.08em]">{label}</div>
-      <div className={`-mx-0.5 flex gap-1.5 pb-0.5 md:gap-2 ${wrap ? "flex-wrap" : "overflow-x-auto"}`}>
+      <div
+        className={`-mx-0.5 flex gap-1.5 pb-0.5 md:gap-2 ${wrap ? "flex-wrap" : "overflow-x-auto"}`}
+      >
         {options.map((opt) => {
           const active = opt.id === "all" ? selected.size === 0 : selected.has(opt.id);
           return (

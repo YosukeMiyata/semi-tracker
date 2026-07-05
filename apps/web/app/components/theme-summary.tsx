@@ -63,15 +63,15 @@ export function ThemeSummary() {
                   style={{ backgroundColor: t.color }}
                   aria-hidden
                 />
-        <span className="type-list-primary font-bold">{t.name}</span>
+                <span className="type-list-primary font-bold">{t.name}</span>
               </div>
 
               <div className="mt-1.5 flex w-full flex-wrap items-center justify-end gap-x-2 gap-y-1 md:mt-0 md:ml-auto md:w-auto md:shrink-0 md:flex-nowrap md:justify-start md:gap-x-3">
                 <Sparkline values={t.spark} />
-                <span className={`type-mono-value ${pctColor(t.dayPct)}`}>
-                  {fmtPct(t.dayPct)}
-                </span>
-                <span className={`type-mono-value md:w-[5.5rem] md:text-right ${pctColor(t.ytdPct)}`}>
+                <span className={`type-mono-value ${pctColor(t.dayPct)}`}>{fmtPct(t.dayPct)}</span>
+                <span
+                  className={`type-mono-value md:w-[5.5rem] md:text-right ${pctColor(t.ytdPct)}`}
+                >
                   {fmtPct(t.ytdPct, 0)}
                   <small className="type-meta ml-0.5 font-normal">YTD</small>
                 </span>

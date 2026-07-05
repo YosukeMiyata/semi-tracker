@@ -54,7 +54,9 @@ function SubBlock({
     <div className="border-line border-b py-3 last:border-b-0">
       <div className="mb-2 flex items-baseline justify-between gap-2">
         <span className="font-bold text-[13.5px] md:text-[15px]">{sub.name}</span>
-        <span className={`font-mono font-bold text-[13.5px] md:text-[15px] ${pctColor(avg)}`}>{fmtPct(avg)}</span>
+        <span className={`font-mono font-bold text-[13.5px] md:text-[15px] ${pctColor(avg)}`}>
+          {fmtPct(avg)}
+        </span>
       </div>
       {showUs && sub.us.length > 0 ? (
         <>
@@ -222,7 +224,9 @@ export function ThemeTrackerView() {
                       </small>
                     </div>
                     <Sparkline values={sparkFromSeries(t.series)} />
-                    <div className={`type-mono-value min-w-[4.75rem] text-right ${pctColor(t.avg)}`}>
+                    <div
+                      className={`type-mono-value min-w-[4.75rem] text-right ${pctColor(t.avg)}`}
+                    >
                       {fmtPct(t.avg)}
                     </div>
                   </summary>

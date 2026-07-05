@@ -29,8 +29,7 @@ function externalLinks(symbol: string, market: "jp" | "us") {
   ];
 }
 
-const TECH_BADGE =
-  "type-meta rounded-full border px-2.5 py-0.5 md:px-3 md:py-1";
+const TECH_BADGE = "type-meta rounded-full border px-2.5 py-0.5 md:px-3 md:py-1";
 
 export function StockSheet({
   symbol,
@@ -119,9 +118,7 @@ export function StockSheet({
               </span>
             ) : null}
             {tech.poBear ? (
-              <span className={`${TECH_BADGE} border-down/40 bg-down-soft text-down`}>
-                📉 逆PO
-              </span>
+              <span className={`${TECH_BADGE} border-down/40 bg-down-soft text-down`}>📉 逆PO</span>
             ) : null}
             {tech.bbWalk === "up" ? (
               <span className={`${TECH_BADGE} border-up/40 bg-up-soft text-up`}>
@@ -134,19 +131,13 @@ export function StockSheet({
               </span>
             ) : null}
             {tech.volSurge === 3 ? (
-              <span className={`${TECH_BADGE} border-up/40 bg-up-soft text-up`}>
-                🔊 出来高5倍↑
-              </span>
+              <span className={`${TECH_BADGE} border-up/40 bg-up-soft text-up`}>🔊 出来高5倍↑</span>
             ) : null}
             {tech.volSurge === 2 ? (
-              <span className={`${TECH_BADGE} border-up/40 bg-up-soft text-up`}>
-                🔊 出来高3倍↑
-              </span>
+              <span className={`${TECH_BADGE} border-up/40 bg-up-soft text-up`}>🔊 出来高3倍↑</span>
             ) : null}
             {tech.volSurge === 1 ? (
-              <span className={`${TECH_BADGE} border-up/40 bg-up-soft text-up`}>
-                🔊 出来高2倍↑
-              </span>
+              <span className={`${TECH_BADGE} border-up/40 bg-up-soft text-up`}>🔊 出来高2倍↑</span>
             ) : null}
             {tech.pullback ? (
               <span className={`${TECH_BADGE} border-up/30 bg-up-soft text-up`}>
@@ -154,9 +145,7 @@ export function StockSheet({
               </span>
             ) : null}
             {tech.pattern ? (
-              <span className={`${TECH_BADGE} border-line bg-panel2 text-ink`}>
-                {tech.pattern}
-              </span>
+              <span className={`${TECH_BADGE} border-line bg-panel2 text-ink`}>{tech.pattern}</span>
             ) : null}
             {tech.signal ? (
               <span className={`${TECH_BADGE} border-copper/40 bg-copper-soft text-copper`}>

@@ -14,9 +14,7 @@ export function WeeklyDigest() {
       />
 
       <div className="mb-3 flex flex-wrap items-center gap-x-3 gap-y-1.5 pl-1 md:mb-4">
-        <span className="type-badge rounded-md bg-copper px-2.5 py-1 text-paper">
-          今週の解説
-        </span>
+        <span className="type-badge rounded-md bg-copper px-2.5 py-1 text-paper">今週の解説</span>
         <span className="type-mono-accent">{digestWeekLabel()}</span>
         <span className="type-faint">更新 {weeklyDigest.updated}</span>
       </div>

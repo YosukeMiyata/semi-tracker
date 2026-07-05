@@ -61,7 +61,9 @@ export function StockRankListRow({
       onClick={onClick}
       className={`${rowBase} ${highlightRowClass(symbol, highlightSymbol)}`}
     >
-      <span className={`${RANK_W} shrink-0 font-mono font-semibold text-[12px] text-copper md:text-[13px]`}>
+      <span
+        className={`${RANK_W} shrink-0 font-mono font-semibold text-[12px] text-copper md:text-[13px]`}
+      >
         {rank}
       </span>
       <StockSymbol symbol={symbol} market={market} />
@@ -106,9 +108,7 @@ export function StockThemeListRow({
       ) : (
         <span className="flex-1" aria-hidden />
       )}
-      <span
-        className={`${PCT_W} type-mono-value shrink-0 text-right ${pctColor(pct)}`}
-      >
+      <span className={`${PCT_W} type-mono-value shrink-0 text-right ${pctColor(pct)}`}>
         {fmtPct(pct)}
       </span>
     </button>

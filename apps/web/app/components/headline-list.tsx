@@ -22,13 +22,7 @@ function sourceBadgeClass(source: string): string {
   return SOURCE_STYLE[source] ?? "border-line bg-panel2 text-ink-2";
 }
 
-export function HeadlineList({
-  items,
-  compact = false,
-}: {
-  items: HeadlineItem[];
-  compact?: boolean;
-}) {
+export function HeadlineList({ items }: { items: HeadlineItem[] }) {
   if (items.length === 0) {
     return (
       <p className="type-body-sm border-line border-t py-4 md:py-5">

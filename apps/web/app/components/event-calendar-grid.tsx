@@ -91,9 +91,7 @@ function DayCell({
 
 function EventDetail({ event }: { event: CalendarEvent | null }) {
   if (!event) {
-    return (
-      <p className="type-body-sm">日付またはイベントをタップすると詳細が表示されます。</p>
-    );
+    return <p className="type-body-sm">日付またはイベントをタップすると詳細が表示されます。</p>;
   }
 
   return (

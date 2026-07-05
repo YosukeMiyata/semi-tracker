@@ -187,9 +187,7 @@ export function TrackerChart({ themes }: { themes: TrackerRankedTheme[] }) {
   }, [drawable]);
 
   if (drawable.length === 0) {
-    return (
-      <p className="type-body-sm py-6 text-center">チャートデータがありません。</p>
-    );
+    return <p className="type-body-sm py-6 text-center">チャートデータがありません。</p>;
   }
 
   const xAt = (dateI: number) => PAD.l + (dateI / Math.max(dates.length - 1, 1)) * PLOT_W;
@@ -290,92 +288,92 @@ export function TrackerChart({ themes }: { themes: TrackerRankedTheme[] }) {
       onPointerDown={handlePointer}
       onPointerLeave={() => setHoverIdx(null)}
     >
-        {ticks.map((v) => (
-          <g key={v}>
-            <line
-              x1={PAD.l}
-              x2={W - PAD.r}
-              y1={yAt(v)}
-              y2={yAt(v)}
-              stroke={Math.abs(v) < 0.01 ? "var(--color-faint)" : "var(--color-line)"}
-              strokeWidth={isDesktop ? 0.75 : 1}
-              strokeDasharray={Math.abs(v) < 0.01 ? "3 3" : undefined}
-            />
-            <text
-              x={PAD.l - 4}
-              y={yAt(v) + 3}
-              textAnchor="end"
-              className="fill-ink-2 font-mono text-[8.5px] md:text-[10px]"
-            >
-              {v}%
-            </text>
-          </g>
-        ))}
-        {monthTicks.map((m) => (
+      {ticks.map((v) => (
+        <g key={v}>
+          <line
+            x1={PAD.l}
+            x2={W - PAD.r}
+            y1={yAt(v)}
+            y2={yAt(v)}
+            stroke={Math.abs(v) < 0.01 ? "var(--color-faint)" : "var(--color-line)"}
+            strokeWidth={isDesktop ? 0.75 : 1}
+            strokeDasharray={Math.abs(v) < 0.01 ? "3 3" : undefined}
+          />
           <text
-            key={`${m.label}-${m.x}`}
-            x={m.x}
-            y={H - 5}
-            textAnchor="middle"
+            x={PAD.l - 4}
+            y={yAt(v) + 3}
+            textAnchor="end"
             className="fill-ink-2 font-mono text-[8.5px] md:text-[10px]"
           >
-            {m.label}
+            {v}%
           </text>
-        ))}
-        {drawable.filter((t) => !selected.has(t.key)).map((t) => line(t, false))}
-        {selectedThemes.map((t) => line(t, true))}
-        {hoverIdx !== null ? (
-          <line
-            x1={xAt(hoverIdx)}
-            x2={xAt(hoverIdx)}
-            y1={PAD.t}
-            y2={H - PAD.b}
-            stroke="var(--color-faint)"
-            strokeWidth={isDesktop ? 0.75 : 1}
-            strokeDasharray="2 3"
+        </g>
+      ))}
+      {monthTicks.map((m) => (
+        <text
+          key={`${m.label}-${m.x}`}
+          x={m.x}
+          y={H - 5}
+          textAnchor="middle"
+          className="fill-ink-2 font-mono text-[8.5px] md:text-[10px]"
+        >
+          {m.label}
+        </text>
+      ))}
+      {drawable.filter((t) => !selected.has(t.key)).map((t) => line(t, false))}
+      {selectedThemes.map((t) => line(t, true))}
+      {hoverIdx !== null ? (
+        <line
+          x1={xAt(hoverIdx)}
+          x2={xAt(hoverIdx)}
+          y1={PAD.t}
+          y2={H - PAD.b}
+          stroke="var(--color-faint)"
+          strokeWidth={isDesktop ? 0.75 : 1}
+          strokeDasharray="2 3"
+        />
+      ) : null}
+      {selectedThemes.map((t) => {
+        const row = t.series.find(([d]) => d === readoutDate);
+        if (!row) {
+          return null;
+        }
+        const i = dateIndex.get(readoutDate);
+        if (i === undefined) {
+          return null;
+        }
+        return (
+          <circle
+            key={t.key}
+            cx={xAt(i)}
+            cy={yAt(row[1])}
+            r={dotRadius}
+            fill={resolveColor(t.key, t.color)}
+            stroke="var(--color-card)"
+            strokeWidth={isDesktop ? 1 : 1.5}
           />
-        ) : null}
-        {selectedThemes.map((t) => {
-          const row = t.series.find(([d]) => d === readoutDate);
-          if (!row) {
-            return null;
-          }
-          const i = dateIndex.get(readoutDate);
-          if (i === undefined) {
-            return null;
-          }
-          return (
-            <circle
-              key={t.key}
-              cx={xAt(i)}
-              cy={yAt(row[1])}
-              r={dotRadius}
-              fill={resolveColor(t.key, t.color)}
-              stroke="var(--color-card)"
-              strokeWidth={isDesktop ? 1 : 1.5}
-            />
-          );
-        })}
-        {hoverIdx !== null && hoverTooltipItems.length > 0 ? (
-          <ChartHoverTooltip
-            crosshairX={xAt(hoverIdx)}
-            date={dates[hoverIdx]}
-            items={hoverTooltipItems}
-            yAt={yAt}
-            clipId={tooltipClipId}
-          />
-        ) : null}
-        {endLabels.map((l) => (
-          <text
-            key={l.key}
-            x={W - PAD.r}
-            y={l.y + 3}
-            textAnchor="end"
-            className="fill-ink font-mono font-semibold text-[9px] md:text-[10.5px]"
-          >
-            {fmtPct(l.v, 0)}
-          </text>
-        ))}
+        );
+      })}
+      {hoverIdx !== null && hoverTooltipItems.length > 0 ? (
+        <ChartHoverTooltip
+          crosshairX={xAt(hoverIdx)}
+          date={dates[hoverIdx]}
+          items={hoverTooltipItems}
+          yAt={yAt}
+          clipId={tooltipClipId}
+        />
+      ) : null}
+      {endLabels.map((l) => (
+        <text
+          key={l.key}
+          x={W - PAD.r}
+          y={l.y + 3}
+          textAnchor="end"
+          className="fill-ink font-mono font-semibold text-[9px] md:text-[10.5px]"
+        >
+          {fmtPct(l.v, 0)}
+        </text>
+      ))}
     </svg>
   );
 
