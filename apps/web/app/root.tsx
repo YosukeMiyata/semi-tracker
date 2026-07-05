@@ -68,7 +68,9 @@ export default function App() {
                 SEMICONDUCTOR THEME TRACKER
               </div>
               <h1 className="mt-1.5 font-bold font-serif text-[19px] leading-[1.4] tracking-[0.02em] md:mt-2 md:text-[24px] lg:text-[26px]">
-                半導体<span className="text-copper">テーマ</span>トラッカー
+                半導体
+                <span className="text-copper">テーマ</span>
+                トラッカー
               </h1>
               <p className="mt-1 font-mono text-[10px] text-faint sm:hidden">
                 {themesPerf.last_updated} 時点
