@@ -36,9 +36,9 @@ export function NewsCard({ item }: { item: NewsItem }) {
     item.sentiment,
   ).toFixed(1)}`;
   return (
-    <div className={`mb-3 rounded-card border border-line bg-card p-4 border-l-[3px] ${BORDER[t]}`}>
-      <div className="mb-1 flex flex-wrap items-center gap-2 text-[11px] text-ink-2">
-        <span className={`rounded-md px-2 py-0.5 font-mono font-semibold text-[12px] ${BADGE[t]}`}>
+    <div className={`card-surface mb-3 border-l-[3px] ${BORDER[t]}`}>
+      <div className="type-meta mb-1.5 flex flex-wrap items-center gap-2">
+        <span className={`type-mono-code rounded-md px-2 py-0.5 font-semibold ${BADGE[t]}`}>
           {score}
         </span>
         <span>{shortDate(item.date)}</span>
@@ -46,7 +46,7 @@ export function NewsCard({ item }: { item: NewsItem }) {
         {item.tags.map((tag) => (
           <span
             key={tag}
-            className="rounded-full border border-cyan/40 bg-cyan/10 px-2 py-0.5 font-medium text-[11px] text-cyan"
+            className="type-meta rounded-full border border-cyan/40 bg-cyan/10 px-2 py-0.5 font-medium text-cyan"
           >
             {themeNames.get(tag) ?? tag}
           </span>
@@ -62,14 +62,12 @@ export function NewsCard({ item }: { item: NewsItem }) {
           </a>
         ) : null}
       </div>
-      <h3 className="mb-1.5 font-bold text-[14.5px] leading-[1.5]">{item.title}</h3>
-      <p className="mb-2 text-[13px] text-ink-2">{item.summary}</p>
+      <h3 className="type-card-title mb-1.5">{item.title}</h3>
+      <p className="type-body-sm mb-2">{item.summary}</p>
       {item.impact_chain.length > 0 ? (
-        <div className="mb-2 rounded-[10px] border border-copper/30 border-dashed bg-panel2 px-3 py-2.5 text-[12.5px]">
-          <div className="mb-1 font-bold text-[10.5px] text-copper tracking-[0.1em]">
-            影響の連鎖
-          </div>
-          <div className="flex flex-wrap items-center gap-1 font-medium">
+        <div className="type-body-sm mb-2 rounded-[10px] border border-copper/30 border-dashed bg-panel2 px-3 py-2.5 md:px-4 md:py-3">
+          <div className="type-badge mb-1 text-copper tracking-[0.1em]">影響の連鎖</div>
+          <div className="flex flex-wrap items-center gap-1 font-medium text-ink">
             {item.impact_chain.map((step, i) => (
               <span key={step} className="inline-flex items-center gap-1">
                 {i > 0 ? <span className="font-mono text-copper">→</span> : null}
@@ -82,7 +80,7 @@ export function NewsCard({ item }: { item: NewsItem }) {
       {item.related_stocks.map((s) => (
         <span
           key={s.code}
-          className={`mt-0.5 mr-1 inline-flex items-center gap-1 whitespace-nowrap rounded-full border px-2 py-0.5 font-medium text-[11.5px] ${STOCK_CHIP[s.direction]}`}
+          className={`type-meta mt-0.5 mr-1 inline-flex items-center gap-1 whitespace-nowrap rounded-full border px-2 py-0.5 font-medium ${STOCK_CHIP[s.direction]}`}
         >
           {s.name} {ARROW[s.direction]}
         </span>

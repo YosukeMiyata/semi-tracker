@@ -82,15 +82,15 @@ export function CopySummary() {
   };
 
   return (
-    <div className="mt-6 rounded-card border border-line border-dashed bg-card p-4 text-center">
+    <div className="card-surface mt-6 border-dashed text-center md:mt-10">
       <button
         type="button"
         onClick={copy}
-        className="rounded-full bg-gradient-to-br from-down to-[#5B9279] px-5 py-2 font-bold text-[13px] text-white focus-visible:outline-2 focus-visible:outline-copper focus-visible:outline-offset-2"
+        className="type-list-primary rounded-full bg-gradient-to-br from-down to-[#5B9279] px-5 py-2 font-bold text-white focus-visible:outline-2 focus-visible:outline-copper focus-visible:outline-offset-2 md:px-7 md:py-3"
       >
         {copied ? "コピーしました ✓" : "AI分析用サマリーをコピー"}
       </button>
-      <p className="mt-2 text-[11px] text-ink-2">
+      <p className="type-body-sm mt-3">
         本日の全データをテキスト化します。Claude などの AI
         に貼り付けて「このデータで注目すべき点は?」のように質問できます。
       </p>

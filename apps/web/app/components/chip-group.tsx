@@ -22,8 +22,8 @@ export function ChipGroup<T extends string>({
 }) {
   return (
     <div>
-      <div className="mb-1.5 text-[11px] text-ink-2 tracking-[0.08em]">{label}</div>
-      <div className={`-mx-0.5 flex gap-1.5 pb-0.5 ${wrap ? "flex-wrap" : "overflow-x-auto"}`}>
+      <div className="type-meta mb-1.5 tracking-[0.08em]">{label}</div>
+      <div className={`-mx-0.5 flex gap-1.5 pb-0.5 md:gap-2 ${wrap ? "flex-wrap" : "overflow-x-auto"}`}>
         {options.map((opt) => {
           const active = opt.id === value;
           const accentClass = accent?.[opt.id];
@@ -34,7 +34,9 @@ export function ChipGroup<T extends string>({
               aria-pressed={active}
               onClick={() => onChange(opt.id)}
               className={`shrink-0 rounded-lg border transition-colors focus-visible:outline-2 focus-visible:outline-copper focus-visible:outline-offset-1 ${
-                large ? "px-4 py-2.5 text-[15px] font-bold" : "px-3.5 py-2 text-[12px]"
+                large
+                  ? "px-4 py-2.5 text-[15px] font-bold md:px-5 md:py-3 md:text-[17px] lg:text-[18px]"
+                  : "px-3.5 py-2 text-[12px] md:px-4 md:py-2.5 md:text-[15px] lg:text-[16px]"
               } ${
                 active
                   ? (accentClass ?? "border-ink bg-ink font-bold text-paper")
@@ -65,8 +67,8 @@ export function MultiChipGroup<T extends string>({
 }) {
   return (
     <div>
-      <div className="mb-1.5 text-[11px] text-ink-2 tracking-[0.08em]">{label}</div>
-      <div className={`-mx-0.5 flex gap-1.5 pb-0.5 ${wrap ? "flex-wrap" : "overflow-x-auto"}`}>
+      <div className="type-meta mb-1.5 tracking-[0.08em]">{label}</div>
+      <div className={`-mx-0.5 flex gap-1.5 pb-0.5 md:gap-2 ${wrap ? "flex-wrap" : "overflow-x-auto"}`}>
         {options.map((opt) => {
           const active = opt.id === "all" ? selected.size === 0 : selected.has(opt.id);
           return (
@@ -75,7 +77,7 @@ export function MultiChipGroup<T extends string>({
               type="button"
               aria-pressed={active}
               onClick={() => onToggle(opt.id)}
-              className={`shrink-0 rounded-lg border px-3.5 py-2 text-[12px] font-semibold transition-colors focus-visible:outline-2 focus-visible:outline-copper focus-visible:outline-offset-1 ${
+              className={`shrink-0 rounded-lg border px-3.5 py-2 text-[12px] font-semibold transition-colors focus-visible:outline-2 focus-visible:outline-copper focus-visible:outline-offset-1 md:px-4 md:py-2.5 md:text-[15px] lg:text-[16px] ${
                 active
                   ? "border-ink bg-ink font-bold text-paper"
                   : "border-line bg-transparent text-ink-2"

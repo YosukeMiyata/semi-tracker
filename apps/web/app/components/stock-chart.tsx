@@ -179,18 +179,18 @@ export function StockPriceChart({ symbol }: { symbol: string }) {
   }, [symbol, tf]);
 
   if (!svg) {
-    return <p className="py-4 text-center text-[12px] text-ink-2">チャートデータがありません。</p>;
+    return <p className="type-body-sm py-4 text-center">チャートデータがありません。</p>;
   }
 
   return (
     <div>
-      <div className="mb-2 flex gap-1.5">
+      <div className="mb-2 flex gap-1.5 md:mb-3 md:gap-2">
         {CHART_TFS.map(([label, id]) => (
           <button
             key={id}
             type="button"
             onClick={() => setTf(id)}
-            className={`rounded-full border px-2.5 py-0.5 text-[11px] ${
+            className={`type-meta rounded-full border px-2.5 py-0.5 md:px-3 md:py-1 ${
               tf === id
                 ? "border-copper bg-copper-soft font-semibold text-copper"
                 : "border-line bg-transparent text-ink-2"
@@ -200,7 +200,7 @@ export function StockPriceChart({ symbol }: { symbol: string }) {
           </button>
         ))}
       </div>
-      <div className="mb-1 flex flex-wrap gap-x-2.5 gap-y-0.5 font-mono text-[9.5px]">
+      <div className="type-meta mb-1.5 flex flex-wrap gap-x-3 gap-y-0.5 font-mono md:mb-2 md:gap-x-4">
         {legend.map(({ nn, colr }) => (
           <span key={nn} style={{ color: colr }}>
             ━{nn}MA
@@ -209,7 +209,7 @@ export function StockPriceChart({ symbol }: { symbol: string }) {
       </div>
       <svg
         viewBox={`0 0 ${W} ${H}`}
-        className="mx-auto block w-full max-w-[420px] touch-none"
+        className="mx-auto block w-full max-w-full touch-none"
         role="img"
         aria-label="株価チャート"
         // biome-ignore lint/security/noDangerouslySetInnerHtml: SVG paths from trusted local data

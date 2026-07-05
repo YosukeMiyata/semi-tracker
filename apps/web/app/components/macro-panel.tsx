@@ -22,10 +22,10 @@ export function MacroPanel() {
     <>
       <SectionTitle title="マクロ指標" note={`WSTS月次(手動) · 更新 ${macro.last_updated}`} />
       <Card>
-        <div className="mb-2 font-bold text-[13px]">{macro.wsts.label}</div>
+        <div className="mb-2 type-list-primary font-bold">{macro.wsts.label}</div>
         <svg
           viewBox={`0 0 ${W} ${CHART_H}`}
-          className="mb-2 w-full max-w-[360px]"
+          className="mb-2 w-full max-w-[360px] md:max-w-[480px]"
           role="img"
           aria-label="WSTS月次前年比推移"
         >
@@ -58,7 +58,7 @@ export function MacroPanel() {
                   x={cx}
                   y={CHART_H - 6}
                   textAnchor="middle"
-                  className="fill-ink-2 font-mono text-[8px]"
+                  className="fill-ink-2 font-mono text-[8px] md:text-[10px]"
                 >
                   {monthLabel(p.month)}
                 </text>
@@ -66,7 +66,7 @@ export function MacroPanel() {
             );
           })}
         </svg>
-        <div className="mb-3 flex flex-wrap gap-x-3 gap-y-1 font-mono text-[11px]">
+        <div className="type-meta mb-3 flex flex-wrap gap-x-3 gap-y-1 font-mono md:mb-4">
           {points.map((p) => (
             <span key={p.month} className="text-ink-2">
               {monthLabel(p.month)} <b className={pctColor(p.yoy_pct)}>{fmtPct(p.yoy_pct, 1)}</b>
@@ -74,10 +74,8 @@ export function MacroPanel() {
             </span>
           ))}
         </div>
-        <div className="rounded-[10px] border border-copper/30 border-dashed bg-panel2 px-3 py-2.5 text-[12.5px]">
-          <div className="mb-1 font-bold text-[10.5px] text-copper tracking-[0.1em]">
-            サイクル位置づけ
-          </div>
+        <div className="type-body-sm rounded-[10px] border border-copper/30 border-dashed bg-panel2 px-3 py-2.5 md:px-4 md:py-3">
+          <div className="type-badge mb-1 text-copper tracking-[0.1em]">サイクル位置づけ</div>
           {macro.cycle_note}
         </div>
         {macro.source_url ? (
@@ -85,34 +83,34 @@ export function MacroPanel() {
             href={macro.source_url}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-2 inline-block text-[11px] text-copper underline"
+            className="type-body-sm mt-2 inline-block text-copper underline md:mt-3"
           >
             出典: WSTS ↗
           </a>
         ) : null}
 
         {macro.capex ? (
-          <div className="mt-4 border-line border-t pt-4">
-            <div className="mb-2 flex flex-wrap items-baseline gap-2">
-              <span className="font-bold text-[13px]">{macro.capex.label}</span>
-              <span className="font-mono text-[10.5px] text-ink-2">
+          <div className="mt-4 border-line border-t pt-4 md:mt-5 md:pt-5">
+            <div className="mb-2 flex flex-wrap items-baseline gap-2 md:mb-3">
+              <span className="type-list-primary font-bold">{macro.capex.label}</span>
+              <span className="type-meta font-mono">
                 {macro.capex.as_of} · {macro.capex.unit}
               </span>
             </div>
-            <div className="space-y-2">
+            <div className="space-y-2 md:space-y-3">
               {macro.capex.items.map((c) => (
                 <div
                   key={c.company}
-                  className="rounded-[10px] border border-line bg-panel2 px-3 py-2 text-[12.5px]"
+                  className="type-body-sm rounded-[10px] border border-line bg-panel2 px-3 py-2 md:px-4 md:py-3"
                 >
                   <div className="flex flex-wrap items-baseline justify-between gap-2">
-                    <span className="font-bold">{c.company}</span>
-                    <span className="font-mono text-[12px]">
+                    <span className="type-list-primary font-bold">{c.company}</span>
+                    <span className="type-mono-code">
                       <b className={pctColor(c.yoy_pct)}>{fmtPct(c.yoy_pct, 0)}</b>
                       <span className="ml-1.5 text-ink">{c.value}B$</span>
                     </span>
                   </div>
-                  <p className="mt-1 text-[11.5px] text-ink-2">{c.note}</p>
+                  <p className="type-body-sm mt-1.5">{c.note}</p>
                 </div>
               ))}
             </div>

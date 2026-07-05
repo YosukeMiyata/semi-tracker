@@ -12,7 +12,7 @@ export function SectionTitle({
 }) {
   return (
     <>
-      <h2 className="mt-[26px] mb-1 flex items-center gap-2 font-bold font-serif text-[17px]">
+      <h2 className="type-section-title mt-[26px] mb-1 flex items-center gap-2 md:mt-10 md:mb-2">
         {title}
         {info ? (
           <InfoDialog label={info.label} title={info.title}>
@@ -21,17 +21,13 @@ export function SectionTitle({
         ) : null}
         <span className="h-px flex-1 bg-line" />
       </h2>
-      {note ? <div className="mb-3 text-[12px] text-ink-2">{note}</div> : null}
+      {note ? <div className="type-section-note mb-3 md:mb-5">{note}</div> : null}
     </>
   );
 }
 
 export function Card({ children, className = "" }: { children: ReactNode; className?: string }) {
-  return (
-    <div className={`mb-3 rounded-card border border-line bg-card p-4 ${className}`}>
-      {children}
-    </div>
-  );
+  return <div className={`card-surface mb-3 md:mb-5 ${className}`}>{children}</div>;
 }
 
 export function Placeholder({ children }: { children: ReactNode }) {

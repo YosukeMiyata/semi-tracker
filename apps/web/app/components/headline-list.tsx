@@ -31,7 +31,7 @@ export function HeadlineList({
 }) {
   if (items.length === 0) {
     return (
-      <p className="border-line border-t py-4 text-[13px] text-ink-2">
+      <p className="type-body-sm border-line border-t py-4 md:py-5">
         ヘッドラインはまだありません。
       </p>
     );
@@ -42,7 +42,7 @@ export function HeadlineList({
       <ul>
         {items.map((item) => (
           <li key={item.id} className="border-line border-b py-3 last:border-b-0">
-            <div className="mb-1.5 flex flex-wrap items-center gap-2 text-[11px] text-ink-2">
+            <div className="type-meta mb-1.5 flex flex-wrap items-center gap-2 md:mb-2">
               <span
                 className={`rounded-full border px-2 py-0.5 font-medium ${sourceBadgeClass(item.source)}`}
               >
@@ -54,7 +54,7 @@ export function HeadlineList({
               href={item.url}
               target="_blank"
               rel="noopener noreferrer"
-              className={`block font-medium text-ink leading-[1.45] hover:text-copper ${compact ? "text-[13.5px]" : "text-[14px]"}`}
+              className="type-list-primary block font-medium text-ink leading-[1.45] hover:text-copper md:leading-[1.55]"
             >
               {item.title}
               <span className="ml-1 text-[11px] text-copper">↗</span>

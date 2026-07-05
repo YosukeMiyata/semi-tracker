@@ -12,7 +12,7 @@ function Chips({ codes }: { codes: string[] }) {
       {codes.map((code) => (
         <span
           key={code}
-          className="mt-0.5 mr-1 inline-block whitespace-nowrap rounded-full border border-line bg-card px-2 py-0.5 font-medium text-[11.5px]"
+          className="type-body-sm mt-0.5 mr-1 inline-block whitespace-nowrap rounded-full border border-line bg-card px-2.5 py-0.5 font-medium text-ink md:mr-1.5 md:px-3 md:py-1"
         >
           {stockName(code)}
         </span>
@@ -23,22 +23,22 @@ function Chips({ codes }: { codes: string[] }) {
 
 function StepRow({ step }: { step: SupplyStep }) {
   return (
-    <div className="border-line border-b py-2 last:border-b-0">
-      <div className="mb-1 font-bold text-[12.5px]">{step.name}</div>
+    <div className="border-line border-b py-3 last:border-b-0 md:py-3.5">
+      <div className="type-list-primary mb-2 font-bold">{step.name}</div>
       {step.equip?.length ? (
-        <div className="mb-0.5">
-          <span className="mr-1.5 font-mono text-[10.5px] text-copper">装置</span>
+        <div className="mb-1.5 md:mb-2">
+          <span className="type-mono-accent mr-2 font-bold">装置</span>
           <Chips codes={step.equip} />
         </div>
       ) : null}
       {step.material?.length ? (
-        <div className="mb-0.5">
-          <span className="mr-1.5 font-mono text-[10.5px] text-copper">材料</span>
+        <div className="mb-1.5 md:mb-2">
+          <span className="type-mono-accent mr-2 font-bold">材料</span>
           <Chips codes={step.material} />
         </div>
       ) : null}
       {step.stocks?.length ? (
-        <div className="mb-0.5">
+        <div className="mb-1.5 md:mb-2">
           <Chips codes={step.stocks} />
         </div>
       ) : null}
@@ -58,35 +58,35 @@ export default function MapPage() {
         return (
           <Fragment key={stage.id}>
             {i > 0 ? (
-              <div className="mx-auto h-4 w-0.5 bg-[repeating-linear-gradient(to_bottom,var(--color-copper)_0_3px,transparent_3px_6px)]" />
+              <div className="mx-auto h-4 w-0.5 bg-[repeating-linear-gradient(to_bottom,var(--color-copper)_0_3px,transparent_3px_6px)] md:h-5" />
             ) : null}
-            <details open={i === 0}>
-              <summary className="flex cursor-pointer list-none items-center gap-2.5 rounded-card border border-line bg-card px-4 py-3 [&::-webkit-details-marker]:hidden focus-visible:outline-2 focus-visible:outline-copper focus-visible:outline-offset-2">
-                <span className="rounded-md border border-copper/40 bg-copper-soft px-1.5 py-0.5 font-mono text-[11px] text-copper">
+            <details open={i === 0} className="mb-2 md:mb-3">
+              <summary className="flex cursor-pointer list-none items-center gap-2.5 rounded-card border border-line bg-card px-4 py-3 [&::-webkit-details-marker]:hidden focus-visible:outline-2 focus-visible:outline-copper focus-visible:outline-offset-2 md:gap-3 md:px-5 md:py-4">
+                <span className="type-badge rounded-md border border-copper/40 bg-copper-soft px-1.5 py-0.5 font-mono text-copper md:px-2 md:py-1">
                   {stage.num}
                 </span>
-                <span className="flex-1 font-bold text-[14px]">{stage.name}</span>
-                <span className="text-[10.5px] text-ink-2">
-                  今週 <b className={count > 0 ? "text-up" : ""}>{count}件</b>
+                <span className="type-list-primary flex-1 font-bold">{stage.name}</span>
+                <span className="type-body-sm">
+                  今週 <b className={count > 0 ? "text-up" : "text-ink"}>{count}件</b>
                 </span>
               </summary>
-              <div className="mx-1 mt-[-8px] rounded-b-card border border-line border-t-0 bg-panel2 px-3.5 pt-4 pb-3 text-[13px]">
-                <p className="mb-2 text-[12.5px] text-ink-2">{stage.desc}</p>
+              <div className="mx-1 mt-[-8px] rounded-b-card border border-line border-t-0 bg-panel2 px-4 pt-4 pb-4 md:px-6 md:pt-5 md:pb-5">
+                <p className="type-body-medium mb-3 md:mb-4">{stage.desc}</p>
                 {stage.steps.map((step) => (
                   <StepRow key={step.name} step={step} />
                 ))}
-                <div className="mt-2.5 rounded-[10px] border border-copper/30 border-dashed bg-panel2 px-3 py-2.5 text-[12.5px]">
-                  <div className="mb-1 font-bold text-[10.5px] text-copper tracking-[0.1em]">
+                <div className="type-body mt-4 rounded-[10px] border border-copper/30 border-dashed bg-card px-4 py-3 md:mt-5 md:px-5 md:py-4">
+                  <div className="type-badge mb-1.5 text-copper tracking-[0.1em] md:mb-2">
                     今週の論点
                   </div>
-                  {stage.topic}
+                  <p className="text-ink">{stage.topic}</p>
                 </div>
               </div>
             </details>
           </Fragment>
         );
       })}
-      <p className="mt-3 text-[12px] text-ink-2">
+      <p className="type-body-sm mt-4 md:mt-6">
         「今週
         n件」は直近7日のニュースのうち、関連銘柄がステージ構成銘柄と重なる件数です。ステージ・銘柄の編集は
         data/supplychain.json、論点は同ファイルの topic を更新してください。

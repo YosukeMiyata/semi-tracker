@@ -5,7 +5,7 @@ export function WeeklyDigest() {
 
   return (
     <section
-      className="relative mt-3 overflow-hidden rounded-card border-2 border-copper/45 bg-gradient-to-br from-copper-soft/55 via-card to-panel2 px-4 py-4 shadow-[inset_0_1px_0_rgba(232,176,75,0.2)]"
+      className="relative mt-3 overflow-hidden rounded-card border-2 border-copper/45 bg-gradient-to-br from-copper-soft/55 via-card to-panel2 px-4 py-4 shadow-[inset_0_1px_0_rgba(232,176,75,0.2)] md:px-6 md:py-6 lg:px-7 lg:py-7"
       aria-labelledby="weekly-digest-title"
     >
       <div
@@ -13,29 +13,21 @@ export function WeeklyDigest() {
         aria-hidden
       />
 
-      <div className="mb-3 flex flex-wrap items-center gap-x-3 gap-y-1.5 pl-1">
-        <span className="rounded-md bg-copper px-2.5 py-1 font-bold text-[11px] text-paper tracking-[0.12em]">
+      <div className="mb-3 flex flex-wrap items-center gap-x-3 gap-y-1.5 pl-1 md:mb-4">
+        <span className="type-badge rounded-md bg-copper px-2.5 py-1 text-paper">
           今週の解説
         </span>
-        <span className="font-mono text-[12px] text-copper">{digestWeekLabel()}</span>
-        <span className="text-[10.5px] text-faint">更新 {weeklyDigest.updated}</span>
+        <span className="type-mono-accent">{digestWeekLabel()}</span>
+        <span className="type-faint">更新 {weeklyDigest.updated}</span>
       </div>
 
-      <h2
-        id="weekly-digest-title"
-        className="mb-3 pl-1 font-bold font-serif text-[18px] text-ink leading-[1.5] tracking-[0.02em]"
-      >
+      <h2 id="weekly-digest-title" className="type-feature-title mb-3 pl-1 md:mb-4">
         {weeklyDigest.title}
       </h2>
 
-      <div className="space-y-2.5 border-copper/25 border-t border-dashed pt-3 pl-1">
+      <div className="space-y-2.5 border-copper/25 border-t border-dashed pt-3 pl-1 md:space-y-3 md:pt-4">
         {paragraphs.map((para, i) => (
-          <p
-            key={para}
-            className={`leading-[1.7] ${
-              i === 0 ? "font-medium text-[14.5px] text-ink" : "text-[13px] text-ink-2"
-            }`}
-          >
+          <p key={para} className={i === 0 ? "type-body-medium" : "type-body-sm"}>
             {para}
           </p>
         ))}

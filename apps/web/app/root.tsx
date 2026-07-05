@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 import { Links, Meta, NavLink, Outlet, Scripts, ScrollRestoration } from "react-router";
-import { HomeHeaderMenu } from "~/components/home-header-menu";
+import { HomeHeaderMenu, HomeSectionNavBar } from "~/components/home-header-menu";
 import { themesPerf } from "~/lib/data";
 import "./app.css";
 
@@ -21,7 +21,7 @@ export function Layout({ children }: { children: ReactNode }) {
         <Meta />
         <Links />
       </head>
-      <body className="bg-paper pb-[76px] font-sans text-[15px] text-ink leading-[1.65]">
+      <body className="bg-paper pb-[76px] font-sans text-[15px] text-ink leading-[1.65] md:pb-12 md:text-[17px] md:leading-[1.75] lg:text-[18px]">
         {children}
         <ScrollRestoration />
         <Scripts />
@@ -38,34 +38,64 @@ const TABS = [
   { to: "/learn", icon: "✎", label: "学ぶ" },
 ];
 
+function DesktopNavLink({ to, icon, label, end }: (typeof TABS)[number] & { end?: boolean }) {
+  return (
+    <NavLink
+      to={to}
+      end={end}
+      className={({ isActive }) =>
+        `flex items-center gap-1.5 rounded-lg px-3 py-2 text-[13px] transition-colors md:px-4 md:py-2.5 md:text-[15px] lg:text-[16px] ${
+          isActive
+            ? "bg-copper-soft font-bold text-copper"
+            : "text-ink-2 hover:bg-panel2/60 hover:text-ink"
+        }`
+      }
+    >
+      <span className="text-[15px] leading-none">{icon}</span>
+      {label}
+    </NavLink>
+  );
+}
+
 export default function App() {
   return (
     <>
-      <header className="sticky top-0 z-30 border-line border-b bg-paper/95 px-[14px] py-5 backdrop-blur-md">
-        <div className="mx-auto flex max-w-[820px] items-center gap-2.5">
-          <div className="min-w-0 flex-1">
-            <div className="text-[10px] text-ink-2 tracking-[0.16em]">
-              SEMICONDUCTOR THEME TRACKER
+      <header className="sticky top-0 z-30 border-line border-b bg-paper/95 backdrop-blur-md">
+        <div className="app-container py-4 md:py-6">
+          <div className="flex items-center gap-2.5 md:gap-4">
+            <div className="min-w-0 flex-1">
+              <div className="text-[10px] text-ink-2 tracking-[0.16em] md:text-[12px]">
+                SEMICONDUCTOR THEME TRACKER
+              </div>
+              <h1 className="mt-1.5 font-bold font-serif text-[19px] leading-[1.4] tracking-[0.02em] md:mt-2 md:text-[24px] lg:text-[26px]">
+                半導体<span className="text-copper">テーマ</span>トラッカー
+              </h1>
+              <p className="mt-1 font-mono text-[10px] text-faint sm:hidden">
+                {themesPerf.last_updated} 時点
+              </p>
             </div>
-            <h1 className="mt-1.5 font-bold font-serif text-[19px] leading-[1.4] tracking-[0.02em]">
-              半導体<span className="text-copper">テーマ</span>トラッカー
-            </h1>
-            <p className="mt-1 font-mono text-[10px] text-faint sm:hidden">
+            <div className="hidden shrink-0 font-mono text-[11px] text-faint sm:block md:text-[13px]">
               {themesPerf.last_updated} 時点
-            </p>
+            </div>
+            <HomeHeaderMenu />
           </div>
-          <div className="hidden shrink-0 font-mono text-[11px] text-faint sm:block">
-            {themesPerf.last_updated} 時点
-          </div>
-          <HomeHeaderMenu />
+          <nav
+            className="-mx-1 mt-3 hidden items-center gap-0.5 overflow-x-auto md:flex [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+            aria-label="メインナビゲーション"
+          >
+            {TABS.map((tab) => (
+              <DesktopNavLink key={tab.to} {...tab} end={tab.to === "/"} />
+            ))}
+          </nav>
         </div>
+        <HomeSectionNavBar />
       </header>
 
-      <main className="mx-auto max-w-[820px] px-[14px] pt-[18px] pb-10">
+      <main className="app-container pt-[18px] pb-10 md:pt-8 md:pb-16">
         <Outlet />
       </main>
 
-      <footer className="mx-auto max-w-[820px] px-[14px] pb-5 text-[10.5px] text-faint leading-[1.7]">
+      <footer className="app-container type-body-sm pb-5 md:pb-10">
         <b className="text-ink-2">免責事項</b>
         :本サイトは公開情報の整理・ニュース論調の分析を提供するものであり、金融商品取引法上の投資助言ではありません。感情スコアはニュース記事の論調を機械的に数値化したもので、将来の株価を予測するものではありません。投資判断はご自身の責任でお願いします。
         <br />
@@ -76,7 +106,10 @@ export default function App() {
         Hardware(RSS・平日自動)/分析ニュース=手動編集(data/news.json)
       </footer>
 
-      <nav className="fixed inset-x-0 bottom-0 z-40 flex gap-px border-line border-t bg-line pt-px pb-[env(safe-area-inset-bottom)]">
+      <nav
+        className="fixed inset-x-0 bottom-0 z-40 flex gap-px border-line border-t bg-line pt-px pb-[env(safe-area-inset-bottom)] md:hidden"
+        aria-label="メインナビゲーション"
+      >
         {TABS.map((tab) => (
           <NavLink
             key={tab.to}
@@ -100,9 +133,9 @@ export default function App() {
 export function ErrorBoundary({ error }: { error: unknown }) {
   const message = error instanceof Error ? error.message : "不明なエラーが発生しました";
   return (
-    <main className="mx-auto max-w-[820px] px-[14px] pt-[18px]">
-      <h1 className="mb-2 font-bold font-serif text-[17px]">エラー</h1>
-      <p className="text-[13px] text-ink-2">{message}</p>
+    <main className="app-container pt-[18px] md:pt-6">
+      <h1 className="mb-2 font-bold font-serif text-[17px] md:text-[20px]">エラー</h1>
+      <p className="text-[13px] text-ink-2 md:text-[15px]">{message}</p>
     </main>
   );
 }

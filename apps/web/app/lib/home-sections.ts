@@ -11,4 +11,4 @@ export const HOME_SECTIONS = [
   { id: "headlines", label: "最新ヘッドライン" },
 ] as const;
 
-export const HOME_SECTION_SCROLL_MT = "scroll-mt-[5.5rem]";
+export const HOME_SECTION_SCROLL_MT = "scroll-mt-[5.5rem] md:scroll-mt-[10rem]";

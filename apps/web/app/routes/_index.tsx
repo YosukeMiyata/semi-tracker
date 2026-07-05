@@ -45,20 +45,16 @@ export default function Home() {
       {indices.length > 0 ? (
         <section id="indices" className={`mt-3 ${HOME_SECTION_SCROLL_MT}`}>
           {indices.map((ix) => (
-            <Card key={ix.id} className="flex items-center gap-3">
+            <Card key={ix.id} className="flex items-center gap-3 md:gap-5">
               <div className="min-w-0 flex-1">
-                <div className="font-bold text-[13px]">
+                <div className="type-list-primary font-bold">
                   {ix.name}
-                  <small className="ml-1.5 font-mono font-normal text-[10px] text-ink-2">
-                    {ix.date}
-                  </small>
+                  <small className="type-meta ml-1.5 font-mono font-normal">{ix.date}</small>
                 </div>
-                <div className="font-mono font-semibold text-[16px]">
-                  {ix.last.toLocaleString()}
-                </div>
+                <div className="type-mono-value mt-0.5 font-semibold">{ix.last.toLocaleString()}</div>
               </div>
               <Sparkline values={ix.spark} />
-              <div className="text-right font-mono text-[12px]">
+              <div className="type-body-sm text-right font-mono">
                 <div className={pctColor(ix.chg_pct)}>前日 {fmtPct(ix.chg_pct)}</div>
                 <div className={pctColor(ix.ytd_pct)}>年初来 {fmtPct(ix.ytd_pct)}</div>
               </div>
@@ -76,19 +72,19 @@ export default function Home() {
           title="今週のセンチメント"
           note="分析ニュースの論調スコア(手動キュレーション)。テーマ別の着色は下のウェハーマップ"
         />
-        <div className="grid grid-cols-[150px_1fr] items-center gap-3.5 rounded-card border border-line bg-card px-4 pt-5 pb-4">
+        <div className="grid grid-cols-[150px_1fr] items-center gap-3.5 rounded-card border border-line bg-card px-4 pt-5 pb-4 md:grid-cols-[200px_1fr] md:gap-6 md:px-6 md:pt-7 md:pb-6 lg:px-7 lg:pt-8">
           <Wafer themes={waferThemes} />
           <div>
-            <div className="font-mono font-semibold text-[44px] leading-[1.05]">
+            <div className="font-mono font-semibold text-[44px] leading-[1.05] md:text-[56px] lg:text-[60px]">
               {weekly.score === null
                 ? "—"
                 : `${weekly.score > 0 ? "+" : weekly.score < 0 ? "−" : ""}${Math.abs(weekly.score).toFixed(1)}`}
-              <small className="font-medium text-[16px] text-ink-2"> / ±2.0</small>
+              <small className="type-body-sm font-medium"> / ±2.0</small>
             </div>
-            <span className="mt-1.5 inline-block rounded-full bg-copper-soft px-2.5 py-0.5 font-bold text-[12px] text-copper">
+            <span className="type-badge mt-1.5 inline-block rounded-full bg-copper-soft px-2.5 py-0.5 text-copper md:mt-2">
               {verdictLabel(weekly.score)}
             </span>
-            <div className="mt-2 text-[12px] text-ink-2">
+            <div className="type-body-sm mt-2 md:mt-3">
               {weekly.delta !== null ? (
                 <>
                   先週比{" "}
@@ -102,7 +98,7 @@ export default function Home() {
               分析ニュース {weekly.count}本
             </div>
           </div>
-          <div className="col-span-full border-line border-t border-dashed pt-2.5 text-[11px] text-ink-2">
+          <div className="type-meta col-span-full border-line border-t border-dashed pt-2.5 md:pt-3.5">
             ダイ1つ=1テーマ。直近7日のニュース論調で着色。
           </div>
         </div>

@@ -8,7 +8,7 @@ export function LinkageAlert() {
 
   if (triggered.length === 0) {
     return (
-      <div className="border-line border-t border-dashed p-4 text-[13px] text-ink-2">
+      <div className="type-body-sm border-line border-t border-dashed p-4 md:p-6">
         <span className="font-bold text-ink">本日の連動トリガー: なし</span>
         <span className="mx-1.5 text-faint">·</span>
         直近営業日に米国テーマが+2%超で上昇したサブテーマはありませんでした。
@@ -17,15 +17,15 @@ export function LinkageAlert() {
   }
 
   return (
-    <div className="mb-3 border-2 border-copper/50 border-t p-4">
-      <div className="mb-3 flex flex-wrap items-center gap-2">
-        <span className="rounded-md bg-copper px-2 py-0.5 font-bold text-[11px] text-paper tracking-[0.08em]">
+    <div className="card-surface mb-3 border-2 border-copper/50 border-t">
+      <div className="mb-3 flex flex-wrap items-center gap-2 md:mb-4 md:gap-3">
+        <span className="type-badge rounded-md bg-copper px-2 py-0.5 text-paper tracking-[0.08em]">
           連動トリガー発火
         </span>
-        <span className="font-bold text-[14px]">米国テーマ前日+2%超 → 翌営業日の連動候補</span>
+        <span className="type-card-title">米国テーマ前日+2%超 → 翌営業日の連動候補</span>
         <Link
           to="/themes"
-          className="ml-auto text-[12px] text-copper underline focus-visible:outline-2 focus-visible:outline-copper"
+          className="type-body-sm ml-auto text-copper underline focus-visible:outline-2 focus-visible:outline-copper"
         >
           連動ビューで詳細 ↗
         </Link>
@@ -35,15 +35,15 @@ export function LinkageAlert() {
         {triggered.map((g) => {
           const topRows = g.rows.slice(0, 3);
           return (
-            <div key={g.theme} className="border-line border-b py-3 last:border-b-0">
-              <div className="mb-2 font-bold text-[14px]">
+            <div key={g.theme} className="border-line border-b py-3 last:border-b-0 md:py-4">
+              <div className="type-list-primary mb-2 font-bold">
                 {g.sub}
-                <small className="ml-1.5 font-normal text-[12px] text-ink-2">
+                <small className="type-body-sm ml-1.5 font-normal">
                   {g.macro} · 米国平均 {fmtPct(g.usAvg)}
                 </small>
               </div>
               {g.us.length > 0 ? (
-                <div className="mb-2 flex flex-wrap gap-1.5 text-[11px] text-ink-2">
+                <div className="type-meta mb-2 flex flex-wrap gap-1.5 md:gap-2">
                   {g.us.map((u) => (
                     <span
                       key={u.symbol}
@@ -54,27 +54,25 @@ export function LinkageAlert() {
                   ))}
                 </div>
               ) : null}
-              <div className="mb-1 text-[11px] text-ink-2">過去実績ベースの連動候補(翌日)</div>
+              <div className="type-meta mb-1.5">過去実績ベースの連動候補(翌日)</div>
               <div>
                 {topRows.map((r) => (
                   <div
                     key={r.code}
-                    className="grid grid-cols-[1fr_auto_auto] items-center gap-2 border-line/70 border-b py-2 text-[13.5px] last:border-b-0"
+                    className="type-list-primary grid grid-cols-[1fr_auto_auto] items-center gap-2 border-line/70 border-b py-2.5 last:border-b-0 md:gap-4 md:py-3"
                   >
-                    <span className="font-medium">
+                    <span>
                       {r.name}
-                      <small className="ml-1.5 font-mono font-bold text-[13px] text-copper">
-                        {r.code}
-                      </small>
+                      <small className="type-mono-code ml-1.5 text-copper">{r.code}</small>
                     </span>
                     <span
-                      className={`font-mono font-bold text-[13.5px] ${r.rate >= 60 ? "text-up" : r.rate <= 40 ? "text-down" : "text-copper"}`}
+                      className={`type-mono-value ${r.rate >= 60 ? "text-up" : r.rate <= 40 ? "text-down" : "text-copper"}`}
                     >
                       陽性率 {r.rate}%
                     </span>
-                    <span className={`font-mono font-bold text-[13.5px] ${pctColor(r.avg)}`}>
+                    <span className={`type-mono-value ${pctColor(r.avg)}`}>
                       平均 {fmtPct(r.avg, 2)}
-                      <small className="text-[10px] font-normal text-ink-2">(n={r.n})</small>
+                      <small className="type-meta font-normal">(n={r.n})</small>
                     </span>
                   </div>
                 ))}
@@ -84,7 +82,7 @@ export function LinkageAlert() {
         })}
       </StockListShell>
 
-      <p className="mt-2 text-[10.5px] text-ink-2">手法: {linkageMethod()}</p>
+      <p className="type-meta mt-3">手法: {linkageMethod()}</p>
     </div>
   );
 }

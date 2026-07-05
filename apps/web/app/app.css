@@ -33,6 +33,76 @@ html {
   scroll-behavior: smooth;
 }
 
+/* デスクトップ向けレイアウト・タイポグラフィ
+ * 基準: 今週の解説セクション（WeeklyDigest）の md/lg スケール
+ * - 見出し 24/25px · 本文 17/18px · 補助 15/16px · メタ 12/13px
+ */
+@layer components {
+  .app-container {
+    @apply mx-auto w-full max-w-[820px] px-[14px] md:max-w-[980px] md:px-8 lg:max-w-[1120px] lg:px-10;
+  }
+
+  .card-surface {
+    @apply rounded-card border border-line bg-card p-4 md:p-6 lg:p-7;
+  }
+
+  .type-feature-title {
+    @apply font-bold font-serif leading-[1.5] tracking-[0.02em] text-[18px] md:text-[24px] lg:text-[25px];
+  }
+
+  .type-section-title {
+    @apply font-bold font-serif leading-[1.4] text-[17px] md:text-[24px] lg:text-[25px];
+  }
+
+  .type-card-title {
+    @apply font-bold leading-[1.5] text-[14.5px] md:text-[17px] lg:text-[18px];
+  }
+
+  .type-body {
+    @apply leading-[1.7] text-[14.5px] md:text-[17px] md:leading-[1.75] lg:text-[18px];
+  }
+
+  .type-body-medium {
+    @apply font-medium text-ink leading-[1.7] text-[14.5px] md:text-[17px] md:leading-[1.75] lg:text-[18px];
+  }
+
+  .type-body-sm {
+    @apply leading-[1.7] text-[13px] text-ink-2 md:text-[15px] md:leading-[1.75] lg:text-[16px];
+  }
+
+  .type-section-note {
+    @apply leading-[1.7] text-[13px] text-ink-2 md:text-[15px] md:leading-[1.75] lg:text-[16px];
+  }
+
+  .type-list-primary {
+    @apply font-medium text-[13.5px] md:text-[17px] lg:text-[18px];
+  }
+
+  .type-mono-value {
+    @apply font-mono font-bold text-[14px] md:text-[17px] lg:text-[18px];
+  }
+
+  .type-mono-code {
+    @apply font-mono font-bold text-[13px] md:text-[15px] lg:text-[16px];
+  }
+
+  .type-meta {
+    @apply text-[11px] text-ink-2 md:text-[12px] lg:text-[13px];
+  }
+
+  .type-faint {
+    @apply text-[10.5px] text-faint md:text-[12px];
+  }
+
+  .type-badge {
+    @apply font-bold tracking-[0.12em] text-[11px] md:text-[12px];
+  }
+
+  .type-mono-accent {
+    @apply font-mono text-[12px] text-copper md:text-[13px];
+  }
+}
+
 /* v1 タイトルアニメーション */
 .titlebeat {
   animation: titlebeat 2.6s ease-in-out infinite;

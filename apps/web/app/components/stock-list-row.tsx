@@ -18,13 +18,13 @@ export function StockListShell({
 }
 
 export function StockListGroupLabel({ children }: { children: ReactNode }) {
-  return <div className="mb-1 text-[11px] text-ink-2">{children}</div>;
+  return <div className="type-meta mb-1 md:mb-1.5">{children}</div>;
 }
 
 export function StockSymbol({ symbol, market }: { symbol: string; market: "jp" | "us" }) {
   return (
     <span
-      className={`${CODE_W} shrink-0 font-mono font-bold text-[13px] ${market === "jp" ? "text-copper" : "text-us"}`}
+      className={`${CODE_W} type-mono-code shrink-0 ${market === "jp" ? "text-copper" : "text-us"}`}
     >
       {symbol}
     </span>
@@ -32,7 +32,7 @@ export function StockSymbol({ symbol, market }: { symbol: string; market: "jp" |
 }
 
 const rowBase =
-  "flex w-full items-center gap-2.5 border-line border-b py-3 text-left last:border-b-0 hover:bg-panel2/35";
+  "flex w-full items-center gap-2.5 border-line border-b py-3 text-left last:border-b-0 hover:bg-panel2/35 md:gap-3 md:py-4";
 
 /** v1 踏襲: 順位 | コード | 名称 | 騰落率 */
 export function StockRankListRow({
@@ -61,17 +61,15 @@ export function StockRankListRow({
       onClick={onClick}
       className={`${rowBase} ${highlightRowClass(symbol, highlightSymbol)}`}
     >
-      <span className={`${RANK_W} shrink-0 font-mono font-semibold text-[12px] text-copper`}>
+      <span className={`${RANK_W} shrink-0 font-mono font-semibold text-[12px] text-copper md:text-[13px]`}>
         {rank}
       </span>
       <StockSymbol symbol={symbol} market={market} />
-      <span className="min-w-0 flex-1 truncate text-[13.5px] font-medium">
+      <span className="type-list-primary min-w-0 flex-1 truncate">
         {name}
         {trailing}
       </span>
-      <span
-        className={`${PCT_W} shrink-0 text-right font-mono font-bold text-[14px] ${pctColor(pct)}`}
-      >
+      <span className={`${PCT_W} type-mono-value shrink-0 text-right ${pctColor(pct)}`}>
         {fmtPct(pct)}
       </span>
     </button>
@@ -102,14 +100,14 @@ export function StockThemeListRow({
       className={`${rowBase} py-2 focus-visible:outline-2 focus-visible:outline-copper focus-visible:-outline-offset-2`}
     >
       <StockSymbol symbol={symbol} market={market} />
-      <span className="min-w-0 shrink text-[13.5px] font-medium">{name}</span>
+      <span className="type-list-primary min-w-0 shrink">{name}</span>
       {note ? (
-        <span className="min-w-0 flex-1 truncate text-[12px] text-ink-2">{note}</span>
+        <span className="type-body-sm min-w-0 flex-1 truncate">{note}</span>
       ) : (
         <span className="flex-1" aria-hidden />
       )}
       <span
-        className={`${PCT_W} shrink-0 text-right font-mono font-bold text-[13.5px] ${pctColor(pct)}`}
+        className={`${PCT_W} type-mono-value shrink-0 text-right ${pctColor(pct)}`}
       >
         {fmtPct(pct)}
       </span>
@@ -118,10 +116,10 @@ export function StockThemeListRow({
 }
 
 export const stockListVolGridClass =
-  "grid w-full grid-cols-[28px_54px_minmax(0,1fr)_auto_auto] items-center gap-x-2.5 border-line border-b py-3 text-left last:border-b-0 hover:bg-panel2/35";
+  "grid w-full grid-cols-[28px_54px_minmax(0,1fr)_auto_auto] items-center gap-x-2.5 border-line border-b py-3 text-left last:border-b-0 hover:bg-panel2/35 md:gap-x-3 md:py-3.5";
 
 export const stockListVolHeaderClass =
-  "grid grid-cols-[28px_54px_minmax(0,1fr)_auto_auto] gap-x-2.5 border-line border-b py-2 text-[11px] text-ink-2";
+  "type-meta grid grid-cols-[28px_54px_minmax(0,1fr)_auto_auto] gap-x-2.5 border-line border-b py-2 md:py-2.5";
 
 /** 検索ドロップダウン用(v1 行レイアウト) */
 export function StockSearchListRow({
@@ -146,15 +144,13 @@ export function StockSearchListRow({
       className={`${rowBase} px-3 focus-visible:outline-2 focus-visible:outline-copper focus-visible:-outline-offset-2`}
     >
       <StockSymbol symbol={symbol} market={market} />
-      <span className="min-w-0 flex-1 truncate text-[13.5px] font-medium">{name}</span>
+      <span className="type-list-primary min-w-0 flex-1 truncate">{name}</span>
       {badge ? (
-        <span className="shrink-0 rounded bg-copper-soft px-1.5 py-0.5 text-[10.5px] text-copper">
+        <span className="type-meta shrink-0 rounded bg-copper-soft px-1.5 py-0.5 text-copper">
           {badge}
         </span>
       ) : null}
-      <span
-        className={`${PCT_W} shrink-0 text-right font-mono font-bold text-[13.5px] ${pctColor(pct)}`}
-      >
+      <span className={`${PCT_W} type-mono-value shrink-0 text-right ${pctColor(pct)}`}>
         {fmtPct(pct)}
       </span>
     </button>

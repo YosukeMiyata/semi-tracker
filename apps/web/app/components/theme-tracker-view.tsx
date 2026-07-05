@@ -53,8 +53,8 @@ function SubBlock({
   return (
     <div className="border-line border-b py-3 last:border-b-0">
       <div className="mb-2 flex items-baseline justify-between gap-2">
-        <span className="font-bold text-[13.5px]">{sub.name}</span>
-        <span className={`font-mono font-bold text-[13.5px] ${pctColor(avg)}`}>{fmtPct(avg)}</span>
+        <span className="font-bold text-[13.5px] md:text-[15px]">{sub.name}</span>
+        <span className={`font-mono font-bold text-[13.5px] md:text-[15px] ${pctColor(avg)}`}>{fmtPct(avg)}</span>
       </div>
       {showUs && sub.us.length > 0 ? (
         <>
@@ -163,7 +163,7 @@ export function ThemeTrackerView() {
 
   return (
     <>
-      <p className="mb-4 text-[12.5px] text-ink-2 leading-[1.55]">
+      <p className="type-body-sm mb-4 md:mb-6">
         累積騰落率で、どのテーマに資金が来てどこから抜けたかを一望。タップでサブテーマ・連動日本株へ。
       </p>
 
@@ -189,13 +189,13 @@ export function ThemeTrackerView() {
               onChange={setMarket}
             />
 
-            <div className="border-line border-t pt-3 pb-2">
-              <div className="mb-2 font-bold text-[13.5px]">
+            <div className="border-line border-t pt-4 pb-2 md:pt-5">
+              <div className="type-list-primary mb-3 font-bold md:mb-4">
                 {plabel} 累積騰落率(%) — テーマ平均
               </div>
               <TrackerChart themes={rows} />
               <TrackerChartLegend themes={rows} />
-              <div className="mt-2 text-right font-mono text-[11px] text-ink-2">
+              <div className="type-meta mt-2 text-right font-mono md:mt-3">
                 データ {trackerLastUpdated} 時点
               </div>
             </div>
@@ -208,23 +208,21 @@ export function ThemeTrackerView() {
                   className="group"
                   onToggle={(e) => setOpenKey(e.currentTarget.open ? t.key : null)}
                 >
-                  <summary className="flex cursor-pointer list-none items-center gap-2.5 border-line border-b py-3 [&::-webkit-details-marker]:hidden hover:bg-panel2/35 focus-visible:outline-2 focus-visible:outline-copper focus-visible:outline-offset-2">
+                  <summary className="flex cursor-pointer list-none items-center gap-2.5 border-line border-b py-3 [&::-webkit-details-marker]:hidden hover:bg-panel2/35 focus-visible:outline-2 focus-visible:outline-copper focus-visible:outline-offset-2 md:gap-3 md:py-4">
                     <span
-                      className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full font-mono font-bold text-[12px] text-paper"
+                      className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full font-mono font-bold text-[12px] text-paper md:h-8 md:w-8 md:text-[13px]"
                       style={{ backgroundColor: t.color }}
                     >
                       {rank + 1}
                     </span>
-                    <div className="min-w-0 flex-1 font-bold text-[14px]">
+                    <div className="type-list-primary min-w-0 flex-1 font-bold">
                       {t.name}
-                      <small className="block font-normal text-[12px] text-ink-2">
+                      <small className="type-meta mt-0.5 block font-normal">
                         {t.subs.length}サブテーマ
                       </small>
                     </div>
                     <Sparkline values={sparkFromSeries(t.series)} />
-                    <div
-                      className={`min-w-[4.75rem] text-right font-mono font-bold text-[15px] ${pctColor(t.avg)}`}
-                    >
+                    <div className={`type-mono-value min-w-[4.75rem] text-right ${pctColor(t.avg)}`}>
                       {fmtPct(t.avg)}
                     </div>
                   </summary>
@@ -243,7 +241,7 @@ export function ThemeTrackerView() {
               ))}
             </StockListShell>
 
-            <p className="text-[11px] text-ink-2 leading-[1.65]">
+            <p className="type-meta leading-[1.65] md:leading-[1.7]">
               出典: Stooq 日足(終値ベース)。{plabel}の累積騰落率=構成銘柄の単純平均。
               平均の対象で米国株のみ/日本株のみに切替可能です。
             </p>

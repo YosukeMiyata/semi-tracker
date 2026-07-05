@@ -19,7 +19,7 @@ export function EventCalendarPreview() {
         <EventCalendarGrid compact showDetail={false} />
         <Link
           to="/news"
-          className="mt-3 block border-line border-t border-dashed pt-3 text-center text-[12px] text-copper underline"
+          className="type-body-sm mt-3 block border-line border-t border-dashed pt-3 text-center text-copper underline md:mt-4 md:pt-4"
         >
           詳細・イベント一覧 ↗
         </Link>
@@ -41,7 +41,7 @@ export function EventCalendar() {
         {events.length > 0 ? (
           <EventCalendarGrid />
         ) : (
-          <p className="text-[12.5px] text-ink-2">予定されているイベントはありません。</p>
+          <p className="type-body-sm">予定されているイベントはありません。</p>
         )}
       </Card>
     </>

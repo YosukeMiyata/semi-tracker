@@ -31,9 +31,9 @@ function rsiColor(v: number | null): string {
 
 function TechCell({ label, children }: { label: string; children: ReactNode }) {
   return (
-    <div className="rounded-lg border border-line bg-panel2 px-2 py-1.5">
-      <div className="text-[10px] text-ink-2">{label}</div>
-      <div className="mt-0.5 font-mono text-[12px]">{children}</div>
+    <div className="rounded-lg border border-line bg-panel2 px-2.5 py-2 md:px-3 md:py-2.5">
+      <div className="type-meta">{label}</div>
+      <div className="type-mono-code mt-1">{children}</div>
     </div>
   );
 }
@@ -51,9 +51,9 @@ export function StockTechGrid({ tech }: { tech: StockTechnical }) {
   const streakClass = tech.streak > 0 ? "text-up" : tech.streak < 0 ? "text-down" : "text-ink";
 
   return (
-    <div className="mb-4 rounded-xl border border-line bg-card p-3">
-      <div className="mb-2 font-bold text-[12px] text-ink-2">📅 スイング目線(中期・数日〜数週)</div>
-      <div className="mb-2 grid grid-cols-2 gap-1.5 sm:grid-cols-3">
+    <div className="mb-4 rounded-xl border border-line bg-card p-3 md:mb-5 md:p-4 lg:p-5">
+      <div className="type-meta mb-2 font-bold md:mb-3">📅 スイング目線(中期・数日〜数週)</div>
+      <div className="mb-2 grid grid-cols-2 gap-2 sm:grid-cols-3 md:gap-2.5">
         <TechCell label="25日線乖離">
           <span className={devColor(tech.dev25, -5, 8)}>{fmtPct(tech.dev25)}</span>
         </TechCell>
@@ -73,20 +73,20 @@ export function StockTechGrid({ tech }: { tech: StockTechnical }) {
           <span>{tech.lo52 !== null ? tech.lo52.toLocaleString() : "—"}</span>
         </TechCell>
         <TechCell label="移動平均の並び">
-          <span className={`text-[11px] ${poClass}`}>{poLabel}</span>
+          <span className={`type-body-sm ${poClass}`}>{poLabel}</span>
         </TechCell>
       </div>
 
       {tech.pullback ? (
-        <div className="mb-2 rounded-lg border border-up/25 bg-up-soft/50 px-2.5 py-1.5 text-[11px] text-up">
+        <div className="type-body-sm mb-2 rounded-lg border border-up/25 bg-up-soft/50 px-3 py-2 text-up md:mb-3 md:px-3.5 md:py-2.5">
           🎯 {tech.pullback}(上昇トレンド中の買い場候補)
         </div>
       ) : null}
 
-      <div className="mb-2 mt-3 font-bold text-[12px] text-ink-2">
+      <div className="type-meta mb-2 mt-3 font-bold md:mb-3 md:mt-4">
         ⚡ デイトレ目線(超短期・当日〜数日)
       </div>
-      <div className="mb-2 grid grid-cols-2 gap-1.5 sm:grid-cols-3">
+      <div className="mb-2 grid grid-cols-2 gap-2 sm:grid-cols-3 md:gap-2.5">
         <TechCell label="5日線乖離">
           <span className={devColor(tech.dev5, -4, 5)}>{fmtPct(tech.dev5)}</span>
         </TechCell>
@@ -115,18 +115,18 @@ export function StockTechGrid({ tech }: { tech: StockTechnical }) {
           </span>
         </TechCell>
         <TechCell label="バンドウォーク">
-          <span className={`text-[11px] ${bbWalkClass}`}>{bbWalkLabel}</span>
+          <span className={`type-body-sm ${bbWalkClass}`}>{bbWalkLabel}</span>
         </TechCell>
       </div>
 
       {tech.daytrade ? (
-        <div className="mb-2 rounded-lg border border-up/25 bg-up-soft/40 px-2.5 py-1.5 text-[11px] text-up">
+        <div className="type-body-sm mb-2 rounded-lg border border-up/25 bg-up-soft/40 px-3 py-2 text-up md:mb-3 md:px-3.5 md:py-2.5">
           ⚡ {tech.daytrade}
         </div>
       ) : null}
 
       {hints.length > 0 ? (
-        <div className="rounded-lg border border-line bg-panel2 px-2.5 py-2 text-[11px] text-ink-2 leading-[1.65]">
+        <div className="type-body-sm rounded-lg border border-line bg-panel2 px-3 py-2.5 leading-[1.65] md:px-3.5 md:py-3 md:leading-[1.7]">
           {hints.map((h) => (
             <div key={h}>{h}</div>
           ))}

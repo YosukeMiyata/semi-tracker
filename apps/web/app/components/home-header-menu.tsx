@@ -4,6 +4,34 @@ import { useEffect, useState } from "react";
 import { useMatch } from "react-router";
 import { HOME_SECTIONS } from "~/lib/home-sections";
 
+export function HomeSectionNavBar() {
+  const isHome = useMatch({ path: "/", end: true }) !== null;
+
+  if (!isHome) {
+    return null;
+  }
+
+  return (
+    <nav
+      className="app-container hidden border-line border-t py-2 md:block"
+      aria-label="ホーム内セクション"
+    >
+      <ul className="flex gap-1 overflow-x-auto pb-0.5 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+        {HOME_SECTIONS.map((item) => (
+          <li key={item.id} className="shrink-0">
+            <a
+              href={`#${item.id}`}
+              className="type-body-sm inline-block rounded-full border border-line bg-card px-3 py-1.5 whitespace-nowrap transition-colors hover:border-copper/40 hover:bg-panel2 hover:text-ink focus-visible:outline-2 focus-visible:outline-copper md:px-4 md:py-2"
+            >
+              {item.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  );
+}
+
 export function HomeHeaderMenu() {
   const isHome = useMatch({ path: "/", end: true }) !== null;
   const [open, setOpen] = useState(false);
