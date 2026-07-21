@@ -1,6 +1,6 @@
 {
   "_schema": "id: 安定ID / date: YYYY-MM-DD / title: 見出し / url: 原文リンク / source: 媒体名 / published_at: ISO8601(任意)",
-  "fetched_at": "2026-07-20T12:17:45.355184+00:00",
+  "fetched_at": "2026-07-21T11:48:45.505566+00:00",
   "sources": [
     "日経",
     "Bloomberg",
@@ -17,21 +17,573 @@
     "Tom's Hardware"
   ],
   "fetch_notes": [
-    "日経: 91件",
-    "Bloomberg: 51件",
-    "Reuters: 35件",
-    "CNBC: 25件",
-    "WSJ: 20件",
-    "日刊工業: 19件",
-    "東洋経済: 17件",
-    "日経xTECH: 12件",
+    "日経: 94件",
+    "Bloomberg: 45件",
+    "Reuters: 37件",
+    "CNBC: 31件",
+    "WSJ: 26件",
+    "日刊工業: 15件",
+    "東洋経済: 22件",
+    "日経xTECH: 7件",
     "ITmedia: 15件",
     "EE Times Japan: 20件",
-    "DigiTimes: 失敗 (not well-formed (invalid token): line 50, column 54)",
+    "DigiTimes: 失敗 (not well-formed (invalid token): line 149, column 49)",
     "SemiEngineering: 10件",
     "Tom's Hardware: 50件"
   ],
   "items": [
+    {
+      "id": "hl-926720a25f6266fe",
+      "date": "2026-07-21",
+      "title": "パナソニックHD、半導体工場向け排水処理の新規事業 30年度50億円",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9JbTdWUkdrTmlScUltSm91QklhdGV3MnVIVFRRZWd0c1VMRm9uUDN5YWFiY1Y3OFdRRVZ3SVlzc0x1Wmo4QjJ5MUZHU3JmVVp0YW10THVROTA1OWpUY0oyMGYtbGFuTGNaRmJMQQ?oc=5",
+      "source": "日経",
+      "published_at": "2026-07-21T11:20:00+00:00"
+    },
+    {
+      "id": "hl-2d5129a721b61fff",
+      "date": "2026-07-21",
+      "title": "SMIC's third-gen 7nm node shows smaller metal pitch than Intel 18A, higher transistor density than TSMC N6 without EUV — analysis of N+3 shows significant advancement for Chinese semi manufacturing",
+      "url": "https://www.tomshardware.com/tech-industry/semiconductors/smics-third-gen-7nm-node-shows-smaller-metal-pitch-than-intel-18a-higher-transistor-density-than-tsmc-n6-without-euv-analysis-of-n-3-shows-significant-advancement-for-chinese-semi-manufacturing",
+      "source": "Tom's Hardware",
+      "published_at": "2026-07-21T11:00:00+00:00"
+    },
+    {
+      "id": "hl-a091b9df4ba20121",
+      "date": "2026-07-21",
+      "title": "シンガポール株21日、4日ぶり反発 日韓の半導体株上昇で心理改善",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBlQjE1Qkh2VWtvMWJuT2dFcllXZ1A4eVlJTWhHdkdYOXc1SVFscXhWOXhhQVJBSHpVczNEQ29DT1lHWHN4dzYybDBINlN2WkxiUnZPT0IwSmtKeGR3Wm42WDlqZ2RIMUViNVRySA?oc=5",
+      "source": "日経",
+      "published_at": "2026-07-21T09:33:51+00:00"
+    },
+    {
+      "id": "hl-32ce2f15c639c310",
+      "date": "2026-07-21",
+      "title": "半導体株ショックは成長痛､AI革命はまだ｢3回表｣に過ぎない - 四季報オンライン",
+      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE5ELW1HV2pvT3NVOGRhQzdYUC1YSmJfMnYyczZ5eGNvbFppLUdCX045TkFDVnVqN1k1VlJWZFEyMGROb1ZxV3k4R2czanZFNHhpcUtiRGZHWQ?oc=5",
+      "source": "東洋経済",
+      "published_at": "2026-07-21T09:30:00+00:00"
+    },
+    {
+      "id": "hl-05753a0d5b1d614d",
+      "date": "2026-07-21",
+      "title": "日産化学CFO、ROE「20%超え堅持」 半導体材料が成長けん引",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1wVkFLMUp6WUtYR3V4aExyRGJTTGNhTmJtbGZ2cWRoNzdYcXBHM3JiX2R2czVUZ05nWENpT0pUR0JzUVNUekpSRUZFa0xzdURCbnFBQ1JHR3k2R2pDU1dTZnhmLXN5X3pCMlZwQg?oc=5",
+      "source": "日経",
+      "published_at": "2026-07-21T09:29:30+00:00"
+    },
+    {
+      "id": "hl-0e3c04ffc7342204",
+      "date": "2026-07-21",
+      "title": "TSMC in Talks to Raise Prices by Up to 10% in 2027, Report Says",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQQUt3ZmstejlWUWt5VHh1NTNqdENmRlBBRC1NWE93MUNSenVZX0JPY2VlNW5mRFVwSHZCVk1MaU83a1hnTk14M0hmSE42YzhHbXNJeVd2elVIUk9mY0VwRWNTRHN1X1VKNWFqZ2dIZXdZVndnVlIwY2ZoVlE0UVdOS1Q5Q0tncURwaTRJcF9HWF9rbzZJZDN1aERHYlZTXzA0N09lLUQ3enhhZWpHcFJDN1Jn?oc=5",
+      "source": "Bloomberg",
+      "published_at": "2026-07-21T08:43:11+00:00"
+    },
+    {
+      "id": "hl-b753236a569333df",
+      "date": "2026-07-21",
+      "title": "香港株大引け 小幅反落、本土系内需関連に売り 半導体は高い",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9CaWtLR2d1TC0tQWxxTGJPdHVvdXV1OXdmbFBFbWlNTnROMU93WlAwNWxzZ0NWNUNsR0FHMmpCczZiZVVoVi1nTXFzbVNyU3JnQXdVZ3cxajlJUHFXNUx1TElsR2U5ZlRoY0xQNQ?oc=5",
+      "source": "日経",
+      "published_at": "2026-07-21T08:27:54+00:00"
+    },
+    {
+      "id": "hl-73deaa31ceece1fb",
+      "date": "2026-07-21",
+      "title": "上海株大引け 続伸 半導体に買い カンブリコンは11%高",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBBQ19vd3hEYVBaNjNfYjk1UDRGMkxoajZJeVJkTmkyNnlyOGgweVBxcGU2bUM4MmpjbzF4NndtbVNlZFlKTThOcDlHWFVueGY4MVQxVE5HeFgwejJmSFNxVEl1a2VfSVlQMnBaaA?oc=5",
+      "source": "日経",
+      "published_at": "2026-07-21T07:32:36+00:00"
+    },
+    {
+      "id": "hl-cb50ba7d6299776c",
+      "date": "2026-07-21",
+      "title": "21日の日本株は大幅反発､AI･半導体関連株を中心に買い - 四季報オンライン",
+      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE9TRUdzc21ZdlJqNE1Fc3Y3NzlycTdXaHJmVzFDb2VNTzVmYUU3aEx4UUl5eW1RZWNjMnJ1dnRFazdaTW8wOG1tSWp3Y2pGNkZKOEtQbDBpZw?oc=5",
+      "source": "東洋経済",
+      "published_at": "2026-07-21T07:15:00+00:00"
+    },
+    {
+      "id": "hl-9f8046bf20a40780",
+      "date": "2026-07-21",
+      "title": "Chip Industry Technical Paper Roundup: July 21",
+      "url": "https://semiengineering.com/chip-industry-technical-paper-roundup-july-21/",
+      "source": "SemiEngineering",
+      "published_at": "2026-07-21T07:01:42+00:00"
+    },
+    {
+      "id": "hl-f93fad4728ac4cba",
+      "date": "2026-07-21",
+      "title": "Research Bits: July 21",
+      "url": "https://semiengineering.com/research-bits-july-21/",
+      "source": "SemiEngineering",
+      "published_at": "2026-07-21T07:01:14+00:00"
+    },
+    {
+      "id": "hl-978adf97f90dde01",
+      "date": "2026-07-21",
+      "title": "韓国株21日 3日ぶり反発 半導体株に買い サムスン電子6%高",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5CZXRIZXJuRmZfUUhXUHdnSEkxdzNRbl9SRU4yU1ZmaW00TFNGOFVXcjdnbzVXTU1lYkhraVdScDRRaTZHbktWLXJtc1BoZDBHdnhscjVFU3c0ZUFpczlaeHQ2SE9QZ1hxY0xUeA?oc=5",
+      "source": "日経",
+      "published_at": "2026-07-21T06:41:06+00:00"
+    },
+    {
+      "id": "hl-d78fb81670cbe9a4",
+      "date": "2026-07-21",
+      "title": "Chipmaker IQE raises annual sales growth forecast on AI, data centre demand",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPYXg5V3BESkE5aVZMaUttdGRMZkJnWXlMeHZMOFpFY2xkeHBkLTJ0OXc2NDcwVjRlUmNDZHl3X2NrS1FKLXZTaWxPS3IwbXBVbXpmUWQ4TlRWTjIxTDBybktvWmE4M2ZFSFBOTzh5dG1JSzltR015amwyOTN4Tkx5RGJDX2xkb3RPbTJDOFExeVRkNTdQWDBoa3hkM21IdF8teDNiYmoyUHAwa3lCZGJpQ1NmMUtucDQ?oc=5",
+      "source": "Reuters",
+      "published_at": "2026-07-21T06:35:00+00:00"
+    },
+    {
+      "id": "hl-135bbb1531b527bb",
+      "date": "2026-07-21",
+      "title": "IoTで現場管理をデジタル化 予兆保全プラットフォーム",
+      "url": "https://eetimes.itmedia.co.jp/ee/articles/2607/21/news062.html",
+      "source": "EE Times Japan",
+      "published_at": "2026-07-21T06:30:00+00:00"
+    },
+    {
+      "id": "hl-9c927aaafb2e7d70",
+      "date": "2026-07-21",
+      "title": "Stock Movers: Zhipu, Samsung, Petrochina",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQcDY0WENEUU5vQzRvZkNQRVU5WEdmZ0RWRDUtYklKOFk3dkdGdlNkMUdHQngydTg1SkRJcGR1LWxTTlNGRHJDMDV0Skh6ZDRkMHRXLTl3Q3lfb1BTNWRibXloRDFjS3FFMnRHYjFmaUlIcllma0U4bVEwdHZ2ZUZ4RE16SFlTWVN1ZVVkd1djNDVYZGdQaHZmQw?oc=5",
+      "source": "Bloomberg",
+      "published_at": "2026-07-21T06:11:33+00:00"
+    },
+    {
+      "id": "hl-2d68947e974fe1f0",
+      "date": "2026-07-21",
+      "title": "レゾナックなど日米12社の半導体企業連合、ベルギー研究機関と協業",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE92WW45NWZUTTlwZnJTMURJTklBVWhMSzNWaDV3eFNzdlp4UzZKSlBacWFlS2xNbXBtNXdDcWsxMTNPR21DSnFNb0xSc3paMTFjZ1UxMU13bElMZ053T29CWUViQlB5cVkyTFFUXw?oc=5",
+      "source": "日経",
+      "published_at": "2026-07-21T05:56:21+00:00"
+    },
+    {
+      "id": "hl-5ed3098397b06b55",
+      "date": "2026-07-21",
+      "title": "台湾株21日 4日ぶり反発 米半導体株高を好感 テック株は大幅高",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBlSmx0d1RSVENHX1c3cUU2Xy1wMlhoUkVZbGozM1JsQzBjaVl3MDRZLVB5TWVPajhyNmUtaThjaC1RclFPUVRxeDdvQmZadktGclBrMHRIZ01kM2QxdkVhbTdZSlZNOEt3bllBeA?oc=5",
+      "source": "日経",
+      "published_at": "2026-07-21T05:54:08+00:00"
+    },
+    {
+      "id": "hl-421c19e1252e9b01",
+      "date": "2026-07-21",
+      "title": "骨太、AIや半導体など成長分野に投資枠 閣議決定 基礎収支黒字化掲げず",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE55ZVVQMUtEVGhWTzNVVk40Tmdrck9mTDJ5Ny1MYllwOUlLbWszbHVfSkVqdnk0T0VnQ1V0WDVLbGV0YTRsdU1ibUVNalB4RTR1bGFQRlFMNUhPR1lzWklZQS1CS1VMdXotQlpKWA?oc=5",
+      "source": "日経",
+      "published_at": "2026-07-21T05:30:00+00:00"
+    },
+    {
+      "id": "hl-2925f13b3e7e9e64",
+      "date": "2026-07-21",
+      "title": "【池袋】人事コンプライアンス担当｜半導体メーカー - 日経転職版",
+      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1XZ3hWc1diOEFFTWtBdExzT0NYWVhFY0ZRY2M1WXJFMzRzUjNscF9PUVExa1dSd1VhZ0Y5bm83TmZNZ2UtRjN2eE9UU21iSW9ENDUyWWZ6MVVSQmlOajFZRUlRcUFWZ0xiSjlJNVBB?oc=5",
+      "source": "日経",
+      "published_at": "2026-07-21T05:26:25+00:00"
+    },
+    {
+      "id": "hl-aa594c513c338fbc",
+      "date": "2026-07-21",
+      "title": "【東京】人事マネージャー※最先端半導体メーカー - 日経転職版",
+      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE5vcWJ6Q1dkSVBQekszbTA3NDNNWTVzUjdvS2FDR0xtR0t0dnFTM3I2NENTdzVZSkF3ZkJJS0J5cmQzUC1jandkUklzemNLUDQzQ05ZOHkxSHNrRHhVTkZXa0tDUHZZcmJ4b0duX3Bn?oc=5",
+      "source": "日経",
+      "published_at": "2026-07-21T05:10:49+00:00"
+    },
+    {
+      "id": "hl-75d6c0df14a6da96",
+      "date": "2026-07-21",
+      "title": "半導体製造装置売上高、26年は過去最高の1659億米ドルへ",
+      "url": "https://eetimes.itmedia.co.jp/ee/articles/2607/21/news034.html",
+      "source": "EE Times Japan",
+      "published_at": "2026-07-21T04:30:00+00:00"
+    },
+    {
+      "id": "hl-ff7ccde117a77a6b",
+      "date": "2026-07-21",
+      "title": "China considers tighter export controls on AI models and chips, FT reports",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQMnQtRVFFNl9xQzJhYWtqMjlrVEx5NW9FYmp4UzM3QlNHdjYwaDhfT3BTdkdaX0QwUHF2X0Z3a3pEMnl0b0RqN0VVMFZ2NndBT1YtWDhjbE85dGZKT2lpWmtFYTJaY1E5UHljUmVvcXhvV0FTTUFyck5GZHBYRU1Nc1hTNDg4aUxoeFFNZmhKOVVKcDNLQVo3SFBYcnZ0VFFhVlBhNndHOWtuMVZpaDhmVE9JY051NmVzQUx4QUln?oc=5",
+      "source": "Reuters",
+      "published_at": "2026-07-21T04:11:00+00:00"
+    },
+    {
+      "id": "hl-38768797af468368",
+      "date": "2026-07-21",
+      "title": "【名古屋】半導体製品担当CQE - 日経転職版",
+      "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9BQUcyRDR1SklldlZCRlpoZW5pUEdjc3NoT0JlS3hsZDNMYm1NaHdaZzl5MjZfUVZ0YW82azBVdlR4ME1LNV9ibFc0WHRqakpkaTlta1ZhVTVMYWd2RUFaTGR4M1dzZXlteFVsX1d3?oc=5",
+      "source": "日経",
+      "published_at": "2026-07-21T04:09:43+00:00"
+    },
+    {
+      "id": "hl-ac6c4d790532f710",
+      "date": "2026-07-21",
+      "title": "自動車は95％の時間は止まっている……「使わない時間」から考える可能性",
+      "url": "https://eetimes.itmedia.co.jp/ee/articles/2607/21/news065.html",
+      "source": "EE Times Japan",
+      "published_at": "2026-07-21T03:30:00+00:00"
+    },
+    {
+      "id": "hl-fc5145b828ef8050",
+      "date": "2026-07-21",
+      "title": "21日午前の日本株は大幅反発､AI･半導体関連株に買い - 四季報オンライン",
+      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE9MS1JKbXdvVWxFdVhndEFKcS1fZUV3ZktJblBJcjNaSTlDb2pORlJxeG1WQ3JZTHVKRFR2a19QaG01V0NSSzBJNmRXQWtqX1pLMUNWNzlSVQ?oc=5",
+      "source": "東洋経済",
+      "published_at": "2026-07-21T03:10:00+00:00"
+    },
+    {
+      "id": "hl-4fb40f2708e491c6",
+      "date": "2026-07-21",
+      "title": "「国産AIスタック」を持たないカナダ、ソブリンAIをどう構築するのか",
+      "url": "https://eetimes.itmedia.co.jp/ee/articles/2607/21/news054.html",
+      "source": "EE Times Japan",
+      "published_at": "2026-07-21T02:00:00+00:00"
+    },
+    {
+      "id": "hl-d79b8a586eeca01a",
+      "date": "2026-07-21",
+      "title": "Power, water needs test South Korea's push to build AI chip hub beyond Seoul",
+      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNOHVPM29HcFNnU1Y5azdMTko1WVRacThpX1IxQ2IxVnNPcDM4dVpmODVTZFB4aDJCWVJaOGVMZzNHaGtSZmpodVBRZ3NhekJ5UG5KaGoxRVk4UVd5MkpTN1kzOE45ZG9Ea0JuaWUzRzlaNm5KdklNWmNiMm51ZW5JN0xYWnZKeE1keDIwdmlpaGVLZE8xTFQ0Z05SeXZnTjNNVDI0RUxhSFJKcVBMVU1mMzRCWW9RSmhWTGdVcWlDN20?oc=5",
+      "source": "Reuters",
+      "published_at": "2026-07-21T01:06:00+00:00"
+    },
+    {
+      "id": "hl-09e73877eb6a4a5c",
+      "date": "2026-07-21",
+      "title": "1つの2次元結晶ナノ構造で2つの光機能を実現、岡山大ら",
+      "url": "https://eetimes.itmedia.co.jp/ee/articles/2607/21/news033.html",
+      "source": "EE Times Japan",
+      "published_at": "2026-07-21T00:30:00+00:00"
+    },
+    {
+      "id": "hl-f279eefdd65dd3e6",
+      "date": "2026-07-21",
+      "title": "NVIDIAファンCEO一問一答、日本は「製造業強いがフィジカルAI欠く」",
+      "url": "https://xtech.nikkei.com/atcl/nxt/column/18/03688/071700007/",
+      "source": "日経xTECH",
+      "published_at": "2026-07-21T00:00:00+00:00"
+    },
+    {
+      "id": "hl-a5b88871d6d17804",
+      "date": "2026-07-21",
+      "title": "AI半導体、推論シフトで一変 NVIDIA1強から群雄割拠へ",
+      "url": "https://xtech.nikkei.com/atcl/nxt/column/18/03640/071000003/",
+      "source": "日経xTECH",
+      "published_at": "2026-07-21T00:00:00+00:00"
+    },
+    {
+      "id": "hl-7f06226702291a02",
+      "date": "2026-07-21",
+      "title": "Watch AI Chips: TSMC in Talks to Raise Prices Up to 10% Next Year: Nikkei",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOMVNSLVZzNHVKWnRYMkRtbTJGekE2ZWRJVUN5ZzFfamtIX2xWQ3h4c2dXVWRZYlZzdTc5WnphQWVJY0xoNHJFZk5yY3BHTTVGQTZRUDQzb25tYldPOTc5LTFYZENzSC1EV0JwbWRUWUZiTHdyXzBRZGVLVDZWUEhkZGdzMzBOclcyWVdMVkY5YWlpOUZMVHphakRSN1NhcEFQR3M0b2tMV3V2SFhOUmc?oc=5",
+      "source": "Bloomberg",
+      "published_at": "2026-07-21T00:00:00+00:00"
+    },
+    {
+      "id": "hl-703fc4252ea18b0f",
+      "date": "2026-07-21",
+      "title": "主役はエヌビディア GPU供給網を分析",
+      "url": "https://xtech.nikkei.com/atcl/nxt/mag/nc/18/071000560/071000002/",
+      "source": "日経xTECH",
+      "published_at": "2026-07-21T00:00:00+00:00"
+    },
+    {
+      "id": "hl-0be3b4c938ba1286",
+      "date": "2026-07-21",
+      "title": "「最新のAIサーバーを置けない」、NVIDIAの進化に追いつかない日本の法規制",
+      "url": "https://xtech.nikkei.com/atcl/nxt/column/18/03694/071600001/",
+      "source": "日経xTECH",
+      "published_at": "2026-07-21T00:00:00+00:00"
+    },
+    {
+      "id": "hl-b41293c8d6e4cad7",
+      "date": "2026-07-20",
+      "title": "NY株ハイライト AI・半導体株下げ止まるか、資金はアップルに逃避",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9yRFlYUnlvc0VRMlBLc2ViZEp4VDdpeDNUenBiQWg3dHBCS3dzdDBrMVBma3RDM3Q0SzQzOE5ZWHIxQ1hQNWJXWnA1NG1nWHhBMHhHS2ZRaWtnSGplTEJoZVVRSGo3ODFmdGJJUg?oc=5",
+      "source": "日経",
+      "published_at": "2026-07-20T22:48:11+00:00"
+    },
+    {
+      "id": "hl-d4dc4555b4cb5081",
+      "date": "2026-07-20",
+      "title": "Kioxia Bulls Ride Out Volatility With Targets 130% Above Market",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPc1pRcFhDTEJ3UmVhanJTZkFKRi05WVVkMnlUUEpjTVlnMjdSTHNSOU55TEFuY0JlSXhYd0lpaVNGdlE4QkFBLWYxd3g3WTE5aExtRVJadTVwa3hIMXdFTHRpSjBVRS1KV2JJel9WRFFXdjVsdzloSG9iWXBtaHd4X0I0ZUlCbUVDdkkwNDRET1VhWkRYRjVDbzhGTFhKSzZMN1k0TDZUb2NwYXdzS1hKalc0bw?oc=5",
+      "source": "Bloomberg",
+      "published_at": "2026-07-20T22:37:31+00:00"
+    },
+    {
+      "id": "hl-31d6770795df2119",
+      "date": "2026-07-20",
+      "title": "日経平均、米半導体株高が追い風 イラン衝突は重荷（先読み株式相場）",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5XWWcycFNuNE90VmVmd2xyeUJ2N1BBYmN5QXd3YW03eDEzSHljZ3M0ZENDS09Wdk9hZlpXaWdlZWsxN0QyclU4RjFyMjVnQjR4bmp3MWR2cW5WRmg4TWVPVlNUUnBpSm55WHlkQw?oc=5",
+      "source": "日経",
+      "published_at": "2026-07-20T22:33:44+00:00"
+    },
+    {
+      "id": "hl-5df1c7205b304c7d",
+      "date": "2026-07-20",
+      "title": "Chip Rebound Drives Stocks Higher as Oil Eases: Markets Wrap",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPNkNWOXN1YXJVTDNkZWJxWFZ4a0Vpa1FCVm9BT2szZWZBRm1XWkxMTXlBQnZhUWNPNDkwWktKREtsU1BkZmVubDB6cGpvQXdDSGpuQjNZX1JfaG5VSmJOSDJib0FfWXdyZFZZWHBid0hnRUpNLXhNdF9yWjFQUmRyTHg1ZUk3T0xuSEU5UU5BN0dKdjk3?oc=5",
+      "source": "Bloomberg",
+      "published_at": "2026-07-20T22:09:48+00:00"
+    },
+    {
+      "id": "hl-42f4a5f352d24328",
+      "date": "2026-07-20",
+      "title": "U.S. Stocks Edge Lower to Start Week; Chip Stocks Rebound",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPMUpseE1oUEhCLVRmNGk0ZHRIX0l5UEN0R0hVZXRXQ2NTNUVhZ3BVX0k3R2NaZ1JuYUxwakJFZmtPNUhKYmUtZm0tLWxjZ2pyaGxtbHhQQ2lTU2xpMm9xeHNweVBsTkdGT2NneUZPNF81OHNkYnkzZ1J0bGw0UE1iTFFvWmF1UHdQNXFFeXZRWE1XeXJVMjFVRTlpcw?oc=5",
+      "source": "WSJ",
+      "published_at": "2026-07-20T21:52:00+00:00"
+    },
+    {
+      "id": "hl-5440c3db47f6a514",
+      "date": "2026-07-20",
+      "title": "本気で｢総合半導体材料｣企業へ進化する中堅化学メーカー - 四季報オンライン",
+      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE41RjlBbkpKR2QyUFFQSTF2cTV4VEVxalFmYkpBdW50OEdwZXlFODVOdzh2THJuUnlXVmR6RW9LRTBTNmpzZGljN0lzeE1NcmpCZG9ndWdsOA?oc=5",
+      "source": "東洋経済",
+      "published_at": "2026-07-20T21:00:00+00:00"
+    },
+    {
+      "id": "hl-cbde476926e8b60f",
+      "date": "2026-07-20",
+      "title": "ASML to offer employees €20,000 retention bonus for staying in 2027-2030",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQeC13S3VXZTZQWWtGMndwV094TGo3WmhsVjZhaUdxSjhSSUVmLWV0YXc0MC1PaE9yMlFpMmdzNGVyNUJXRGw3Q1g4R2RwQWZRam9FUkQ4ZUd0VHdXcEc4dllQWTRzcUtMTHRYSkp0a0M0UGM0bHlKZnNzenZMNkVfdzZQYkk1dnBBRTBqZzE1LW0yckpKOVhuS0MzU01YaG1xQWRZeVhZUW9VZlViTTlDRWxUNVFHWkwzOHhj?oc=5",
+      "source": "Reuters",
+      "published_at": "2026-07-20T20:59:11+00:00"
+    },
+    {
+      "id": "hl-8bf794b02be9fbdb",
+      "date": "2026-07-20",
+      "title": "Semiconductor names are down a lot, but not oversold, says tech investor Dan Niles",
+      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQU3h1VE1vX1VvSW4zQkpTOEEtZFYwM0FyRVNhZ3hDLUxKS0stT2dha1prQjFzelRmTVBvaUFzMjkydXYtMURrNDNoY0pya1NxUXNKSHIyR0RUU19Ia3FKcUxqb1ZUY0NkemF0RmZkeHc4YmttaDBWQ0U5c19CMUFrTkNnOG4xOFJIWUVPVWhqUzBzeVB2aXhJeFRKdm5OV08xZU85UEhoQ0VnNUFOeWpMWUc5TEIwVjVtVkhpaFRQdWU?oc=5",
+      "source": "CNBC",
+      "published_at": "2026-07-20T20:56:39+00:00"
+    },
+    {
+      "id": "hl-a50bbf0d4114cab4",
+      "date": "2026-07-20",
+      "title": "巨大化するAI半導体で業界が激震､レゾナック｢従来の開発では対応が難しい｣次世代パッケージ技術の標準化にどう挑む",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1iNWtoNDdOcVVLNS1lS0V2Y1dNM2szR0ZrLU1vVzBGcHZxMnNjZnlLdkc2ZFhVNnBtdER6U1lPYTFoaldwTXNiMmVlUGE2RzRTMmI5S1R4M2JrU0ZlbW04?oc=5",
+      "source": "東洋経済",
+      "published_at": "2026-07-20T20:40:00+00:00"
+    },
+    {
+      "id": "hl-bf7dd6252337c734",
+      "date": "2026-07-20",
+      "title": "US Stocks Rebound From Selloff as Nvidia, Other Chipmakers Rise",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQdHhZUmsyTWpPejdKS0Q3UVhKUm9YQUNWVGFGUnFucXFZUVdfYVBJRFIxWkpvXzdtSUl0dVZmT21rd3lwYnhqd2VCMElObEYtQTByZGJoZUdPYmZJbFNKSGxPeUl1dWNPcEkzRjlWZ3BYR2pxelRHNXpYSGFXZDF4Rm9YbGsxQ3FJNFBLdkNNWEwwcWZHV0t0bFFoOWVNc21SNWhObE1Wczk2bmltNWt6UzNMRQ?oc=5",
+      "source": "Bloomberg",
+      "published_at": "2026-07-20T20:27:30+00:00"
+    },
+    {
+      "id": "hl-6cf9440a3c53c073",
+      "date": "2026-07-20",
+      "title": "Tech stocks to buy after the big semiconductor pullback, according to UBS",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPS2hPclNuV1BSTGdaU0YxYUp5YTZBNzI4YVM4bXBmclBiVHA4bzJmdFFFeWUwZ09OOTZUclFGbEZmU085RGtTTUpDdThKOWU1NjY1NWgzNTU4WVM0bWpnUFRWbzYyTlZuc1FGdDJtMGpHaUZvOTJUQjBZVFY1NUFJWjlXMnpwWl9HRDRuWUdGS2FlTnpiX2xZSFZFeDdMMFNqZUVSVjhhRG5XX3JyU0E?oc=5",
+      "source": "CNBC",
+      "published_at": "2026-07-20T20:12:04+00:00"
+    },
+    {
+      "id": "hl-834e494a1ea1e4d2",
+      "date": "2026-07-20",
+      "title": "米国株、ダウ続落 米イランの対立激化を懸念 半導体は伸び悩み",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE96ajVQWmpRUF81UUREaEw4c1RNOFNmemZvZFdYNnRFcUxoTHN0MGRvSmx4VlZibkc2TlNzRzF0YV9LSTFMU2JiTm9kMnphOURCN2l0MzRyYkZpeVRNb3JoX192NUZJV3J3MTA2eg?oc=5",
+      "source": "日経",
+      "published_at": "2026-07-20T20:06:51+00:00"
+    },
+    {
+      "id": "hl-f29d5bbae5e0738a",
+      "date": "2026-07-20",
+      "title": "AI半導体、推論シフトで一変 NVIDIA1強から群雄割拠へ（2ページ目） - 日経クロステック",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQY1FnQmh3aXQzWnROVHJfaGxjY1daMmMzVllvbG1jUnNkTW1wdTlwM1ZySWZqalA4UktGM2ZZd2pLaVNvUkRFWUdSN2tTVkhJVlNIYmJJaS05bXlBUDVnOVpNT0ZuUS1NQlhFQ0pDRkJHSGJhZEpVZGF5aVVRaXJDQ1kxNXgyaFdBcTFiOE1EcjF5YUs5a3FscG53?oc=5",
+      "source": "日経",
+      "published_at": "2026-07-20T20:00:00+00:00"
+    },
+    {
+      "id": "hl-8daf65decbcd1313",
+      "date": "2026-07-20",
+      "title": "AI半導体、推論シフトで一変 NVIDIA1強から群雄割拠へ - 日経クロステック",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1kSjZGMUdJbnRsUl9wTktneGJCSVBwX3RhbnJmM1E4VDJXal9HdktISkRwY19BbmRBQVNHdGFhM01oUFRJNHcxSFhrOXNCYUpmeUR3UFBRWmFWS3Z1VlgyaTN0b3hWWk5FNjdVaA?oc=5",
+      "source": "日経",
+      "published_at": "2026-07-20T20:00:00+00:00"
+    },
+    {
+      "id": "hl-6d3ffaeb58953d62",
+      "date": "2026-07-20",
+      "title": "「半導体の経済安保、九州で守れ」 熊本県立大の黒田忠広理事長",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE96VV9BQl8xWHlZejVENXdKcjRqTVY1VmFmS0tLeGk2NUxqbHA0LXZwNEpWTU9BUWdtSE02UGtMS3F6ZFBsQlc3bmhXZnhaN0RWWFRyR010RHVQcU4zWEh2S3dfOWNwek03VllrUA?oc=5",
+      "source": "日経",
+      "published_at": "2026-07-20T20:00:00+00:00"
+    },
+    {
+      "id": "hl-35f8449e2893b08a",
+      "date": "2026-07-20",
+      "title": "経営ひと言／レゾナック・ホールディングス・阿部秀則執行役員「半導体で共創」",
+      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE45MU4ySHRPN09jcTNVVDZfTU1NM25kcWI0UHJ6aEoxNm81NUhLZ1B0XzZKQ3VCbkxMUzJlNG9GdWc5ZE8teml0R1YyemNxbGJZQ1l5eGtmd0VyUWs?oc=5",
+      "source": "日刊工業",
+      "published_at": "2026-07-20T20:00:00+00:00"
+    },
+    {
+      "id": "hl-c353dd325e78de38",
+      "date": "2026-07-20",
+      "title": "Graph Transformer Speeds IC Interconnect Signal Integrity Analysis (Buffalo, Stuttgart, IBM)",
+      "url": "https://semiengineering.com/graph-transformer-speeds-ic-interconnect-signal-integrity-analysis-buffalo-stuttgart-ibm/",
+      "source": "SemiEngineering",
+      "published_at": "2026-07-20T18:30:40+00:00"
+    },
+    {
+      "id": "hl-2275d7af88826cd8",
+      "date": "2026-07-20",
+      "title": "3D Mask Effects Enhance Imaging in High-NA EUV and Hyper-NA EUV Litho (Fraunhofer, ASML)",
+      "url": "https://semiengineering.com/3d-mask-effects-enhance-imaging-in-high-na-euv-and-hyper-na-euv-litho-fraunhofer-asml/",
+      "source": "SemiEngineering",
+      "published_at": "2026-07-20T18:14:00+00:00"
+    },
+    {
+      "id": "hl-11cdba23dff3ad37",
+      "date": "2026-07-20",
+      "title": "Inference Accelerator that Integrates Compute-in-Interconnect and Memory to Mitigate the Memory Wall (NUS)",
+      "url": "https://semiengineering.com/inference-accelerator-that-integrates-compute-in-interconnect-and-memory-to-mitigate-the-memory-wall-nus/",
+      "source": "SemiEngineering",
+      "published_at": "2026-07-20T17:57:49+00:00"
+    },
+    {
+      "id": "hl-a95a066897656957",
+      "date": "2026-07-20",
+      "title": "NbAs Nanowires Show Lower Resistivity as Interconnect Dimensions Shrink (Cornell, NYCU, IBM et al.)",
+      "url": "https://semiengineering.com/nbas-nanowires-show-lower-resistivity-as-interconnect-dimensions-shrink-cornell-nycu-ibm-et-al/",
+      "source": "SemiEngineering",
+      "published_at": "2026-07-20T17:42:34+00:00"
+    },
+    {
+      "id": "hl-008e39c9bd9456a4",
+      "date": "2026-07-20",
+      "title": "Litho Patterning of Conformal Thin-Film Coatings on Complex 3D Structures (KTH Royal)",
+      "url": "https://semiengineering.com/3d-scaffold-masks-pattern-conformal-thin-films-down-to-27-nm/",
+      "source": "SemiEngineering",
+      "published_at": "2026-07-20T17:17:53+00:00"
+    },
+    {
+      "id": "hl-ecfd2b34a2e9c203",
+      "date": "2026-07-20",
+      "title": "AI半導体検査、精度1000倍 エスペック、微弱電流で故障予測",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFAwTXpaYTVwT0g1b1hQbzY5OVRnX2FGWnJoTjRONXlMcHE4TVpWTEotT2hZVWNhZXNvUWVPUXhFbGVSMzQ1eTBhQU5CcmprQnZKNmdNZWRUNndkUVRuenhYS2FaOURHSm5JQ25TYw?oc=5",
+      "source": "日経",
+      "published_at": "2026-07-20T17:00:00+00:00"
+    },
+    {
+      "id": "hl-c552cccf81c7df99",
+      "date": "2026-07-20",
+      "title": "Wuxi Shangji Semiconductor Technology Co Ltd",
+      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFAtV05XWW1yNGZQQ3ZlRXRGeHV3SmdBVDJoNkdYVXFKbDBPU2E4RV9malYydXBMVjYycFZVX18xVUVVQ3lsaGpBZlRBWkhURmJPdkdaVnRUbmVpWloxR1R5ZXpvMA?oc=5",
+      "source": "Bloomberg",
+      "published_at": "2026-07-20T16:59:05+00:00"
+    },
+    {
+      "id": "hl-1684ce2e688dca91",
+      "date": "2026-07-20",
+      "title": "Hengtai Semiconductor Shanghai Co Ltd",
+      "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBBY0pxYXhVM2g1RGRIOEZWT0IzYUZXYXNmQ2lrY2hHZHFvZ1hwTXoxeUNpbVJlbk1sS0kxOE11T292WDRwNk5ZM0cwcTkyOThHY0h6TlBfdmw1akU0b05uTUFhbw?oc=5",
+      "source": "Bloomberg",
+      "published_at": "2026-07-20T16:57:58+00:00"
+    },
+    {
+      "id": "hl-1078d21833a27d8f",
+      "date": "2026-07-20",
+      "title": "Stocks making the biggest moves midday: AMD, Archer Aviation, SpaceX, Iren & more",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQSXpCRDlGcTR5VHVMTXVZeDBIcl91TlI5anlfaFJrcDh4emUwdWNCazdDWjRxZ0NqUTlsYV9qdzd4REptNjYwcXoxR1NJNUlDTU03bmRnU09iR2thWGp6REptcGphaU9ISEVrSUpqTkpVckVkY0tvNmxGdlZqUTZsTjI5RTR6WVhtU0dlYXBYdHgzWmNlR0w4NXNn?oc=5",
+      "source": "CNBC",
+      "published_at": "2026-07-20T15:52:30+00:00"
+    },
+    {
+      "id": "hl-67bbd1ff06ca7189",
+      "date": "2026-07-20",
+      "title": "Google Shares Gain on Report of Chip to Boost AI Efficiency",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNMGdVbVNpNHdna2FUaEk5Y3ZObVI3dWwxZWlzTGIxeDJuQWNZR2o5REJETHJhblIzdVBrMjFMbFdQOFZhQkphSVFIRkxpYUtFZFhXN1NFSUk5a0lxVmVya2lZaGh0MVIxT3owSWJMS0VabVNoNTZmRVY3WkxtMFZrV09UTVVPX3FSb2NBUllIWkkyRFkwXy15aDFleXlicFRPVkNHZlgzWXg4S2EtOGhCdzV3?oc=5",
+      "source": "Bloomberg",
+      "published_at": "2026-07-20T15:03:02+00:00"
+    },
+    {
+      "id": "hl-4d30aec771e022e7",
+      "date": "2026-07-20",
+      "title": "Tempus to buy cancer test maker Personalis for $1.5 billion",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOeDdaUjUzN3pPOUFOZFZnRDQtelVrYUFKcDFGZUxMXzhxVFlQejhnSWJ2b2VkM2h0YnRfRXJ6Qm0tMFQ5eWNLZW4yRncwZXVvN2dZWFE4LS02WkRuS2JiblQ0U3VVSm9jaGs5TjdtNnhzLXFBMUNuYXlUd2o0OGxwd0kzaVc3UUZ5QUJBQmpfVFNOSkN3c0RKcktoekRBMFJENEFBa0JranFHSjJs?oc=5",
+      "source": "Reuters",
+      "published_at": "2026-07-20T14:44:05+00:00"
+    },
+    {
+      "id": "hl-5aa20304f5dd5a26",
+      "date": "2026-07-20",
+      "title": "NYダウ、一進一退で始まる 半導体関連に買い直し",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBaMFljUGxuZXp6ZkU0RVZLYWEwUGJBTERQajBKUEF2THQwWG92Z3FRQ2pSNUUxbk1TTEthVVliMlBybk4tTFlBYk5BQ2M3RUNURnJ6cnVNaDJldVY0Q3U3Z0d3eUlxcWxQNV9ZdQ?oc=5",
+      "source": "日経",
+      "published_at": "2026-07-20T14:40:59+00:00"
+    },
+    {
+      "id": "hl-26d4230061332171",
+      "date": "2026-07-20",
+      "title": "米国株、ダウ一進一退で始まる 半導体関連に買い直し",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5TZ3A4X3JETFZWZUhmcXlCd2JmOFJQa3dkdHQyNnYtTVFtUjNOVlhWVTNEZ0M5MkRxVUxHVC1IMnVsSXdlNGZ5NTRmVGVPRHdma2hFdW9rNzhCWkdXOUJFX050S2M3UmU3Z1lkUQ?oc=5",
+      "source": "日経",
+      "published_at": "2026-07-20T14:19:38+00:00"
+    },
+    {
+      "id": "hl-71366cabb5950a7d",
+      "date": "2026-07-20",
+      "title": "Hut 8 signs $9.8 billion AI data center lease, fully commercializes Texas campus",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNNkgyZFlrU2hqY2tJUEdEc0JxWkpWVC1aSkl0aTg2UFlqV1VHUWkwUW51QjZXRkMzY1VEN211ZkpDRUZaS3ZGLXZZLVctU3lLWGp2UXlKb1lnblNQVV9sQkcxNEJBenJpYUY2cGt4NGdUeVZ0Q0JVN0NqUUM1cl85OVlEbGRmWjNId19KRVQ3Y2VmTl9yMW9tcFJVekt5NXhYakpxdXdaTTFZbnNubDBNUkdfWEVqYUpoblNISURBcG9yUQ?oc=5",
+      "source": "Reuters",
+      "published_at": "2026-07-20T13:46:38+00:00"
+    },
+    {
+      "id": "hl-84ad1679411d1611",
+      "date": "2026-07-20",
+      "title": "Chip stocks just had their worst week in over a year. Is now the time to buy?",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOUjhhYmJFbVVIYmdldGxYUnZWMGRQQWhzU2d6MzNyN2VQdU5Sc0p0cFdjbFBLbnlVcV9SNzhnNjQ4cHlEQnQta2hEVGxId1l1dHRzNjZNR3dMR2ZOQ2dBbFJhcVVvaUo1Q2RQM2tVZWNzOE15TTVmVEVDTU9lbFFNRFVVVHJUNHQ0SGtXUzFza09Zd05YRmZrUEVMN3d5UmRVeDYwNEV6UzA0SmF5T1U3cmJ3?oc=5",
+      "source": "CNBC",
+      "published_at": "2026-07-20T13:15:00+00:00"
+    },
+    {
+      "id": "hl-954ae1bd7191e240",
+      "date": "2026-07-20",
+      "title": "AMD launches Helios, its first rack AI system to rival Nvidia, adding Microsoft as newest buyer",
+      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE0tRlF5bzh6NUI5VmZKRW9oTzljR3pJbjVLSl9Yb0NqeEtfMVlTQU5TcHl2dU10YkNtN1ZYb0pCWHl1RHhVd1hNZkZDQ21GSTN0NXZTVXRwalhsWk1tNjlYejF5SUF0TTNLdXVqZnROaWV6R3JfZ2fSAXtBVV95cUxPSE4wRDExampVaGU0bDg4VUVIVDFxOEo1QkxXelFLQ2RwTGpzWHJrOV9vb1l3dWIwUWtEWlU5THY0My1HTUlEMVFpRVFCOURkTUVWQXQ0aktqTzdqN3luZkZVZC05eXRwN2otTFVuSHVLdS1kVEtpNU9WT1E?oc=5",
+      "source": "CNBC",
+      "published_at": "2026-07-20T13:00:01+00:00"
+    },
+    {
+      "id": "hl-2a9c15a5c33255b7",
+      "date": "2026-07-20",
+      "title": "There's a buying opportunity in this semiconductor name with strong fundamentals, says Barclays",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQUlpYZzJjOWpXeFNLQThoOFlzU2RXZ1pnVktLNjVPa2E4UmlUc3VMaHBNOGt2VHhETm91eDdLUTlFVE43Qi1PTHgwVzlnQVprQ1ExZEVacWdMRDJNS2ZKLXcxOXg5YTUxR0FOdWphV0c5ZmhOczBSVVhPTmpVWHBGcDFQQ0xPZVRrT3JKMlhXc0dGVGMwNUNDNkxWdlNWQk1hMU1OWVBxOA?oc=5",
+      "source": "CNBC",
+      "published_at": "2026-07-20T12:19:30+00:00"
+    },
+    {
+      "id": "hl-478f9c40acd5af12",
+      "date": "2026-07-20",
+      "title": "Taiwan indicts ex-TSMC employee over alleged theft of trade secrets for intended use in China",
+      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNMHRWazU1OU9HOEhuRnNndU1nMkM4WVZwNlNWNGRybWdNOGM5dy1uUUxpWF9QRVo3akQ4REhCLUtfYmN3bktLZkZ1bGR0XzZhamRDVHBWS3REY0Q4U1pEaF8zUEN0Q3lPWnVkdmlYWUV5cXNGbG9lSFR0TWFfRDVyTUE0N0JQYXBDOEp5M3k5dzRiOHJoZWtNaGwtVGlwZnRrcFJnOV9sNnRWLW1qRktGOXU3bXZmVFFmaU1lZFh0U3RITWdWVkZieg?oc=5",
+      "source": "Reuters",
+      "published_at": "2026-07-20T11:54:55+00:00"
+    },
+    {
+      "id": "hl-539f13fe83165ebd",
+      "date": "2026-07-20",
+      "title": "Stocks making the biggest moves premarket: AMD, SpaceX, Domino's Pizza, Alibaba & more",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQRlY4TjlFOHdjSGhzbGNCSDh6Q1YwaWlLb2JGSmhaR0pVZVBYMjIyNFhWMU8zREVLSEdkYmJCRS1QLXdjYlhpN2wzdFFwdzFDSUZ3YjV4eGZjZDVBLXVGWm1TaGU3MEt1WXR0Q2ZpR1E2Wm51Q05qeDlCMjdrcW56VU1heUtGdmFKb1B2Z0tlVHBfMklCZnc?oc=5",
+      "source": "CNBC",
+      "published_at": "2026-07-20T11:32:49+00:00"
+    },
+    {
+      "id": "hl-444b900d0f774464",
+      "date": "2026-07-20",
+      "title": "Detrick: What goes up must come down, there could be more chip weakness ahead",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOaWFWUHJVekphaS1kV0ZPWkg5VEwzZkxpRVhkaHdLMVJCLUNIUDl5M2hFTXJSNTZERnFNS1dmd3NzQTdUUlJJbGxCZ2JPd0dFSTZkYTRjZS1GX0FTYVQ5WXJpdlVqQ25tbTdzVUt3V1JpbFI3LU9mczBkZ3ROTFh1VjBWQjhOUjFGWlN3LWpXdlg0Q3NhWFBZem9vUF9OMElUWEY0SDIwMl9Uc3hSY2txdkFZX3psVVZzaUE?oc=5",
+      "source": "CNBC",
+      "published_at": "2026-07-20T11:06:45+00:00"
+    },
     {
       "id": "hl-6931e47059af9b43",
       "date": "2026-07-20",
@@ -41,9 +593,9 @@
       "published_at": "2026-07-20T10:52:25+00:00"
     },
     {
-      "id": "hl-525299819ea59f04",
+      "id": "hl-76394957d13e4055",
       "date": "2026-07-20",
-      "title": "Bezos Backs AI Startup to Discover New Materials for Chipmaking",
+      "title": "Jeff Bezos Backs AI Startup Focused on Material Discovery for Chipmaking",
       "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxObkFKYmRjaHlRdUkxdU1kV2NhaUJQT1lxZ1NzZTl1WlBYTzZnd1ZXMEhEMFZOeTFhUXl6Y3lFZkVnSTJnM2J6ZnFBNWlKa0U1VUFSTFFJcWtqazhyNmVMUnhtLVBpNjN2M0kwY2h3X3ZKc3E1Q0tJUWJFd1hWVlRUWVkxeE9DektULU5HQWF5MVRkdF90OVRNa0JLVDU4YzlGZFE1OTB4YWJNbmgySXFLSXRoTm0yUQ?oc=5",
       "source": "Bloomberg",
       "published_at": "2026-07-20T10:47:48+00:00"
@@ -55,558 +607,6 @@
       "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPeVdfN2RfcnotMjlQeGpnY3BkMjNvTzdyc3BrXzdSaGhaNkNDQ0NnM2RKenhKWnRMcks1elBpZHAycVJsTDJYQ0JLdjBLcUZrZGhBelI4bUhzOGc4RnhhLVpiMW9RU0pRb1NlcTNWTXZ6THVkSzJ6dmp0RTgyMHVEctIBhgFBVV95cUxNYy00UWxqQnNVMzBVS0RCU3VPZ1pFLVNiSk5tNnVabEZhTGNoYmNfc2VmaXFmTjJxb2xEbV9PYXY0MEM1UHhBSEJDQ2MtUFRoT0xidkVwbGw2bzVBMy1rMzNJSG01dWYxbXVjbmlVSkI2V0MyV1NzOHF0M3VKdm5KbVdjV3V4UQ?oc=5",
       "source": "CNBC",
       "published_at": "2026-07-20T09:58:05+00:00"
-    },
-    {
-      "id": "hl-11c649454b886a8c",
-      "date": "2026-07-20",
-      "title": "Moonshot’s Kimi K3 May Be More About Memory Than Compute",
-      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxObVlISHVhaHJ2THlIMlVER0RQN0pVLUZEcGJVSWN3ejlCblFwZkV2LUp1NmRQUC1ud01EWEp4bi13ZHljWHdOLVpON3lMalliVEFpOVV5WDJuYUhwc1hScmgxbnU3WFd4WG1BcHVPSG91MWdGNHVjQ2ZTX1JUVEZvUEFKV3R6am13NFBpSVVOUmctcEFBNThXdGNKNUhIWE9NY2djSVVxZHdhazg?oc=5",
-      "source": "Bloomberg",
-      "published_at": "2026-07-20T09:11:55+00:00"
-    },
-    {
-      "id": "hl-c2b827b87d5702ac",
-      "date": "2026-07-20",
-      "title": "エスペック、AI半導体の検査精度1000倍に 低電流で故障予測",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9aNWNpbktqM0ZBcUJYNDcwLWpyTktZWUhIZFo1R0lCbDQxSHFOWjI3eEFIcEV0YnQ0Vk1xME8yR2FQQXV3SDlKTW82azRYV1J1TjFwMGVmOXJKWUI3ZEpXb01KcmpEekFzejNpYw?oc=5",
-      "source": "日経",
-      "published_at": "2026-07-20T08:00:00+00:00"
-    },
-    {
-      "id": "hl-aa1d823cfc6a2c43",
-      "date": "2026-07-20",
-      "title": "Verifying Networks On Chip",
-      "url": "https://semiengineering.com/verifying-networks-on-chip/",
-      "source": "SemiEngineering",
-      "published_at": "2026-07-20T07:15:30+00:00"
-    },
-    {
-      "id": "hl-f72655374c6d966c",
-      "date": "2026-07-20",
-      "title": "Data Center Chokepoints Tied To AI, Political Pressure, Supply Chain",
-      "url": "https://semiengineering.com/data-center-chokepoints-tied-to-ai-political-pressure-supply-chain/",
-      "source": "SemiEngineering",
-      "published_at": "2026-07-20T07:01:00+00:00"
-    },
-    {
-      "id": "hl-2a4d23b5bfec8ef4",
-      "date": "2026-07-20",
-      "title": "Could AI chip boom make ASML Europe's first trillion-dollar firm?",
-      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNR01HZHVDNUtrR0hhUmxCcmFSdU5ibzN6Q0dQRjFkeWdZMmxEcVE5VXo1YUpZYy1laXJzNVdTNzJFd1kzV0g0LUtYaTlPOEdua20xRFRpbXdZTGJEdjNSU2RqblNDZW8taTdCdXY4bEQzakpNVjYwU3IwN0tRMW1kMGIzbENhdmU4VldKXzFjWWVUMGV4bDdaczFNQlZuZlM1YWxUYzB1NmlKd2VwUV9ubmdqQTEyTUxoMXVQekZEbw?oc=5",
-      "source": "Reuters",
-      "published_at": "2026-07-20T05:02:00+00:00"
-    },
-    {
-      "id": "hl-8407db026cbd0eb1",
-      "date": "2026-07-20",
-      "title": "Bezos Backs AI Startup to Discover New Materials for Chipmaking",
-      "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxPNVN4UDRyNTJvR1RRNGI0amxGRG55ZEtqX2ZiMF91Vm1OYmwtQkhuYkdzalVNVGxyT2RsN094TllPRTB4aGVEeVl0SjBRRVg3dTBiZGMtLVlWYXpXdFpzWUowalBwNUFCc243UmJpQXRhNnVaUTNtSTY4Q05RczBHYzB5WXdpcDY1SC11VndmQmJ6d05qcUQ0WHQ0dGg4WTZIekRrclBPX3FkR3pYa3huNG0ycWdBSjBSNGpJX0ZnUmQxTmlWSXJZbXZ1NVo4MHFabVhGWFE2VHo1dw?oc=5",
-      "source": "Bloomberg",
-      "published_at": "2026-07-20T05:00:00+00:00"
-    },
-    {
-      "id": "hl-ef84fa4a62203ba2",
-      "date": "2026-07-20",
-      "title": "'Give me my money back': South Korean traders' leveraged SK Hynix, Samsung bets unravel after selloff",
-      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQWUFHVC10U1hOdXZacjczZjJvWEdndDFKM3lmWjItNkc5TmtCLWczd3dPelhKSnAxV0dVRUZDOG9FLWhna3Q4OGRXVVRVa2djUEw4Ny1yTzJYOGFYUHlHbV9tUGk0Nm95cmdISkwzZThMQU50aHA2bUdxUUpfalFGVDBZNFpWalJPZlc2czQxaWZxV1h0bDlrNE5hTFlzZHozTEFYUdIBqgFBVV95cUxQd09RVThINDhuT25FUm16WWo5NjN6LUNHQUctMmR6T3VCWTFwcmhQT25fMENrbEt5aUQ1NGU2M2Rudml3cUE2RmdUTF9lSDFINm9XdzFYbXlmUDYzRmRZV3pVdVJVdmlaOFpuSFFEaEN5bk1lV0MzWUFoc2pRSkJtZDJzblNfUnQ0emh6eHZxYkMwNXdHWXlhSmg2a0Y0QXNkS3dYOG1fSHM5dw?oc=5",
-      "source": "CNBC",
-      "published_at": "2026-07-20T04:18:05+00:00"
-    },
-    {
-      "id": "hl-c5f45cbc15bca64d",
-      "date": "2026-07-20",
-      "title": "米マイクロン、クアルコムなどと長期契約 AI車用半導体で",
-      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5HVk50c2N4MUJJeWVOVG92YS10RTFWeElMWWJsaG1oYlV1Ty1NSTVsMWs2ZHFPbl82OG9VNjA5N3hmMVNURzg3QTNWZVd1TXk0UUNZVTR4X1JoTDQ?oc=5",
-      "source": "日刊工業",
-      "published_at": "2026-07-20T02:58:49+00:00"
-    },
-    {
-      "id": "hl-c9b1283d4f8e4c15",
-      "date": "2026-07-19",
-      "title": "TSMC expects 'strong, multi-year' demand for AI chips as it ramps up Arizona investment",
-      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNeWtrc3R6QmdYREpuRHNxR3dFNkJkVjdSMTRYcFhmRHJYQ18yaGFfSHcwbmVKSjZvWVo2M0FqdF9VZkJmbG9CVTVObEZTQ2t1amx5MTlJZ201YWR3cE9IMFNxVTNXdlp6SVV5MnZDLXotWS1EQVFNbUFFV2hZUWJJeUVScVNRaUhjci1zUXJoUTBnMFBkSnFzeWgwWkNpd2FqZ2hZQW14cTNCRDcydkp4X2p2QlYyRWlTRWFISmFoSllBY01OWmNlVWNpamk?oc=5",
-      "source": "Reuters",
-      "published_at": "2026-07-19T23:15:00+00:00"
-    },
-    {
-      "id": "hl-1e5e629a4299b5f0",
-      "date": "2026-07-19",
-      "title": "TSMC is accelerating Arizona factory buildout to capitalize on AI 'megatrend,' CFO says",
-      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQd2FWclZGano0cHJOODVWcTdPLWpsQ2RXbzIxYkg4ZDFkd2JkOWRVMS1nWVlnR3c1bURNcFdCUE9sZzIyZUtzSU01V1FUdDZIdWRzbWlJVElCRXNWenUtejRIa2I3X1NrcjFMNEVRWTQ0YVBORFluR0hsTGVIWUpWUkpuONIBiAFBVV95cUxNUkJaNENZWmFKeTlhY3cxV254bVd1MWVLZWYxWEplcWZ0RXNKZWxCaXdzbWxVcld2OGdnMTU3WTRjQXNOLUNBNThIRVpWT1p1QWtPR2M4RTVnY0gyVlN5cVlTbVhTbWt0clBVaVRySF9mSUhaZU5mb1AzMm1jRFdWRmtUYTFjYTdX?oc=5",
-      "source": "CNBC",
-      "published_at": "2026-07-19T23:09:49+00:00"
-    },
-    {
-      "id": "hl-9a807bdb3d01cc54",
-      "date": "2026-07-19",
-      "title": "TSMC’s $265 Billion US Spending Driven by Demand and Rivals, CFO Says",
-      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPcU9LUFM0anRtbzRhYjQ3NUFiWlE5VHVCb3pGRzJfUTRsT2M2a19KUnNhN0lnVTFNZmxmV3hrSlRJZnZpOUhvRFJxdm1PT0dHa3pPSGNVVWZTclJJWGdQZXd3REhwUU5pc1dZUWdiYVNPRTdCUXRDZWZzRldCY3R0aFl3b1VFcm8xRU51aGpKaEhoVlFPUVdNLVBWNUthbkdpQmppU2JZNlRvZEJ4NzNxNw?oc=5",
-      "source": "Bloomberg",
-      "published_at": "2026-07-19T23:00:00+00:00"
-    },
-    {
-      "id": "hl-51f44536ca1bbb6e",
-      "date": "2026-07-19",
-      "title": "ダイセル、台湾社と合弁 半導体向け化学品製販",
-      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5xN2VVVmZ5OVBIVHhrYklEejYxX0pyVW1Ob3FOazBuWUc3eFJVTkMzdW4zQzB6WUw0V0lKRloxcmdYRWhmVmV1ZW92OU9jNzloNW9fOU05NWtvNVVRUWxRZUFFb1BNejhvLXczS3hMeVdfT1N5?oc=5",
-      "source": "日刊工業",
-      "published_at": "2026-07-19T20:18:02+00:00"
-    },
-    {
-      "id": "hl-ad406ed2356b0736",
-      "date": "2026-07-19",
-      "title": "トリオ、半導体装置部材を拡大 長尺品の需要増",
-      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5wOE1YMDRjQTBXWEFVRlk1NHFZTVRfdXpGNmVXU1BtTVRYN3RQcjFTXzJFR3FhaHNyaUt4ZGtSRkJlLTlKMlhrVEc2bkhnMHRNM2oydWl1d0NtWGs?oc=5",
-      "source": "日刊工業",
-      "published_at": "2026-07-19T20:00:00+00:00"
-    },
-    {
-      "id": "hl-1e1d766dd35aae96",
-      "date": "2026-07-19",
-      "title": "TSMCという夢・AI人材育成、九州半導体の成長の方程式探る",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE8yMEgyMWFlYUQ0MTVCZkY1enBnekZ1MlVYZFdic21SaWZDYThuZzd2TlNXak80RkdvY3pTVVJDZFZxOWRqYmZsUHBTVnd3NkRuVmtOQU5tRGhUWHZhU2Z3VXQzRmVyc1ZPcXhiZA?oc=5",
-      "source": "日経",
-      "published_at": "2026-07-19T20:00:00+00:00"
-    },
-    {
-      "id": "hl-8537c335f55447ee",
-      "date": "2026-07-19",
-      "title": "Lego Strikes Back Against Screens—With Chips in Bricks",
-      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE9kUWthNThsNi1lbU4tbGF2VlhZdlF2akFOWk5OalA5SmdLandvRkhUZUpYWFBBN1BxMFRGNlprVk5Pc3h5NEtvTFZNSWpMaExWTzV3alZNZWJPY0ZVRFdVLVBEUERFQkg2WTVDRmh5WjQxbjNqRVExNVhB?oc=5",
-      "source": "WSJ",
-      "published_at": "2026-07-19T17:07:33+00:00"
-    },
-    {
-      "id": "hl-6b44bc8e2536066a",
-      "date": "2026-07-19",
-      "title": "The Last-Minute Soccer Fan’s Guide to the World Cup Final",
-      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOVkoycVBvQ2tyekI0ajA3UkFHTUZJNFRxWGJQMVAwSDVKQnYxalpRcmw1R0FBYWZHRnI3LXdIVHhGZTV6RVVXdkVyRUFKenBBaU5TdGRJdXpoc0FfT0Zkbm42YkVJX0k2MFRkTjJiNWxCcFV2NEY1VWdYc3dSWUN5eWdsV3V1Z1VjNEx2R0lseFVTU0Y1Mm8yZGlhN2lPY0pS?oc=5",
-      "source": "WSJ",
-      "published_at": "2026-07-19T14:32:00+00:00"
-    },
-    {
-      "id": "hl-19b01296378e6a18",
-      "date": "2026-07-19",
-      "title": "Social-Media Influencers Andrew and Tristan Tate Are Arrested in Miami",
-      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNQlRsYWVTYUtZMzJCYVVKMld1dEZqVHp1WVF3WDdxaGYtOWR0NGdQeUhNTGl0ZHQzVlROYkJGYmFhcHdvN2h5YnNSbTBXRzdKX1A3c1IzdVFpcHpTRUZuaHk3MVVmbGNCZU9LU2NRdUljVHZYaXpORUZPSHhPcUpwdm9lUmZJeEVCMW9vb2hFSmgyVjc0SGx5aXFVWlV3dXl4Q0VJc3IxRWJjN2s?oc=5",
-      "source": "WSJ",
-      "published_at": "2026-07-19T02:26:00+00:00"
-    },
-    {
-      "id": "hl-6bd997051e8f3796",
-      "date": "2026-07-19",
-      "title": "JX金属｢半導体材料を全力増産｣気になる業績の行方 - 四季報オンライン",
-      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE9uRUpnOHBvMWlwX0FZdVRiUnNrQlg0OHJaSkxTajBXZEhvTFlBMTF1bFF1eFhwRi02cjRQVm9PTVpJaWktTkJjVjVMVU1KZ09aN2VKTmNpOA?oc=5",
-      "source": "東洋経済",
-      "published_at": "2026-07-19T00:00:00+00:00"
-    },
-    {
-      "id": "hl-422588a0471efecb",
-      "date": "2026-07-19",
-      "title": "Watch TSMC's $265B Spend Drive by Demand, Rivals, Says CFO",
-      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQNVYxUG8zaVZ6NjFjai1LZnRRRDNneFhHUHZBVDg4SzEtQl9TaUtxUl9ZdzJVcUpxS3hrSndIRC1IcVhFSV9XcEhWQjBPSXdUNHZHdDZpZGg4UldOaGJMSWo2bG5DVFR4bFo3RGN3LXlILVA1TDMydnlZU1lYdVlKNm5QOFNCNnlYU3hSS0dTT1JIUVJqMVNiUjZXdW1hekk0MUxFSjVhUQ?oc=5",
-      "source": "Bloomberg",
-      "published_at": "2026-07-19T00:00:00+00:00"
-    },
-    {
-      "id": "hl-212e35a311497f79",
-      "date": "2026-07-18",
-      "title": "【テスラ･イーターからNVIDIAイーターへ変貌】電気自動車にとどまらずAI分野で存在感､中国｢シャオペン｣新社屋に潜入",
-      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE44UW16YWV6RGN1TVViMzhWc1AtWkYyWkQxTFZOdVhBazlQYXV2UEdNdDlHQ2pyQkk2dHJPRDFfbE15OFpER1FaMThBUUtSbVFpTElLSjc0NFVZbzg?oc=5",
-      "source": "東洋経済",
-      "published_at": "2026-07-18T21:00:00+00:00"
-    },
-    {
-      "id": "hl-da1bd13c40b1b700",
-      "date": "2026-07-18",
-      "title": "過熱AI投機マネー逆流 日米韓の半導体株が大幅安 期待修正で調整局面",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1vTnkzdTJMMGpELTJudlVXeENBSVF4dm9lVmlhbnF1eWx4Sk9HYU5fbFBEVE9qOXhTTVpqZXlnWmwxX3U0dXl4TV9ZbkZzLS1icmNxRWIzMGlxR0JMclNBeWZKWkpaeVdxUmtCTA?oc=5",
-      "source": "日経",
-      "published_at": "2026-07-18T17:00:00+00:00"
-    },
-    {
-      "id": "hl-90ec72e5beb0ac89",
-      "date": "2026-07-18",
-      "title": "Spanish Soccer Created the GOAT. The Only Problem Is That He Plays for Argentina.",
-      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNOWI4NFJiRkliR1pYVFdCeG82ZlBhaWQzY2MwTFE0NDlEZmduX2J2S3NnUk1Pdkc4bVVPc0Z0VUJEaWdlNTZBeVJicVJkUFRxYWlLM1Z3WUVNVmFyZERpbkZNZUhQX2RQSl9wV1VFeXNHY3hjRE5QeGYzMmdtTndjMjhfTGRNcFF0SFZYa2RSa2dSSG5I?oc=5",
-      "source": "WSJ",
-      "published_at": "2026-07-18T11:05:00+00:00"
-    },
-    {
-      "id": "hl-83226851b777d542",
-      "date": "2026-07-18",
-      "title": "［新連載］逆襲のファーウェイ、トヨタが車載OS採用 EV・半導体で狙う新覇権 - 日経ビジネス電子版",
-      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOUi0ycGZjbzdISHRzd3RhS2dVMU11V3FvaVFkdmM5ME5wNzZJREJJLWhDRDV4LUI3Y1J4dkdLOGdudkU2cUZNZXNoYldFMld3cjFHYTJsWWFiQTNnNU1pNmtCZmFRQjcxSnRadFZ3Y3pReEJ3UHF0eHFPUXVkVXhnallFQkx5Q293QWc?oc=5",
-      "source": "日経",
-      "published_at": "2026-07-18T07:42:01+00:00"
-    },
-    {
-      "id": "hl-29e2d336ece79040",
-      "date": "2026-07-18",
-      "title": "ファーウェイの逆襲 トヨタも車載OSで頼る 半導体はTSMCに挑む - 日経ビジネス電子版",
-      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5XRU1QYXRJTF8wNlk0U0Q1c3R0ZmFHUFpBeV9ZM01FVFRwdDJESTI2bXZabGpTcHBFaFBlbkhpdnpFQlEtUkVrd3VCdmROX01fN3QtS1V4NldtWkZ0VEdNYmVBWGg?oc=5",
-      "source": "日経",
-      "published_at": "2026-07-18T07:00:00+00:00"
-    },
-    {
-      "id": "hl-2ddfa07bbb776358",
-      "date": "2026-07-18",
-      "title": "米テック株、中国AI重荷 ナスダック1.4%安 半導体、弱気相場入り",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9UTUVweTFuQTNkTThTMWxJMDNnamtNT2xoMVZNRk0wUE8wMHAyQXZiVWNfS3JHaldvQk1LVmJZQVZJWHdkRFViLTFFSHNhREhJSzlwWkpXSGNfNGN1LUhEQ3FFMHlQbjgyWVJ2Qg?oc=5",
-      "source": "日経",
-      "published_at": "2026-07-18T05:30:00+00:00"
-    },
-    {
-      "id": "hl-6a74de5be7f5460b",
-      "date": "2026-07-17",
-      "title": "Exclusive | AI Chip Startup Etched Is in Talks for $20 Billion Valuation",
-      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQbVg2TzUxNl9pbW91dTA4UThIMmNkVHYxclhhQ3BmaDRCYk5EZnNqSXhkRGlxNFVoekZTSHJ4YUJRNUJreHZDOHZhYWhuZ2V5VzFYUzJycmJ5QXJDd2tWV25HR01JcHhNZWVnUndxWko0a3ZFOGlCOVY5RHlITGpyT1RoMi1BRmF3aWdJRC1YTmJJSUhHWF9wTVVMaks?oc=5",
-      "source": "WSJ",
-      "published_at": "2026-07-17T23:42:00+00:00"
-    },
-    {
-      "id": "hl-3ef286e9f00c328b",
-      "date": "2026-07-17",
-      "title": "「推論時代のAI半導体」「SUMCO社長に聞く」 注目5本",
-      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOTnByX2xCa0huUmdoX2pJQTkxcXdZTTJoM0JEdUltT3NGV3ZuMjc4Qk5NSTFOV3NrcFM5TFE2TjBtSU1LbUVtdHI3eDI5d0JxdGlxZE01STFKdDVTb3hBM0lGNFNwTHZqSEE3dnVsLXo0UngxampFT2FXcXQ4c2Z5aGt3SlFobzA?oc=5",
-      "source": "日経",
-      "published_at": "2026-07-17T23:00:00+00:00"
-    },
-    {
-      "id": "hl-eec48ef8368e881e",
-      "date": "2026-07-17",
-      "title": "World stocks fall in semiconductor rout; oil rises on Middle East escalation",
-      "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNVTBUX2ZaNk9EY2M2SU5BaEw4VkRFXzF6OE1MeENrcVRwT1hnd2gtbzVDODJ3VUh2ZXdOYi03b2ZobHhhdlMzSE1fOWM0b3lWTlh1Q2VENEFFdHlKWmNuOVltd0R4X254aFM0SmNjZ3RIWVNqREU3OXlHSFNsUGtBUXYyUQ?oc=5",
-      "source": "Reuters",
-      "published_at": "2026-07-17T22:51:35+00:00"
-    },
-    {
-      "id": "hl-67153f4314a450da",
-      "date": "2026-07-17",
-      "title": "Wall St ends lower for the day and week as chip selloff broadens",
-      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPSXBLd3owVnZENU9mMVBIZUg5UjJoT1RtdmJ6UkdJNzJOVmxXdVFtT2FWYzU4c1pQSzkybmNBRHUwMnBxeURFY01ZQ3ptMkg0TFR2dGpQblJSSWRNVThEYlBXZWNVZjQtTWswdUdLR2M4SXhXWGtRNER2UlgyU1ctQkR6Y0ZSWWYzV2tyc2FtMHhfZGNMU0xZdlRGN0hXYXVkRWk0QkdpV0o4dEU?oc=5",
-      "source": "Reuters",
-      "published_at": "2026-07-17T22:31:24+00:00"
-    },
-    {
-      "id": "hl-5553e54763af3449",
-      "date": "2026-07-17",
-      "title": "U.S. Chip Stocks Extend Slide; Netflix Tumbles on Growth Warning",
-      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQem5XYzBnY2M4TUVKT3BERkI4SENMWm5NZ0wxWk4wTW5Dd0x6LUhQZDVHc0hNUXVXVFhuNURMNWxfZkx4elQyZENRTjZUOWFURkp2Ui0zdDZvdjNlVHJfN2R6Q2libTBlVUVaLVkxNm5sWWtMMnoyZ202cUxSSTRmbFRqUWctX2hONGYxWTBwM2hhS25nZzR3TjZVSDJ0dGhhcDZPWk5qb1ZqZw?oc=5",
-      "source": "WSJ",
-      "published_at": "2026-07-17T21:53:00+00:00"
-    },
-    {
-      "id": "hl-6d11da5289e19aeb",
-      "date": "2026-07-17",
-      "title": "China’s Moonshot AI Adds More Fuel to Wall Street’s Chip Selloff",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNMTVud1RGOWRKaW1XUkcwaVBvVkVWQ0plMmdKX3ZOOUIzbjJiRlp2WFZ6bmszbDhRYUVYQ3FMaExjWHJ6QVhJaTVmOE9wMlB2YS0wNktFMjBORnUybWxJTGhTVG5Mend0WHh3Q1Njc0stU0dwcHdHZGtaazd6Q2xCM2thb0czeGE4MEJSVm1Rd1hCaW9hSmw1cg?oc=5",
-      "source": "WSJ",
-      "published_at": "2026-07-17T21:38:00+00:00"
-    },
-    {
-      "id": "hl-8ebf7aa0b1b8f885",
-      "date": "2026-07-17",
-      "title": "Nvidia, Challenged by Apple, Narrowly Retains Wall Street’s Crown",
-      "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQQVFrX1Q2NmJlU2l5ZDREY20zUHhsWkFzd0xoZE5OX1JLQlFlVkVtVDBLZjUtZWZQLXlwUEs0RXZudnNGMFJfT1NMeTNjZUoyajNNRDlnbEpnbG1LN2VGVGIyVTBXcWlqVG9OVXBSaGptNkhEZGo1d3E5b1phWW1yQlpLMWEyT1ZoaVpibmFhSHE?oc=5",
-      "source": "WSJ",
-      "published_at": "2026-07-17T21:08:00+00:00"
-    },
-    {
-      "id": "hl-ac73033fac08d889",
-      "date": "2026-07-17",
-      "title": "Chip stock pullback sparks worries about AI rally strength, leveraged trades",
-      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxONEpraWR3MkhKa1R0dDlkLTJsYXVWU0NsQjIySnpzcTA1dkFyVGNKcGk0RFNjbmF2dnRQZ2ZnR0lGb2thTEdwb3RLRVQyRWdxYmtFV2QxOVVQcHBocEsxVUoyYnJBa0JlZlBZRkRfY0trdGJnRkFOWEljYXowWWNrLXlVQm1sYkJoT2NzMVlMcDV1cWdDSHRjQUpZalFpdHN5cjZyWkxkOXVDMllxR2RiekFTYw?oc=5",
-      "source": "Reuters",
-      "published_at": "2026-07-17T20:55:29+00:00"
-    },
-    {
-      "id": "hl-617405b2f899800a",
-      "date": "2026-07-17",
-      "title": "Apple unseats Nvidia to become world's most valuable company as AI bets shift",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOQ0dxV3BmWDRMVmZLTHI0bWpNR2hCVTVfdWloZGRCdnZxTUZNNnBQMGs1bm9oVGpiZVVtclBiNkIxQjF5NlFJY2JjalR4cTIyVEg1TVAycGZpakdXQUxZWEtZWEdMemFhVXFDX2RPX21HV05QMnpVU0REaFpOYjlUVVROV09RdFFURmdVS1FUeFRRcUtoZHdTd3ZKRjNjWVk?oc=5",
-      "source": "Reuters",
-      "published_at": "2026-07-17T20:32:56+00:00"
-    },
-    {
-      "id": "hl-ae74edb54dbfb999",
-      "date": "2026-07-17",
-      "title": "Chips Stocks Sink Into Bear Market as 105% AI Rally Fizzles",
-      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPaXJLOUktNlE1Tml0WDBNdDlZUEg1NUxZTFRuQnBmMUpJRk1rejh3Xzd0S3VkMVBhX0N2ZmczTGRUMnRXMnZRcFdHLVItNmtYTzJCSjh6NHdzMEtsVHdYbXZUNlBRTjlPblVXVXR0YWVSQy1xMUlaZWRoWjlZS25HelpqRUgxQmNKNnR3TUJRU09QSXk5SGFkblRDNng1S2huVjROVnlxdnlFc3ZtRkdDUw?oc=5",
-      "source": "Bloomberg",
-      "published_at": "2026-07-17T20:26:19+00:00"
-    },
-    {
-      "id": "hl-fd811eef8b6fc426",
-      "date": "2026-07-17",
-      "title": "Nasdaq Drops Again as Chip Slump Deepens",
-      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQN2h1a09IZkxFVzBsZ3N2bGRubnh0ODluV0pBTUlvTzBGQmFmVjIzUzBzdDJ3eHlyUGpiYXozU0c4ZU9OamxMQU5NaDhJN1EtSDFabFBZbTNYUzhkT2V6T3RNQllEWjBoTVJEVFdhbUIwb3c3MjluNk9hUEd0Y3RKYi1ScXZPaHVBSHZtTQ?oc=5",
-      "source": "WSJ",
-      "published_at": "2026-07-17T20:04:00+00:00"
-    },
-    {
-      "id": "hl-af4e6887673cda6b",
-      "date": "2026-07-17",
-      "title": "京都経済躍進、半導体産業がけん引 村田製作所など旺盛なAI需要捉える",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1wV08yMkdqbVNsWExqNjREczlFMVZkN0ZmQUpENmpfYjEtSWlBMWc1V05TUEFNYmJ4ZXJldDNqU2pvRkJzcDlLLW1zR3ltWnNkQVFHNktrRUZqTl82WGlWcWstR3NBYTNVUDJkWQ?oc=5",
-      "source": "日経",
-      "published_at": "2026-07-17T20:00:00+00:00"
-    },
-    {
-      "id": "hl-8701628913d62821",
-      "date": "2026-07-17",
-      "title": "京セラの作島社長「半導体製造装置向け部品需要、30年まで上昇基調」",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1FazZ6ai12M0JPV1NVUDh2cTQzaGdzVHhJb2lZZjZFRm80dElrTkVid3M2T1ZVMmJFYXI1SEhNa1p2Zk85QXZsdm5hQk1ZaW5fSnE2cEozX1RKLVFSM0NqQ3l4VHhLOVVmSnJGYw?oc=5",
-      "source": "日経",
-      "published_at": "2026-07-17T20:00:00+00:00"
-    },
-    {
-      "id": "hl-617a5760c283c9cf",
-      "date": "2026-07-17",
-      "title": "NVIDIAファン氏、日本半導体にエール もつ鍋囲んだ経営者の顔ぶれ",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9EUkZvVDRRSGdVRFlkY1MxSWdZcWlxcmFRRFdWUUVHcFFuRXFuS3ltS2ZMa2M1VXNWNGpzQWI5aVJTYWIxd2xHbWduTnpkSkFTWEtxSm52SzdXUEV0dHNod25GOVh0LUhBZndBbw?oc=5",
-      "source": "日経",
-      "published_at": "2026-07-17T20:00:00+00:00"
-    },
-    {
-      "id": "hl-dfd687a7272b469c",
-      "date": "2026-07-17",
-      "title": "Exclusive | SpaceX in Talks to Provide Computing Power for Pentagon’s AI Push",
-      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxORjd5MTJmSFZmLU5FUmR1dDM1SUdRNVkzeFlZYXhIUXZLZHdMWDA3NFFjWDBfcXIwZnVpNllpbzd3VjE3T1ZBRHI3cHItM2tId0FNcE9mN3BkNTBCT3ZCNFFuNVFNX2lXTS1rcko0VHZwbmk0N2VRODZEMFpVanBkUC1GNFBtOTh4SGNEdTVqMUlmSmc1YkRnVkEtTG9DOE9hUUNB?oc=5",
-      "source": "WSJ",
-      "published_at": "2026-07-17T19:03:00+00:00"
-    },
-    {
-      "id": "hl-d975d2f33db88cfe",
-      "date": "2026-07-17",
-      "title": "Exclusive | Meta Plans to Hire Top Amazon Computing Executive as It Weighs Cloud Push",
-      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPMzJzUVBBblNkM3RGZThHNlZENmtWV1RrR0c5clhpM2hPOTBYNGo5a2IxLWdsUkpHeU1NUno5SFcyUHhyYUcwT01yT0p0ZUozM3RRUGdJRkhDdU91M0hWUmdUZ2RyMWNraFREaXhTTml3V3RBN25hR1NzNDRiZHY2UGhubmJMbS0wdHBTSTdUUVNwMzNkeHZRT202SjVfUkdvWldiNk5TSnI3aFE?oc=5",
-      "source": "WSJ",
-      "published_at": "2026-07-17T17:41:00+00:00"
-    },
-    {
-      "id": "hl-c147fcb07821fe23",
-      "date": "2026-07-17",
-      "title": "ドイツ株17日 続落、半導体インフィニオンに売り続く",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9RVmRpelFOMndlM3lfcDF3QWdkeDQxZFB2VUh5UmhRaXB4dFJYOWlxZ1ZSZWxVWE1vWGRUSEdqSkg0WHRBQVFJaUFTV09HekpwMk5MaVVMM29PY1BlVlBXT05RYjd4OUVFWmlqNw?oc=5",
-      "source": "日経",
-      "published_at": "2026-07-17T17:24:21+00:00"
-    },
-    {
-      "id": "hl-a395e1bf8f2527ce",
-      "date": "2026-07-17",
-      "title": "日経平均6万5000円割れ 1カ月ぶり AI・半導体、下げ主導 キオクシアは半値",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5RYlI0MjZIQjJiWVpXTExFWDl6OE5lUVVJYUlrQU5fNm1tMXNnZVZVTHgtQl9TU3ZXcjF3ZDNsNFlFWHZuQ1YwTFNqaHY1T2RHOUhZRDhtbmpiSFJVdW8yby1GbHdHVFhlZTlzZw?oc=5",
-      "source": "日経",
-      "published_at": "2026-07-17T17:00:00+00:00"
-    },
-    {
-      "id": "hl-64034586fcf92b0c",
-      "date": "2026-07-17",
-      "title": "世界半導体販売額2倍 5月、AI向け需要活発",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1MaWFOWlVFeVZHYVZSeHNta3ZPc3p4SXMtY0J0XzlCSzc3MWpGWl9zZ0xaamFQSmw0QXdLMUNIWUdCX1czcmdUQW1yNlBmMkJBd2RMaDAxUF9QWjd2SnZLWUFrZXI4Z19WeEg4Sg?oc=5",
-      "source": "日経",
-      "published_at": "2026-07-17T17:00:00+00:00"
-    },
-    {
-      "id": "hl-4ee5dd7cd6d2ab45",
-      "date": "2026-07-17",
-      "title": "日本株「売られすぎ」サイン AI・半導体関連が失速",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBvU3FTSWJsLWpnS0JkQ0UxOTNQX20wb0NYTlk0bkFkZmVYNzJkYVgxUnEzVldwa3VzbXhtX3Mwbmx4RHJaclRlMVI4UlhtTm5uZjRxS29IWHVIYXpzSFFCaUdkaXcySk1sdWt4RA?oc=5",
-      "source": "日経",
-      "published_at": "2026-07-17T17:00:00+00:00"
-    },
-    {
-      "id": "hl-0c57e4baf90878c3",
-      "date": "2026-07-17",
-      "title": "ラピダス、AIで半導体を自動設計 米ソフト大手と",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE81Qko2S0ZoY3dNclVTSE9jUWZNbk85TEpFUW9VaUduTmxIWmFvbTUybHZuVzZZbTkzVnZIMDRZZlZ5VWpVWUwtaXFBQ0xzYXpYZGxWSlZRVEJKWHdaSW5DR1J1ODllV2w3SDUxZw?oc=5",
-      "source": "日経",
-      "published_at": "2026-07-17T17:00:00+00:00"
-    },
-    {
-      "id": "hl-7c5bfb50578e9fa6",
-      "date": "2026-07-17",
-      "title": "Bloomberg Intelligence: Chip Stocks Sink Into Bear Market Territory as AI Rally Fizzles",
-      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPMEtfSFo2REVYbUgtR3VBZ05GclNjemEtZ2tQWl9XSWRVY2EzMk5USnJRTGhNejV4Z25NTDBhQ3Z5d2QzOWVLM0NvUVBreDR4V0FDQmUxOTh5NTVRckhxQkRwbW9ZcUJyMFNIMU85M2JObzBSb2NLTnVic01FREhqZHlMRDF0aGFkMEF5b283T1RCYWJST2xid1Y5NHR3eVhOa0xqZVZLOGFSTVU?oc=5",
-      "source": "Bloomberg",
-      "published_at": "2026-07-17T16:47:55+00:00"
-    },
-    {
-      "id": "hl-a0fbc5057e97482c",
-      "date": "2026-07-17",
-      "title": "Bloomberg Intelligence Podcast - Bloomberg",
-      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1OejJ4dHJqMDkyQ2d3UjA2MEcyQWI3ampubG9SRnh6Tnh2VUtDaFlIajgtV2F2TXg0VWJKZnl3MTZGTG1JT2N1aGtzR283dm5qbUFONDJTQzVTODEwbzA3T282RVlmM2ZPZDBINWliazRNQQ?oc=5",
-      "source": "Bloomberg",
-      "published_at": "2026-07-17T16:46:06+00:00"
-    },
-    {
-      "id": "hl-ae5d4c3eba342c90",
-      "date": "2026-07-17",
-      "title": "欧州国債概況17日 独10年債利回り、低下 半導体株安で心理悪化",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE92NFZodWkyYlpEcTlsemRKUDFtZklZLUF0eEVEYmNJR05hVzR2VkU1eDV6YlVrbkhjUFNJUVoxUml2d19fNkwwUnh5bXBad3oxOWJubkpncDd4b3hvWkpZWktsSXpIUVJIUlFIaQ?oc=5",
-      "source": "日経",
-      "published_at": "2026-07-17T16:40:46+00:00"
-    },
-    {
-      "id": "hl-51a17fcc81887f72",
-      "date": "2026-07-17",
-      "title": "Tesla and Intel among stocks with earnings momentum reporting next week. Here are the others",
-      "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxOMU5HcGpmVzRTcFpyNE02NkZSQWdZeUc5cm8zSUwtSlpDS2hFdjBZTXBzVkVWMVhjRzlmRjAwRklSQlhGWUNiQmtqUFJtNjI4ZWpMRHZPd3ZRNXFEVzR0RktIb0paNk5raXBVclBFWWozaldKNWhxcHptdUYxcGhQejBfaUtXVGZHR3QxLTNINEl1eU1XWEoxTlEzb3UzbXhDM3lrS0x0ODM5MW5kdDFiNmdBbV9LQlRuUVREUlprRi1QdG51cGRLMnBpSTlwN3hWaHlzcXJsLUlyZ1B4UXZSTi13?oc=5",
-      "source": "CNBC",
-      "published_at": "2026-07-17T16:23:24+00:00"
-    },
-    {
-      "id": "hl-620f7fa726d3168e",
-      "date": "2026-07-17",
-      "title": "ASML's planned Low-NA EUV machine price hikes reportedly frustrate TSMC — lithography machine maker comes knocking to make bank on TSMC's profitable fabs, potentially costing the Taiwanese chipmaker billions",
-      "url": "https://www.tomshardware.com/tech-industry/semiconductors/asmls-planned-low-na-euv-machine-price-hikes-reportedly-frustrate-tsmc-lithography-machine-maker-comes-knocking-to-make-bank-on-tsmcs-profitable-fabs-potentially-costing-the-taiwanese-chipmaker-billions",
-      "source": "Tom's Hardware",
-      "published_at": "2026-07-17T15:57:16+00:00"
-    },
-    {
-      "id": "hl-b0543f92d5e70327",
-      "date": "2026-07-17",
-      "title": "Why we remain bullish on this chip stock despite a 30% pullback this month",
-      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPNTRMUVQ5Y2QzVWVQRC1lOHVtZXNyQzB6YmtiaW5wZ01iRVRUdHd0WVdkWFdrMHl4NDVXV2FkWHUxVXAxM3dpVWE2SjVkSFAtTk4yMU5paVpSaUVjU0d6SVZKLXZDcloxc3oxY2wzWm9rM2VEN3hrTEV1cGJrYmQzNnFUT1pJREh0UlI0Y05qWVZwYldrSmRLZVY2eTgwakwwenJtRHd2YUI0R21DT00ydHk2WQ?oc=5",
-      "source": "CNBC",
-      "published_at": "2026-07-17T15:55:17+00:00"
-    },
-    {
-      "id": "hl-cf1c4bfed060067d",
-      "date": "2026-07-17",
-      "title": "TSMC confirms significant yield and performance improvements in A14 update — strong interest from AI/HPC and smartphone customers",
-      "url": "https://www.tomshardware.com/tech-industry/semiconductors/tsmc-confirms-significant-yield-and-performance-improvements-in-a14-update-strong-interest-from-ai-hpc-and-smartphone-customers",
-      "source": "Tom's Hardware",
-      "published_at": "2026-07-17T15:30:26+00:00"
-    },
-    {
-      "id": "hl-b5dad09c68b595a0",
-      "date": "2026-07-17",
-      "title": "Stock Movers: Netflix, Micron, Sweetgreen",
-      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPUGMxWWxGZm9rYjlpWGFyX0M4Y3drZEFKTnlpSTFEZWFJYlVHRk9GemtXeFlKRGh1aHB3RE9FNXg1NzNuS2czRHpuQkZ3SHdILVJvYnFOSHllMU85RG14OGt3VkpHQnhDVkJqNTJib1hLTVR1d2xvYTVLb0dxZEROTzJoMnEzSHpualoxMmt6VjRQeDlicDZKdnFB?oc=5",
-      "source": "Bloomberg",
-      "published_at": "2026-07-17T15:24:55+00:00"
-    },
-    {
-      "id": "hl-fdc50c72a70af5c9",
-      "date": "2026-07-17",
-      "title": "【ダイヘン】半導体先進後工程向けパネル搬送ロボット「SPR-AD020BPN」が第56回 機械工業デザイン賞 IDEAで「日本ロボット工業会賞」を受賞",
-      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE5oYXlUWDJ4Y2VGZmVncHVzdE00QnV0VUZIdEplRmlGeERaVmJmalNVZUE0c291Mm9mdUoxQ2I1dmlEY2xFQTJ2ZkRyUkJTN3pfaVdITmkzazY?oc=5",
-      "source": "日刊工業",
-      "published_at": "2026-07-17T14:06:29+00:00"
-    },
-    {
-      "id": "hl-d2efd5490acaea8d",
-      "date": "2026-07-17",
-      "title": "米国株、ダウ続落で始まる AI・半導体関連に売り ネットフリックス急落",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE45QXU0ZG1hQTMyX3lEc3BfZEJxSlEzdGZQNGFnWGJ4d0lRUHd1ZEx5SEdONXI0RGxJSFd3VUNBMW9GTUQtbnhlWlRCUDVkV19YTjZWTmdyLS1BT01VdUhsRDVXcXlIZnljaVZVTw?oc=5",
-      "source": "日経",
-      "published_at": "2026-07-17T14:02:09+00:00"
-    },
-    {
-      "id": "hl-7329f31b972c60a4",
-      "date": "2026-07-17",
-      "title": "中国AIショックで米ナスダック総合1.4%安 半導体株が弱気相場入り",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE52bkhjSURxWW9vZjhoYkRJMlo5eVowNGVhQVV0QmdMQ185MzdzeVZFRW5oWEp2cm90WEF4aWJFQnZYcjI0TGtycUgxUlRNMGNEMEo2dW94QWp0dzVnMjZwRGNNNWphR1FWaU04YQ?oc=5",
-      "source": "日経",
-      "published_at": "2026-07-17T13:52:07+00:00"
-    },
-    {
-      "id": "hl-5153f14acb673978",
-      "date": "2026-07-17",
-      "title": "The semiconductor trade tumbled this week. Why UBS and Barclays are still bullish",
-      "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPSUg1WDg2SktUcjh1ak5QenIyc2lGYk9BQnNVNEdOcXlxZWNmbG1BU0tzdHd0NUdXN2pJSmVUNWpVX01CYWc2bzVHV0pqWnBwZUhJY29ILS1wLXVNVEM5RjFtdHJsY3k1Rzk2WHJhN1hyZ18xdGZldHRfN3I1ZjBmWG55TEZpQ2NYTGtLT3BqOFl6VlhEY0VlX3RkcmJ1VTk5REs1bjN1Tm1SRkhCbnFVeTFkejRkbUpV?oc=5",
-      "source": "CNBC",
-      "published_at": "2026-07-17T13:02:00+00:00"
-    },
-    {
-      "id": "hl-fa0808f764955721",
-      "date": "2026-07-17",
-      "title": "US equity funds suffer outflows as chip stocks slide",
-      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPbFQyLVZDdkI4c2o2TGhEX1JlMW85YTdCMmZTQlY2Wkg5QzFreFNCMFRfeUlyQUtmemF5c1doUnI4dnlnbVRMWlVmZmxDN1ZubGhiVld2eEVjT0gtZS1EM3lCQmduMDVkamJ5ZHhjY3VHWnlyc29Na0hGazRrR2V2U0VhSF9KVTRjSmdYSzI3Z1ZpOEI5V3dVdl9R?oc=5",
-      "source": "Reuters",
-      "published_at": "2026-07-17T12:59:43+00:00"
-    },
-    {
-      "id": "hl-3d3ac89be8d00824",
-      "date": "2026-07-17",
-      "title": "Chip stock sell-off, Netflix earnings, Trump's approval rating and more in Morning Squawk",
-      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQM0o4Tkl6TnJvWmQ1ejlQbWxQSUI1X0U5ejlrc242RFpDSWx0RUhfOVFLd0dZYXlTMFlYVG5IY2lrY3hJOE5LNEtPcnhTR1AzVEdBUC1vV3ZGOXRMMjd1UzE4N29EUTcwUU5oUXJublJNUkdVRURGc0JOcFU0TDlEdk81eUMwakwzd2Qw0gGQAUFVX3lxTE5oaUJXeUdCS0xhWllzSGdpRXVMRi1haHZobl9jbXZRWVRyVmlCSUlBU0hwNU41NHgtNU5tbkZlTXhZV1BMVmZsN1ZZMVVsVlZGTFI0QklyMTVOVlg0clVnUFBlemV0M1VuUWZCQXA1OTN4RTY0aWJBQjJGbDFVN0FyZGJlLVFpdXIxcDV5eUhyMw?oc=5",
-      "source": "CNBC",
-      "published_at": "2026-07-17T12:35:44+00:00"
-    },
-    {
-      "id": "hl-b9520e551063fbb9",
-      "date": "2026-07-17",
-      "title": "Morning Bid: Chips and ships",
-      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOSjJpZGJiNTlfUnJLV0F1RE4wRldGY3FCSElpZ3hfVmhJdnlvbzVXVlpTdjI1NExQallib0hRUWoydXF0YzR3LU96LUgwS3c4b18zS1RPVDNmaTltUGZfZ3luNUJXdm9DbjE5Y2x4WWlDSElObFk4WWZYVFJJLUxEaENuX3l5dTF6eWVRNm1xeE5UNmJWd2tN?oc=5",
-      "source": "Reuters",
-      "published_at": "2026-07-17T11:37:39+00:00"
-    },
-    {
-      "id": "hl-11250d73597e104c",
-      "date": "2026-07-17",
-      "title": "Financial week in five charts: Energy shock, chip winners and Fed relief",
-      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPTlp1RWthandna01ydVh3enlUbUp5bGtFVEtnNHpQdGNmeHQ4M1djN3hZU0pLb1VwRE5BSkRHU2R0UTRwekRuUEh1X1pIS2xuaHVqbFJLUEJ3MERfV24zaHlDelItTUdjZlhTc1kwaFhBUEVyNm5YaUZkOGtRN0psa1RWcnlyX05zY2RWVkJQbENTWDNRaXVjQ1Jac0hobXFvdXdZX0xub2ExV0FCQXcySHRiWUpMaDRadWt1S2Q5OU5Za2pLUHNkZkVFVUU?oc=5",
-      "source": "Reuters",
-      "published_at": "2026-07-17T11:23:12+00:00"
-    },
-    {
-      "id": "hl-8526423c46929293",
-      "date": "2026-07-17",
-      "title": "U.S.-China AI feud sees ASML walk tightrope between sales and geopolitics",
-      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxONF9ENThRU1VCUm5CWklpN3Z5cVlEOU0yU0UxTlNsM2puWFhYZVRWdzBXTTQ5MUdnSnBvMU94OVQ3MTZiRHVJTXlvZEhmVmMyeXAtbGZ2ZmQ5OTZLYmFzMTZUZ0lINWIxV1djQmszWjIwUkhsdEZpSXFJT3lQR1M5ZUlKdDZ1X3JtSWptMjM3VdIBlAFBVV95cUxPQmpQNlN5S0V2X0RrT2ktOEJJTmR0NnVtY01yU3NPc0ZoTno2a1oxdzM0cXJLRHdpMlN6bllDUVB3SnBlWl9VejM0b0kxRGI4bFZLVXJDOTA0azBvQUNXSWFfcjhsaF9DelJFM0k2S2RsYkV0aWUwbG5fdUdpSEhIeFZiSkE5NFBvR2M1emhyMVQxX3p4?oc=5",
-      "source": "CNBC",
-      "published_at": "2026-07-17T11:08:32+00:00"
-    },
-    {
-      "id": "hl-03ac411f45a68378",
-      "date": "2026-07-17",
-      "title": "日経平均6万5000円割れ、半導体株が急落「信用の投げ売り膨らむ」",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9ldmlTQVowNkdhX3pkdW56OWtfTklMZ01PY25vRGUwdU5NUnlsT1YyaFQ4Q0doU1NoNnNJc2tidUdYYjhud3VCTVplV0RkQWxxckVTZWdnYjhVUWNFc0I2R3M1cVZ5QzdIWnFUTQ?oc=5",
-      "source": "日経",
-      "published_at": "2026-07-17T10:34:04+00:00"
-    },
-    {
-      "id": "hl-1f8896cfa4e32811",
-      "date": "2026-07-17",
-      "title": "ASML looks to increase prices of its Low-NA EUV tools beyond existing productivity-based model — company wants to capture the value of all the advantages its tools offer, not just wafer throughput improvements",
-      "url": "https://www.tomshardware.com/tech-industry/semiconductors/asml-looks-to-increase-prices-of-its-low-na-euv-tools-beyond-existing-productivity-based-model-company-wants-to-capture-the-value-of-all-the-advantages-its-tools-offer-not-just-wafer-throughput-improvements",
-      "source": "Tom's Hardware",
-      "published_at": "2026-07-17T10:30:00+00:00"
-    },
-    {
-      "id": "hl-c495dba1d7c8b908",
-      "date": "2026-07-17",
-      "title": "Wall St Week Ahead Alphabet, Intel results in focus for AI trade as US earnings rev up",
-      "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNUmJhQmIyVFFQQ2FDdzIwZThieC00dE9yZEZNMVRSb20tRFAxVlZLYURkU1VYMC1ESlpFZ1poUnFoU0hJbno2VEd1VTB4Nl96YThVdTZUcDJiSmhWbFJhc0dzT0xnZE10aW9jZHRhdmRlWEE4cXF1MlNsdjNVTzZEZmtxLUFtLWN3YUJrbVB5eDd0cVkwaGJrTnVuLUwyeTBjUERETjNfMUZ3cWlzTklCeDJOTDd3SnVYaGNuUQ?oc=5",
-      "source": "Reuters",
-      "published_at": "2026-07-17T10:04:00+00:00"
-    },
-    {
-      "id": "hl-d0edda3b12bf91ac",
-      "date": "2026-07-17",
-      "title": "Stock Movers: ASML, Burberry, Monte Paschi",
-      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQTndQbWlMQXZZakZIZlBYZXoyaGVNbkpCTUVmajRBanozZnd4WVFBRGRrUHZvR3ZYZGxqZUxtMUJVVkxMR1VWRXhLdkxfcmp2QnFYb1R6a1RHRVU4Qy05V3dESXFfaGpDaWVlZHdtYWRqUjZZTjc5QlloN2o1RGJtcW93MjBpeGJ2dnVUTThNWG1SSmNKbDIxb19pZw?oc=5",
-      "source": "Bloomberg",
-      "published_at": "2026-07-17T09:10:17+00:00"
-    },
-    {
-      "id": "hl-9902f9baf78a40e3",
-      "date": "2026-07-17",
-      "title": "エージェントAIで半導体設計 ラピダス、米ケイデンスと協業",
-      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5QbUJyUk5NbzBrNUJpZzRSQzVla3hybGtDLUdOS1hrQVE5UTBGN1lYTVNBLWo0VHd3eWhveUU2ZVg2OWJ1UVZxWHRnNmFKWG10SkZSUzBHeWFpM3c?oc=5",
-      "source": "日刊工業",
-      "published_at": "2026-07-17T09:00:00+00:00"
-    },
-    {
-      "id": "hl-be353928fb23a16e",
-      "date": "2026-07-17",
-      "title": "記憶に残る急落 半導体株、受難の2日間",
-      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFAzUlJiU0hkWU93TV9sdVJIRW5aUDNuLWdJUFdzRFVzVHhuQ0VQaEc0cXVNX2xEQndqc01WWUNDcXVsQU1oLVBnci1NNElQSzh1YkZZaEgxb0FJa3B3TDdoamEzdGY3TmVHMmw0cE50UXBvcnJSS3BwVVRROUpYdw?oc=5",
-      "source": "日経",
-      "published_at": "2026-07-17T08:20:09+00:00"
     }
   ]
 }
