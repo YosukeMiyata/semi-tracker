@@ -1,6 +1,6 @@
 {
   "_schema": "id: 安定ID / date: YYYY-MM-DD / title: 見出し / url: 原文リンク / source: 媒体名 / published_at: ISO8601(任意)",
-  "fetched_at": "2026-10-14T14:55:24.286767+00:00",
+  "fetched_at": "2026-10-15T14:41:46.036557+00:00",
   "sources": [
     "日経",
     "Bloomberg",
@@ -17,596 +17,596 @@
     "Tom's Hardware"
   ],
   "fetch_notes": [
-    "日経: 70件",
-    "Bloomberg: 25件",
-    "Reuters: 20件",
-    "CNBC: 26件",
-    "WSJ: 8件",
-    "日刊工業: 4件",
-    "東洋経済: 18件",
-    "日経xTECH: 2件",
+    "日経: 71件",
+    "Bloomberg: 36件",
+    "Reuters: 23件",
+    "CNBC: 27件",
+    "WSJ: 15件",
+    "日刊工業: 6件",
+    "東洋経済: 17件",
+    "日経xTECH: 3件",
     "ITmedia: 15件",
     "EE Times Japan: 20件",
-    "DigiTimes: 40件",
+    "DigiTimes: 48件",
     "SemiEngineering: 10件",
     "Tom's Hardware: 50件"
   ],
   "items": [
     {
-      "id": "hl-4e668d33117931a7",
-      "date": "2026-10-14",
-      "title": "Japan to invest up to $21 billion in two US chip factories to be run by GlobalFoundries",
-      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPZjM3SC1iaHFNLTdkS2N5U3JVS3lMR0p4Q1ZTclVOa2RDbFpzR2E3R2I5UlFlYWlsWHJfeGlKSEpockRseEpCTGpsNFAzanBPUkVVa3FiUFNVeVZ3S0daZ2JRWGc3Zy04RmFSbFRHeU5kRy1HaGJ2ZmViUHlfYk5CN0xYMEhXb250eE41clpvVHF1RDhIRWF4Z1p0NS1rQmVtbjFNc2FjMzVTaTlvM24weWtzS1V4M1RVdHpXWVNCU2REdDVkd2FwZWQ1V1kxZUZU?oc=5",
-      "source": "Reuters",
-      "published_at": "2026-10-14T13:35:05+00:00"
+      "id": "hl-7f4df1f4f37f6df8",
+      "date": "2026-10-15",
+      "title": "Why there’s an ‘extremely fierce’ battle for TSMC's limited chip manufacturing capacity",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOM1JWVlV1cHBxMXFDSVdYV3Z1bmpESng4cHpGV0duTG1MVWtRTC1SSHZTRUpHcFNrM3pFdmxzRGFmZWZvQ1lJWXRwaVBST2hJbkRjVHM3Vmc5RFNoekRiUF9QMXNpclpqdjBhbHAyWV9OaVpJZHFtVnpUSGN6Mm5oU0t2Z2VTU0VmRVBFWWZ6UTZ4Q3hkU1BoekIzRElLakNQcVhjdmpn?oc=5",
+      "source": "CNBC",
+      "published_at": "2026-10-15T14:18:50+00:00"
     },
     {
-      "id": "hl-2cdb6ed7bd11b972",
-      "date": "2026-10-14",
-      "title": "Analyzing Intel's EMIB and Foveros advanced packaging roadmaps",
-      "url": "https://www.tomshardware.com/tech-industry/semiconductors/analyzing-intels-emib-and-foveros-advanced-packaging-roadmaps-how-intel-plans-to-scale-chips-in-every-direction",
+      "id": "hl-4e138be23231e101",
+      "date": "2026-10-15",
+      "title": "US chip stocks set to wipe out $2 trillion after latest selloff",
+      "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNVDZEYU5ySFdLYUlmY29XeGxBbzZ1Nk92dHprTE44dzd5V19Yd09NdmUxUFpXMHhxdzYwenJiUjJQRFhPOXhBcHptTW9rY2J2Y01kM1loR3VQMVBXRG9mR2hQbkdWVnNGQVpCN01KelozT1h4aGx0RjRYeUZHRVRCYnlLWlpXWmpwbFRmRG4tSFR1RkNpRHNTb0lueU1VdWlpSjVFVGljZw?oc=5",
+      "source": "Reuters",
+      "published_at": "2026-10-15T13:55:18+00:00"
+    },
+    {
+      "id": "hl-a6a094017aa77dab",
+      "date": "2026-10-15",
+      "title": "EU negotiates sanction swap with China to rescue critical ASML supplier",
+      "url": "https://www.tomshardware.com/tech-industry/semiconductors/eu-negotiates-sanction-swap-with-china-to-rescue-critical-asml-supplier-german-coatings-firm-faces-shutdown-without-chinese-rare-earths",
       "source": "Tom's Hardware",
-      "published_at": "2026-10-14T12:50:00+00:00"
+      "published_at": "2026-10-15T13:30:00+00:00"
     },
     {
-      "id": "hl-6b4e97722fe5ddb6",
-      "date": "2026-10-14",
-      "title": "Elon Musk's Terafab will reportedly receive its first EUV tool from ASML in mid-2027",
-      "url": "https://www.tomshardware.com/tech-industry/semiconductors/elon-musks-terafab-will-reportedly-receive-its-first-euv-tool-from-asml-in-mid-2027-cutting-edge-scanner-could-sit-idle-for-some-time-as-experimental-facility-is-completed",
+      "id": "hl-3834adcdb943fe97",
+      "date": "2026-10-15",
+      "title": "An AI-for-Climate Startup Won Nvidia’s Backing—After Putting the Climate Part on Ice",
+      "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNak9mU2RoMUtpX2tSZlY3YTJwMms2UDZMVnNqTGJSTkdTTTBtdm5Cc3pHUUg4V2p2Um1SWmhTWGF1TUhIcmZZYWU3R2ZxYjVYRWRURDdHNXRUN0stSEU1STFrZ2t1Nko4RjFKRGF5NmRuX0RsMEhRMEhCNUFBQ0NoWmZ2LVpmVzR6MFZRTGlFVFRoLXhYQWZ6MjREMGRwb01EZWZBTjB5dTdTTXJjemVNVTE1MVFLTERoSmV6VG9NMmdxQ09aNFpVZm5XUQ?oc=5",
+      "source": "WSJ",
+      "published_at": "2026-10-15T13:25:00+00:00"
+    },
+    {
+      "id": "hl-8955feab78ec02c8",
+      "date": "2026-10-15",
+      "title": "Stock Movers: CRWV, TSMC, RKLB",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOT09vUG9UN0dJZXd0aGEzRk9PYWYwdUtzTWx2SGpGUEFUUFM2TWNQcTg2eUViZWhrYXg0RkcxWVBMSGxvYlpfbGlCLXNiZ2lfMkMtVUpPcTByTFJFazZacUY3YTNQbnJHbERuOXFIVXQ2MDZhNGFxTkxEbUQza2laZ1lhcTFrMUs3cnkw?oc=5",
+      "source": "Bloomberg",
+      "published_at": "2026-10-15T13:13:03+00:00"
+    },
+    {
+      "id": "hl-265a9991707a2ccc",
+      "date": "2026-10-15",
+      "title": "A $1 Trillion Chip Rout Draws Billions Into Leveraged ETF Bets",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQSElBdWpJbkdBU3VDWmVwS3RlWVUydlF5a01qdVM0MmpuYkRCUTQwZTRGUE5Dc2s4UFNGSkVFbGJ1RmtVS200NjRKUEFvZEVBdUV0M0R4NFVYQUEwaDFlUGluRXBBVTVOT2p1V3NLbGthN3NrTzBwRHlNV2lLWWNhNEVyR2lrakVac3I0cjZnbDlpYnctd01EVHppTmxXckhmdU9HQ3hVelZ2SE1QaHVYOGFn?oc=5",
+      "source": "Bloomberg",
+      "published_at": "2026-10-15T13:00:49+00:00"
+    },
+    {
+      "id": "hl-a6f0f0eb46da5a6b",
+      "date": "2026-10-15",
+      "title": "Here are Thursday's biggest analyst calls: Nvidia, CoreWeave, Walmart, Crocs, CarMax, Regeneron & more",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOSy1oWV9sbGQ3MEZKbnNwMkZsTDVtZHpQcElldW9vRzU3YUptLWVPQ0ZrWUhKb29fdlVOVDM0QXlZUWVJRXBkSFZwVFIxcDJXX3hZVjBMSm1BZy1GcEFMU2lObGhadC1YSS1yOTJ3TGhXbmYxWTZ0dWZkMFFENDg1SmZjTFlJdGFwR1gxa0Y1Q20xTlJE?oc=5",
+      "source": "CNBC",
+      "published_at": "2026-10-15T12:17:33+00:00"
+    },
+    {
+      "id": "hl-8934d118e100868a",
+      "date": "2026-10-15",
+      "title": "Memory stocks are getting hammered. China and a 2029 oversupply are the big worries",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOUkVqRjgwNHV5dlVabXVfMTAxS3dWaTNvY2VteVo0MnlENXFheFZQY3BUWGllajdxcC1oZGxqblVvQkVoXzg3VW8zZnlWZTRTRkRNRVl4Z1RWcEd5ejcxNUNGOUJtRHVkZ3NURmJJRDRCMHdPY3BtY3FMMmd2ckVJdWQ2X3Z0LUXSAYwBQVVfeXFMTjB4SDdXN2pCUWk4YkN5cm96TFdmdDJNekg2eXhUWHlSb3lUMGYyT0p6ZWxwc2VmNldCV2VuOFBnWGpOWklyendVSTJMZm14RVRuVlZFX3JIMVFNa2prWmZ1dDloOU1DMUpLQ2ZCaE04aGxtcG9pVlJuWnBQRkpMNWZKSU1Ibm9QcE4xT1Y?oc=5",
+      "source": "CNBC",
+      "published_at": "2026-10-15T12:15:09+00:00"
+    },
+    {
+      "id": "hl-e2b702ba31d45a50",
+      "date": "2026-10-15",
+      "title": "ASML reports record $13 billion quarter, vows to expand capacity as demand for lithography equipment soars",
+      "url": "https://www.tomshardware.com/tech-industry/semiconductors/asml-reports-record-usd13-billion-quarter-vows-to-expand-capacity-as-demand-for-lithography-equipment-soars-customers-eager-to-secure-orders-in-2030-as-demand-is-expected-to-outstrip-2027-and-2028-supply",
       "source": "Tom's Hardware",
-      "published_at": "2026-10-14T12:30:00+00:00"
+      "published_at": "2026-10-15T12:00:00+00:00"
     },
     {
-      "id": "hl-1939d0de9f22bb31",
-      "date": "2026-10-14",
-      "title": "Comedian Russell Brand was a ruthless sexual predator, UK prosecutors say",
-      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOZ194VkRSLUI1ZGNJcnFBQjVTc0ZsR2poX19rODV5QU5BR21rWjZlS1U4RjBEV1lZUTRjTjlvdTh6QzFfb1laRVd1ZDM5Q3JJdDhLSFJwWkdFX1hJUXRNbnZCdHh2dVkzMWFVRDdBeDU1N0N2MV9QeHpCM19TVDh3RHdwNG5JV2ZBTktJam9SdHNrcF9iTll2dGJzbms5YWF1YkZhVjVPQUhtUQ?oc=5",
-      "source": "Reuters",
-      "published_at": "2026-10-14T12:12:54+00:00"
+      "id": "hl-cd39fb300ae3a9e2",
+      "date": "2026-10-15",
+      "title": "ASML struggling to keep up with demand for chipmaking equipment as AI spending continues to boom",
+      "url": "https://www.tomshardware.com/tech-industry/semiconductors/asml-struggling-to-keep-up-with-demand-for-chipmaking-equipment-as-ai-spending-continues-to-boom-chipmakers-are-already-looking-to-place-orders-for-2029-and-2030-output-ceo-says-demand-could-surpass-capacity-despite-massive-expansion-plans",
+      "source": "Tom's Hardware",
+      "published_at": "2026-10-15T11:30:00+00:00"
     },
     {
-      "id": "hl-d93ebd07758cfc9e",
-      "date": "2026-10-14",
-      "title": "Here are Wednesday's biggest analyst calls: SpaceX, Nvidia, Apple, Meta, Brinker, Kontoor Brands & more",
-      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQT2ZXLUFXdURqaHZfQ2pOTVVZLUIzMHh3SF9WeVl5SnBJZUUyQm93RmszTDh3T1kzdWxKZXI4NTl5dzdxRFhWVDVENk1NYUppdDJmb3lnT1VRck9tOHRZUGpNUWR3NE1nYnI4UC1fdXRlUlU0X05Oa3c2Nk1QQU0yWUIzODZLaVVJRWpKRjFrRDRpTmxRY2c?oc=5",
-      "source": "CNBC",
-      "published_at": "2026-10-14T12:09:41+00:00"
+      "id": "hl-5e25d42de9edacea",
+      "date": "2026-10-15",
+      "title": "TSMC confirms it is considering Terafab chipmaking expansion with Elon Musk",
+      "url": "https://www.tomshardware.com/tech-industry/semiconductors/tsmc-confirms-it-is-considering-terafab-chipmaking-expansion-with-elon-musk-ceo-insists-tsmc-would-have-to-run-texas-based-project",
+      "source": "Tom's Hardware",
+      "published_at": "2026-10-15T11:15:39+00:00"
     },
     {
-      "id": "hl-4bb2e1e53e48caae",
-      "date": "2026-10-14",
-      "title": "ASML Rises as Chip-Gear Maker Can’t Keep Up With AI Demand",
-      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNcm1heDMtc0U2WVhvVjlZaGNmT1RWS1h1M25veGtJRkNBSE9Id1hvYlhsYkpMX1NKUHdrNU5EWkxkVDMzWjVkdnpoWHBDNFF5MGJLRk1VbW1NdnlhWUh3OFFYc25rSkFDekw0STlDNEtNN2diRVZ4M2N0WVdoc0k5cVpabm5Hc2ZYcDN3cXBGb3BhcHMtcHNvV1lSQ3JDSm1FaXZONXdjSTVOeEZOUHd3SA?oc=5",
+      "id": "hl-77ebbf167b5b0df8",
+      "date": "2026-10-15",
+      "title": "Stock Movers: BNY, TSMC, RKLB",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNSU5kanYwNDQ1b0pVbmZpYXNoNExLOHhrZTVDU1JxOXoxNXRBcnNYT1RWZ1JLZm9yWi1kSkx3T2RCbmR5Nm40Z2ZXdjhGZEozLTlqSTRmbGN0bmRiM09pODdJeTV0b1VMYndCOUhlNDYxemNDX29kaldTN2dDaXNJemw0Q0VhOEVPZlE?oc=5",
       "source": "Bloomberg",
-      "published_at": "2026-10-14T11:48:29+00:00"
+      "published_at": "2026-10-15T11:04:02+00:00"
     },
     {
-      "id": "hl-ea13a51c621a9091",
-      "date": "2026-10-14",
-      "title": "Rosenblatt's Kevin Cassidy on CXMT's new memory design: Don't think it will swing supply-demand equation",
-      "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxQcFU2dWJVN3ZhU1V1Q3M0MnQ1bHpBbFQ3dFIzTnAydUhBRGpyZk1maWQybmJIc0RxTTRGdW9BWEJwYlFQT0RnMVBLTWhIUG53Tlp6bTg5N2laQ2VGUy03MGZGMnBBazR3MUlfZ1dzaVkxYzVsdmpONFU5MXZlMEhVQUUxUXRxbWlSRnluU2hSeUZUajQ3SUtFNlJvOF9jYXZIOVkyWUxDcnVTQjlLX1ZERGpGbFJQeXJMY3RESWtpZHI1REREaWs5dC00RnFzLVFDM2xocjZ6bjdMZ0U?oc=5",
-      "source": "CNBC",
-      "published_at": "2026-10-14T11:38:02+00:00"
+      "id": "hl-b950f9b770a3bcae",
+      "date": "2026-10-15",
+      "title": "China's ByteDance sets up AI safety team, launches global hiring drive",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNUUh6d0NyZGxfYjd4bDhwRWdkT0wxOG4xUUlrQkZFZ0JMTlNJMzVUVWRHNDhyYWR2Vzh0RGRsUk9YdDhHeE92NlBPTWlnU1htMHotSVhfRGoydXVjM21UcEV6Z3dsSGtSSGhOcExMaFBud3ZVcGJDU1NNUXFUcFBCdDNwZUFfWVY4QnJjNEhaWHQ2Z01PUUt4enJJVWRxWjA5aTNVUncwSW1XcFB5c2VzYXBmR3RNZVZxNHpzd1c1bHhUSzZIa1E?oc=5",
+      "source": "Reuters",
+      "published_at": "2026-10-15T10:52:58+00:00"
     },
     {
-      "id": "hl-00ab0c02f6962473",
-      "date": "2026-10-14",
-      "title": "Exclusive | Mamdani’s Pied-à-Terre Tax Hits Wealthy Out-of-Towners With a Double Whammy",
-      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1yWUFXWFctb3QwWDJCUWM4dmN0LXNEVnBmUVE5TFE4UGQ0bFRUZHpDUER2WFZ2N29oTV9lSWRsdjlKRnFwbGtNdXdxU2J0dWFkNTNHVFFqYWJOa3hUSFdXOVQ1eG9lbEtVeHBlSWN1TVhBQkc3Rl9IYg?oc=5",
-      "source": "WSJ",
-      "published_at": "2026-10-14T10:23:31+00:00"
+      "id": "hl-5658ea7ec6e66c81",
+      "date": "2026-10-15",
+      "title": "Russian chipmakers demo homegrown RISC-V and Arm chips with retro games",
+      "url": "https://www.tomshardware.com/tech-industry/semiconductors/russian-semiconductor-players-shows-off-bespoke-cpu-and-soc-designs-arm-and-elbrus-architectures-on-display",
+      "source": "Tom's Hardware",
+      "published_at": "2026-10-15T10:30:00+00:00"
     },
     {
-      "id": "hl-24440f4ec810d8e9",
-      "date": "2026-10-14",
-      "title": "対米投融資で半導体工場を建設、2兆円規模 日米両政府が近く発表",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5JVUZGWFZFallnM1hRUzBMSlhsb2NEaHliRTZZZGhsTEpHWG40NkJpVm5lVERlTml5WUJZUzBlR1dfdEh5MnU5Y2piRUcyZlFwNWVSWEJKSGJLZy1PR2RmMThPVzhGdE1nU1gzTQ?oc=5",
+      "id": "hl-3e52fd2c91fd24c3",
+      "date": "2026-10-15",
+      "title": "田中精密工業、名大発新興と資本業務提携 半導体向け冷却部品開発",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9WR2xNTFRfbkFVenVveGlkWUE2M25oUEtTMlZXRzhDZGZnUU93UDg2NzYtLXc0V0RyRFA2RXBTUDdTNm5paktkTUR6ck5pQ3BzWVEzR2dPNUdTSVJIZmctZDdEcjBZVS15Wk9Qbg?oc=5",
       "source": "日経",
-      "published_at": "2026-10-14T09:56:37+00:00"
+      "published_at": "2026-10-15T10:30:00+00:00"
     },
     {
-      "id": "hl-881575ce76eb6f8b",
-      "date": "2026-10-14",
-      "title": "ASML earnings boost tech stocks, lift European shares",
-      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQNmI1cmdFeWZ3cUxZV3NCMlg4TTJEQ2NzNU5DeUM3eDJvTnVKUHlJcFRtVEpYNlk3MnRvb0xDaWI5VGNNMWowdl9CcE9qTTNoTjBkR280VjRYSnUwUGhKZ3FiRmViNmJvd3FLa0RXbW01NXl2TTlKQUJxdWxadG5nbDhoV214TlFTYVlEWDFsdTY2TWN3WXQza0Jvcjd3ZlRCUHpqRkpqX1ZNZ0lVUDRGRTVTdDA?oc=5",
-      "source": "Reuters",
-      "published_at": "2026-10-14T09:19:02+00:00"
+      "id": "hl-d48fab13d45fff98",
+      "date": "2026-10-15",
+      "title": "【AI・半導体株のボラティリティはさらに高まる】日本株はアメリカ中間選挙後に波乱拡大／エヌビディア“錬金術”に見え始めたほころび／年末に向け日経平均「最高値」も射程だが／金利高・原油高の影響は",
+      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9LODR3R0dCdEExRGVrXzIybDhhUjY4dUhSZmFldXJCZ0x5YjVRa3M0Zl9PSlZTSG81OUlucWxGMHdxOEg0NXhreTNOZk1JS3BYV2c?oc=5",
+      "source": "東洋経済",
+      "published_at": "2026-10-15T10:00:00+00:00"
     },
     {
-      "id": "hl-c2b2c58676f8fba3",
-      "date": "2026-10-14",
-      "title": "300mm fab equipment spending to hit US$227 billion by 2029, SEMI says",
-      "url": "https://www.digitimes.com/news/a20261014VL216/300mm-equipment-semi-fab-2026.html",
+      "id": "hl-2eb62b1acf10057a",
+      "date": "2026-10-15",
+      "title": "決算:TSMC、AI半導体供給増へ「20の建設計画進行」 7〜9月最高益",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9EQUwzZTVwbnBNWEItRTFYRHRSTW1aa3lYVldtWGlvY3BTQTdFMFFDTjVVU2JhSUJnS0JvY2EyVWZpbGFjWXpHbE0wTnlsT1E0OG5rVUFkYjJQblpyUjN5ZW4xQXo1aDlxd01kLQ?oc=5",
+      "source": "日経",
+      "published_at": "2026-10-15T09:35:44+00:00"
+    },
+    {
+      "id": "hl-cbb76f29c42f013d",
+      "date": "2026-10-15",
+      "title": "Two killed, one seriously hurt in explosion at Intel’s chip plant in Israel",
+      "url": "https://www.tomshardware.com/tech-industry/semiconductors/two-killed-one-seriously-hurt-in-explosion-at-intels-chip-plant-in-israel-police-suspect-a-gas-cylinder-malfunction-and-the-fire-involved-a-toxic-gas-used-to-clean-chipmaking-tools",
+      "source": "Tom's Hardware",
+      "published_at": "2026-10-15T09:34:15+00:00"
+    },
+    {
+      "id": "hl-38d84722dedba799",
+      "date": "2026-10-15",
+      "title": "シンガポール株15日、続落 世界的な半導体株安が波及",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE16N0stYnhScndQWVFCT25BMUxlQ0ZxSkxFd3hZVDFuc0pXY1duTjk2bWUwazk3Z01RXzlGd1daVHgxc2htclVmZXFvM0tuRnBYdUhTR0szUnVObGtWZk5vQ0p3ZWRHNUtqaEpueQ?oc=5",
+      "source": "日経",
+      "published_at": "2026-10-15T09:32:45+00:00"
+    },
+    {
+      "id": "hl-1348dbb449926f69",
+      "date": "2026-10-15",
+      "title": "TSMC bars capacity resale, aims to leave no AI money on the table",
+      "url": "https://www.digitimes.com/news/a20261015PD244/tsmc-capacity-demand-wafer-technology.html",
       "source": "DigiTimes",
-      "published_at": "2026-10-14T09:18:42+00:00"
+      "published_at": "2026-10-15T09:20:45+00:00"
     },
     {
-      "id": "hl-73b38b612f677d87",
-      "date": "2026-10-14",
-      "title": "Tata's flagship chip fab faces pressure from its own shareholders",
-      "url": "https://www.digitimes.com/news/a20261014VL218/tata-group-90nm-fab-investment.html",
-      "source": "DigiTimes",
-      "published_at": "2026-10-14T08:50:17+00:00"
-    },
-    {
-      "id": "hl-04cd8c7dde049575",
-      "date": "2026-10-14",
-      "title": "AI computing demand drives water management integration at Tianyi",
-      "url": "https://www.digitimes.com/news/a20261014PD229/demand-water-management-capacity-expansion-equipment.html",
-      "source": "DigiTimes",
-      "published_at": "2026-10-14T08:40:08+00:00"
-    },
-    {
-      "id": "hl-86422668e0dcd952",
-      "date": "2026-10-14",
-      "title": "Wiwynn unveils CPO compute system with GUC and Ayar Labs",
-      "url": "https://www.digitimes.com/news/a20261014PD247/cpo-guc-wiwynn-laser.html",
-      "source": "DigiTimes",
-      "published_at": "2026-10-14T08:38:13+00:00"
-    },
-    {
-      "id": "hl-ba01c59c64ee3f79",
-      "date": "2026-10-14",
-      "title": "ASML CFO says US Match Act limiting DUV sales to China would be counterproductive",
-      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNa3FUUDFSN0ZoX0xlZ09TamlVeURBQkZtUHV6NlBkNG1Gc1hLODN5SENaclg1UjByalVNemQ2QzVrSTc2WjJUenZMT0IwRTY2dXRZeERhV2owSXVkNjdIZUhiU0VlZkpDZEtRcXp4akJjVlNfUzZzVmFiTmI5ZVcyNkNSY3F2SWxqbm5oWkJ4ZUJpaUt6N3NVMnNVN2Vra0JNS2F4bC1Cd2JNYUp4WjZUOHB0NmRwQ1lQTnU5YkctN3E3T0E?oc=5",
-      "source": "Reuters",
-      "published_at": "2026-10-14T08:31:06+00:00"
-    },
-    {
-      "id": "hl-7a28b730a78710b4",
-      "date": "2026-10-14",
-      "title": "Tsang Yow's semiconductor revenue share reaches 12%",
-      "url": "https://www.digitimes.com/news/a20261014PD240/tsang-yow-revenue-equipment-2026-demand.html",
-      "source": "DigiTimes",
-      "published_at": "2026-10-14T08:26:00+00:00"
-    },
-    {
-      "id": "hl-e4b27b9e781d5b27",
-      "date": "2026-10-14",
-      "title": "Cerebras CEO reveals the capacity shortfall behind OpenAI's turn to Nvidia GPUs",
-      "url": "https://www.digitimes.com/news/a20261014PD230/cerebras-data-capacity-openai-nvidia.html",
-      "source": "DigiTimes",
-      "published_at": "2026-10-14T08:20:00+00:00"
-    },
-    {
-      "id": "hl-6c204ebe0970d96e",
-      "date": "2026-10-14",
-      "title": "Chip-Machine Supplier ASML Boosts Guidance for Third Time on Surging AI Demand",
-      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQWHp0Zks1SnAwS1Y3RWhMSHNRUlVtTGJhb3duY1o0NWFycWQyUkNad2NIMm01aUlUM1lVX1lSS0lNYzQtVnBWTGZlc3RvcDZYQzUzNGRqZFRWOVNUSDJ1MVRnR19nZ280Tl80eERkdXJydU9DakFsbUVYYlIybnh4ZUY0YmJnV1lVTmhFRHZKNjlSR3o4S3lfeVc3akVEUm5vRnpodTZCUFB6MDExeXhyRWRmQXItVzlFVzBxTkJyMWtQV28?oc=5",
+      "id": "hl-60b3e1ea11d5d8de",
+      "date": "2026-10-15",
+      "title": "TSMC Weighs Texas Expansion, Holds Talks on Musk’s Terafab",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNdEdMeDJhNG03UExRNVQ2MEJQWndsZDFteUhQSC1WekZrdnFWVHdBb2s0V2I4SVJCakw5Z0d0dVpkRUdVSXlSQUxJaFMxdERQX010a1ZVeHZYV3AtWVh2YVVkN1pDcU4xLUNQUHpRWVRLY2ZRc0poWU9leUt6LU5BOEZtOFctbjA?oc=5",
       "source": "WSJ",
-      "published_at": "2026-10-14T07:29:00+00:00"
+      "published_at": "2026-10-15T09:18:00+00:00"
     },
     {
-      "id": "hl-d62bf900390e5098",
-      "date": "2026-10-14",
-      "title": "SK Hynix HBM4 equipment installations reportedly face partial deferral to 2027",
-      "url": "https://www.digitimes.com/news/a20261014VL213/equipment-hbm4-sk-hynix-2027-investment.html",
+      "id": "hl-f8640688916ffc63",
+      "date": "2026-10-15",
+      "title": "TSMC investor conference: TSMC lifts 2026 revenue growth forecast to 44%, 2nm expansion, new 3nm fab",
+      "url": "https://www.digitimes.com/news/a20261015PD243/tsmc-growth-3nm-2026-fab.html",
       "source": "DigiTimes",
-      "published_at": "2026-10-14T07:25:32+00:00"
+      "published_at": "2026-10-15T09:15:13+00:00"
     },
     {
-      "id": "hl-e90154f7317cf779",
-      "date": "2026-10-14",
-      "title": "How To Define CPU And Software Stack Performance For Agentic AI",
-      "url": "https://semiengineering.com/how-to-define-cpu-and-software-stack-performance-for-agentic-ai/",
-      "source": "SemiEngineering",
-      "published_at": "2026-10-14T07:04:19+00:00"
-    },
-    {
-      "id": "hl-99e5890cfab99713",
-      "date": "2026-10-14",
-      "title": "Generative AI On A General-Purpose Neural Processor (GPNPU)",
-      "url": "https://semiengineering.com/generative-ai-on-a-general-purpose-neural-processor-gpnpu/",
-      "source": "SemiEngineering",
-      "published_at": "2026-10-14T07:03:02+00:00"
-    },
-    {
-      "id": "hl-b290ffa2855022f3",
-      "date": "2026-10-14",
-      "title": "Simplify Electronic-Photonic Design Workflows: eBook",
-      "url": "https://semiengineering.com/simplify-electronic-photonic-design-workflows/",
-      "source": "SemiEngineering",
-      "published_at": "2026-10-14T07:02:41+00:00"
-    },
-    {
-      "id": "hl-cc69a0787958bc55",
-      "date": "2026-10-14",
-      "title": "Accelerating Advanced IC Package Design: A Methodology for Early and Iterative Optimization of Chiplet Integration",
-      "url": "https://semiengineering.com/accelerating-advanced-ic-package-design-a-methodology-for-early-and-iterative-optimization-of-chiplet-integration/",
-      "source": "SemiEngineering",
-      "published_at": "2026-10-14T07:02:00+00:00"
-    },
-    {
-      "id": "hl-f846a42cb6f2b52e",
-      "date": "2026-10-14",
-      "title": "Why Heat Is Becoming A Bigger Chip Design Issue",
-      "url": "https://semiengineering.com/why-heat-is-becoming-a-bigger-chip-design-issue/",
-      "source": "SemiEngineering",
-      "published_at": "2026-10-14T07:01:20+00:00"
-    },
-    {
-      "id": "hl-406bd9782b9100d8",
-      "date": "2026-10-14",
-      "title": "Blog Review: Oct. 14",
-      "url": "https://semiengineering.com/blog-review-oct-14-3/",
-      "source": "SemiEngineering",
-      "published_at": "2026-10-14T07:01:04+00:00"
-    },
-    {
-      "id": "hl-ecfd93ad1a8be3bb",
-      "date": "2026-10-14",
-      "title": "ASML's record 3Q26 sales expose a capacity gap for AI chip demand through 2028",
-      "url": "https://www.digitimes.com/news/a20261014VL212/asml-sales-2028-demand-capacity.html",
+      "id": "hl-0eb650b7a63ed969",
+      "date": "2026-10-15",
+      "title": "EU seeks China deal to lift ASML supplier sanctions amid rare-earth crisis",
+      "url": "https://www.digitimes.com/news/a20261015PD246/eu-asml-russia-business-beijing.html",
       "source": "DigiTimes",
-      "published_at": "2026-10-14T06:52:05+00:00"
+      "published_at": "2026-10-15T09:11:32+00:00"
     },
     {
-      "id": "hl-1c3bd787a5143efc",
-      "date": "2026-10-14",
-      "title": "Nvidia's share of China's AI chips falls by a third while Huawei gains",
-      "url": "https://www.digitimes.com/news/a20261014VL210/nvidia-huawei-china-chips-sales.html",
-      "source": "DigiTimes",
-      "published_at": "2026-10-14T06:32:11+00:00"
+      "id": "hl-27dbbc89e5fb656d",
+      "date": "2026-10-15",
+      "title": "ニコン、半導体の後工程向け新型露光装置 処理速度44%向上",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9hQ2NfSlZLcnN4LWdfR1ZlZjlUSEdHb3Q3SGdpSVJMN0VsRjJackN3WGR0ZjlDTUtnUWx1VmpzSHdjNzZVdnRudjlZZWQ0alZpR3hWdmFfeXNQRzhZdW4tZXhnV25NVG9hRlZsVw?oc=5",
+      "source": "日経",
+      "published_at": "2026-10-15T08:31:27+00:00"
     },
     {
-      "id": "hl-f69bd090a0439e58",
-      "date": "2026-10-14",
-      "title": "ニコン、半導体後工程向け新露光装置 処理能力40％向上",
-      "url": "https://eetimes.itmedia.co.jp/ee/articles/2610/14/news041.html",
-      "source": "EE Times Japan",
-      "published_at": "2026-10-14T06:30:00+00:00"
-    },
-    {
-      "id": "hl-d50a3142e209ee3a",
-      "date": "2026-10-14",
-      "title": "Elon Musk says Micron is 'reasonable' on memory prices while others are 'extortionate'",
-      "url": "https://www.digitimes.com/news/a20261014VL211/micron-dram-price-elon-musk.html",
-      "source": "DigiTimes",
-      "published_at": "2026-10-14T06:19:58+00:00"
-    },
-    {
-      "id": "hl-699a8960d35c58da",
-      "date": "2026-10-14",
-      "title": "Nvidia pledges $250 million to UK AI safety research",
-      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNb1pFUmU1TjNGdW44THRFdlVLU285bHh3azlnTGNFWEJqcnF3T0lzc0pRWi1aTnZOeXlJY1VrbXBXSUxFNTdlS3NCYkptd0ZFb283c1NRc2dLRk9zcEJXenlrV3Q0UVhYTFQ4b1lnVTdLUzFrejJLMFpBcUhLVTRlZC13ZUNXZXk1RU5yWkVEd3M2RWVFUkJlOTlvQVBwRlJRR3dN?oc=5",
-      "source": "Reuters",
-      "published_at": "2026-10-14T06:19:00+00:00"
-    },
-    {
-      "id": "hl-1b1006061b7c5fa8",
-      "date": "2026-10-14",
-      "title": "Taiwan IC substrate maker Xinxing halts some machinery after fatal workplace accident",
-      "url": "https://www.digitimes.com/news/a20261014PD236/ic-substrate-plant-investigation-production-inspection.html",
-      "source": "DigiTimes",
-      "published_at": "2026-10-14T05:50:09+00:00"
-    },
-    {
-      "id": "hl-1d8841fcea3ee4ac",
-      "date": "2026-10-14",
-      "title": "Palliser Asks Samsung to Issue ADRs to Buy Back Preferred Shares",
-      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOMDlDbm5UeS1iN05ZMXdLRVNEbWd4a3RvZnRGWTdZc1JidGdrZmZkTS1tSkhGYjZ0dERpYzd6eXNNNWtTNE8yc2cxLVcyc1FZNkw2dGlGUTVHbTFSMUcwenhrYWloSkdYaVBkNkx6bUhtTTYwQWhfT3NBcTcxYWJmcmdnRVM2RHZ5NGRQb1VpdVVfbnEtYlZ6VElZM3lpbjd4NWRPeTRWdXZjc2VFQXhrUnFHYlpMZw?oc=5",
+      "id": "hl-e3586a1867fac1ed",
+      "date": "2026-10-15",
+      "title": "Watch Semiconductor Research Head: AI Trade 'Remarkably Resilient' Despite Rising Rates",
+      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPLW5UaFVrV3VBdi1rRVhScVBVLVp2Z3JFLWVmWkMyNDNEbE5SR3NDYkZzNUZPS0NBeS1KX3d4TE1EcV9uaE1mTmF0NUJHZ3VsVWtteXUxeExpMG9EcXFRaEI1RmhjRFRxZGx1RGtRTHVZVkFpMkdScHdPcHJ4em4wbkxOVWlCRXVOWUc1dmliZk5qR25vb2t1V3NXZzV5MzZRVXFV?oc=5",
       "source": "Bloomberg",
-      "published_at": "2026-10-14T05:44:00+00:00"
+      "published_at": "2026-10-15T08:29:58+00:00"
     },
     {
-      "id": "hl-457989eeda1824ab",
-      "date": "2026-10-14",
-      "title": "ASML says it's getting order interest through 2030 as profit smashes expectations",
-      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOSDQ3Zy1uUWZHZDRSQmVCRGY2VEpzVHZOZkNBQ29vM2sxbkpqRFlQTFlXX1Zub1otNmREVGFyMFVucU9KZXRWOFJCSUo5N1JBNGprZUtsYlJXX1A2N3ZJX2ZBeE1KbjlGRUtEakNwZjVWQVlYLWdMeVExODZzYmFqX2Z6QzZuUdIBiwFBVV95cUxPYXpNR093eFN2OXh5eGdjX1JZM3hDQURoa3VhOWZPUzBjaFkwTXRFVVlPbXo1WlVPQ2diYmotb0pCSmNyeERpOVpJNUtYa1JzR0NVRnFjSzVGaGdkRktPWHhyNllYdHhMbEJ1RGhPY2JqaWYyUExCeFlFZjJ1cDJVVXNQal9ZeURTMU5Z?oc=5",
+      "id": "hl-b13f71f67dbdf3bd",
+      "date": "2026-10-15",
+      "title": "Touch Taiwan 2027 expands tech scope with advanced packaging and SiPh shows",
+      "url": "https://www.digitimes.com/news/a20261015PD237/2027-touch-taiwan-packaging-siph-expo.html",
+      "source": "DigiTimes",
+      "published_at": "2026-10-15T08:25:00+00:00"
+    },
+    {
+      "id": "hl-9dee246033a7c877",
+      "date": "2026-10-15",
+      "title": "TSMC CEO says profitability has no ceiling, plans High-NA EUV adoption in 2030",
+      "url": "https://www.digitimes.com/news/a20261015PD240/tsmc-high-na-euv-adoption-2030.html",
+      "source": "DigiTimes",
+      "published_at": "2026-10-15T08:14:39+00:00"
+    },
+    {
+      "id": "hl-b083853d25555210",
+      "date": "2026-10-15",
+      "title": "SK Hynix reportedly ties US NAND fab plan to approval for chip equipment exports to China",
+      "url": "https://www.digitimes.com/news/a20261015VL222/sk-hynix-equipment-nand-exports-solidigm.html",
+      "source": "DigiTimes",
+      "published_at": "2026-10-15T08:11:12+00:00"
+    },
+    {
+      "id": "hl-d625076010df98e3",
+      "date": "2026-10-15",
+      "title": "TSMC’s Profit Surpasses Expectations After AI Orders Rush In",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQNnZQMElNRlc2aGFEd21EQTBjRS1fLTFZR0hHZG9MTzJTMFBsR25pMDhCSHRmcDRhR3JkQWtYOV91cjlVd3BEcEtlVUNPQ21yRVNRRXJ4MFdXZldkdjk3OWJHLU9JcFBSYUx5Q1FjMlVTMlhqaUlKamFnX2VIVVNMZmxMTENDZ2YtbnVxanpfRnhKUzY5RnFkcHVnVm1uMVZyTy15OWt3ZmdTc1F4Mk4yaw?oc=5",
+      "source": "Bloomberg",
+      "published_at": "2026-10-15T08:09:32+00:00"
+    },
+    {
+      "id": "hl-2c2f44b87e09444d",
+      "date": "2026-10-15",
+      "title": "Applied Materials CEO says agentic AI drives wafer demand",
+      "url": "https://www.digitimes.com/news/a20261015PD231/applied-materials-demand-wafer-ceo-equipment.html",
+      "source": "DigiTimes",
+      "published_at": "2026-10-15T08:02:25+00:00"
+    },
+    {
+      "id": "hl-8d878b6718d75a8c",
+      "date": "2026-10-15",
+      "title": "半導体製造装置関連の熊本企業 3代目は「先代が培った技術、守るより進化」 - 日経ビジネス電子版",
+      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE0yckVzMkVZSmJuRy1tYkhDYnJoRFRPRXN0WkZ5M0NSX0dETG1zdlFGTVpXSHBqQnJLelo2Y0Z2d1Q5bHRsOW1qQllqZWI1Y3JQSHh4aEJVYW0wZVhuNFh3SW1vVmdGZ3Rkcnh4UDlYMA?oc=5",
+      "source": "日経",
+      "published_at": "2026-10-15T08:00:00+00:00"
+    },
+    {
+      "id": "hl-3caf50d3b0d8a60f",
+      "date": "2026-10-15",
+      "title": "India's RRP Electronics opens advanced wafer-level packaging facility in Navi Mumbai",
+      "url": "https://www.digitimes.com/news/a20261014VL217/rrp-electronics-mumbai-packaging-chairman-testing.html",
+      "source": "DigiTimes",
+      "published_at": "2026-10-15T07:59:00+00:00"
+    },
+    {
+      "id": "hl-92533f15c7d0c225",
+      "date": "2026-10-15",
+      "title": "TSMC breaks silence on Musk's Terafab: Talks underway, but fab control non-negotiable",
+      "url": "https://www.digitimes.com/news/a20261015PD239/tsmc-elon-musk-terafab-capacity-expansion.html",
+      "source": "DigiTimes",
+      "published_at": "2026-10-15T07:50:31+00:00"
+    },
+    {
+      "id": "hl-f3625e4d774c9b27",
+      "date": "2026-10-15",
+      "title": "TSMC Open to Working With Terafab But Must Control Plants",
+      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPQ2NVU2xrb3hGWG9HNzRPTGdMZ3BJTFdISm84cTBhdFcxdGxid3VmaFlCNzBmcUd3R0N3ZnotbGRLalM3TjRNQ3Y4dFVaVHNpakJtQy1yX0U3Q0g4Q0ktR2hyRmVyNmVpY2xQZHRGbU5fMDEzYjd0YWhaS2JQNHpTRjg5Q2poSEtqZkRNT0MzWVhxMWlVbkY0TXlmVXRiOUJPeDYtS0ZvN0Z4RkhL?oc=5",
+      "source": "Bloomberg",
+      "published_at": "2026-10-15T07:36:15+00:00"
+    },
+    {
+      "id": "hl-ca4e67c5a7b0adff",
+      "date": "2026-10-15",
+      "title": "TSMC eyes US$54.3bn in 4Q26 revenue, but 2nm ramp and overseas fabs pressure margins",
+      "url": "https://www.digitimes.com/news/a20261015VL221/tsmc-revenue-2nm-demand-2026.html",
+      "source": "DigiTimes",
+      "published_at": "2026-10-15T07:31:02+00:00"
+    },
+    {
+      "id": "hl-d8f12e440127c666",
+      "date": "2026-10-15",
+      "title": "カプコン株1年ぶり高値 半導体株安で資金流入（15日の株式市場）",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5uLUxXeFhMWWVrSks5eVdGdTNzWXE0MlNueXA3WnR1U2REZmhBblZZZUFSQndtOHV1clVPTzVVNk16N3ZSWGpETGRNaTAyWHBzdlVnbDVGeTlDNER3RnVySEJrdTM4cG1mck5RNg?oc=5",
+      "source": "日経",
+      "published_at": "2026-10-15T07:30:00+00:00"
+    },
+    {
+      "id": "hl-690d7624caf8f031",
+      "date": "2026-10-15",
+      "title": "上海株大引け 続落、1年2カ月ぶり安値 アジア半導体株安で",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1GZUtUU2NpSGtpejlnYzUwSnJ0aW4xTU9rLTVJZWRPWlQ3X0RMVnhkNEpqMEJBTkNCOWd3ZmFFVEpJMXExTmV2NF94MnVJaDlLMW14d2FVUlo0SW5zY3l1TmI2WGlCdE8xYXEtMA?oc=5",
+      "source": "日経",
+      "published_at": "2026-10-15T07:28:03+00:00"
+    },
+    {
+      "id": "hl-81e931d350e73c98",
+      "date": "2026-10-15",
+      "title": "China's AMEC targets 60% of high-end chip equipment market with US$1.94 billion R&amp;D plan",
+      "url": "https://www.digitimes.com/news/a20261015VL211/equipment-amec-high-end-market-manufacturing.html",
+      "source": "DigiTimes",
+      "published_at": "2026-10-15T07:24:26+00:00"
+    },
+    {
+      "id": "hl-dd9532c8ca748067",
+      "date": "2026-10-15",
+      "title": "Samsung reportedly completes 4F&sup2; DRAM development as China's CXMT targets year-end launch",
+      "url": "https://www.digitimes.com/news/a20261015VL219/samsung-dram-development-cxmt.html",
+      "source": "DigiTimes",
+      "published_at": "2026-10-15T07:16:51+00:00"
+    },
+    {
+      "id": "hl-b06a8918edcbf94d",
+      "date": "2026-10-15",
+      "title": "Beyond The Specification: What Really Determines PCIe Retimer Reach?",
+      "url": "https://semiengineering.com/beyond-the-specification-what-really-determines-pcie-retimer-reach/",
+      "source": "SemiEngineering",
+      "published_at": "2026-10-15T07:07:45+00:00"
+    },
+    {
+      "id": "hl-15c321be591a91d5",
+      "date": "2026-10-15",
+      "title": "Strengthening Advanced-Node Interconnects Through Automated Via Insertion",
+      "url": "https://semiengineering.com/strengthening-advanced-node-interconnects-through-automated-via-insertion/",
+      "source": "SemiEngineering",
+      "published_at": "2026-10-15T07:06:02+00:00"
+    },
+    {
+      "id": "hl-2d0f2e592f9eb80f",
+      "date": "2026-10-15",
+      "title": "Building AI Infrastructure For Greater Choice And Flexibility",
+      "url": "https://semiengineering.com/building-ai-infrastructure-for-greater-choice-and-flexibility/",
+      "source": "SemiEngineering",
+      "published_at": "2026-10-15T07:03:05+00:00"
+    },
+    {
+      "id": "hl-576db3a5fe2ebec9",
+      "date": "2026-10-15",
+      "title": "AMBA C2C: Moving Forward With A Converged AMBA Foundation For C2C Connectivity",
+      "url": "https://semiengineering.com/amba-c2c-moving-forward-with-a-converged-amba-foundation-for-c2c-connectivity/",
+      "source": "SemiEngineering",
+      "published_at": "2026-10-15T07:02:37+00:00"
+    },
+    {
+      "id": "hl-db2073f8dd3970ff",
+      "date": "2026-10-15",
+      "title": "Why Open-Weight AI Matters",
+      "url": "https://semiengineering.com/why-open-weight-ai-matters/",
+      "source": "SemiEngineering",
+      "published_at": "2026-10-15T07:02:13+00:00"
+    },
+    {
+      "id": "hl-55a90726b09b35a8",
+      "date": "2026-10-15",
+      "title": "Agentic AI Alters The CPU-GPU Balance",
+      "url": "https://semiengineering.com/agentic-ai-alters-the-cpu-gpu-balance/",
+      "source": "SemiEngineering",
+      "published_at": "2026-10-15T07:01:24+00:00"
+    },
+    {
+      "id": "hl-7e98607e84e875a6",
+      "date": "2026-10-15",
+      "title": "How Close Are We To Fully Autonomous Chip Design?",
+      "url": "https://semiengineering.com/how-close-are-we-to-fully-autonomous-chip-design/",
+      "source": "SemiEngineering",
+      "published_at": "2026-10-15T07:01:10+00:00"
+    },
+    {
+      "id": "hl-9b835e7dc6128940",
+      "date": "2026-10-15",
+      "title": "Thermal Co-Simulation Testing Of Co-Packaged Optics",
+      "url": "https://semiengineering.com/thermal-co-simulation-testing-of-co-packaged-optics/",
+      "source": "SemiEngineering",
+      "published_at": "2026-10-15T07:01:01+00:00"
+    },
+    {
+      "id": "hl-e2baf90ed8153098",
+      "date": "2026-10-15",
+      "title": "半導体工場に1.6兆円、対米投融資の第3弾 東エレクや東京応化が参画",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5Zb0paeFhFSFVXcm5oanNKbURIbXh5VFVTdUtMRnp0THVKaEhXYjlkZERGYmxUaGlGVkUyc0tUNkFDcTBEOFVpTUUyNTFOZkxCdzNnSTBjYWxfNXJGeFBWX1o4WDhxVE9VdTlqSg?oc=5",
+      "source": "日経",
+      "published_at": "2026-10-15T06:49:34+00:00"
+    },
+    {
+      "id": "hl-ae216fc2024263e8",
+      "date": "2026-10-15",
+      "title": "韓国株15日 7日続落し6000割れ、6カ月ぶり安値 米半導体株安が重荷",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBxSGNRanJlMktIcUtPZzdqclJsaXpYVDliUmROT3lnZ2tyOGlnc2hmbEw2aUxpLVFSc1N6ZVRweDE4b3pMLXNmNmFfQm9NTU9Vd29yQ2ZfaTI2SDEwQ3hRSW9XMnc0Ty0xOExXWQ?oc=5",
+      "source": "日経",
+      "published_at": "2026-10-15T06:49:11+00:00"
+    },
+    {
+      "id": "hl-a9bc724634a0c02d",
+      "date": "2026-10-15",
+      "title": "Global Chip Selloff Deepens as Investors Retreat from AI",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPMUlJWTZNNjM3R3M2UHZSWDBVRzJKTDlmWDIxY3NlRkZqSkJERGFOQmk1cjBPWnBqald5RktiS240a2Z5bTN0Z0UxQV9meldKS3lVMWhIOEhQVmswc2RnZTJuSGIxM3AySndtajhLWGVtdlpOMnlqYVViZ0F1clVTbEZTVmdOdDhlUDZjaUlDQmlRWHEwOUdGd3phak5pcERTV2ZaUkQyNXoyVU9fUElv?oc=5",
+      "source": "Bloomberg",
+      "published_at": "2026-10-15T06:48:00+00:00"
+    },
+    {
+      "id": "hl-6b909a99f18c7ec5",
+      "date": "2026-10-15",
+      "title": "SK Hynix targets January 2027 for HBF standard, eyes DRAM stacked on AI chips",
+      "url": "https://www.digitimes.com/news/a20261015PD218/sk-hynix-dram-ai-inference-capacity-2027.html",
+      "source": "DigiTimes",
+      "published_at": "2026-10-15T06:46:14+00:00"
+    },
+    {
+      "id": "hl-09df9063bb4e06e0",
+      "date": "2026-10-15",
+      "title": "TSMC's AI-fuelled profit streak hits sixth straight record in 3Q26, but 2nm expansion weighs on margins",
+      "url": "https://www.digitimes.com/news/a20261015VL218/tsmc-profit-2nm-revenue-2026.html",
+      "source": "DigiTimes",
+      "published_at": "2026-10-15T06:35:58+00:00"
+    },
+    {
+      "id": "hl-246d042586f284c0",
+      "date": "2026-10-15",
+      "title": "職人の暗黙知をフィジカルAIに 指先を捉えるグローブ",
+      "url": "https://eetimes.itmedia.co.jp/ee/articles/2610/15/news042.html",
+      "source": "EE Times Japan",
+      "published_at": "2026-10-15T06:30:00+00:00"
+    },
+    {
+      "id": "hl-fc40c90c1478cc94",
+      "date": "2026-10-15",
+      "title": "カプコン株価1年ぶり高値 半導体株安でゲーム株に資金流入",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1td3FHU3A0V3JUb19Fc0FNVldFd0tLbzVHdjZwdHRzS3dVRHNCejl0S3R5RHVVMWdCYllDUG51UDFWbURlZGViX1ZkLWZ3MzVFQ05MMVZ1b3RYbWRIcnc0ZkdLWGk5UktWQ08ySQ?oc=5",
+      "source": "日経",
+      "published_at": "2026-10-15T06:10:10+00:00"
+    },
+    {
+      "id": "hl-b3319667acade7a7",
+      "date": "2026-10-15",
+      "title": "Commentary: Huawei's 2027 Kirin roadmap &mdash; can LogicFolding overcome chipmaking constraints?",
+      "url": "https://www.digitimes.com/news/a20261015PD206/huawei-kirin-chips-roadmap-2027.html",
+      "source": "DigiTimes",
+      "published_at": "2026-10-15T06:03:36+00:00"
+    },
+    {
+      "id": "hl-f5054a9677f9e6de",
+      "date": "2026-10-15",
+      "title": "TSMC’s Third-Quarter Profit Beats Expectations",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQNWJYSmlXUGpIYVUtZjdpWG5YaGFCT3pUa0Y4VDJaZy13c1JaTEd5dzVzU043Q1JFRG1FY0RFa1pGN2xsMUlpNHlIOU12clhDb21sZnBSOWRvYmY4Mnl1ZnB4UGtyZUtWMFpuMkc2alJIMEx5b1pxRzlXRU1FdWhNWkhYQkhXYW9XVnJFS0t6d1cxeGVSVmVUWVNhd3dQdDFuNm5sUm5R?oc=5",
+      "source": "Bloomberg",
+      "published_at": "2026-10-15T05:59:00+00:00"
+    },
+    {
+      "id": "hl-cee81d54bb071bfd",
+      "date": "2026-10-15",
+      "title": "Column: 3D memory could redraw chip competition, weaken US sanctions on China",
+      "url": "https://www.digitimes.com/news/a20261014PD245/3d-2022-nand-dram-competition.html",
+      "source": "DigiTimes",
+      "published_at": "2026-10-15T05:59:00+00:00"
+    },
+    {
+      "id": "hl-cb83d03e483b482e",
+      "date": "2026-10-15",
+      "title": "TSMCの純利益68.7%増 7〜9月、AI需要旺盛で最高益更新",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFA5OE5VbEhHM1BSMDB0TzIyMVEyTmVRM01zaFROOS1uS05nVzI5eTFFdWRsRzktT1RUcjhxNzMzYWhodWF0S2p2WFRmZXloMjg4TEp6ckdjMkx4LTF3T1pnNnU2N1c0a3NoLUtJVA?oc=5",
+      "source": "日経",
+      "published_at": "2026-10-15T05:49:54+00:00"
+    },
+    {
+      "id": "hl-67d4dd3e0a5c3480",
+      "date": "2026-10-15",
+      "title": "台湾株15日 反落、米半導体株安が波及 1カ月ぶり4万7000割れ",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9ObnZ0US02R0I0Rkw0S25FSmc2RWFXSC1Odm5Hd2ZQajlOU3BQYUxvZmhpUTV5dF8zV2YxNEtTRnM4aDNHb3llbHZ5SlBITUlrbXRDczZzWXVlUkk1bDZWRWtnR2V5X1R4OHh0eQ?oc=5",
+      "source": "日経",
+      "published_at": "2026-10-15T05:48:08+00:00"
+    },
+    {
+      "id": "hl-a43266a6d7a91904",
+      "date": "2026-10-15",
+      "title": "TSMC posts record profit for a sixth straight quarter, beating estimates on AI boom",
+      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1Ma2pzMWkya2t5N2Jvbk96dlBYZWtzMlpnSlpDdWFpbldxVEdFcjFkdWV6TGxpa09HU3dXSGNWVU5uZF9xdWJNZmlKTWNKQjNCeEFDQVE5aVI5V0VaWFIwS194VHp1N1pUZHVSNW8ySjJCT1R3OHNjQXJEemUtUdIBgwFBVV95cUxPeVg2MXNaS1g3NzQxQXV5WjFWazhxdXlTYm1IQWtVSUhLUDdDaG1xemFrdUZ6bF9LazJwSThpcGwwbEROWEVhZEkyZ0lGY1dabkJhRjVzSTd2XzB3Q05JQVFQSjdOWF9rUEtWa2s2MG1ueVdFMTdwVHpJVjJyenJDT3d2MA?oc=5",
       "source": "CNBC",
-      "published_at": "2026-10-14T05:14:56+00:00"
+      "published_at": "2026-10-15T05:37:31+00:00"
     },
     {
-      "id": "hl-d86749df541bd668",
-      "date": "2026-10-14",
-      "title": "Check out Taiwan Semiconductor Manufacturing Company Limited's stock price (TSM) in real time",
-      "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTFBlUy1CTE1DMlQwUmJQdjBQd21FT3V4OTNfWEkyRHdMLXRhWG5IVkR5TTBudlRndHJmVVR5SWQ3bE43VHUxS3c?oc=5",
-      "source": "CNBC",
-      "published_at": "2026-10-14T05:08:15+00:00"
+      "id": "hl-9ad62e3ffa65b600",
+      "date": "2026-10-15",
+      "title": "TSMC’s Profit Surpasses Expectations After AI Orders Rush In",
+      "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQMk13X1VYN3F5WGlUZUN6UFpOejNBdHpLdjNmQmxnRURjbkhRU0dBdk11anl0VG5SbVpCaVNxX3JVbkk2cHdvZldGV2prY2JTUVJVbkhrcnk4cXNadl9rWnROMDlmdlhFVmRWSVZ6S0h2bWpGaTlhVnN1NHVwRlVOSDBWeEgxTktscUNSaENENGhQel9tX0tUWjhCWFJkbWRCMnZtY0xwR0otR1EyV05SQlJVcFZTZW5hX28xWkozWnh6dkFTbUN4bmp0bXFrcU0?oc=5",
+      "source": "Bloomberg",
+      "published_at": "2026-10-15T05:36:00+00:00"
     },
     {
-      "id": "hl-dc12b5900e65434c",
-      "date": "2026-10-14",
-      "title": "ASML's strong orders ease fears AI spending boom is running out of steam",
-      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOZFZsa19tQTZzTmpjeDVDenFPTGdxSTJVS1k5bTNrakxDWEtUelY1SWlDdnhNZDVoUmY1dkhoWXdJMWQtS1pjR3drMndqc0kxT00zVkM1bUIyRXM3X011cGhMaUNvbXdtUzVaNUhWWEMzOEN5Q0luZEQ3MzE5M2J2N2h3Mko4eUg3NkZJY2pBbG03UzRwVGs5MVl4dWxWbjNJeVN0OA?oc=5",
+      "id": "hl-0a57a0b8636f51a4",
+      "date": "2026-10-15",
+      "title": "Taiwan president calls for Micron, workers to negotiate 'sincerely' ahead of possible strike",
+      "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQcTFwdXItQUpwWG1SRlRyaXpsLTlkdFdxcUxQZmdSOWVZdG1oVnkxRlBObkxJQ1U4M2FnUjZTTUZrN1M5bFE3VUpWbl8taHVpWWVmSHFkb2JCZkZsYS1OSjZxLTFoUnlkQmUwNmFOQzFtcExrN1RUTnhZaWI5NUpjaENiWnNvcVVTTVFSNUNMcEV4WEw5c3dCelNDbFk3MVVpQ3ZzYXN1Z205X1NLV0J4c2hDNGt5S0xrN0Q4eG9HejRHZGs3S0JSZjhQMVRzMjA?oc=5",
       "source": "Reuters",
-      "published_at": "2026-10-14T05:07:00+00:00"
+      "published_at": "2026-10-15T05:11:00+00:00"
     },
     {
-      "id": "hl-ccd7e59dea1064ad",
-      "date": "2026-10-14",
-      "title": "中国CXMT、新技術搭載の半導体メモリーを年末めど投入へ",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5kaERENTNURUZBYXg4MnRFbDUtWGVtM1FncXMxbDFTY0pRRGRCOXpBd3dFeGxxWkVud2diOV8zMWFCUmk2Rzd5YVp5NzBqcmVrcXl6R1lnbnpqUWg1UjlNR3FwMWFhckVVbi1LYg?oc=5",
-      "source": "日経",
-      "published_at": "2026-10-14T04:30:58+00:00"
+      "id": "hl-e5ff90124b917c0e",
+      "date": "2026-10-15",
+      "title": "Micron opens second Taiwan advanced packaging plant as HBM supply tightens",
+      "url": "https://www.digitimes.com/news/a20261015VL216/micron-taiwan-hbm-packaging-plant.html",
+      "source": "DigiTimes",
+      "published_at": "2026-10-15T04:57:23+00:00"
     },
     {
-      "id": "hl-02ab7ac7712889fd",
-      "date": "2026-10-14",
-      "title": "富士通、米国に量子研究拠点 国立研究所や大学と連携",
-      "url": "https://eetimes.itmedia.co.jp/ee/articles/2610/14/news021.html",
+      "id": "hl-be7291d1b407b528",
+      "date": "2026-10-15",
+      "title": "South Korea's KOSPI closes at 6-month low as chipmakers slump on AI worries",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOdWpRSjBjZzFURGRKR0VQWHlfRGlueEl6akRuam5yVExaVDJQWVYyckVBTDJ0WTlKc1F0THBUNWJBajN3bzRGa2U3TjBUSGxKS05NclZpWU14N2FVUzFoX05pQ1NwV2QtaXljRnJiUTZOc0RIaXZnMHlhX05aNmMwRmJhMmtINmRranYyVEFITFZJWnNGWFY1N2pNcEx0V3lEdTJZZWwzZnc1Y0U2ZFVpU0NnaUxydw?oc=5",
+      "source": "Reuters",
+      "published_at": "2026-10-15T04:54:00+00:00"
+    },
+    {
+      "id": "hl-fc1634c771ceefe7",
+      "date": "2026-10-15",
+      "title": "ダイヤモンドMOSFETで6.78MHz電力変換 PDS",
+      "url": "https://eetimes.itmedia.co.jp/ee/articles/2610/15/news027.html",
       "source": "EE Times Japan",
-      "published_at": "2026-10-14T04:30:00+00:00"
+      "published_at": "2026-10-15T04:30:00+00:00"
     },
     {
-      "id": "hl-343b88402919c06c",
-      "date": "2026-10-14",
-      "title": "AI chip competition shifts to data-center efficiency as memory, interconnect limits bite",
-      "url": "https://www.digitimes.com/news/a20261014PD212/demand-efficiency-data-bandwidth-semiconductors.html",
+      "id": "hl-9a4f9d4df6675b12",
+      "date": "2026-10-15",
+      "title": "Synopsys CEO says fully autonomous AI chip design remains out of reach",
+      "url": "https://www.digitimes.com/news/a20261015PD229/synopsys-ceo-design-development-chips.html",
       "source": "DigiTimes",
-      "published_at": "2026-10-14T04:14:35+00:00"
+      "published_at": "2026-10-15T04:29:27+00:00"
     },
     {
-      "id": "hl-41c20c886c724399",
-      "date": "2026-10-14",
-      "title": "Broadcom executive says chipmakers must tackle packaging, power limits together",
-      "url": "https://www.digitimes.com/news/a20261014PD210/broadcom-packaging-materials-asic-performance.html",
+      "id": "hl-4adb99d5b58452bb",
+      "date": "2026-10-15",
+      "title": "Samsung, Applied Materials back startup targeting chip packaging warpage",
+      "url": "https://www.digitimes.com/news/a20261015VL215/samsung-applied-materials-packaging-venture-capital-technology.html",
       "source": "DigiTimes",
-      "published_at": "2026-10-14T04:11:30+00:00"
+      "published_at": "2026-10-15T04:27:39+00:00"
     },
     {
-      "id": "hl-083d3cb4050e60c2",
-      "date": "2026-10-14",
-      "title": "Samsung, AMD validate CXL memory for AI servers",
-      "url": "https://www.digitimes.com/news/a20261014VL208/samsung-amd-cxl-ai-server-bandwidth.html",
+      "id": "hl-736a250b2c08c40c",
+      "date": "2026-10-15",
+      "title": "Intel says AI 'gold rush' is over, pushes prompt routing across open hardware",
+      "url": "https://www.digitimes.com/news/a20261015VL212/intel-hardware-gold-data.html",
       "source": "DigiTimes",
-      "published_at": "2026-10-14T04:04:18+00:00"
+      "published_at": "2026-10-15T04:07:23+00:00"
     },
     {
-      "id": "hl-53dfa2794ac5919f",
-      "date": "2026-10-14",
-      "title": "LG, Bosch team up on automotive chiplets",
-      "url": "https://www.digitimes.com/news/a20261014PD208/lg-automotive-bosch-lg-electronics-soc.html",
+      "id": "hl-d3ce751d4eaf9ffa",
+      "date": "2026-10-15",
+      "title": "Analysis: GlobalFoundries' calculus behind US$2 billion entry into TSMC's CoWoS ecosystem",
+      "url": "https://www.digitimes.com/news/a20261015PD220/tsmc-globalfoundries-cowos-manufacturing-silicon.html",
       "source": "DigiTimes",
-      "published_at": "2026-10-14T03:58:43+00:00"
+      "published_at": "2026-10-15T04:00:19+00:00"
     },
     {
-      "id": "hl-98692d4d35c6b890",
-      "date": "2026-10-14",
-      "title": "上海株前引け 小動き 石油株に買い 半導体は安い",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBGQ3M2SVNEcHJPTm9QXzJ3cnhTZU1KWnBkMUN4M0R3QU9BNW1mZVBrLXozTFBTd3pMS0Ftakh4MTBIX25nU1lZVDluY0hPYkxZNGltcW9iNURTVFAtdFV1RmNyWV9xdzRHOGJMag?oc=5",
+      "id": "hl-c90b770130ed7f01",
+      "date": "2026-10-15",
+      "title": "上海株前引け 続落 日韓株安が波及、半導体や非鉄が大幅安",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1MZnFOdnVwTHhKMWxhSk55LVI5QjdZYkFjM0RGdE1XRWlGSEI3SGlfUnAwaDRralZVUEFNZzM5T2c3eEp6SFUtZmQ4ekZJLXVKS01zVzdRcU1ERVBWc1Jlb0loVzh3WHZNQ05hVw?oc=5",
       "source": "日経",
-      "published_at": "2026-10-14T03:46:13+00:00"
+      "published_at": "2026-10-15T03:49:10+00:00"
     },
     {
-      "id": "hl-4223d99733d2903d",
-      "date": "2026-10-14",
-      "title": "TSMC and MediaTek alumni lead Taiwan's new wave of deep tech startups",
-      "url": "https://www.digitimes.com/news/a20261013VL226/taiwan-startup-tsmc-mediatek-data.html",
+      "id": "hl-b04f78a05fff9507",
+      "date": "2026-10-15",
+      "title": "Intel Israel fab explosion kills 1, seriously injures 2 workers",
+      "url": "https://www.digitimes.com/news/a20261015PD224/intel-israel-fab-fire-wafer.html",
       "source": "DigiTimes",
-      "published_at": "2026-10-14T03:39:39+00:00"
+      "published_at": "2026-10-15T03:05:45+00:00"
     },
     {
-      "id": "hl-b635eb1201cbe915",
-      "date": "2026-10-14",
-      "title": "Cisco expands AI networking with new chips, SONiC, cross-site deployment",
-      "url": "https://www.digitimes.com/news/a20261014PD206/cisco-chips-capacity-technology-cooling.html",
-      "source": "DigiTimes",
-      "published_at": "2026-10-14T03:30:49+00:00"
-    },
-    {
-      "id": "hl-e7af3dd28188de0a",
-      "date": "2026-10-14",
-      "title": "Cisco, Nvidia target high-speed optical interconnects with 4x USFP density",
-      "url": "https://www.digitimes.com/news/a20261014PD205/cisco-nvidia-2026-bandwidth-design.html",
-      "source": "DigiTimes",
-      "published_at": "2026-10-14T03:25:27+00:00"
-    },
-    {
-      "id": "hl-03511445dc13a42d",
-      "date": "2026-10-14",
-      "title": "Hua Hong forges strategic alliances with four Chinese chip equipment giants",
-      "url": "https://www.digitimes.com/news/a20261014VL204/hua-hong-semiconductor-ic-manufacturing-equipment-eda-2026-shanghai.html",
-      "source": "DigiTimes",
-      "published_at": "2026-10-14T02:55:55+00:00"
-    },
-    {
-      "id": "hl-8fb50ddf32097ffd",
-      "date": "2026-10-14",
-      "title": "TOK expands Koriyama photoresist capacity as AI chip demand rises",
-      "url": "https://www.digitimes.com/news/a20261014PD204/tokyo-ohka-kogyo-photoresist-materials-demand-production.html",
-      "source": "DigiTimes",
-      "published_at": "2026-10-14T02:54:18+00:00"
-    },
-    {
-      "id": "hl-0e6745e7a7502589",
-      "date": "2026-10-14",
-      "title": "東証前引け 日経平均は反発 アドテストなど半導体に買い",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBGcl9EeTVZSEFvbWxpZm9yVjZQaVFodWdQb1JjOXdxbFR3YlJiRG91eGozbDZVdWpHVGJOUkw2Wm1IRHdJVHZoZjNHZzNmeDhXcV9UejVVbm5TSFhFY1V0dmpPZWlWRmFUQjNQZA?oc=5",
-      "source": "日経",
-      "published_at": "2026-10-14T02:44:42+00:00"
-    },
-    {
-      "id": "hl-4ca79b7d574285c1",
-      "date": "2026-10-14",
-      "title": "Memory bottlenecks drive HBM shift to 8-layer stacks",
-      "url": "https://www.digitimes.com/news/a20261014PD220/hbm-capacity-demand-2027-supply-chain.html",
-      "source": "DigiTimes",
-      "published_at": "2026-10-14T02:35:20+00:00"
-    },
-    {
-      "id": "hl-9bc08673ac8d9d9a",
-      "date": "2026-10-14",
-      "title": "HBM capacity shift sends DDR4 contract prices rising faster than DDR5",
-      "url": "https://www.digitimes.com/news/a20261014PD214/ddr4-ddr5-market-capacity-hbm.html",
-      "source": "DigiTimes",
-      "published_at": "2026-10-14T02:25:41+00:00"
-    },
-    {
-      "id": "hl-26726ef0738eca2e",
-      "date": "2026-10-14",
-      "title": "KYEC, Nvidia eye Texas site for US AI chip testing plant",
-      "url": "https://www.digitimes.com/news/a20261014PD219/king-yuan-testing-nvidia-ai-chip-texas.html",
-      "source": "DigiTimes",
-      "published_at": "2026-10-14T02:17:31+00:00"
-    },
-    {
-      "id": "hl-8beffeef17510c2e",
-      "date": "2026-10-14",
-      "title": "MLCC／インダクター2本柱で成長市場へ 太陽誘電社長が語る新中計",
-      "url": "https://eetimes.itmedia.co.jp/ee/articles/2610/13/news108.html",
-      "source": "EE Times Japan",
-      "published_at": "2026-10-14T02:00:00+00:00"
-    },
-    {
-      "id": "hl-e05f4c3361b7a5f5",
-      "date": "2026-10-14",
-      "title": "上海株寄り付き 反落して始まる 半導体と非鉄に売り",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBkdlAwVm5yUEtaWERYRTRHRGRlOFR1UFoycjAxbGFsQTJCcVcwNXU4YzRRVkg4MjNjUENmSmR2Z0pBa2tiS05Ub0RPbVVOelJsU2F3MnNCckRJRmxJLXVPQkhkdF9RS3B0cDNxVQ?oc=5",
-      "source": "日経",
-      "published_at": "2026-10-14T01:52:48+00:00"
-    },
-    {
-      "id": "hl-180a5d5b4a8bb3b4",
-      "date": "2026-10-14",
-      "title": "富士フイルム、米国アリゾナ拠点に先端半導体材料CMPスラリーの新規生産設備を導入",
-      "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1yeFNzNWZWWnhHZENJUFF0aWJEUnJINkR5Q1V0TUpzWjJiekVVT0gwTjNydnhVSDRWakZhMmwwOTR3TDg4TnFXNmluUXJvdUJjXzVldzE3Mlh0TVJPQ2JBYUpPOTJvWDM3LUs4?oc=5",
-      "source": "日経",
-      "published_at": "2026-10-14T01:39:23+00:00"
-    },
-    {
-      "id": "hl-eeadfb8838dca7fa",
-      "date": "2026-10-14",
-      "title": "CXMT targets 4F&sup2; DRAM production two years ahead of Samsung, but can China close technology gap?",
-      "url": "https://www.digitimes.com/news/a20261014PD211/cxmt-3d-dram-production.html",
-      "source": "DigiTimes",
-      "published_at": "2026-10-14T01:35:10+00:00"
-    },
-    {
-      "id": "hl-c01613488381628c",
-      "date": "2026-10-14",
-      "title": "Qualcomm says edge AI faces power, cost, and scale hurdles",
-      "url": "https://www.digitimes.com/news/a20261014PD216/qualcomm-cost-data-materials-technology.html",
-      "source": "DigiTimes",
-      "published_at": "2026-10-14T01:35:00+00:00"
-    },
-    {
-      "id": "hl-b6c4c7cf105764c7",
-      "date": "2026-10-14",
-      "title": "KYEC signs advanced payment deal with Nvidia for US testing expansion",
-      "url": "https://www.digitimes.com/news/a20261013PD257/testing-king-yuan-nvidia-expansion-capacity.html",
-      "source": "DigiTimes",
-      "published_at": "2026-10-14T01:31:15+00:00"
-    },
-    {
-      "id": "hl-eeeb25ae216c6ba7",
-      "date": "2026-10-14",
-      "title": "FLOSFIAが6インチ基板で酸化ガリウムエピ成膜 8インチも視野",
-      "url": "https://eetimes.itmedia.co.jp/ee/articles/2610/14/news039.html",
-      "source": "EE Times Japan",
-      "published_at": "2026-10-14T01:30:00+00:00"
-    },
-    {
-      "id": "hl-84d659789be6534a",
-      "date": "2026-10-14",
-      "title": "Samsung integrates AI into daily life as LG showcases smart factories, data-center cooling",
-      "url": "https://www.digitimes.com/news/a20261014PD201/samsung-lg-cooling-lg-electronics-2026.html",
-      "source": "DigiTimes",
-      "published_at": "2026-10-14T01:22:51+00:00"
-    },
-    {
-      "id": "hl-e8deb68c1b13d89b",
-      "date": "2026-10-14",
-      "title": "AP Memory completes US$415.5M GDR offering, boosts three product lines",
-      "url": "https://www.digitimes.com/news/a20261013PD231/ap-memory-ic-design-gdr-revenue-growth.html",
-      "source": "DigiTimes",
-      "published_at": "2026-10-14T01:16:42+00:00"
-    },
-    {
-      "id": "hl-8a7f55c33a04f235",
-      "date": "2026-10-14",
-      "title": "SK Hynix, Micron confront AI memory bottlenecks with HBM standardization, chip integration",
-      "url": "https://www.digitimes.com/news/a20261013PD239/hbm-micron-development-infrastructure-expansion.html",
-      "source": "DigiTimes",
-      "published_at": "2026-10-14T01:09:30+00:00"
-    },
-    {
-      "id": "hl-1b0e8e3e7949c5f7",
-      "date": "2026-10-14",
-      "title": "TSMC, Intel, Samsung seek to break AI chipmaking's next barrier through early technology integration",
-      "url": "https://www.digitimes.com/news/a20261013PD240/intel-tsmc-samsung-technology-development.html",
-      "source": "DigiTimes",
-      "published_at": "2026-10-14T01:09:01+00:00"
-    },
-    {
-      "id": "hl-1bf689a602bcda16",
-      "date": "2026-10-14",
-      "title": "SEMICON West makes three-year commitment to Phoenix, home to over US$200B in chip investment",
-      "url": "https://www.digitimes.com/news/a20261013PD243/semi-semicon-west-arizona-2026-2027.html",
-      "source": "DigiTimes",
-      "published_at": "2026-10-14T01:05:05+00:00"
-    },
-    {
-      "id": "hl-cd056f5c6b742ab4",
-      "date": "2026-10-14",
-      "title": "China's AI chipmakers target 3D packaging, optical interconnects and software ecosystems",
-      "url": "https://www.digitimes.com/news/a20261014PD209/software-chipmakers-3d-packaging-performance-efficiency.html",
-      "source": "DigiTimes",
-      "published_at": "2026-10-14T01:01:21+00:00"
-    },
-    {
-      "id": "hl-a73fe3b465a279a3",
-      "date": "2026-10-14",
-      "title": "TSMC-GF interposer deal reshapes US AI supply chain, from CoWoS to HBM",
-      "url": "https://www.digitimes.com/news/a20261013PD248/tsmc-globalfoundries-packaging-capacity-silicon.html",
-      "source": "DigiTimes",
-      "published_at": "2026-10-14T00:51:56+00:00"
-    },
-    {
-      "id": "hl-7476726de70e540e",
-      "date": "2026-10-14",
-      "title": "Former Intel CEO Pat Gelsinger sees hardware renaissance in memory, optical interconnects",
-      "url": "https://www.digitimes.com/news/a20261013PD250/pat-gelsinger-hardware-design-intel-ceo.html",
-      "source": "DigiTimes",
-      "published_at": "2026-10-14T00:51:39+00:00"
-    },
-    {
-      "id": "hl-3d0b1eb5e00fecbf",
-      "date": "2026-10-14",
-      "title": "AI memory boom pushes smartphone market into premium-first reset",
-      "url": "https://www.digitimes.com/news/a20261013VL219/smartphone-market-infrastructure-investment-shipments.html",
-      "source": "DigiTimes",
-      "published_at": "2026-10-14T00:49:54+00:00"
-    },
-    {
-      "id": "hl-dd692b9a5b00f901",
-      "date": "2026-10-14",
-      "title": "IonQ pushes beyond quantum computing as US$1.3 billion Elisity deal targets cyber defense",
-      "url": "https://www.digitimes.com/news/a20261013VL225/quantum-computing-security-acquisition-cybersecurity.html",
-      "source": "DigiTimes",
-      "published_at": "2026-10-14T00:49:43+00:00"
-    },
-    {
-      "id": "hl-888e808aa04c52d4",
-      "date": "2026-10-14",
-      "title": "Huawei accelerates ASEAN data center hardware supply as Kunpeng chip exports surge",
-      "url": "https://www.digitimes.com/news/a20261012PD233/huawei-asean-hardware-data-center-exports.html",
-      "source": "DigiTimes",
-      "published_at": "2026-10-14T00:45:31+00:00"
-    },
-    {
-      "id": "hl-7e71f324f21dd47e",
-      "date": "2026-10-14",
-      "title": "富士フイルム、先端半導体の材料増産 米アリゾナ工場に30億円",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9xN0liWERuQmVIWEhhbl9aNDQ5SDN3b3c3TEJiLWpZT21yXzdZbmJETHkxQllDNVR0dnY4VFZIX3lTaWFEMWJ3Z0dycEFKeFQ0dDh6X3dMd3FNTWdTb0d0YnZPRnYxUFZSNWhjRw?oc=5",
-      "source": "日経",
-      "published_at": "2026-10-14T00:44:19+00:00"
-    },
-    {
-      "id": "hl-66ff307eddf54c23",
-      "date": "2026-10-14",
-      "title": "Taiwan FPCB maker CMI targets flat 2026 revenue despite memory, CPU shortages hitting notebook demand",
-      "url": "https://www.digitimes.com/news/a20261012PD239/cmi-revenue-2026-cpu-electronics.html",
-      "source": "DigiTimes",
-      "published_at": "2026-10-14T00:42:21+00:00"
-    },
-    {
-      "id": "hl-686532392c6169d8",
-      "date": "2026-10-14",
-      "title": "India's Tessolve raises US$75 million from Vector Line Capital to fund chip-services acquisitions",
-      "url": "https://www.digitimes.com/news/a20261012VL215/tessolve-revenue-powertech-design-2026.html",
-      "source": "DigiTimes",
-      "published_at": "2026-10-14T00:41:09+00:00"
+      "id": "hl-fd512c2420798b37",
+      "date": "2026-10-15",
+      "title": "ByteDance nears chip supply deal with MediaTek for data centres, Bloomberg News reports",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQSzBSa0l3cFM5aWVOV3JMUUNqT2JVbTREN0puV0V0TW1zU0Z3cXZuQ29KR3pQelFyVU5CeTJOMHBfU2lNN3Y0SmhFSkpSUlI4NGtRdTA4M2kwSUZpQUdkRlpmcTFISlA3b0QzVWoyUi1zcUh5ZEtScHBCRGZkU2VnLXYwcjNHX01VNnpKS0J5YkFGRU9IQlV4VDI0U250NjhfQWhtWW12Tm9SZHpNOU9hSzVCa1BFeGpjWW41czV3?oc=5",
+      "source": "Reuters",
+      "published_at": "2026-10-15T03:03:00+00:00"
     }
   ]
 }
