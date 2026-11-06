@@ -1,6 +1,6 @@
 {
   "_schema": "id: 安定ID / date: YYYY-MM-DD / title: 見出し / url: 原文リンク / source: 媒体名 / published_at: ISO8601(任意)",
-  "fetched_at": "2026-11-05T17:53:51.602335+00:00",
+  "fetched_at": "2026-11-06T17:10:40.090387+00:00",
   "sources": [
     "日経",
     "Bloomberg",
@@ -17,52 +17,452 @@
     "Tom's Hardware"
   ],
   "fetch_notes": [
-    "日経: 74件",
-    "Bloomberg: 31件",
-    "Reuters: 23件",
-    "CNBC: 30件",
-    "WSJ: 10件",
-    "日刊工業: 5件",
-    "東洋経済: 8件",
+    "日経: 65件",
+    "Bloomberg: 28件",
+    "Reuters: 16件",
+    "CNBC: 25件",
+    "WSJ: 15件",
+    "日刊工業: 6件",
+    "東洋経済: 9件",
     "日経xTECH: 4件",
     "ITmedia: 15件",
     "EE Times Japan: 20件",
-    "DigiTimes: 15件",
+    "DigiTimes: 16件",
     "SemiEngineering: 10件",
     "Tom's Hardware: 50件"
   ],
   "items": [
+    {
+      "id": "hl-03da35137cadd5ad",
+      "date": "2026-11-06",
+      "title": "Analysis: Britain's semiconductor paradox&mdash;world-class innovation, but who captures the value?",
+      "url": "https://www.digitimes.com/news/a20261106VL200/uk-manufacturing-design-materials-commercial.html",
+      "source": "DigiTimes",
+      "published_at": "2026-11-06T17:00:00+00:00"
+    },
+    {
+      "id": "hl-49e552b120f4869c",
+      "date": "2026-11-06",
+      "title": "TSMC considers making advanced memory chips, The Information reports",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPR3VDQTJfT19xV0p2UGZRSUVERlJKVE8xb0VENzVOMEM2UjhPd0ZUM1JISzRGbjJ5aEs0TmZnLVZVQVZlTUZyTEhfUnRJaFJyNmxwbFRhcXdHTExjQURvckJ3bUtTTUtYMmlzektZbGRQemdVMDFrNDhsMUtMdjMzREpIbm90ZjkwNWYyR3lyY2p6RW51cGNvc2czWEo2ampYSVhBaW5ZQm15TWQ0ZGFyOGFESlBEMzBKd2c?oc=5",
+      "source": "Reuters",
+      "published_at": "2026-11-06T15:46:09+00:00"
+    },
+    {
+      "id": "hl-d6c2ffa67bd29f57",
+      "date": "2026-11-06",
+      "title": "Nasdaq rebounds as chips stocks recover from steep losses",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQang5czlMS1c0LVRiTWdNdXItcDlKcTgyOXplSVVGRHljMGVrVG1KVGJTclR0TmtjWjFob0t1QWh6OTdkNzltaDJhTi1fdUdkM2tOb01JaVVlaVRWcWVTdkZFbmdBYlgxY2ktWVh6eFdZRVczekVTdFRCSWtOSzBGVnNCWHpFNFFXWFE2WDVQUjFCa19tbUhzNzdlNksyNFBqek4tcXdrcjVIVTQxMkE?oc=5",
+      "source": "Reuters",
+      "published_at": "2026-11-06T15:29:06+00:00"
+    },
+    {
+      "id": "hl-d7d15cb259b67d1b",
+      "date": "2026-11-06",
+      "title": "Nvidia’s AI Chip Exports Emerge as Target in Democratic Congress",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPb1hFMFZLZ3NScUN5R1drUjBFWFZGSXA5a1JjYW9TTkp0UE5nYWNxekFRNlBQcG00X3NpRmZHVVJ4X25HM3pnaHYtMVgxSENsT0RrTmg4OURDNk12dmhyVDFZbHN6V2g3Y0hWY05HaWxKaVdoMXFxVlBEdUwteWEtVjB5YTdyNTBORnQ1azRXQnFFeVFWcFZfRzFpQTVVSkI3dXFUcFJYWjIwT3JRckcwRzVmdklOdw?oc=5",
+      "source": "Bloomberg",
+      "published_at": "2026-11-06T14:56:59+00:00"
+    },
+    {
+      "id": "hl-7725d93862f4f1d4",
+      "date": "2026-11-06",
+      "title": "TSMC Mulls Making Advanced AI Memory Chips, Information Says",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNVVJGbWZwV3FvN1Q3OHRSQTdCTGI4eFFHM2VKYzItYlM3SjFKVW1vbkZCMzJiRDVOLXhhSXBIX0lybV9FNUlfVFU4UzJIYUUyVkdka3VXdG1LOEVIWTBqblFCaGt3NEE5bTB2bU92MkZ5VHFPalZ3MzJwSHN6YmFtNjF5YWxiUFZHYXBqbTVGUHhGYnhHUHZVcUhXNndCdGdBM0N3bGpUeW1EYjZGc2hV?oc=5",
+      "source": "Bloomberg",
+      "published_at": "2026-11-06T14:48:17+00:00"
+    },
+    {
+      "id": "hl-41f45b3428a622a5",
+      "date": "2026-11-06",
+      "title": "GlobalFoundries VP details FDX Fusion technology, sporting 7nm-class performance without the need for EUV tools — company targets 2030 for high-volume manufacturing, with planar transistors in tow",
+      "url": "https://www.tomshardware.com/tech-industry/semiconductors/globalfoundries-vp-details-fdx-fusion-technology-sporting-7nm-class-performance-without-the-need-for-euv-tools-company-targets-2030-for-high-volume-manufacturing-with-planar-transistors-in-tow",
+      "source": "Tom's Hardware",
+      "published_at": "2026-11-06T14:00:00+00:00"
+    },
+    {
+      "id": "hl-8132324caaf93ce0",
+      "date": "2026-11-06",
+      "title": "Semiconductors",
+      "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE5WcE0yOHlLeU5xQndZN2dqaTBqNGgtbUJLZnF4dEpyWFhpNXo0WVVYRlBnemgtR3NWZFhoRDBuZEFBZ0pWOWRmMUxFN0w?oc=5",
+      "source": "CNBC",
+      "published_at": "2026-11-06T12:16:35+00:00"
+    },
+    {
+      "id": "hl-83f56d4d59db10e2",
+      "date": "2026-11-06",
+      "title": "Chipmakers and Investors Seek Stability in a Chaotic World",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNUzhhUFhzUUNmN2Y3UnZINXFGbU0yV0R4bzRvbW5Bak1qVjVZbWpfTjVYQTh3M2hpbzF5SUQ1TTB6OGUtZXdoSFc1anRBa0NBZ1BRLTNaMEkzLWgzdEZDWjdCQ1BWV0xWWUYzRVpsOXRodVFlaDI2NkhaVDZZMEJ1SndmWGxOSmtVcDZzS2RVaG54czVETEJkM0VGMXByako5TmZ0UQ?oc=5",
+      "source": "Bloomberg",
+      "published_at": "2026-11-06T12:03:58+00:00"
+    },
+    {
+      "id": "hl-fbd253b62ca76889",
+      "date": "2026-11-06",
+      "title": "Gelsinger-backed Nagare Labs’ Z2RAM promises SRAM speed at DRAM density",
+      "url": "https://www.tomshardware.com/tech-industry/semiconductors/gelsinger-backed-nagare-labs-capacitorless-z2ram-promises-sram-speed-with-dram-density-latest-published-cell-retains-data-for-over-300-seconds-at-85-c-but-further-figures-are-projected",
+      "source": "Tom's Hardware",
+      "published_at": "2026-11-06T11:00:00+00:00"
+    },
+    {
+      "id": "hl-13c4b78a1d1844b8",
+      "date": "2026-11-06",
+      "title": "US lawmakers request briefing with Nvidia's Jensen Huang on dealings with Megaspeed executive",
+      "url": "https://www.digitimes.com/news/a20261106VL220/nvidia-jensen-huang-ceo-chips-government.html",
+      "source": "DigiTimes",
+      "published_at": "2026-11-06T10:04:49+00:00"
+    },
+    {
+      "id": "hl-17b8b224286bda97",
+      "date": "2026-11-06",
+      "title": "Nvidia Boosts Chip Tracking in Southeast Asia to Fight Smuggling",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNZ0lJLXdrVkh1Znk1NVctYlYwdjhzR2hySkctbHliLW03bmQ3WGtJT3FFQ1dUb2RSZEZVZXRNNkVPcFgxdnVfUU0zYm5xMklxekQyejBTa0JzT19uT0o1d1N6WVlzZkNNTkxiZUN3dlhwMDc2ZUZHMzlackpiVjVUU2wxNnBnSm9DOTkyc2FQdTZLaWFIUV9OYkN4eDBJdGxDY2JCVS1XNVJLSmowYzgwSGlOak5UZw?oc=5",
+      "source": "Bloomberg",
+      "published_at": "2026-11-06T10:03:19+00:00"
+    },
+    {
+      "id": "hl-e3640a59368c5f80",
+      "date": "2026-11-06",
+      "title": "Commentary: US governors target AI data centers as Taiwan firms await Nvidia outlook",
+      "url": "https://www.digitimes.com/news/a20261106PD241/usa-data-center-ai-outlook-2026.html",
+      "source": "DigiTimes",
+      "published_at": "2026-11-06T09:00:00+00:00"
+    },
+    {
+      "id": "hl-dacf80b7ca92666b",
+      "date": "2026-11-06",
+      "title": "Moonshot AI reportedly seeking access to Nvidia GPUs through European neoclouds",
+      "url": "https://www.digitimes.com/news/a20261106VL219/moonshot-nvidia-chips-blackwell-data.html",
+      "source": "DigiTimes",
+      "published_at": "2026-11-06T08:59:43+00:00"
+    },
+    {
+      "id": "hl-c362ad418c975482",
+      "date": "2026-11-06",
+      "title": "YMTC targets up to 70% Chinese tools for new NAND fab",
+      "url": "https://www.digitimes.com/news/a20261106VL217/ymtc-nand-equipment-manufacturing.html",
+      "source": "DigiTimes",
+      "published_at": "2026-11-06T08:55:28+00:00"
+    },
+    {
+      "id": "hl-5299454857fefdf0",
+      "date": "2026-11-06",
+      "title": "TSMC、半導体回路設計のAI活用に基盤提供 生産性3倍以上に",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9wWTBSeHRTVWFNaElSNFluZFRFZUtTcGhTRUFlYXYtMkJoeUhOZDktWE9IRnVmaXBBcFZZbGhiamZ2amlIWXJNbUpBMUVWdDY4LTM3djF5bHJkeVExZUV6RlpXb0gwZXBBcVN0eg?oc=5",
+      "source": "日経",
+      "published_at": "2026-11-06T08:45:33+00:00"
+    },
+    {
+      "id": "hl-92639a0a9940a810",
+      "date": "2026-11-06",
+      "title": "Nvidia reportedly buys glass substrate samples from Korea's JNTC",
+      "url": "https://www.digitimes.com/news/a20261106VL216/jntc-nvidia-glass-substrate-supplier-manufacturing.html",
+      "source": "DigiTimes",
+      "published_at": "2026-11-06T08:04:38+00:00"
+    },
+    {
+      "id": "hl-6ab108511c69107e",
+      "date": "2026-11-06",
+      "title": "Chip Industry Week In Review",
+      "url": "https://semiengineering.com/chip-industry-week-in-review-163/",
+      "source": "SemiEngineering",
+      "published_at": "2026-11-06T08:01:01+00:00"
+    },
+    {
+      "id": "hl-1e74cf2686ea552d",
+      "date": "2026-11-06",
+      "title": "Wistron ITS reports record third-quarter profit as AI and semiconductor focus accelerates",
+      "url": "https://www.digitimes.com/news/a20261106PD234/wistron-its-revenue-profit-growth.html",
+      "source": "DigiTimes",
+      "published_at": "2026-11-06T07:55:00+00:00"
+    },
+    {
+      "id": "hl-613df6bd48e3a89f",
+      "date": "2026-11-06",
+      "title": "AI Elite Lose $18 Billion as Chip Stock Rout Spreads to Asia",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPZElOeXZTazI3SDF4bFpjbUJWZkl1LWI2NW1DN096SWphOW51VVEycUhlZm41NmRJZktNalhCeUhtN3pJcXhycXhSRnltZEowTWNyazg1T3l6cnVmYlBzb21iaXpTNWsxc1VLa3NSVnB1YWFFTUQxTTdNWU9naUZBTlJ2MktPUjVyTFBZV1oyUzBtLTZGWUM1YmdlMjROY1VTcGx2VlRUNThBTjRFQk1z?oc=5",
+      "source": "Bloomberg",
+      "published_at": "2026-11-06T07:22:00+00:00"
+    },
+    {
+      "id": "hl-3981c2f116d6e5c4",
+      "date": "2026-11-06",
+      "title": "上海株大引け 3日ぶり反落、リスク回避の売り 半導体安い",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFB4ZXJwY3ZoWFE3WGxXaTNuUmJicTNNaHVBSnNYcUtRZ1k5d1BnN1RmTjNjQy0tV0pCbVBoSzhTNTBnRVlxTUF5VWZ2am5BVzZQMHhYV1BDWjc0c3AxSC1rV21hN1RncTU4eDhfdg?oc=5",
+      "source": "日経",
+      "published_at": "2026-11-06T07:15:41+00:00"
+    },
+    {
+      "id": "hl-91e49f3304a4396f",
+      "date": "2026-11-06",
+      "title": "ウインテスト[6721]：新事業「半導体の前工程検査装置事業」開始に関する日程変更のお知らせ 2026年11月6日(適時開示) ：日経会社情報DIGITAL",
+      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPMUZSY0l5Q3J4LTRHWmxCT1NhNWxidzMtbW5BLXJXSHJKdE5NQW93TnY3UklQV21Odk1OSjZSXzJCQzgwbG1ranVyM1JveHhCU3NyTE9CSHNiNWdiYlcwMkxnWXpYZmlnSHlBUXJOY3BPaTkxQVVkOTVQNUYzQ0hEaHJZcS1kTGx2b3d0WENOa3ctc1NMX2dac0NVUU4zX0p5VHE2Q2trc29HZUtSbFBqbnFzcmNkU1pmaGZQcXJ0MTdtaWVKeElTV3h3cU0?oc=5",
+      "source": "日経",
+      "published_at": "2026-11-06T07:00:00+00:00"
+    },
+    {
+      "id": "hl-bc9ad586d1eed838",
+      "date": "2026-11-06",
+      "title": "スタンレー電気、半導体基板を大口径化 次世代品の量産コスト低減",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9pQ25Icnc5QXA3Sm9WSXlmb080dkhCTzRmVlNGTGtZVUpCXzV4VXB2X2cta0p1R1dRTHNGODlFZThLWnZkckdpS2lraDJWSnJSb1o1cjZINldxRTBSeGZ3Ti1ZbldJQUFlVl92dA?oc=5",
+      "source": "日経",
+      "published_at": "2026-11-06T06:38:23+00:00"
+    },
+    {
+      "id": "hl-890c68e85e6bd0b1",
+      "date": "2026-11-06",
+      "title": "字が見えない、声も聞こえない！ シニア大学院生の受難",
+      "url": "https://eetimes.itmedia.co.jp/ee/articles/2611/09/news009.html",
+      "source": "EE Times Japan",
+      "published_at": "2026-11-06T06:30:00+00:00"
+    },
+    {
+      "id": "hl-e4964a02b4b42240",
+      "date": "2026-11-06",
+      "title": "Qualcomm validates HBC memory architecture, targets AI250 samples in 1H27",
+      "url": "https://www.digitimes.com/news/a20261106PD216/qualcomm-hardware-ai-inference-technology-hbm4.html",
+      "source": "DigiTimes",
+      "published_at": "2026-11-06T06:00:44+00:00"
+    },
+    {
+      "id": "hl-a894c82bb44bcb0d",
+      "date": "2026-11-06",
+      "title": "AI boom turns chip packaging into the next battleground for semiconductors",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOVTRsRWo5SjhUM1lPV19Xc1ZKUjNWWEx1eTFkZEZLYmpjVG1FNFltZDRRdVBwZ3RBVnk0NlQtbDZmaWdmaFhSY0NFT3Rpa2YzZVRzNl8zSHNzcVdhR3RZdEpFeVNkMW93SDFrbTY5SE9NM3NneHpZOFYxN1FGOVU1ekxjSF9aZ2FyZnRXLU5aY2pFT0gtYTVwMEhfUmU2a2lOaURTeURqcDQ0M185ekd4ZWJwVHdiVWEwanduVElR?oc=5",
+      "source": "Reuters",
+      "published_at": "2026-11-06T05:52:00+00:00"
+    },
+    {
+      "id": "hl-3f9212081b542e32",
+      "date": "2026-11-06",
+      "title": "台湾株6日 大幅に7日続落、6カ月ぶり安値 米半導体株安が波及",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1XcTVaNEN4OTVmTjM0YndXZEFMRUxSMmp4S040MHAxNVdVQ0s3akM4bUJLMks1UGp2a0IxR3pQSWF6NDJyYWRzc0NUOWpMVkhFSEpJTjkwVE9EQy01OU5kVU1Qb2J3bWtUSm5TaA?oc=5",
+      "source": "日経",
+      "published_at": "2026-11-06T05:48:40+00:00"
+    },
+    {
+      "id": "hl-6c2c8b9670d6e4d1",
+      "date": "2026-11-06",
+      "title": "量子×AIで材料開発 6社が共通基盤構築へ",
+      "url": "https://eetimes.itmedia.co.jp/ee/articles/2611/06/news019.html",
+      "source": "EE Times Japan",
+      "published_at": "2026-11-06T04:30:00+00:00"
+    },
+    {
+      "id": "hl-a9375b840eae6304",
+      "date": "2026-11-06",
+      "title": "China's NSIG sees silicon wafer prices rebound, but profitability remains elusive",
+      "url": "https://www.digitimes.com/news/a20261106VL208/nsig-silicon-wafer-300mm-expansion.html",
+      "source": "DigiTimes",
+      "published_at": "2026-11-06T03:59:06+00:00"
+    },
+    {
+      "id": "hl-3d623df73ce030cb",
+      "date": "2026-11-06",
+      "title": "China's chip equipment makers ride record AI orders into 2027, but new challenges lie ahead",
+      "url": "https://www.digitimes.com/news/a20261106VL211/china-ic-manufacturing-equipment-expansion-investment-2027.html",
+      "source": "DigiTimes",
+      "published_at": "2026-11-06T03:46:28+00:00"
+    },
+    {
+      "id": "hl-a37e6d52d67fe687",
+      "date": "2026-11-06",
+      "title": "Samsung speeds P5 Fab 2 construction as memory chip shortage looks to last through 2028",
+      "url": "https://www.digitimes.com/news/a20261105VL231/samsung-2028-2027-equipment-production.html",
+      "source": "DigiTimes",
+      "published_at": "2026-11-06T03:35:03+00:00"
+    },
+    {
+      "id": "hl-24c259c0362ffc09",
+      "date": "2026-11-06",
+      "title": "Taiwan-UK tech ties could support Europe's chip autonomy drive",
+      "url": "https://www.digitimes.com/news/a20261106PD220/technology-uk-taiwan-industrial-development.html",
+      "source": "DigiTimes",
+      "published_at": "2026-11-06T03:35:00+00:00"
+    },
+    {
+      "id": "hl-b5a704380445e434",
+      "date": "2026-11-06",
+      "title": "ニコン露光装置事業、26年度上期は営業利益137％増",
+      "url": "https://eetimes.itmedia.co.jp/ee/articles/2611/06/news037.html",
+      "source": "EE Times Japan",
+      "published_at": "2026-11-06T03:30:00+00:00"
+    },
+    {
+      "id": "hl-d6d6bd35e28068fb",
+      "date": "2026-11-06",
+      "title": "Commentary: YMTC's record NAND profits mask bigger risks behind its reported IPO delay",
+      "url": "https://www.digitimes.com/news/a20261106PD227/ymtc-ipo-nand-equipment-manufacturing.html",
+      "source": "DigiTimes",
+      "published_at": "2026-11-06T03:20:30+00:00"
+    },
+    {
+      "id": "hl-175ab0de84714e5b",
+      "date": "2026-11-06",
+      "title": "Stockpiled in Hong Kong: Beijing limits Nvidia H200 imports as domestic silicon push accelerates",
+      "url": "https://www.digitimes.com/news/a20261106VL209/beijing-nvidia-silicon-market-shipments.html",
+      "source": "DigiTimes",
+      "published_at": "2026-11-06T03:08:42+00:00"
+    },
+    {
+      "id": "hl-7a4f93f468ae2d1a",
+      "date": "2026-11-06",
+      "title": "SK Hynix AI arm buys US$377 million stake in Penguin Solutions from SK Telecom",
+      "url": "https://www.digitimes.com/news/a20261106VL207/sk-hynix-solidigm-ai-investment.html",
+      "source": "DigiTimes",
+      "published_at": "2026-11-06T03:01:13+00:00"
+    },
+    {
+      "id": "hl-ee481f66eb2d7708",
+      "date": "2026-11-06",
+      "title": "Memory maker Transcend's operating profit falls 40% from second quarter, but nine-month earnings reach record",
+      "url": "https://www.digitimes.com/news/a20261106PD222/transcend-profit-earnings-2026-revenue.html",
+      "source": "DigiTimes",
+      "published_at": "2026-11-06T02:38:40+00:00"
+    },
+    {
+      "id": "hl-a009c4294c4d8f54",
+      "date": "2026-11-06",
+      "title": "画像 | すごいベンチャー【17】LENZO／日本発の次世代AI半導体に挑む",
+      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFBSOGpRQjVjQWo4STdfYko0Ukk0QmI5VGNVYjVqLV9HWm52dGlnaElnd3d4RkNkYVVNSGMwenIxTEJFVkFlczBzMHNHR2t4QXQtdjlubkRhRQ?oc=5",
+      "source": "東洋経済",
+      "published_at": "2026-11-06T02:30:00+00:00"
+    },
+    {
+      "id": "hl-f10748dc0c137555",
+      "date": "2026-11-06",
+      "title": "AIエージェント普及でCPUの重要性増す、Googleが語る新たな需要",
+      "url": "https://eetimes.itmedia.co.jp/ee/articles/2611/06/news025.html",
+      "source": "EE Times Japan",
+      "published_at": "2026-11-06T02:00:00+00:00"
+    },
+    {
+      "id": "hl-e2d54e05bc016fe0",
+      "date": "2026-11-06",
+      "title": "太陽誘電、AI需要で営業利益127％増 設備投資も前倒し",
+      "url": "https://eetimes.itmedia.co.jp/ee/articles/2611/06/news035.html",
+      "source": "EE Times Japan",
+      "published_at": "2026-11-06T01:30:00+00:00"
+    },
+    {
+      "id": "hl-3af900e4d92df253",
+      "date": "2026-11-06",
+      "title": "Nasdaq sell-off batters Asian chip stocks as SK Hynix, Samsung, Softbank, TSMC tumble",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFAwSklwR0ROYnpSbTk3dUZ4WUpNWDRfRjRzYjVGcE90U3VuNmFJRXdwXzFlTVplcEJzT3R5dUV5S21vY1JjRWZYVERSTlg4WHdGMW1hRjdvODg5R3I0MmRLQ2ZOYzFKNnJNRHZLc3dON19tUURZWGF4cUkwQUoybjjSAYQBQVVfeXFMTzQzR01kNVNEV0xUOFlPVEF6djcwZkRNU2xDZTAyRHlJcVZtNDNhd1R6b0hBc0c3ZTVwcEE3aW03N0dGXzg1bmZiSE1pVi1RXzExam5xVVE5NE50cmZkZ0F4ZzlRdXZTZmVLeWpWM3M1cm85aE9hZnloQUwtZ2hWRHNybml1?oc=5",
+      "source": "CNBC",
+      "published_at": "2026-11-06T00:59:00+00:00"
+    },
+    {
+      "id": "hl-89ccce6a8f3fc0ab",
+      "date": "2026-11-06",
+      "title": "半導体関連株が軒並み急落､米半導体株の大幅安が波及 - 四季報オンライン",
+      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE1HbFZhV3RWcEtaY1JMUUx2REZkMWtYSGVlV0l3aXlJWjhlaVg1NHJEYTJHY1RPLU4tQUZZV3A4TkhUY3YxVHBSRDFZdU1qSXAxdGJlZXhTcw?oc=5",
+      "source": "東洋経済",
+      "published_at": "2026-11-06T00:49:48+00:00"
+    },
+    {
+      "id": "hl-d4eda0713f474234",
+      "date": "2026-11-06",
+      "title": "ローカルLLMに最適な専用機 Mac miniかAMD搭載PCか",
+      "url": "https://xtech.nikkei.com/atcl/nxt/mag/nc/18/052100112/103000150/",
+      "source": "日経xTECH",
+      "published_at": "2026-11-06T00:00:00+00:00"
+    },
+    {
+      "id": "hl-a0dcd880ed3df35d",
+      "date": "2026-11-06",
+      "title": "LG、家電への独自AI半導体搭載を加速 クルマやロボ向けに触手か",
+      "url": "https://xtech.nikkei.com/atcl/nxt/column/18/01231/00167/",
+      "source": "日経xTECH",
+      "published_at": "2026-11-06T00:00:00+00:00"
+    },
+    {
+      "id": "hl-349a435920d1677c",
+      "date": "2026-11-05",
+      "title": "グローバルＸ 半導体・トップ１０－日本株式 ＥＴＦ[282A]：ETFの収益分配金見込額のお知らせ 2026年11月6日(適時開示) ：日経会社情報DIGITAL",
+      "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE16THBtYXE0NW00d2NzcE9pVGRGOW56SHlUOTcwSkM1VHhpSzE4SHdKTGVaajE1aldHNzc0OGd2dzhTWWt0d3pITmJPNEVLOENBZF82VnpxenJpaXNRZnZHMHppNTVMY1d1RXc?oc=5",
+      "source": "日経",
+      "published_at": "2026-11-05T23:50:00+00:00"
+    },
+    {
+      "id": "hl-4140361dbe57b45a",
+      "date": "2026-11-05",
+      "title": "Huang Drops From World’s Top 10 Richest After Chips Selloff",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNSV9wemNUMHdoQVROdEFTdE0zLTQxaXJoYS1rT0Zab3d4Nkd5TU00RFVhU21fQm1GcFIzS0Y2RkcxQjBydzlad2V5SXl2Z2xOZmlnY2ZmTHpkSGd2OW9jVnZUVWp5eEdKTnJsQjd6VldGaXZaQm5VUmRFeGhsTTQtZ0JPYTFPMjZYaFlub2xIcDlBcW9fUGpOSktCRXRqLUZUdlRBUnZrN2dQdnBkVWRn?oc=5",
+      "source": "Bloomberg",
+      "published_at": "2026-11-05T21:53:45+00:00"
+    },
     {
       "id": "hl-3094888c97502a3c",
       "date": "2026-11-05",
       "title": "US Stock Futures Diverge as Chip Selloff Extends Into Second Day",
       "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPSGhDSzhCYkhQQlg2TDJ4OHFfREQ1bEFUWjlmUlYwLXNSS3dCbjh1YWJ3d21xcEJabjhkMWZyR05XQUItd2pFaEtzNDBrOFZ0eVhrb0xId2J6R2NSbjRFbUlKQ2ZTZWEwYzhZX2swQk5jOVV2LXptLXZab0tUVUNkZHliVFVJYnNreTBDTkw0b25fa3c4NFBZOThFQUYyOTN3MmprcURGSFZyNGswU3BxS0k0UC1aQQ?oc=5",
       "source": "Bloomberg",
-      "published_at": "2026-11-05T17:09:20+00:00"
+      "published_at": "2026-11-05T21:38:39+00:00"
     },
     {
-      "id": "hl-e2b6b7154adbea27",
+      "id": "hl-e3e300c7c597cc44",
       "date": "2026-11-05",
-      "title": "Nasdaq 100 Falls 4% as Chipmaker Selloff Deepens: Markets Wrap",
-      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPaHBnOEludEdwalhTMXRiLWFQbk9RRVVIVGYzY3cwZUk4TmxLY1hnZExZQTZBTExfR2l2TmpJNXUwRWUwc21Jd0EzZklqc2hCbnRta19OU1lQV2NTdjhuNUZxaGQwaHlBZG51eG44WXFxNTNuX1FRYVluOGdaTFptSWRFY3J1ZTdMTlFzY3VmYVhkbDJH?oc=5",
-      "source": "Bloomberg",
-      "published_at": "2026-11-05T17:01:35+00:00"
+      "title": "半導体株が下落する中で出直り！高値更新に期待の飼料株 - 四季報オンライン",
+      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE14LVBIOVZLZkNJWjhtRTFMcGlxOUFmb3VwQUVoR3pSeFhuTTBZYnJFY0NHQmhkYXhmTzJrOFZHUmFrR25WckVkbHo5TF80ZGJQZjRsbFpZOA?oc=5",
+      "source": "東洋経済",
+      "published_at": "2026-11-05T21:00:00+00:00"
     },
     {
-      "id": "hl-a64ba8035a12d35d",
+      "id": "hl-9e478e3e01963910",
       "date": "2026-11-05",
-      "title": "TI targets next semiconductor supercycle as humanoid robots surge",
-      "url": "https://www.digitimes.com/news/a20261105PD230/texas-instruments-robotics-semiconductors-demand-capacity.html",
-      "source": "DigiTimes",
-      "published_at": "2026-11-05T16:36:00+00:00"
+      "title": "ニコンの4-9月期、営業黒字転換 半導体装置など伸長",
+      "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9MM1ljRHZMVmtBTU90UVh2VlhrWEprOEhLdVJDcVdRcXFUVUs1SDctdWNJaU5IeWFNTW9fRjYwcENQaTRhZWZrbzVZdjZfem5RRnd5U2QwSkM?oc=5",
+      "source": "日刊工業",
+      "published_at": "2026-11-05T20:00:00+00:00"
     },
     {
-      "id": "hl-00234b96214d5f58",
+      "id": "hl-4a5349ea0b137f35",
       "date": "2026-11-05",
-      "title": "US midterm elections shake-up leaves Samsung, SK Hynix facing AI data center risks, CHIPS Act opportunities",
-      "url": "https://www.digitimes.com/news/a20261105PD229/chips-act-samsung-2026-sk-hynix-data.html",
-      "source": "DigiTimes",
-      "published_at": "2026-11-05T16:34:00+00:00"
+      "title": "半導体工場の1日を体験 台湾発の無料ゲーム「fab24hr」",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9KVGlzQ1RFTVdqRFh0eXJuWkViajNoNjgzaW1OcjQ3SGpjTkJzMk9yOGd3ZGIwaGhNMzVVT0ljZ3hmVjRNMUFvdjRtVHZxRXlpNWdtSjJRTlBwM1pxVlhVYnlWWExvZnJ6UWc2Mg?oc=5",
+      "source": "日経",
+      "published_at": "2026-11-05T20:00:00+00:00"
+    },
+    {
+      "id": "hl-25f1aff321351e3a",
+      "date": "2026-11-05",
+      "title": "インテル急接近 インド半導体、35年に後工程シェア10%",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNTmUwWkFyWHNIRkxqVFo5X2lQOV9Oc0lSaTZlSlFOZk12NXNvUklrLWpSNkZrcEVyZi01Qm04X2F5N0pmVW1XZjdCajd4cGtaNUxaNHNmWlBWdVpUZ3FUOEZSNFNnSHZ1eTViTlRCYWpvUm9POUQyVXg5VUhYR2ItWm85dDlGdk0?oc=5",
+      "source": "日経",
+      "published_at": "2026-11-05T20:00:00+00:00"
+    },
+    {
+      "id": "hl-16f5cd5435365437",
+      "date": "2026-11-05",
+      "title": "LG、家電への独自AI半導体搭載を加速 クルマやロボ向けに触手か - 日経クロステック",
+      "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE8ydUpmLXJwWlVXdEFfYkZWZ2VCU0lRcXJxdGtaU2taVlBvMi1LVllUSFhNb2NQSzdsQURWbGRKUXJnOU1SRDV3cXFQdDZLNFl4NnpGOGtkY092c0tkY1o3UVpiNGlfWFk?oc=5",
+      "source": "日経",
+      "published_at": "2026-11-05T20:00:00+00:00"
+    },
+    {
+      "id": "hl-eb907e86cd711a30",
+      "date": "2026-11-05",
+      "title": "Bernstein’s Stacy Rasgon on the chip stocks selloff",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOSUJUaVRSWm12ckZNLWhYMmVUajdyWXlaVjE4V0VULWN0Z183V1RpcGxCSEQtQ3d3NUQ4emNUbktpZDdPVkxqXzRXUjh0UThOTzRJRnNGX2F6TmlwVWhOZnRIcHcyR3RXS1lNbzdLRVpYSGNPY3BhbmluYXVVRW1wZk5HZTNRbFhUcjc0QVZIMVZOZnNQcHY5Rm93?oc=5",
+      "source": "CNBC",
+      "published_at": "2026-11-05T18:42:45+00:00"
+    },
+    {
+      "id": "hl-635bffa8f124406b",
+      "date": "2026-11-05",
+      "title": "Stocks making the biggest moves midday: Micron, Tesla, Tripadvisor, AppLovin, Nvidia & more",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPQ3FKb0tTczRZcVFtbklBaFp2WWFCSU5zR1h3UEdPSERONW9PYUFhMmZ6aFV1U0Eta0ViYV9mM1B4NWVBTU9ELXByNm9aNVVYaDBhQXJtN1dDTzRzVUMycTUxaFA1aUw4aFE0Z1RrRDhtT0NLbDN3R0I3ZVY1OW1qaG9BUF9QLUFCampwdVp0U1RHUzRIZ0R3eFB1d2Z3Zw?oc=5",
+      "source": "CNBC",
+      "published_at": "2026-11-05T18:06:29+00:00"
+    },
+    {
+      "id": "hl-c2a8e5f7912205cf",
+      "date": "2026-11-05",
+      "title": "India targets creating homegrown GPUs within 2 years and plans to commercialize indigenous SHAKTI and VEGA processors",
+      "url": "https://www.tomshardware.com/tech-industry/semiconductors/india-targets-creating-homegrown-gpus-within-2-years-and-plans-to-commercialize-indigenous-shakti-and-vega-risc-v-processors-sees-ai-boom-as-a-potential-repeat-of-the-y2k-opportunity-for-its-it-industry",
+      "source": "Tom's Hardware",
+      "published_at": "2026-11-05T18:00:00+00:00"
     },
     {
       "id": "hl-8e227b2dc40b817b",
@@ -70,7 +470,7 @@
       "title": "We continue to expect growth in the data center, semiconductor spaces, says Rockwell CEO Blake Moret",
       "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxNcVVsZnRQU052MjVUX2ViUGo3RjdaQm1hcVZDUnpEQXA1YUJicVk0YklWQjUwVnVxYjZCLVUzTWV1ZDRDeldsLWNiT2tWV1ZaeFZKdkYzOHZ5YldCcDNiRzVCbjI0ckZTbkRPSjhBTG5GbURjYi1hMFVvN3l4UTJLLVpBbE1ERXRsN0JzUjJDUjZ3Y0hGWVEwcEMybkVua0JxQU0yc1FjRTVUQks3bnJlU2F2eXRTNi04U0FTZ2dSSFdtTmZaODJpRzhjeTRhUzVCWmFRc3gwS3I?oc=5",
       "source": "CNBC",
-      "published_at": "2026-11-05T15:49:09+00:00"
+      "published_at": "2026-11-05T16:14:00+00:00"
     },
     {
       "id": "hl-845cde18e655aa33",
@@ -89,10 +489,10 @@
       "published_at": "2026-11-05T15:31:17+00:00"
     },
     {
-      "id": "hl-80436bab7876d9fc",
+      "id": "hl-06ebed6a78562ce7",
       "date": "2026-11-05",
       "title": "Qualcomm slides 9% after earnings, leading postelection chip stock sell-off",
-      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOUGR6VGxMQVNKdUF0R21NRjNRYzB1MlJMRzZFVVViM0tLZXpMM3BOc210T2FGZ0RMcEVWOTRXeGx3dHJNd2JlOHh4Z05BREdvSmVGdjdHWlptek45UEc1UGU1eDFYdVdRczVheTJCcE93S2E4d0dULWI0NUtVXzNiQtIBhgFBVV95cUxPU1pQS0l2NFdxYnpCWkV0d1lrSzFVQU45NVJWOEhlQTZfdTFoaVVwbUNsMXBNZVJ5aFAtMFRhbUhIZ0VNbG16YklqODNsekdieHY4M2ZGNzlXemtZTHYxOHYyM096QWVyVkllTFhjTHZUYmpWeEpMUEJBaHdTbXBTTkp2VG5TUQ?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPU1pQS0l2NFdxYnpCWkV0d1lrSzFVQU45NVJWOEhlQTZfdTFoaVVwbUNsMXBNZVJ5aFAtMFRhbUhIZ0VNbG16YklqODNsekdieHY4M2ZGNzlXemtZTHYxOHYyM096QWVyVkllTFhjTHZUYmpWeEpMUEJBaHdTbXBTTkp2VG5TUdIBhgFBVV95cUxPU1pQS0l2NFdxYnpCWkV0d1lrSzFVQU45NVJWOEhlQTZfdTFoaVVwbUNsMXBNZVJ5aFAtMFRhbUhIZ0VNbG16YklqODNsekdieHY4M2ZGNzlXemtZTHYxOHYyM096QWVyVkllTFhjTHZUYmpWeEpMUEJBaHdTbXBTTkp2VG5TUQ?oc=5",
       "source": "CNBC",
       "published_at": "2026-11-05T15:18:46+00:00"
     },
@@ -137,28 +537,12 @@
       "published_at": "2026-11-05T13:25:28+00:00"
     },
     {
-      "id": "hl-fe20685fa4a21d7c",
-      "date": "2026-11-05",
-      "title": "IBM, AMD, Oak Ridge National Laboratory launch quantum error correction platform",
-      "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQODR3T0kxZE10MmFBenJjWTB3d0pYSmtLaUpGNjZQZkZzamlkS2MwZFZKM250YTVmV29XR21hUFlYT3FVejZKY0piWTJJS3F5NHRDa0t3b0xqV0ZqdURJdktzc2hqNG5ENExRVUM2T0NfMVBMd1RBQnhZZlZDUTB4VUxHTmhLUGRRUWY3YzZmZEpKb2czdXAydS1yaENPZFFqZVBuYktRWjNMVXlmX2NSeHdHVnItRV9JLXhaWklDSlYwaVk?oc=5",
-      "source": "Reuters",
-      "published_at": "2026-11-05T13:00:55+00:00"
-    },
-    {
       "id": "hl-ab79502d4c77194a",
       "date": "2026-11-05",
       "title": "BMW Supplier Sees ‘Mind-Boggling’ Chip-Price Rises on AI Demand",
       "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQaUkzVnpZbTlRVzdmTEhNNE5kcDlndkVybEFYUkw3MGdxbFZlQ3BpZWtGVzBlYWJfX3hpS0tVOE5uU0lqYWxZdkR3bTVDYm55emxfa2h1QW95NXFSM1NXMGR3aW9LUTdwbkJ6ajNudVhNQkRDRUt1MTBzQUtfZlREMzBvNEczdkNGLTVVa3N6Q2VueDg4OGN5WTJkdlkzSmxtbkF2SnFoQk9IZnZQVi11S013?oc=5",
       "source": "Bloomberg",
       "published_at": "2026-11-05T12:56:08+00:00"
-    },
-    {
-      "id": "hl-42ef5ae2439d6677",
-      "date": "2026-11-05",
-      "title": "Micron has paused a Taiwan cleanroom since October amid labor dispute, but keeps EUV plans",
-      "url": "https://www.digitimes.com/news/a20261105VL234/micron-taiwan-euv-cleanroom-labor.html",
-      "source": "DigiTimes",
-      "published_at": "2026-11-05T12:35:55+00:00"
     },
     {
       "id": "hl-ec4030254af3b57f",
@@ -193,20 +577,20 @@
       "published_at": "2026-11-05T12:00:00+00:00"
     },
     {
-      "id": "hl-f0fe1f6fa3a15de5",
-      "date": "2026-11-05",
-      "title": "EXCLUSIVE: Nvidia chips pile up in Hong Kong as China withholds import approval",
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQZHNUQnlURFBWSTlTSE5wNWUzekR0cDZfcWQzQVRFLVNweXJiSGhtSFZ6cWdvMXF4SHpLRy1YT1Y2QjJZMGxRajNaRGQ1Y25SVGkycEphaU4zTTRJSzV0QjNPTFMxeEl0Mm9CdGFQc0JJTHBNemVoSXdkTnhsR1FNR0t1b2hoUHdfSW0yVnlGMl95Qkd4dDAtMGdhYTFhUzRhc0U1Mm9fdGxLRnhacUNr?oc=5",
-      "source": "Reuters",
-      "published_at": "2026-11-05T11:54:32+00:00"
-    },
-    {
       "id": "hl-b78886afb9e42deb",
       "date": "2026-11-05",
       "title": "決算:トーカロ純利益16%増に上振れ 27年3月期、半導体装置向け伸びる",
       "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBqc0RSbEpBazJvZWF6Qi03T29GOXY2cTI0bHd2ejlIR0FiZ1daTk80eW9SbWRXNTBGSy1FaVJzbnQtQTBsTFhIT2M0ejBwczV0Y0lwa0xKQW5RU015dHhSRWRoTGtxVlpjM1FUOA?oc=5",
       "source": "日経",
       "published_at": "2026-11-05T11:33:03+00:00"
+    },
+    {
+      "id": "hl-f0fe1f6fa3a15de5",
+      "date": "2026-11-05",
+      "title": "EXCLUSIVE: Nvidia chips pile up in Hong Kong as China withholds import approval",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQZHNUQnlURFBWSTlTSE5wNWUzekR0cDZfcWQzQVRFLVNweXJiSGhtSFZ6cWdvMXF4SHpLRy1YT1Y2QjJZMGxRajNaRGQ1Y25SVGkycEphaU4zTTRJSzV0QjNPTFMxeEl0Mm9CdGFQc0JJTHBNemVoSXdkTnhsR1FNR0t1b2hoUHdfSW0yVnlGMl95Qkd4dDAtMGdhYTFhUzRhc0U1Mm9fdGxLRnhacUNr?oc=5",
+      "source": "Reuters",
+      "published_at": "2026-11-05T11:27:00+00:00"
     },
     {
       "id": "hl-2dec9b28f4cbc544",
@@ -223,390 +607,6 @@
       "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBOTl83VlJxM0dfeFFUd2UtbVJQTzRwWFI4Z1VSWGJsQ1BfTkhlQ2NpeWRmV3hIdTA5NGNkZEpGeWdCaWUzWXRFUWR3cGgzVTdMQnBXdTFFQkI3aTV1UU5ESmoyeHFCNmN5cm9fLQ?oc=5",
       "source": "日経",
       "published_at": "2026-11-05T10:23:52+00:00"
-    },
-    {
-      "id": "hl-347b7d724d4d7a7a",
-      "date": "2026-11-05",
-      "title": "日東紡、半導体用ガラス材料に200億円投資 29年度に生産能力3.6倍",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9kWG5nZWhqdDU1dTh5Vmx4UUdjZUJCUjNvTld3RFY1YXpwUGpaQmlXNVZqNkszUHpqaEhmRi1FWU9FckgxNlZDTkdZaDh2andsc0JieHlFQUtEd3RHNlF2cGZEaENraGQxcnNTUA?oc=5",
-      "source": "日経",
-      "published_at": "2026-11-05T10:16:14+00:00"
-    },
-    {
-      "id": "hl-38970ff790a7b09a",
-      "date": "2026-11-05",
-      "title": "北海道大学、ジェトロと包括連携協定 半導体研究の国際展開で協力",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5pVGJVWnRUdVBxS0FncklmbTJxYkJxSkRQaVNpam1teXlpenhqcmNVbHhUeFp1WTdkeGRabFFqcVlsQl9JQXZVSjQ4TDJhT0xFNmZ6SXpkZXBOZXZwdVE3VG1RQV9mY2twY01xYw?oc=5",
-      "source": "日経",
-      "published_at": "2026-11-05T10:05:45+00:00"
-    },
-    {
-      "id": "hl-63409640d644d640",
-      "date": "2026-11-05",
-      "title": "北海道で「ビジネスEXPO」開幕 半導体やバイオ技術を展示",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9rTGdkRnZVQTZuWTVUMHFDQ3FIQ2hDNmxPSzVYTVBJQ3VnSjkzMUF3N0JWQ3lBcE8zUWJ4XzhSN3djNDh3MUhndWVDal96M0N2dXB6ZzhCOUVseVBSUkV6N2FYc3kxamh5VEszeg?oc=5",
-      "source": "日経",
-      "published_at": "2026-11-05T09:57:15+00:00"
-    },
-    {
-      "id": "hl-78115e4afa7374a5",
-      "date": "2026-11-05",
-      "title": "ソニー「複数シナリオを想定」、SamsungのApple向けCIS参入報道の中",
-      "url": "https://eetimes.itmedia.co.jp/ee/articles/2611/05/news089.html",
-      "source": "EE Times Japan",
-      "published_at": "2026-11-05T09:42:00+00:00"
-    },
-    {
-      "id": "hl-27e3fdcc8e7df954",
-      "date": "2026-11-05",
-      "title": "ソニー半導体は2Q過去最高益、スマホ市場2割減も増益確保",
-      "url": "https://eetimes.itmedia.co.jp/ee/articles/2611/05/news085.html",
-      "source": "EE Times Japan",
-      "published_at": "2026-11-05T09:35:00+00:00"
-    },
-    {
-      "id": "hl-6b51a704760a7b9b",
-      "date": "2026-11-05",
-      "title": "AI･半導体への不安が広がる中で注目したい｢2つの銘柄｣ - 四季報オンライン",
-      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE1PNVE5VXJ6RWFQbTlkOGgtOFV6YnBaMkdqYkQyOURnZW8ybkNVWTE4dnhKMmtINDFrOURET2s3OFNIb1pyWWx2UEVVbWQ3UGFyaWpzYWdDUQ?oc=5",
-      "source": "東洋経済",
-      "published_at": "2026-11-05T09:30:00+00:00"
-    },
-    {
-      "id": "hl-945e8b686b06812b",
-      "date": "2026-11-05",
-      "title": "オラクル、中国テンセントへのAI半導体リース契約破棄 FT報道",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE94U0EtYTVESkViQ2Z2UHp4M0xUQUQ1MVdPSXQ4MG43WmlES0RMbmNXWFUtOHlOQ29hUlV1WllOcmFUVzZxOXloMDJsamhacnFkMHhmeVFpRV82S2VVYkdXODF5X2FBdU5mRlpFaw?oc=5",
-      "source": "日経",
-      "published_at": "2026-11-05T08:34:33+00:00"
-    },
-    {
-      "id": "hl-c6c120927e0855e8",
-      "date": "2026-11-05",
-      "title": "Adding Network Security To AI, HPC, And Data Centers",
-      "url": "https://semiengineering.com/adding-network-security-to-ai-hpc-and-data-centers-2/",
-      "source": "SemiEngineering",
-      "published_at": "2026-11-05T08:06:45+00:00"
-    },
-    {
-      "id": "hl-6c6103751d2e241a",
-      "date": "2026-11-05",
-      "title": "Turning Conv2D Into A Practical GPU Compute Pattern",
-      "url": "https://semiengineering.com/turning-conv2d-into-a-practical-gpu-compute-pattern/",
-      "source": "SemiEngineering",
-      "published_at": "2026-11-05T08:05:35+00:00"
-    },
-    {
-      "id": "hl-bd13fa4e422f880c",
-      "date": "2026-11-05",
-      "title": "A System-Level Approach To Protecting 3D-IC Signal Integrity",
-      "url": "https://semiengineering.com/a-system-level-approach-to-protecting-3d-ic-signal-integrity/",
-      "source": "SemiEngineering",
-      "published_at": "2026-11-05T08:04:55+00:00"
-    },
-    {
-      "id": "hl-73587c3f966a3b8c",
-      "date": "2026-11-05",
-      "title": "Fitting AI Models To Edge Applications",
-      "url": "https://semiengineering.com/fitting-ai-models-to-edge-applications/",
-      "source": "SemiEngineering",
-      "published_at": "2026-11-05T08:04:08+00:00"
-    },
-    {
-      "id": "hl-48b3faaab16b18c4",
-      "date": "2026-11-05",
-      "title": "Why Testing Automated Driving Is Harder Than It Looks",
-      "url": "https://semiengineering.com/why-testing-automated-driving-is-harder-than-it-looks/",
-      "source": "SemiEngineering",
-      "published_at": "2026-11-05T08:02:40+00:00"
-    },
-    {
-      "id": "hl-359a6cb1f5f64140",
-      "date": "2026-11-05",
-      "title": "Why Integrated Gate Drive Regulation Matters For High Reliability Space GaN Designs",
-      "url": "https://semiengineering.com/why-integrated-gate-drive-regulation-matters-for-high-reliability-space-gan-designs/",
-      "source": "SemiEngineering",
-      "published_at": "2026-11-05T08:01:35+00:00"
-    },
-    {
-      "id": "hl-72be5f4d2f063460",
-      "date": "2026-11-05",
-      "title": "Physical AI Pushes The Limits Of Hardware",
-      "url": "https://semiengineering.com/physical-ai-pushes-the-limits-of-hardware/",
-      "source": "SemiEngineering",
-      "published_at": "2026-11-05T08:01:19+00:00"
-    },
-    {
-      "id": "hl-24b3e2722e6505e1",
-      "date": "2026-11-05",
-      "title": "College Grads And AI",
-      "url": "https://semiengineering.com/college-grads-and-ai/",
-      "source": "SemiEngineering",
-      "published_at": "2026-11-05T08:01:03+00:00"
-    },
-    {
-      "id": "hl-74a1865ee4db4b83",
-      "date": "2026-11-05",
-      "title": "Advantech sees high-double-digit growth through 2027, driven by AI and semiconductor equipment",
-      "url": "https://www.digitimes.com/news/a20261105PD231/advantech-growth-equipment-pc-revenue.html",
-      "source": "DigiTimes",
-      "published_at": "2026-11-05T08:00:07+00:00"
-    },
-    {
-      "id": "hl-893cc18efb6ebcff",
-      "date": "2026-11-05",
-      "title": "決算:東海カーボンの純利益1％増 1〜9月、半導体関連部材が好調",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1mM3YwdTJSb2tIODB2Umd6cERCbnlmcU9yNWNONGJ6em9kWXNzSXFFT3hsYUN6Mi1iQ01VLU1hZjdHdWtLNm1NM016WVhRei00RkxfN2hKcHVDcFhvLWhqT3ZFV3lEUE15ZnZldw?oc=5",
-      "source": "日経",
-      "published_at": "2026-11-05T07:43:51+00:00"
-    },
-    {
-      "id": "hl-5042704a61d109b9",
-      "date": "2026-11-05",
-      "title": "Advantech sees edge AI growth accelerating beyond semiconductor equipment into robotics",
-      "url": "https://www.digitimes.com/news/a20261105PD223/advantech-growth-equipment-robotics-2026.html",
-      "source": "DigiTimes",
-      "published_at": "2026-11-05T07:35:00+00:00"
-    },
-    {
-      "id": "hl-129b395efd325f01",
-      "date": "2026-11-05",
-      "title": "Finance firms reportedly begin seeking investors for SpaceX's US$40B chip financing",
-      "url": "https://www.digitimes.com/news/a20261105VL224/spacex-goldman-sachs-financing-chips-nvidia.html",
-      "source": "DigiTimes",
-      "published_at": "2026-11-05T07:29:58+00:00"
-    },
-    {
-      "id": "hl-b155ed3aa02fd75f",
-      "date": "2026-11-05",
-      "title": "JX金属、AI半導体向け硫酸銅の生産能力5割増",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5DY0dPck1hQ2pYR2VIZkRMaS1zNU5pdGFYU1FhRTl3bUduNnZJYnJSNzJpZlc4QWpNSkctWm41TWN5a244OWFhUzVPQXp4TmdybnlnZEFJSWlHNFFMWDZrX0FJcGJmclJ6SXZCUA?oc=5",
-      "source": "日経",
-      "published_at": "2026-11-05T07:20:11+00:00"
-    },
-    {
-      "id": "hl-0b1cf8ec1774d767",
-      "date": "2026-11-05",
-      "title": "NAND prices face pressure as end demand freezes in 4Q26",
-      "url": "https://www.digitimes.com/news/a20261105PD215/nand-demand-2026-nand-flash-2027.html",
-      "source": "DigiTimes",
-      "published_at": "2026-11-05T07:19:39+00:00"
-    },
-    {
-      "id": "hl-d86749df541bd668",
-      "date": "2026-11-05",
-      "title": "Check out Taiwan Semiconductor Manufacturing Company Limited's stock price (TSM) in real time",
-      "url": "https://news.google.com/rss/articles/CBMiRkFVX3lxTFBlUy1CTE1DMlQwUmJQdjBQd21FT3V4OTNfWEkyRHdMLXRhWG5IVkR5TTBudlRndHJmVVR5SWQ3bE43VHUxS3c?oc=5",
-      "source": "CNBC",
-      "published_at": "2026-11-05T07:14:47+00:00"
-    },
-    {
-      "id": "hl-52a146813002e5d0",
-      "date": "2026-11-05",
-      "title": "AI半導体に「テキサス・ショック」 出遅れ株に資金シフト ヴェリタスEYE（11月5日）",
-      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9ncVF4U2lPcldRa09tQVQ0SldDSXRZd2djZXlZSkFpWHZSQXljajFLbWpROTUzNHBaQ1VUbUwxZk1lNS1BQkxiV3ZBR2s5QmtBY3M2UDlMNFZsMFVGVG16d3p5S25ScGg5ZFVVUkZral9EZ3BrS3UyNERHNWFIQQ?oc=5",
-      "source": "日経",
-      "published_at": "2026-11-05T07:09:17+00:00"
-    },
-    {
-      "id": "hl-f56f0858ae278ba5",
-      "date": "2026-11-05",
-      "title": "韓国株5日 反落、米半導体株安が波及 海外勢が売り",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9oVm50RHl0MHF5dTFPR1NWT0lLa1Z0TXZKb3U0SWNnekRRVVFxSFozcy01c1AyWF8wQlN4dEFRUkRLYzd1b0tvTnNGVUk0dXFDY2VhTUZtMHBBUllGeHpISGhkUG5XZ3NFSkpvaA?oc=5",
-      "source": "日経",
-      "published_at": "2026-11-05T06:48:57+00:00"
-    },
-    {
-      "id": "hl-a4abada7f9bd29ea",
-      "date": "2026-11-05",
-      "title": "Intelの26年Q3決算に見るPC販売の苦境",
-      "url": "https://eetimes.itmedia.co.jp/ee/articles/2611/05/news059.html",
-      "source": "EE Times Japan",
-      "published_at": "2026-11-05T06:30:00+00:00"
-    },
-    {
-      "id": "hl-998afd490af41354",
-      "date": "2026-11-05",
-      "title": "台湾株5日 6日続落、米半導体株安が波及 3カ月ぶり安値",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9CVzN3S1hLVEpMZmk0R2xfNlRqbEhBeG9NQkk2OThzcEtKQnRNQks0TE1tdFVSREZiV01DWkZ6bmhzRXhadkNpUU5WNjhObHdPLWxzR3RqQUtDU0dSekNFa05WWkV4eEUtZW1CUA?oc=5",
-      "source": "日経",
-      "published_at": "2026-11-05T05:46:22+00:00"
-    },
-    {
-      "id": "hl-ce00616cc82da80e",
-      "date": "2026-11-05",
-      "title": "TOTO、福岡に次世代セラミック品生産棟 投資600億円",
-      "url": "https://eetimes.itmedia.co.jp/ee/articles/2611/05/news064.html",
-      "source": "EE Times Japan",
-      "published_at": "2026-11-05T05:30:00+00:00"
-    },
-    {
-      "id": "hl-2695b8a787b031e5",
-      "date": "2026-11-05",
-      "title": "Chipmakers rush to secure equipment for 2029 as lead times top two years",
-      "url": "https://www.digitimes.com/news/a20261105VL219/semiconductors-equipment-production-asml-earnings-2028.html",
-      "source": "DigiTimes",
-      "published_at": "2026-11-05T05:00:00+00:00"
-    },
-    {
-      "id": "hl-189f8fb8b901b47b",
-      "date": "2026-11-05",
-      "title": "中国半導体メモリー大手YMTCがIPO計画を延期 ロイター報道",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBfUlBmd2pZdXFPOWZsMm1GYjF0OTFzWFRtWlBjVXBNZklGc3ZDeklWY3N3RDd1ZWw2R0hBbWY2UGtZSWhkRzJVTzJLdmtycHlPUkZLMExpMm95eGpYbGJ2aXVtMU9MbzMzQ3ppNg?oc=5",
-      "source": "日経",
-      "published_at": "2026-11-05T04:55:00+00:00"
-    },
-    {
-      "id": "hl-8488fe12b960abe6",
-      "date": "2026-11-05",
-      "title": "EU launches EUR525 million push to close chip design gap",
-      "url": "https://www.digitimes.com/news/a20261105VL221/design-europe-eu-manufacturing-demand.html",
-      "source": "DigiTimes",
-      "published_at": "2026-11-05T04:45:00+00:00"
-    },
-    {
-      "id": "hl-dc316fbbeeb3b482",
-      "date": "2026-11-05",
-      "title": "光ファイバー1本で10W超給電 火災検知信号も双方向伝送",
-      "url": "https://eetimes.itmedia.co.jp/ee/articles/2611/05/news037.html",
-      "source": "EE Times Japan",
-      "published_at": "2026-11-05T04:30:00+00:00"
-    },
-    {
-      "id": "hl-53c1bab638039878",
-      "date": "2026-11-05",
-      "title": "China's Big Fund III pivots to 12-inch chip fabs, equipment acquisitions to close semiconductor supply chain gaps",
-      "url": "https://www.digitimes.com/news/a20261105VL220/12-inch-equipment-big-fund-investment-manufacturing.html",
-      "source": "DigiTimes",
-      "published_at": "2026-11-05T04:13:23+00:00"
-    },
-    {
-      "id": "hl-72f17fca086901cf",
-      "date": "2026-11-05",
-      "title": "東北財務局、10月の景気判断据え置き 半導体好調で生産は上方修正",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBxVDl0WFZmNko2eHhHZW8wdUdWM3E5amZBUVdnTWN6MWw4bWdRSUtKT3dLUldhdkF1RnlBN0pMTUZCMm5FSjQ3dUczNzB4UnFlOVVtMVppT0FxR3NQcDNHeVI5YUExSTFQZHY3bA?oc=5",
-      "source": "日経",
-      "published_at": "2026-11-05T04:00:00+00:00"
-    },
-    {
-      "id": "hl-6df55f1c1e93f828",
-      "date": "2026-11-05",
-      "title": "ファーストリテイリング株価が4カ月ぶり高値 半導体株から資金シフト",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5QcXNBVTFyeEdaeFZiMzAwRnNIRzhSZlptMGhJMk1pQnkwZTlqWnVqZUdZMG0taVFuNlA3a0U1YkNqd25YUEtXei1SMHMydk04OWtMc2FSWk1OLWFaQk5FcWVLbzM1djhIR3I2bg?oc=5",
-      "source": "日経",
-      "published_at": "2026-11-05T03:58:54+00:00"
-    },
-    {
-      "id": "hl-4d0fc3ad7e641f1d",
-      "date": "2026-11-05",
-      "title": "Qualcomm to debut 6G terminal prototype at China expo, bringing AI memory to smart glasses",
-      "url": "https://www.digitimes.com/news/a20261105PD221/qualcomm-6g-smart-glasses-testing-wireless.html",
-      "source": "DigiTimes",
-      "published_at": "2026-11-05T03:55:25+00:00"
-    },
-    {
-      "id": "hl-7f1656972289abcd",
-      "date": "2026-11-05",
-      "title": "Inside the chip talent war: Trade secrets and rising Chinese rivals",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOanRQS1NxX3lCdmRsYWJ1STlUY3B4SDIwaHpITTBOUnh2ejlJNUlkQW9QWkJXcTFFckhBLWlCTnRPUTJYaWd1Q0tVSDhIQjNkd2NQRFpXSkhaTVJiZHF4cG9CbnhDSVYzejkxX3JDS0kwaGs2NmM2RGJNWjJSSmNzU1FHT2PSAYoBQVVfeXFMTmJ2eEhROHc3V3Y5RGwwQUVCUC1oTFpqbnQ4WjdNbE83Uzd2SFpXUWJCdloxT0VqdWM4Z3RPM1UwVS1rWHFLLUo1Y2ZScGFjSkZqQ3NQSl9RMnV5SjRPcXZEZ0sxLUJWWTZxbldMcFc5WENINlJnTVo4QmMzLWFXSzB5Uk1Xb1oyRjVR?oc=5",
-      "source": "CNBC",
-      "published_at": "2026-11-05T03:44:00+00:00"
-    },
-    {
-      "id": "hl-ab4278e645ccb929",
-      "date": "2026-11-05",
-      "title": "Analysis: Qualcomm's AI server CPU ambitions gain urgency as smartphone slump threatens its core business",
-      "url": "https://www.digitimes.com/news/a20261105VL211/qualcomm-business-smartphone-cpu-revenue.html",
-      "source": "DigiTimes",
-      "published_at": "2026-11-05T03:39:30+00:00"
-    },
-    {
-      "id": "hl-503ab37cf5176713",
-      "date": "2026-11-05",
-      "title": "Commentary: AOI locks in China's InP substrates for AI optics, but export controls threaten supply",
-      "url": "https://www.digitimes.com/news/a20261105PD220/aoi-inp-substrate-optical-communications-demand.html",
-      "source": "DigiTimes",
-      "published_at": "2026-11-05T03:35:25+00:00"
-    },
-    {
-      "id": "hl-f8f174c0b2662a87",
-      "date": "2026-11-05",
-      "title": "ソニーの新市場参入に注目 2026年10月の記事ランキング",
-      "url": "https://eetimes.itmedia.co.jp/ee/articles/2611/05/news031.html",
-      "source": "EE Times Japan",
-      "published_at": "2026-11-05T03:30:00+00:00"
-    },
-    {
-      "id": "hl-68a32841e9b2e74c",
-      "date": "2026-11-05",
-      "title": "South Korea's Moreh claims AMD MI355X delivers over twice Nvidia B200's inference throughput",
-      "url": "https://www.digitimes.com/news/a20261105VL217/moreh-amd-nvidia-software-government.html",
-      "source": "DigiTimes",
-      "published_at": "2026-11-05T03:28:21+00:00"
-    },
-    {
-      "id": "hl-54995f94f4c2b3fd",
-      "date": "2026-11-05",
-      "title": "Naver Cloud ramps up use of AMD EPYC, citing high Intel CPU costs",
-      "url": "https://www.digitimes.com/news/a20261105PD209/cloud-naver-amd-intel-cpu.html",
-      "source": "DigiTimes",
-      "published_at": "2026-11-05T03:28:00+00:00"
-    },
-    {
-      "id": "hl-b39102e23a3e414b",
-      "date": "2026-11-05",
-      "title": "東証前引け 日経平均は続落 AI・半導体関連に売り 朝高後に下げる",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE82M3lHT1FUcG5SQ2VNbHNtRzRjLWF4QTBieWR6NUtyNXJERW9PU1NvS0VodTNVYUpwNXBKRmczZV9qVUVUWkE1dDFiMWxuX29qYUdEdDNNRmhOaFJaNXdWUC1QUWhuUk9ubnctYg?oc=5",
-      "source": "日経",
-      "published_at": "2026-11-05T03:03:05+00:00"
-    },
-    {
-      "id": "hl-cd4a1246afef084c",
-      "date": "2026-11-05",
-      "title": "日経平均終値1110円安 米中間選挙受け半導体売り、戻り試す機運そぐ",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9Ba0MtcnQ4LUgtVnJVZFdzLWlnWVNaTWc0eHVSNFBOYWFld2xwTjNhVW84NGpwZUMzM3hfckZRSXNXeFBJN0dlbWlZaHU0bnhCYUZmVk15T1JlTU5iRTk0cktKTUNRMnFrUkJ2cw?oc=5",
-      "source": "日経",
-      "published_at": "2026-11-05T02:58:20+00:00"
-    },
-    {
-      "id": "hl-f1c41b4cb56502e6",
-      "date": "2026-11-05",
-      "title": "Blue Wave Stock Rotation Sinks Asian Chipmakers, Boosts Autos",
-      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOMmFfdEpleUtwQ3R0VmZlSlNMLWgwNU9DSDRfRERRbjZIb19OVy1tMHRSdVg2ZjlEWG53T2NuLU5jckRCaEFOaTYyMWpYRUJTUFVMNzRCay1WN1oyVGNDV1o1cGFWRWE5Y1ZQZk0zUl9FaElINEhYTV96TGtieVhMOVhHT1VTamV6RVEyN3JTTDdGUXFyNGxESnVYTV9ocG1zSGIwN1NobmFBRlo3WkpGZA?oc=5",
-      "source": "Bloomberg",
-      "published_at": "2026-11-05T02:22:00+00:00"
-    },
-    {
-      "id": "hl-622b59402c1eff7d",
-      "date": "2026-11-05",
-      "title": "「データセンターは電力グリッドの一部」 制御の鍵はSST／SSCB",
-      "url": "https://eetimes.itmedia.co.jp/ee/articles/2611/05/news038.html",
-      "source": "EE Times Japan",
-      "published_at": "2026-11-05T02:00:00+00:00"
-    },
-    {
-      "id": "hl-b559afcd139c308f",
-      "date": "2026-11-05",
-      "title": "日経平均、一時800円超安 AI・半導体関連に売り膨らむ",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5EZnYtM2R0Z2YzUUg5aDYtQUVacGdaV3loQlhRNEtGc1BGSlZNUFI0bmU2VG81Umxjc3FtaVBtdXdaMlQzTmxSZkVWekt1X01FeHBKSGVMV0pzNVVLc1c2bzgyclRlUzU0d1N5cg?oc=5",
-      "source": "日経",
-      "published_at": "2026-11-05T01:47:50+00:00"
-    },
-    {
-      "id": "hl-ea15d154ef2904a0",
-      "date": "2026-11-05",
-      "title": "上海株寄り付き 反落して始まる 石油や半導体に売り",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1DVm9ERDlEWkZXUU1Gc01TaE4wS3R6UmZwbDVMbG1SaTFtREhQWVozay01bWZ0Nk5LX2RJM1VYWWRSYU5xS042Q1hQaFVIVXJYWnVhbzR3NHgxdzBkcm1NU3Zta2ZrVUNURmRrdg?oc=5",
-      "source": "日経",
-      "published_at": "2026-11-05T01:39:34+00:00"
-    },
-    {
-      "id": "hl-2fe86adad414e62e",
-      "date": "2026-11-05",
-      "title": "世界半導体市場、3四半期連続で20％超成長 3Qは5177億ドル",
-      "url": "https://eetimes.itmedia.co.jp/ee/articles/2611/05/news043.html",
-      "source": "EE Times Japan",
-      "published_at": "2026-11-05T01:30:00+00:00"
     }
   ]
 }
